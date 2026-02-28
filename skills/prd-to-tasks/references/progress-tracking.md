@@ -166,3 +166,27 @@ If work is paused or deprioritized:
 ```markdown
 > **Status: Paused** -- Work paused on YYYY-MM-DD. See [reason]. Resume by [condition].
 ```
+
+## Re-Planning Triggers
+
+Sometimes incremental task updates are insufficient and the task list needs deeper revision. Watch for these triggers:
+
+| Trigger | Action |
+|---------|--------|
+| **>30% of tasks are blocked** | Stop and resolve blockers. Re-examine dependency chain. Consider re-ordering or re-scoping. |
+| **PRD scope change affects >50% of tasks** | Full re-generation of `tasks.md`. Preserve statuses for completed tasks. |
+| **Dependency chain collapse** (a foundational task is blocked/skipped) | Re-map all downstream dependencies. May require new tasks or phase restructuring. |
+| **Phase boundary shift** (work from Phase 2 pulled into Phase 1) | Update phase groupings and re-verify that each phase remains independently deployable. |
+| **New requirements added to PRD** | Incremental update: add new tasks, update requirements coverage matrix. |
+| **Requirements removed from PRD** | Mark affected tasks as `[-]` Skipped with reason. Update coverage matrix. |
+
+When in doubt, prefer incremental updates over full re-generation. Full re-generation risks losing valuable context in task notes and completion history.
+
+## Team Coordination
+
+When multiple people work from the same `tasks.md`:
+
+- **Claim before starting**: Change a task to `[~]` and add your name/initials before beginning work. This prevents duplicate effort.
+- **One task at a time per person**: Finish, block, or hand off a `[~]` task before claiming another.
+- **Communicate blocks immediately**: When marking `[!]`, also notify anyone whose tasks depend on the blocked one.
+- **Review phase boundaries together**: The phase verification task should involve all contributors to confirm integration.

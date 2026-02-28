@@ -1,5 +1,7 @@
 ---
-name: create-a-prd
+slug: create-a-prd
+name: Create a PRD
+version: 1.0.0
 description: Create detailed, development-ready Product Requirements Documents (PRDs) for software projects. Use when the user asks to "write a PRD", "create requirements", "plan a feature", "document a project spec", "scope a feature", or needs to turn a product idea into a structured specification. Covers problem definition, solution design, user stories, alternatives analysis, implementation planning, testing strategy, and risk assessment. Includes codebase discovery to align PRDs with the project's existing tech stack and conventions.
 ---
 
@@ -49,6 +51,10 @@ Before writing, gather context through two parallel tracks.
 
 Do not write the PRD until the problem is understood. Ask 2-4 focused questions. Avoid overwhelming the user with a wall of questions -- prioritize the most critical unknowns first, then follow up.
 
+**Handling incomplete answers:** If the user cannot answer a question, do not block. Document it in Section 9 (Open Questions) with a proposed default and proceed. Mark the assumption clearly so it can be revisited.
+
+**Handling contradictions:** If the user provides conflicting requirements (e.g., "must be real-time" and "must work offline"), surface the conflict explicitly with concrete options. Do not silently choose one interpretation.
+
 **Track B -- Discover the codebase.** Explore the project to understand existing conventions. See [references/codebase-discovery.md](references/codebase-discovery.md) for the full checklist. Key items:
 
 - Detect the package manager (bun, yarn, pnpm, npm, etc.) and use it consistently
@@ -81,17 +87,51 @@ Apply the quality standards in [references/quality-standards.md](references/qual
 - Justify every new dependency against the existing stack
 - Ensure every requirement is independently verifiable
 - Keep one requirement per statement
+- Label all requirements for traceability: `FR-N` (functional), `NFR-N` (non-functional), `US-N` (user stories), `QG-N` (quality gates)
+
+### Phase 2.5: Self-Validation
+
+Before presenting the draft to the user, validate it against the completeness checklist in [references/quality-standards.md](references/quality-standards.md). This is a mandatory gate, not optional.
+
+Verify:
+- Every section from the schema is present (or explicitly marked N/A with reasoning)
+- All requirements use `FR-N`, `NFR-N`, `US-N`, `QG-N` labels
+- All user stories have acceptance criteria with priority levels
+- Success criteria are measurable with specific numeric targets
+- Non-goals section exists and is substantive
+- No vague language ("should be fast", "handle gracefully") remains
+- New dependencies are justified
+- Implementation phases are independently deployable
+
+If any check fails, fix it before presenting. Do not rely on the user to catch structural gaps.
 
 ### Phase 3: Review
 
-Present the draft and ask for feedback on specific sections. Common review items:
+Present the draft and ask for targeted feedback using these review criteria:
 
-- Are the non-goals correct? Is anything missing?
+**Scope review:**
+- Are the non-goals correct? Is anything missing that should be explicitly excluded?
+- Should this PRD be split? (>2 major features or >8 FRs spanning different subsystems)
+
+**Correctness review:**
 - Do the success criteria match business expectations?
-- Are the phased rollout boundaries right?
-- Are risks adequately identified?
+- Are the user stories complete? Any personas or workflows missing?
+- Are constraints accurately captured?
+
+**Feasibility review:**
+- Are the phased rollout boundaries right? Is each phase independently deployable?
+- Are risks adequately identified? Any missing technical or operational risks?
+- Are effort and complexity realistic for the stated constraints?
+
+**Open items review:**
+- Are there open questions that should be resolved before implementation begins?
+- Are proposed defaults for unresolved questions acceptable?
 
 Iterate until the user confirms the PRD is complete.
+
+### Phase 4: Handoff
+
+Once the PRD is confirmed, inform the user that the companion skill **prd-to-tasks** can decompose it into an actionable, trackable task list. The task list will be generated at `plans/<name>/tasks.md` alongside the PRD. This step is optional but recommended before implementation begins.
 
 ## Key Principles
 
@@ -101,7 +141,7 @@ Iterate until the user confirms the PRD is complete.
 
 **Dynamic guidance, not rigid templates.** Do not include specific code, database schemas, or API response shapes in the PRD. These change during implementation. Instead, define requirements that constrain the implementation without dictating it.
 
-**Quality gates from the project.** If the project has lint, format, type-check, or test commands, include all of them as required quality gates. Do not invent new tooling unless the project has none.
+**Quality gates are additive.** Discover every check command the project has (check, format, lint, test, build, etc.) and include **all** of them as required quality gates. Never skip a gate. If the project has five scripts, five gates must pass. Do not invent new tooling unless the project has none.
 
 **Testing is in scope.** Every PRD must include a testing strategy appropriate to the project's complexity. Reference the project's existing test framework and patterns. Define what coverage is expected at each testing level.
 

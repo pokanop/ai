@@ -24,7 +24,7 @@
 In the rapidly evolving world of AI, **the right prompt can unlock extraordinary results**. This repository serves as your definitive resource for:
 
 - **High-quality prompts** tested across multiple AI platforms
-- **Agent Skills** following the [agentskills.io](https://agentskills.io) specification
+- **Agent Skills** following the [skills.sh](https://skills.sh) specification
 - **Best practices** distilled from real-world usage
 - **Foundation patterns** applicable to any AI use case
 
@@ -109,7 +109,7 @@ Expert prompts for:
 <img src="assets/icon-agents.svg" alt="Agents" width="100">
 </div>
 
-Skills in this repository follow the **[Agent Skills Specification](https://agentskills.io)** — an open format for giving AI agents new capabilities and expertise.
+Skills in this repository follow the **[Agent Skills Specification](https://skills.sh/docs)** — an open format for giving AI agents new capabilities and expertise.
 
 ### What are Agent Skills?
 
@@ -129,12 +129,10 @@ skill-name/
 
 ```yaml
 ---
-name: skill-name
+slug: skill-name
+name: Skill Name
+version: 1.0.0
 description: What this skill does and when to use it.
-license: MIT
-metadata:
-  author: your-name
-  version: "1.0"
 ---
 
 # Skill Instructions
@@ -171,7 +169,7 @@ skills/
     └── SKILL.md
 ```
 
-See the [Agent Skills Specification](https://agentskills.io/specification) for complete details.
+See the [Agent Skills Specification](https://skills.sh/docs) for complete details.
 
 ---
 
@@ -192,7 +190,7 @@ ai/
 │   ├── videos/            # Video creation prompts
 │   ├── audio/             # Audio generation prompts
 │   └── text/              # Text & content prompts
-├── skills/                # Agent Skills (agentskills.io format)
+├── skills/                # Agent Skills (skills.sh format)
 │   └── [skill-name]/      # Each skill in its own directory
 │       └── SKILL.md
 └── README.md
@@ -216,7 +214,7 @@ cd ai/prompts/images
 
 ### Using Skills
 
-Skills are automatically discovered by [compatible agents](https://agentskills.io). Simply place your skills in the `skills/` directory:
+Skills are automatically discovered by [compatible agents](https://skills.sh). Simply place your skills in the `skills/` directory:
 
 ```
 skills/
@@ -287,7 +285,7 @@ This repository is designed to be the **foundation for all AI use cases**:
 We welcome contributions! Here's how to help:
 
 1. **Add prompts** - Share your best-performing prompts
-2. **Create skills** - Build reusable agent capabilities following the [specification](https://agentskills.io/specification)
+2. **Create skills** - Build reusable agent capabilities following the [specification](https://skills.sh/docs)
 3. **Improve docs** - Enhance explanations and examples
 4. **Report issues** - Found something that doesn't work? Let us know
 

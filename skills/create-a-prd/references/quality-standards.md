@@ -90,11 +90,43 @@ Before finalizing, verify:
 - [ ] Success criteria are measurable with specific targets
 - [ ] Non-goals are explicitly listed
 - [ ] All user stories have acceptance criteria
+- [ ] All requirements are labeled (`FR-N`, `NFR-N`, `US-N`, `QG-N`)
 - [ ] Alternatives were considered and documented
 - [ ] New dependencies are justified against existing stack
 - [ ] Testing strategy covers unit, integration, and e2e levels
-- [ ] Existing quality gates (lint, format, type-check, test) are included
+- [ ] Existing quality gates are **all** included additively (check, format, lint, test, build -- every available script)
 - [ ] Risks have concrete mitigations, not just acknowledgment
 - [ ] Open questions list who needs to answer them
 - [ ] Implementation phases are independently deployable
 - [ ] The PRD avoids prescribing specific code or schemas
+- [ ] Security considerations are addressed (or explicitly noted as N/A)
+- [ ] Constraints section is present if hard boundaries exist
+
+## Anti-Patterns and Common Failure Modes
+
+Watch for these patterns that indicate a weak PRD:
+
+| Anti-Pattern | Example | Fix |
+|-------------|---------|-----|
+| **Vague requirements** | "The system should be fast" | Add specific measurable targets with conditions |
+| **Compound statements** | "Must support search, filtering, and sorting" | Split into one requirement per statement |
+| **Missing non-goals** | Non-goals section is empty or absent | Actively identify reasonable extensions that are deliberately excluded |
+| **Implementation leaking in** | "Use a Redis sorted set for the leaderboard" | Rewrite as what + why, not how: "Leaderboard must support real-time ranking of 100K+ users" |
+| **Untraceable requirements** | Requirements without `FR-N` labels | Number every requirement for downstream traceability |
+| **Wishful success criteria** | "Users will love it" | Replace with measurable KPIs: adoption rate, task completion time, error rate |
+| **Risk hand-waving** | "Risk: system might be slow. Mitigation: we'll optimize." | Specify concrete mitigation: caching strategy, load testing plan, performance budget |
+| **Scope sprawl** | PRD covers 3 unrelated features | Split into separate PRDs with clear boundaries |
+
+## Measurability Guide
+
+What "measurable" means varies by requirement type:
+
+| Requirement Type | Measurable With | Example |
+|-----------------|-----------------|---------|
+| **Performance** | Latency percentiles under load | "p95 response time < 200ms at 1000 concurrent users" |
+| **Reliability** | Uptime percentage, MTTR | "99.9% availability measured monthly, MTTR < 15 minutes" |
+| **Scalability** | Throughput at scale | "Support 10K concurrent connections with linear horizontal scaling" |
+| **Accessibility** | Standards compliance + specifics | "WCAG 2.1 AA, all interactive elements keyboard-navigable" |
+| **Usability** | Task completion metrics | "Core workflow completable in ≤3 steps, <2min for first-time users" |
+| **Security** | Compliance standards or specific checks | "All inputs validated, SQL injection tests pass, OWASP Top 10 addressed" |
+| **Data** | Volume, retention, consistency | "Support 1M records per tenant, 90-day retention, eventual consistency <5s" |

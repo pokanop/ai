@@ -38,6 +38,17 @@ If the PRD does not define phases, create them. A reasonable default:
 
 Within each phase, break work into layers. Process each layer in order because they naturally form dependency chains:
 
+#### Layer 0: Planning and Investigation
+
+Not all tasks produce code. Include these when needed:
+
+- **Spike / investigation tasks** -- For areas with significant unknowns (e.g., "Evaluate auth providers and recommend one"). Time-box these (S or M effort). A spike's deliverable is a decision or a documented finding, not code.
+- **Design review tasks** -- When architecture decisions need validation before implementation
+- **Stakeholder sign-off tasks** -- When external approval gates exist (e.g., security review, legal review)
+- **Documentation tasks** -- API docs, runbooks, architecture decision records
+
+**Source**: PRD Open Questions, Risks (unknowns that need investigation)
+
 #### Layer 1: Data and Schema
 
 - Database schema changes or new tables/collections
@@ -102,6 +113,15 @@ Within each phase, break work into layers. Process each layer in order because t
 **Source**: PRD Implementation Plan (tech stack alignment), Risks and Mitigations (operational risks)
 
 Not every layer applies to every phase. Skip layers that have no tasks for a given phase.
+
+### Handling Large PRDs (20+ Requirements)
+
+When the PRD has many requirements, avoid generating an overwhelming flat task list:
+
+1. **Cluster related requirements** -- Group FRs and USs that touch the same component or data model. Each cluster becomes a task group within its phase.
+2. **Use sub-phases** -- If a single PRD phase has more than 10 tasks, split it into sub-phases (e.g., "Phase 1a: Core data model", "Phase 1b: Basic API").
+3. **Prioritize ruthlessly** -- Implement P0 requirements first within each phase. P1 and P2 tasks should be clearly separated so they can be deferred without blocking the phase verification.
+4. **Consider a "thin vertical slice" approach** -- One complete flow from data layer to UI, then iterate to add breadth.
 
 ### Step 4: Size Tasks Correctly
 

@@ -107,22 +107,30 @@ Use hierarchical numbering for easy reference:
 - Example: Task 1.3 = Phase 1, Task 3
 - Reference format in dependencies: "Task 1.3" or "Tasks 1.3, 1.4"
 
+**ID stability rules:**
+- Once a task ID is assigned, it is **immutable** -- never renumber existing tasks
+- When adding new tasks, use the next available number in that phase (e.g., if Phase 1 has tasks 1.1-1.8, the next task is 1.9)
+- When removing or skipping tasks, leave the ID gap -- do not backfill
+- This ensures that references in notes, commits, and conversations remain valid
+
 ### Phase Completion Task
 
-Every phase must end with a verification task:
+Every phase must end with a verification task that runs **all** quality gates additively. List every check command the project has -- do not omit any:
 
 ```markdown
 - [ ] **Phase N verification: integration test and quality gates** `[P0]` `[M]`
   - **Depends on**: All prior tasks in Phase N
-  - **Requirements**: PRD Section 7 (Testing Strategy)
+  - **Requirements**: PRD Section 7 (Testing Strategy), all QG-N gates
   - **Acceptance Criteria**:
     - [ ] All Phase N tasks are complete
-    - [ ] All existing tests pass (`<test command>`)
-    - [ ] Lint checks pass (`<lint command>`)
-    - [ ] Type checks pass (`<typecheck command>`)
-    - [ ] Build succeeds (`<build command>`)
+    - [ ] `<package-manager> run check` passes (type checking)
+    - [ ] `<package-manager> run format` passes (formatting)
+    - [ ] `<package-manager> run lint` passes (linting)
+    - [ ] `<package-manager> run test` passes (test suite)
+    - [ ] `<package-manager> run build` passes (build)
     - [ ] Phase N features are independently deployable
     - [ ] Manual verification of key user flows for this phase
+  - **Notes**: Quality gates are additive -- include EVERY check script discovered in the project. If the project has 5 scripts (check, format, lint, test, build), all 5 must appear here. Adapt commands to the actual package manager (bun/npm/yarn/pnpm/cargo/go/make/etc.).
 ```
 
 ## 3. Dependency Graph (Optional)
@@ -172,7 +180,28 @@ List any PRD open questions that affect task planning and what happens if they r
 | Q3: Data retention policy | Task 2.6 | Default to 90-day retention |
 ```
 
-## 6. Future Considerations (Optional)
+## 6. Requirements Coverage Matrix
+
+Verify that every PRD requirement is covered by at least one task. This matrix is the traceability backbone -- include it in every task document.
+
+```markdown
+## Requirements Coverage
+
+| Requirement | Task(s) | Status |
+|------------|---------|--------|
+| FR-1: User registration | Task 1.2, 1.3 | ✅ Covered |
+| FR-2: Email verification | Task 1.4 | ✅ Covered |
+| NFR-1: p95 < 200ms | Task 2.5 (perf test) | ✅ Covered |
+| US-1: New user signup | Tasks 1.2, 1.3, 1.4 | ✅ Covered |
+| QG-1: All tests pass | Phase verification tasks | ✅ Covered |
+```
+
+**Rules:**
+- Every `FR-N`, `NFR-N`, `US-N`, and `QG-N` from the PRD must appear in this matrix
+- If a requirement has no corresponding task, either add a task or document why it's covered implicitly
+- Update this matrix when tasks are added, removed, or skipped
+
+## 7. Future Considerations (Optional)
 
 Tasks that are explicitly out of scope for this PRD but were noticed during decomposition. These are NOT tracked for progress -- they are informational.
 

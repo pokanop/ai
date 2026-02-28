@@ -21,6 +21,20 @@ Numbered list of what this project will achieve. Each goal must be:
 
 Explicit list of what this project will NOT do. Non-goals protect scope and prevent feature creep. Frame as "We will not..." statements. Include things that are reasonable extensions but are deliberately deferred.
 
+### Constraints
+
+Hard boundaries that the solution must work within. These are not choices — they are givens:
+
+- Technical constraints (must use existing database, must support specific browsers)
+- Timeline constraints (must ship by date X)
+- Team constraints (team size, skill gaps)
+- Regulatory constraints (HIPAA, GDPR, SOC2)
+- Budget constraints (infrastructure spend limits)
+
+### Scope Check
+
+If the PRD covers more than **2 major features** or has more than **8 functional requirements** that span different subsystems, consider splitting into separate PRDs. Each PRD should focus on a single cohesive initiative.
+
 ## 3. User Stories and Requirements
 
 ### User Personas
@@ -31,28 +45,31 @@ Brief descriptions of the target users. Include their role, technical level, and
 
 Format: `As a [persona], I want to [action] so that [outcome].`
 
-Group by persona or workflow. Each story must have:
+Label each story with the prefix **US-N** (e.g., US-1, US-2). Group by persona or workflow. Each story must have:
 
 - **Acceptance Criteria**: Concrete, testable conditions that define "done"
 - **Priority**: P0 (must-have for launch), P1 (should-have), P2 (nice-to-have)
 
 ### Functional Requirements
 
-Numbered list of what the system must do. Derive from user stories. Be specific:
+Numbered list of what the system must do, using the label prefix **FR-N** (e.g., FR-1, FR-2). Derive from user stories. These labels are used downstream for traceability when generating task lists.
+
+Be specific:
 
 ```diff
 - The system should handle errors gracefully.
-+ The system must return structured error responses with error code, message, and suggested action. All errors must be logged with correlation IDs.
++ FR-1: The system must return structured error responses with error code, message, and suggested action. All errors must be logged with correlation IDs.
 ```
 
 ### Non-Functional Requirements
 
-Performance, scalability, accessibility, security, and reliability targets. Use measurable criteria:
+Numbered list using the label prefix **NFR-N** (e.g., NFR-1, NFR-2). Cover performance, scalability, accessibility, security, and reliability targets. Use measurable criteria appropriate to the requirement type:
 
-- Response time targets (p50, p95, p99)
-- Availability targets (e.g., 99.9%)
-- Data retention and privacy requirements
-- Accessibility standards (e.g., WCAG 2.1 AA)
+- **Performance**: Response time targets with percentiles (p50, p95, p99) and load conditions
+- **Reliability**: Availability targets (e.g., 99.9%) and recovery time objectives
+- **Security**: Authentication, authorization, data encryption, and audit requirements
+- **Privacy**: Data retention, GDPR/CCPA compliance, PII handling
+- **Accessibility**: Standards compliance level (e.g., WCAG 2.1 AA)
 
 ## 4. Solution Design
 
@@ -84,6 +101,18 @@ High-level description of how components interact. Include:
 - New dependencies require explicit justification
 - Design for composability -- components should be independently testable and replaceable
 - Follow existing project conventions for module boundaries and file organization
+
+### Security Considerations
+
+Address security as a first-class concern, not an afterthought:
+
+- **Authentication**: How users prove identity (existing auth system, new provider, SSO)
+- **Authorization**: How access is controlled (RBAC, ABAC, resource-level permissions)
+- **Data protection**: Encryption at rest and in transit, PII handling, data sanitization
+- **Input validation**: How untrusted input is validated and sanitized
+- **Audit trail**: What actions are logged and how
+
+If security is not a primary concern for this feature, explicitly state why.
 
 ## 5. Alternatives Considered
 
@@ -137,13 +166,20 @@ If modifying existing systems:
 
 ### Quality Gates
 
-Define what must pass before shipping:
+Label each gate with the prefix **QG-N** (e.g., QG-1, QG-2). Quality gates are **additive** -- list every check command the project has and require all of them to pass. Do not pick a subset.
 
-- All existing tests pass
-- New tests cover critical paths
-- Lint and format checks pass
-- Type checking passes (if applicable)
-- Code review completed
+Discover available scripts (see codebase discovery) and include each one as a separate gate:
+
+```markdown
+QG-1: `bun run check` -- Type checking passes with zero errors
+QG-2: `bun run format` -- Code formatting matches project standards
+QG-3: `bun run lint` -- No lint warnings or errors
+QG-4: `bun run test` -- All existing and new tests pass
+QG-5: `bun run build` -- Build completes successfully
+QG-6: Code review completed
+```
+
+Adapt commands to the project's package manager and tooling (npm, yarn, pnpm, cargo, go, make, etc.). If a project has `check`, `format`, `lint`, `test`, and `build` scripts, all five become quality gates -- skipping any one of them is an error.
 
 ## 8. Risks and Mitigations
 
