@@ -6,7 +6,7 @@
 
 **The Ultimate Foundation for AI-Powered Creativity**
 
-*A curated collection of expertly crafted prompts and skills for every AI use case*
+*A curated collection of expertly crafted prompts and agent skills for every AI use case*
 
 <img src="assets/hero-banner.svg" alt="Hero Banner" width="100%">
 
@@ -24,7 +24,7 @@
 In the rapidly evolving world of AI, **the right prompt can unlock extraordinary results**. This repository serves as your definitive resource for:
 
 - **High-quality prompts** tested across multiple AI platforms
-- **Agent Skills** following the [skills.sh](https://skills.sh) specification
+- **Agent Skills** following the [Agent Skills specification](https://agentskills.io) and discoverable via [skills.sh](https://skills.sh)
 - **Best practices** distilled from real-world usage
 - **Foundation patterns** applicable to any AI use case
 
@@ -109,67 +109,87 @@ Expert prompts for:
 <img src="assets/icon-agents.svg" alt="Agents" width="100">
 </div>
 
-Skills in this repository follow the **[Agent Skills Specification](https://skills.sh/docs)** — an open format for giving AI agents new capabilities and expertise.
+Skills in this repository follow the **[Agent Skills Specification](https://agentskills.io/specification)** — an open format for giving AI agents new capabilities and expertise. Skills are discoverable and installable via the [skills.sh](https://skills.sh) registry.
 
 ### What are Agent Skills?
 
 Agent Skills are folders containing instructions, scripts, and resources that agents can discover and use to perform tasks more accurately and efficiently. Each skill is a self-contained directory with a `SKILL.md` file.
 
-### Skill Structure
+### Available Skills
+
+| Skill | Description |
+|-------|-------------|
+| [`code-review`](skills/code-review/) | Structured code review process with actionable feedback |
+| [`create-a-prd`](skills/create-a-prd/) | Create a Product Requirements Document from a feature idea |
+| [`debug-and-fix`](skills/debug-and-fix/) | Systematic debugging and root-cause analysis |
+| [`plan-retrospective`](skills/plan-retrospective/) | Reflect on completed work and capture learnings |
+| [`prd-to-tasks`](skills/prd-to-tasks/) | Break a PRD into actionable engineering tasks |
+| [`release-checklist`](skills/release-checklist/) | Pre-release verification and deployment checklist |
+| [`tasks-to-code`](skills/tasks-to-code/) | Implement engineering tasks from a task list |
+| [`ui-design-audit`](skills/ui-design-audit/) | Audit UI components for design consistency |
+
+### Skill Directory Structure
+
+Each skill lives in its own directory inside `skills/`:
 
 ```
-skill-name/
-├── SKILL.md           # Required: Main skill instructions
-├── scripts/           # Optional: Executable code
-├── references/        # Optional: Additional documentation
-└── assets/            # Optional: Static resources
+skills/
+└── skill-name/
+    ├── SKILL.md           # Required: main instructions + frontmatter
+    ├── scripts/           # Optional: executable helper scripts
+    ├── references/        # Optional: additional documentation
+    └── assets/            # Optional: static resources
 ```
 
 ### SKILL.md Format
 
+Every `SKILL.md` must include YAML frontmatter with at minimum `name` and `description`:
+
 ```yaml
 ---
-slug: skill-name
-name: Skill Name
-version: 1.0.0
-description: What this skill does and when to use it.
+name: skill-name
+description: >
+  What this skill does and when to use it. Include specific keywords
+  that help agents identify when the skill is relevant.
+license: MIT
+metadata:
+  author: pokanop
+  version: "1.0"
 ---
 
 # Skill Instructions
 
-Detailed instructions for the agent...
+Detailed instructions and guidance for the agent...
 ```
 
-### Benefits
+#### Frontmatter Fields
 
-| For Skill Authors | For Compatible Agents | For Teams |
-|-------------------|----------------------|-----------|
-| Build once, deploy everywhere | Get new capabilities out of the box | Capture organizational knowledge |
-| Portable across agent products | Support user-defined extensions | Version-controlled packages |
-| Open standard specification | On-demand context loading | Consistent workflows |
+| Field | Required | Description |
+|-------|----------|-------------|
+| `name` | ✅ Yes | Lowercase alphanumeric + hyphens only. Must match the directory name. |
+| `description` | ✅ Yes | What the skill does and when to use it (1–1024 chars). |
+| `license` | No | License name or reference (e.g. `MIT`, `Apache-2.0`). |
+| `compatibility` | No | Environment requirements, target agent products, or required tools. |
+| `metadata` | No | A map of arbitrary string keys/values (e.g. `author`, `version`). |
+| `allowed-tools` | No | List of tools the skill is permitted to use. |
 
-### Adding Skills
+> **`name` rules:** 1–64 characters, lowercase `a-z` and `-` only, must not start or end with `-`, no consecutive `--`. Must match the parent directory name exactly.
 
-To add a new skill:
+### Adding a Skill
 
-1. Create a directory in `skills/` with your skill name (lowercase, hyphens only)
-2. Add a `SKILL.md` file with YAML frontmatter and instructions
-3. Optionally include `scripts/`, `references/`, or `assets/` directories
+1. Create a directory in `skills/` using lowercase letters and hyphens (e.g. `skills/my-skill/`)
+2. Add a `SKILL.md` with valid frontmatter and instructions
+3. Optionally include `scripts/`, `references/`, or `assets/` subdirectories
 
-**Example skill directory:**
-```
-skills/
-├── code-review/           # Automated code review skill
-│   └── SKILL.md
-├── api-design/            # REST API design patterns
-│   ├── SKILL.md
-│   └── references/
-│       └── openapi-patterns.md
-└── your-skill/            # Add your skills here
-    └── SKILL.md
+**Install any skill from this repo via the CLI:**
+
+```bash
+bunx skills add pokanop/ai
 ```
 
-See the [Agent Skills Specification](https://skills.sh/docs) for complete details.
+Supported by: Claude Code, Cursor, Windsurf, OpenCode, GitHub Copilot, OpenHands, and more.
+
+See the [Agent Skills Specification](https://agentskills.io/specification) for the complete format reference.
 
 ---
 
@@ -190,9 +210,15 @@ ai/
 │   ├── videos/            # Video creation prompts
 │   ├── audio/             # Audio generation prompts
 │   └── text/              # Text & content prompts
-├── skills/                # Agent Skills (skills.sh format)
-│   └── [skill-name]/      # Each skill in its own directory
-│       └── SKILL.md
+├── skills/                # Agent Skills (agentskills.io format)
+│   ├── code-review/
+│   ├── create-a-prd/
+│   ├── debug-and-fix/
+│   ├── plan-retrospective/
+│   ├── prd-to-tasks/
+│   ├── release-checklist/
+│   ├── tasks-to-code/
+│   └── ui-design-audit/
 └── README.md
 ```
 
@@ -204,25 +230,21 @@ ai/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/ai.git
+git clone https://github.com/pokanop/ai.git
 
 # Navigate to your use case
 cd ai/prompts/images
-
-# Use the prompt in your AI tool
 ```
 
-### Using Skills
+### Installing Skills
 
-Skills are automatically discovered by [compatible agents](https://skills.sh). Simply place your skills in the `skills/` directory:
+Install all skills in this repository directly into your project:
 
-```
-skills/
-└── my-custom-skill/
-    └── SKILL.md
+```bash
+bunx skills add pokanop/ai
 ```
 
-Supported by: OpenCode, Cursor, Claude Code, GitHub Copilot, OpenHands, and more.
+Or browse and install individual skills from the [skills.sh leaderboard](https://skills.sh).
 
 ---
 
@@ -285,7 +307,7 @@ This repository is designed to be the **foundation for all AI use cases**:
 We welcome contributions! Here's how to help:
 
 1. **Add prompts** - Share your best-performing prompts
-2. **Create skills** - Build reusable agent capabilities following the [specification](https://skills.sh/docs)
+2. **Create skills** - Build reusable agent capabilities following the [specification](https://agentskills.io/specification)
 3. **Improve docs** - Enhance explanations and examples
 4. **Report issues** - Found something that doesn't work? Let us know
 
@@ -318,7 +340,7 @@ Made with care for the AI community
 
 **Star this repo if you find it useful!**
 
-[Report Bug](https://github.com/your-org/ai/issues) · [Request Feature](https://github.com/your-org/ai/issues) · [Join Discussion](https://github.com/your-org/ai/discussions)
+[Report Bug](https://github.com/pokanop/ai/issues) · [Request Feature](https://github.com/pokanop/ai/issues) · [Join Discussion](https://github.com/pokanop/ai/discussions)
 
 <img src="assets/logo.svg" alt="AI Prompts" width="60" height="60">
 

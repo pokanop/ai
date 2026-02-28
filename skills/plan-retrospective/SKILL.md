@@ -1,8 +1,10 @@
 ---
 name: plan-retrospective
 description: Close out a completed plan with a structured retrospective. Use when the user asks to "close out a plan", "do a retro", "archive a plan", "write a retrospective", "wrap up a feature", or needs to formally complete a plan from plans/<name>/. Reads prd.md and tasks.md, computes completion metrics, surfaces scope drift, captures lessons learned, produces a retro.md, and moves the plan to plans/archive/.
+license: MIT
 metadata:
-  version: "1.0.0"
+  author: pokanop
+  version: "1.0"
 ---
 
 # Plan Retrospective

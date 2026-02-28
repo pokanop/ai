@@ -1,8 +1,10 @@
 ---
 name: create-a-prd
 description: Create detailed, development-ready Product Requirements Documents (PRDs) for software projects. Use when the user asks to "write a PRD", "create requirements", "plan a feature", "document a project spec", "scope a feature", or needs to turn a product idea into a structured specification. Covers problem definition, solution design, user stories, alternatives analysis, implementation planning, testing strategy, and risk assessment. Includes codebase discovery to align PRDs with the project's existing tech stack and conventions.
+license: MIT
 metadata:
-  version: "1.0.0"
+  author: pokanop
+  version: "1.0"
 ---
 
 # Create a PRD

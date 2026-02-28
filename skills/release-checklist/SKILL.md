@@ -1,8 +1,10 @@
 ---
 name: release-checklist
 description: Verify a plan is ready to ship and produce a release checklist and changelog entry. Use when the user asks to "prepare a release", "create a release checklist", "we're ready to ship", "generate a changelog", "check if we're ready to deploy", or needs a go/no-go assessment before deploying. Reads plans/<name>/tasks.md and prd.md, runs all quality gates, verifies P0 task completion, produces a CHANGELOG.md entry, and outputs a deployment-ready checklist.
+license: MIT
 metadata:
-  version: "1.0.0"
+  author: pokanop
+  version: "1.0"
 ---
 
 # Release Checklist

@@ -1,8 +1,10 @@
 ---
 name: debug-and-fix
 description: Systematically debug a reported bug, implement a fix, and add a regression test. Use when the user reports "there's a bug", "this is broken", "this isn't working", "I'm getting an error", or describes unexpected behavior. Accepts a bug report (symptom, steps to reproduce, expected vs. actual), isolates the root cause through hypothesis-driven investigation, implements a minimal fix, verifies the fix, and adds a regression test.
+license: MIT
 metadata:
-  version: "1.0.0"
+  author: pokanop
+  version: "1.0"
 ---
 
 # Debug and Fix
