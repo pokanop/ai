@@ -1,8 +1,8 @@
 ---
-slug: ui-design-audit
-name: UI Design Audit
-version: 1.0.0
+name: ui-design-audit
 description: Audit a UI codebase for design system inconsistencies and produce a structured findings report. Use when the user asks to "audit the UI", "check for design inconsistencies", "find loading state issues", "review component consistency", "check the design system", or needs a systematic sweep of visual and interaction quality across the application. Produces a prioritized findings report and a PRD-compatible output that feeds directly into create-a-prd and prd-to-tasks.
+metadata:
+  version: "1.0.0"
 ---
 
 # UI Design Audit

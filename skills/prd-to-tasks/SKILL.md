@@ -1,8 +1,8 @@
 ---
-slug: prd-to-tasks
-name: PRD to Tasks
-version: 1.0.0
+name: prd-to-tasks
 description: Convert a Product Requirements Document (PRD) into a detailed, actionable task list with progress tracking. Use when the user asks to "create tasks from a PRD", "break down a PRD", "generate a task list", "plan implementation", "create an implementation plan from requirements", or needs to turn an existing PRD into trackable development tasks. Reads the PRD from plans/<name>/prd.md and produces a comprehensive tasks.md in the same directory with hierarchical task decomposition, dependency mapping, effort estimation, and progress tracking.
+metadata:
+  version: "1.0.0"
 ---
 
 # PRD to Tasks

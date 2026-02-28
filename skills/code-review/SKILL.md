@@ -1,8 +1,8 @@
 ---
-slug: code-review
-name: Code Review
-version: 1.0.0
+name: code-review
 description: Review code changes for quality, correctness, and adherence to project conventions. Use when the user asks to "review this code", "review my changes", "do a code review", "check this PR", "look at what I changed", or needs a structured quality assessment before merging. Accepts a diff, list of changed files, or branch description. Produces a structured review with severity-tiered feedback and an optional review.md for tracking resolution.
+metadata:
+  version: "1.0.0"
 ---
 
 # Code Review
