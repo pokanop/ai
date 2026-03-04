@@ -128,6 +128,8 @@ Agent Skills are folders containing instructions, scripts, and resources that ag
 | [`tasks-to-code`](skills/tasks-to-code/) | Implement engineering tasks from a task list |
 | [`ui-design-audit`](skills/ui-design-audit/) | Audit UI components for design consistency |
 
+See the [Skills README](skills/README.md) for complete documentation, recommended order of operations, and workflow details.
+
 ### Skill Directory Structure
 
 Each skill lives in its own directory inside `skills/`:
