@@ -6,7 +6,7 @@ Top-down isometric urban grids built from pixel art tiles — the visual languag
 
 **Best for:** Desktop wallpapers · Game concept art · Social media posts · Poster prints · Town/city visualizations · App assets
 
-![Isometric Pixel City Example](../../../assets/placeholder-isometric-pixel.jpeg)
+![Isometric Pixel City Example](../../../assets/placeholder-isometric-city.jpeg)
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
