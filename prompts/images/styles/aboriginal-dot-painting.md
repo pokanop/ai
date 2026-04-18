@@ -8,14 +8,7 @@ Concentric dot patterns, earth-toned ochre and terracotta palettes, dreamtime sy
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Aboriginal dot painting artwork depicting a sea turtle viewed from above, its shell pattern
-> expanded into an elaborate map of concentric dot circles and flowing dot-line paths, 1:1
-> square format. The turtle's body is the central motif with radiating concentric rings of
-> dots extending outward to fill the entire canvas. Earth-toned palette — warm ochre for the
-> land dots, burnt sienna for the paths, white and cream for water symbolism, and deep oxide
-> red against a rich dark umber background. Each individual dot is a distinct circular point
-> placed with intentional spacing. The composition radiates outward from the center in
-> organic, undulating patterns suggesting waterways and songlines.
+> Aboriginal dot painting artwork depicting a sea turtle viewed from above, its shell pattern expanded into an elaborate map of concentric dot circles and flowing dot-line paths, 1:1 square format. The turtle's body is the central motif with radiating concentric rings of dots extending outward to fill the entire canvas. Earth-toned palette — warm ochre for the land dots, burnt sienna for the paths, white and cream for water symbolism, and deep oxide red against a rich dark umber background. Each individual dot is a distinct circular point placed with intentional spacing. The composition radiates outward from the center in organic, undulating patterns suggesting waterways and songlines.
 > ```
 
 **ChatGPT**

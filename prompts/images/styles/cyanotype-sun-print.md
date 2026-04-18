@@ -8,14 +8,7 @@ Photographic prints in Prussian blue and white, with botanical subjects pressed 
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Cyanotype sun print of a collection of pressed wildflowers and ferns arranged on a
-> sheet of handmade paper, 4:5 vertical format. The botanical specimens appear as detailed
-> white silhouettes against a rich Prussian blue background — every leaf vein, petal edge,
-> and stem is captured in precise white negative detail. Fern fronds arc gracefully across
-> the composition with smaller flowers (Queen Anne's lace, daisies, and clover) scattered
-> between them. The print has the characteristic uneven exposure of a hand-coated sun print
-> — slightly darker at the center, lighter at the edges. Visible handmade paper fiber
-> texture. Subtle blue-to-white tonal gradient in the background from uneven UV exposure.
+> Cyanotype sun print of a collection of pressed wildflowers and ferns arranged on a sheet of handmade paper, 4:5 vertical format. The botanical specimens appear as detailed white silhouettes against a rich Prussian blue background — every leaf vein, petal edge, and stem is captured in precise white negative detail. Fern fronds arc gracefully across the composition with smaller flowers (Queen Anne's lace, daisies, and clover) scattered between them. The print has the characteristic uneven exposure of a hand-coated sun print — slightly darker at the center, lighter at the edges. Visible handmade paper fiber texture. Subtle blue-to-white tonal gradient in the background from uneven UV exposure.
 > ```
 
 **ChatGPT**

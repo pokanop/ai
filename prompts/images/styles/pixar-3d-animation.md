@@ -8,12 +8,7 @@ Expressive 3D animated characters with large emotive eyes, soft subsurface-scatt
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> 3D animated feature film still of a grandmother and her granddaughter baking cookies
-> together in a warm, cluttered kitchen, Pixar animation style, 16:9 landscape format. The
-> grandmother has round spectacles and flour on her nose; the little girl stands on a stool,
-> tongue poking out in concentration. Large expressive eyes with detailed iris reflections on
-> both characters. Warm amber key light from the oven with cool blue window fill. Cookies,
-> dough, and rolling pins scattered across the countertop.
+> 3D animated feature film still of a grandmother and her granddaughter baking cookies together in a warm, cluttered kitchen, Pixar animation style, 16:9 landscape format. The grandmother has round spectacles and flour on her nose; the little girl stands on a stool, tongue poking out in concentration. Large expressive eyes with detailed iris reflections on both characters. Warm amber key light from the oven with cool blue window fill. Cookies, dough, and rolling pins scattered across the countertop.
 > ```
 
 **ChatGPT**

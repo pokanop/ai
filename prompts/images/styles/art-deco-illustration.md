@@ -8,13 +8,7 @@ Gatsby-era geometric elegance with metallic gold and black palettes, radiating s
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Art Deco poster illustration of a woman in a flowing golden gown standing atop the spire
-> of a stylized skyscraper, arms outstretched, with radiating geometric sunburst beams
-> behind her, 4:5 vertical format. Strict symmetrical composition. Color palette limited to
-> gold leaf, matte black, cream, and a single accent of deep emerald green. Geometric
-> patterns — chevrons, zigzags, and stepped pyramids — frame the border. Streamlined
-> stylized figure with elongated proportions. Metallic gold foil texture on all gold elements.
-> Bold sans-serif typography reading "[TITLE]" at the bottom in a decorative cartouche.
+> Art Deco poster illustration of a woman in a flowing golden gown standing atop the spire of a stylized skyscraper, arms outstretched, with radiating geometric sunburst beams behind her, 4:5 vertical format. Strict symmetrical composition. Color palette limited to gold leaf, matte black, cream, and a single accent of deep emerald green. Geometric patterns — chevrons, zigzags, and stepped pyramids — frame the border. Streamlined stylized figure with elongated proportions. Metallic gold foil texture on all gold elements. Bold sans-serif typography reading "[TITLE]" at the bottom in a decorative cartouche.
 > ```
 
 **ChatGPT**

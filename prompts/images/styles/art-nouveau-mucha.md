@@ -8,13 +8,7 @@ Ornate decorative poster art with flowing organic lines, floral borders, muted p
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Art Nouveau poster illustration in the style of Alphonse Mucha, depicting a woman with
-> flowing auburn hair intertwined with blooming wisteria vines, 4:5 vertical format. Her hair
-> and the vines form a single continuous organic composition that fills the decorative circular
-> halo behind her head. Ornate floral border with symmetrical lily-of-the-valley motifs along
-> the sides and a decorative cartouche at the bottom reading "PRINTEMPS." Muted pastel
-> palette — dusty rose, sage green, gold, and cream on an aged ivory background. Flat
-> lithographic print texture with subtle ink registration variation.
+> Art Nouveau poster illustration in the style of Alphonse Mucha, depicting a woman with flowing auburn hair intertwined with blooming wisteria vines, 4:5 vertical format. Her hair and the vines form a single continuous organic composition that fills the decorative circular halo behind her head. Ornate floral border with symmetrical lily-of-the-valley motifs along the sides and a decorative cartouche at the bottom reading "PRINTEMPS." Muted pastel palette — dusty rose, sage green, gold, and cream on an aged ivory background. Flat lithographic print texture with subtle ink registration variation.
 > ```
 
 **ChatGPT**

@@ -8,11 +8,7 @@ Dramatic, studio-quality portrait photography with professional lighting and sha
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Photorealistic cinematic headshot photograph of an elderly lighthouse keeper with deep-set
-> blue eyes and a salt-and-pepper beard, 4:5 vertical portrait format. 85mm lens with f/1.8
-> aperture. Rembrandt lighting — single key light at 45 degrees casting a triangular
-> highlight on the shadowed cheek. Background is a softly blurred stormy coastline at dusk.
-> Weathered skin texture with sun spots and smile lines, sharp focus locked on the eyes.
+> Photorealistic cinematic headshot photograph of an elderly lighthouse keeper with deep-set blue eyes and a salt-and-pepper beard, 4:5 vertical portrait format. 85mm lens with f/1.8 aperture. Rembrandt lighting — single key light at 45 degrees casting a triangular highlight on the shadowed cheek. Background is a softly blurred stormy coastline at dusk. Weathered skin texture with sun spots and smile lines, sharp focus locked on the eyes.
 > ```
 
 **ChatGPT**

@@ -8,15 +8,7 @@
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Retrofuturistic illustration of a 1950s-style family arriving at a gleaming chrome space
-> station orbiting Earth, 16:9 landscape format. The mother wears a silver lamé jumpsuit and
-> the father a finned chrome helmet; they lead two children through a curved transparent
-> observation tube with Earth visible below. The space station has sweeping Googie
-> architecture — boomerang-shaped wings, bubble-dome observation decks, and a central spire
-> topped with a spinning atomic symbol. Polished chrome and pastel-colored surfaces — mint
-> green, coral pink, cream, and metallic silver. Visible stars and a crescent moon through
-> the transparent walls. The mood is optimistic and adventurous — the future as promised by
-> 1950s Popular Mechanics magazine covers.
+> Retrofuturistic illustration of a 1950s-style family arriving at a gleaming chrome space station orbiting Earth, 16:9 landscape format. The mother wears a silver lamé jumpsuit and the father a finned chrome helmet; they lead two children through a curved transparent observation tube with Earth visible below. The space station has sweeping Googie architecture — boomerang-shaped wings, bubble-dome observation decks, and a central spire topped with a spinning atomic symbol. Polished chrome and pastel-colored surfaces — mint green, coral pink, cream, and metallic silver. Visible stars and a crescent moon through the transparent walls. The mood is optimistic and adventurous — the future as promised by 1950s Popular Mechanics magazine covers.
 > ```
 
 **ChatGPT**

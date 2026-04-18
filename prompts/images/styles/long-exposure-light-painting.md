@@ -8,14 +8,7 @@ Night photography with flowing light trails forming subjects — steel wool spar
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Long exposure light painting photograph of a dancer's silhouette traced entirely by flowing
-> LED light trails in electric blue and molten gold, captured against a pitch-black night
-> background, 16:9 landscape format. The dancer's arms sweep upward in an arc, leaving
-> continuous glowing trails that show the full motion path — a single fluid gesture frozen
-> across several seconds of exposure. Steel wool sparks cascade from the dancer's hand in a
-> radial shower of orange light. The ground reflects the light trails in a still puddle. Star
-> points and slight diffraction spikes on the brightest light sources. Camera on tripod, long
-> exposure silky smooth light trails with no noise.
+> Long exposure light painting photograph of a dancer's silhouette traced entirely by flowing LED light trails in electric blue and molten gold, captured against a pitch-black night background, 16:9 landscape format. The dancer's arms sweep upward in an arc, leaving continuous glowing trails that show the full motion path — a single fluid gesture frozen across several seconds of exposure. Steel wool sparks cascade from the dancer's hand in a radial shower of orange light. The ground reflects the light trails in a still puddle. Star points and slight diffraction spikes on the brightest light sources. Camera on tripod, long exposure silky smooth light trails with no noise.
 > ```
 
 **ChatGPT**

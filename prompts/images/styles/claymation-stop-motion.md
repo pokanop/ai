@@ -8,13 +8,7 @@ Handcrafted clay characters and miniature sets with visible fingerprint impressi
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Stop-motion claymation still of a cheerful fox baker pulling a tray of tiny clay croissants
-> from a miniature clay oven, 16:9 landscape format. The fox is sculpted from orange and
-> cream-colored modeling clay with visible fingerprint impressions and tool marks on every
-> surface. The bakery interior is a handbuilt miniature set — clay shelves lined with clay
-> baguettes, a tiny chalkboard menu, and flour dust (fine white powder) on the clay counter.
-> Warm tungsten key light from inside the oven casting a golden glow, with soft fill light
-> from above. Shallow depth of field emphasizing the handmade imperfections.
+> Stop-motion claymation still of a cheerful fox baker pulling a tray of tiny clay croissants from a miniature clay oven, 16:9 landscape format. The fox is sculpted from orange and cream-colored modeling clay with visible fingerprint impressions and tool marks on every surface. The bakery interior is a handbuilt miniature set — clay shelves lined with clay baguettes, a tiny chalkboard menu, and flour dust (fine white powder) on the clay counter. Warm tungsten key light from inside the oven casting a golden glow, with soft fill light from above. Shallow depth of field emphasizing the handmade imperfections.
 > ```
 
 **ChatGPT**

@@ -8,14 +8,7 @@ Bold geometric compositions with limited red/black/cream palettes, diagonal text
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Soviet Constructivist propaganda poster of a woman factory worker raising a wrench
-> triumphantly skyward, 4:5 vertical format. Bold geometric composition with strong dynamic
-> diagonal lines radiating from the lower left to upper right. Strictly limited 4-color
-> palette: Soviet red, pure black, cream, and a single accent of industrial steel grey.
-> The figure is rendered as a high-contrast photomontage cutout layered over geometric
-> shapes — circles, triangles, and bold red bars. A diagonal banner cuts across the upper
-> right corner bearing bold Cyrillic-style block text reading "[СЛOGAN]". Aged paper texture
-> with slight foxing and fold creases. Inspired by El Lissitzky and Alexander Rodchenko.
+> Soviet Constructivist propaganda poster of a woman factory worker raising a wrench triumphantly skyward, 4:5 vertical format. Bold geometric composition with strong dynamic diagonal lines radiating from the lower left to upper right. Strictly limited 4-color palette: Soviet red, pure black, cream, and a single accent of industrial steel grey. The figure is rendered as a high-contrast photomontage cutout layered over geometric shapes — circles, triangles, and bold red bars. A diagonal banner cuts across the upper right corner bearing bold Cyrillic-style block text reading "[СЛOGAN]". Aged paper texture with slight foxing and fold creases. Inspired by El Lissitzky and Alexander Rodchenko.
 > ```
 
 **ChatGPT**

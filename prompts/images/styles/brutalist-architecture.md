@@ -8,14 +8,7 @@ Monolithic raw concrete forms with dramatic shadows, geometric repetition, and o
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Architectural photograph of a massive Brutalist concrete building with a repeating grid of
-> deep-set rectangular windows casting dramatic geometric shadows, 16:9 landscape format.
-> Raw béton brut concrete surface with visible board-formed texture — the wood grain of the
-> formwork is imprinted into the concrete. Overcast grey sky creating flat diffused lighting
-> that emphasizes the geometric forms and shadow patterns. A single small human figure
-> stands at the base for scale, dwarfed by the monolithic structure. Desaturated color
-> palette — concrete grey, charcoal shadows, and a cold steel-blue sky. Shot from a low
-> angle looking upward to emphasize the building's imposing mass.
+> Architectural photograph of a massive Brutalist concrete building with a repeating grid of deep-set rectangular windows casting dramatic geometric shadows, 16:9 landscape format. Raw béton brut concrete surface with visible board-formed texture — the wood grain of the formwork is imprinted into the concrete. Overcast grey sky creating flat diffused lighting that emphasizes the geometric forms and shadow patterns. A single small human figure stands at the base for scale, dwarfed by the monolithic structure. Desaturated color palette — concrete grey, charcoal shadows, and a cold steel-blue sky. Shot from a low angle looking upward to emphasize the building's imposing mass.
 > ```
 
 **ChatGPT**

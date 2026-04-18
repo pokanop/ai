@@ -8,12 +8,7 @@ Two images blended into a single frame — a silhouette filled with a landscape 
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Double exposure photograph in 4:5 vertical portrait format. The dark silhouette of a
-> howling wolf is filled with a highly detailed scene of a northern pine forest under the
-> aurora borealis — green and violet curtains of light weaving between the treetops. The two
-> images blend seamlessly — the wolf's fur edges dissolve into pine needles while the aurora
-> fills the body with ethereal light. Bright clean white background outside the silhouette.
-> Stars visible through the thinner parts of the wolf's form.
+> Double exposure photograph in 4:5 vertical portrait format. The dark silhouette of a howling wolf is filled with a highly detailed scene of a northern pine forest under the aurora borealis — green and violet curtains of light weaving between the treetops. The two images blend seamlessly — the wolf's fur edges dissolve into pine needles while the aurora fills the body with ethereal light. Bright clean white background outside the silhouette. Stars visible through the thinner parts of the wolf's form.
 > ```
 
 **ChatGPT**

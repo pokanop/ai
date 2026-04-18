@@ -8,14 +8,7 @@ Intentionally corrupted digital imagery with pixel sorting, color channel displa
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Glitch art portrait of a woman's face fragmenting into corrupted data streams, 4:5 vertical
-> format. The left half of the face is photorealistic and sharp; the right half dissolves into
-> horizontal scan line tears, pixel-sorted color bands, and RGB color channel displacement —
-> red shifted left, blue shifted right. Vertical bands of stretched and smeared pixels
-> cascade downward like a waterfall of broken data. JPEG compression artifact blocks visible
-> in the transition zones. The background is pure black with occasional glitched noise
-> bursts of neon pink and electric cyan. The overall effect is simultaneously beautiful and
-> unsettling — order disintegrating into digital chaos.
+> Glitch art portrait of a woman's face fragmenting into corrupted data streams, 4:5 vertical format. The left half of the face is photorealistic and sharp; the right half dissolves into horizontal scan line tears, pixel-sorted color bands, and RGB color channel displacement — red shifted left, blue shifted right. Vertical bands of stretched and smeared pixels cascade downward like a waterfall of broken data. JPEG compression artifact blocks visible in the transition zones. The background is pure black with occasional glitched noise bursts of neon pink and electric cyan. The overall effect is simultaneously beautiful and unsettling — order disintegrating into digital chaos.
 > ```
 
 **ChatGPT**

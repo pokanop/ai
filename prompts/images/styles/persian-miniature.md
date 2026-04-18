@@ -8,14 +8,7 @@ Highly detailed flat-perspective scenes with jewel-toned pigments, gold leaf acc
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Persian miniature painting of a royal garden scene — a prince and princess seated on
-> cushions beneath a flowering plum tree, attended by servants pouring tea, while a
-> nightingale sings on a branch above them, 4:5 vertical format. Flat isometric perspective
-> with no vanishing point — the garden is seen from a slightly elevated angle. Jewel-toned
-> gouache pigments: lapis lazuli blue sky, vermillion robes, emerald foliage, and gold leaf
-> accents on the clothing and tree. Intricate geometric border with interlocking star
-> patterns in turquoise and gold. Figures have serene almond-shaped eyes and delicate
-> features. Inspired by the Shahnameh and Safavid court painting tradition.
+> Persian miniature painting of a royal garden scene — a prince and princess seated on cushions beneath a flowering plum tree, attended by servants pouring tea, while a nightingale sings on a branch above them, 4:5 vertical format. Flat isometric perspective with no vanishing point — the garden is seen from a slightly elevated angle. Jewel-toned gouache pigments: lapis lazuli blue sky, vermillion robes, emerald foliage, and gold leaf accents on the clothing and tree. Intricate geometric border with interlocking star patterns in turquoise and gold. Figures have serene almond-shaped eyes and delicate features. Inspired by the Shahnameh and Safavid court painting tradition.
 > ```
 
 **ChatGPT**

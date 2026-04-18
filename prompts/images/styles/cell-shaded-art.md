@@ -8,11 +8,7 @@ Flat-shaded, stylized 3D art with thick outlines and hard shadow edges, inspired
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Cell-shaded 3D video game scene of a lone samurai standing on a windswept cliff edge,
-> overlooking a vast valley of swaying golden grass, 16:9 landscape format. Cherry blossom
-> petals drifting on the wind. Thick black outlines around every form, flat vibrant color fills
-> with no soft gradients, hard-edged shadow shapes that snap between exactly two tones. Art
-> style evokes The Legend of Zelda: Breath of the Wild — painterly, bold, and serene.
+> Cell-shaded 3D video game scene of a lone samurai standing on a windswept cliff edge, overlooking a vast valley of swaying golden grass, 16:9 landscape format. Cherry blossom petals drifting on the wind. Thick black outlines around every form, flat vibrant color fills with no soft gradients, hard-edged shadow shapes that snap between exactly two tones. Art style evokes The Legend of Zelda: Breath of the Wild — painterly, bold, and serene.
 > ```
 
 **ChatGPT**

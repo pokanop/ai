@@ -8,14 +8,7 @@ Mind-bending recursive geometry with Penrose stairs, impossible triangles, gravi
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Detailed architectural illustration in the style of M.C. Escher depicting an impossible
-> library where staircases connect floors that loop back onto themselves, 16:9 landscape
-> format. Readers walk on staircases that defy gravity — some walk upside-down on the
-> underside of bridges, others ascend stairs that seamlessly become the ceiling. Bookshelves
-> line every surface including walls and ceilings. Penrose triangle geometry embedded in the
-> staircase structure. Precise technical pen-and-ink rendering with crosshatch shading on a
-> cream paper background. Multiple impossible vanishing points creating a spatial paradox.
-> Calm, contemplative atmosphere despite the impossibility.
+> Detailed architectural illustration in the style of M.C. Escher depicting an impossible library where staircases connect floors that loop back onto themselves, 16:9 landscape format. Readers walk on staircases that defy gravity — some walk upside-down on the underside of bridges, others ascend stairs that seamlessly become the ceiling. Bookshelves line every surface including walls and ceilings. Penrose triangle geometry embedded in the staircase structure. Precise technical pen-and-ink rendering with crosshatch shading on a cream paper background. Multiple impossible vanishing points creating a spatial paradox. Calm, contemplative atmosphere despite the impossibility.
 > ```
 
 **ChatGPT**

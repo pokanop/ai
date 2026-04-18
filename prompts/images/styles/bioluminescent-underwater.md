@@ -8,13 +8,7 @@ Deep-sea scenes illuminated entirely by organic bioluminescent light — glowing
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Underwater photograph of an enormous jellyfish with a translucent bell and dozens of
-> trailing tentacles, reimagined as a bioluminescent deep-sea organism, 16:9 landscape
-> format. The jellyfish emits a vivid organic glow in neon blue, teal, and electric green, as
-> if lit from within by millions of microscopic light-producing cells. Surrounding water is
-> pitch black — the only illumination comes from the jellyfish itself and a cloud of tiny
-> glowing plankton particles drifting through the current. Subtle aquatic caustic light
-> patterns ripple across the tentacles.
+> Underwater photograph of an enormous jellyfish with a translucent bell and dozens of trailing tentacles, reimagined as a bioluminescent deep-sea organism, 16:9 landscape format. The jellyfish emits a vivid organic glow in neon blue, teal, and electric green, as if lit from within by millions of microscopic light-producing cells. Surrounding water is pitch black — the only illumination comes from the jellyfish itself and a cloud of tiny glowing plankton particles drifting through the current. Subtle aquatic caustic light patterns ripple across the tentacles.
 > ```
 
 **ChatGPT**

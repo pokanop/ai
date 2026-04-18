@@ -8,14 +8,7 @@ Antique photographic process aesthetic with sepia-metallic tones, mirror-like re
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Daguerreotype portrait of a stern Victorian-era blacksmith holding a hammer across his
-> chest, 4:5 vertical format. The image has the distinctive silver-metallic sheen of a true
-> daguerreotype — the surface appears to shift between positive and negative depending on
-> the viewing angle. Soft oval vignette fading to dark at the edges. Warm sepia and cool
-> silver tones. Long exposure apparent — the subject is perfectly still but there is a slight
-> ghosting on the fingers suggesting micro-movement. Surface imperfections: fine scratches,
-> small spots of oxidation, and a thin crack across the upper right corner. Mounted in an
-> ornate gold-leaf decorative mat with embossed floral corners.
+> Daguerreotype portrait of a stern Victorian-era blacksmith holding a hammer across his chest, 4:5 vertical format. The image has the distinctive silver-metallic sheen of a true daguerreotype — the surface appears to shift between positive and negative depending on the viewing angle. Soft oval vignette fading to dark at the edges. Warm sepia and cool silver tones. Long exposure apparent — the subject is perfectly still but there is a slight ghosting on the fingers suggesting micro-movement. Surface imperfections: fine scratches, small spots of oxidation, and a thin crack across the upper right corner. Mounted in an ornate gold-leaf decorative mat with embossed floral corners.
 > ```
 
 **ChatGPT**

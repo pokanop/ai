@@ -8,13 +8,7 @@ Translucent, crystalline subjects carved from clear and frosted ice or glass. In
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Photograph of an intricate ice sculpture of a rearing horse on a mirrored pedestal in a
-> dark gallery, 16:9 landscape format. The horse is carved from crystal-clear ice with frosted
-> matte sections on the mane, tail, and hooves creating contrast against the transparent body.
-> Internal refractions split a single white spotlight into rainbow caustic patterns on the
-> mirrored surface below. Fine condensation droplets bead on the surface, catching the light
-> like tiny diamonds. Cold blue-white color palette with a deep charcoal background. A single
-> dramatic spotlight from above-right creating sharp highlights along the ice edges.
+> Photograph of an intricate ice sculpture of a rearing horse on a mirrored pedestal in a dark gallery, 16:9 landscape format. The horse is carved from crystal-clear ice with frosted matte sections on the mane, tail, and hooves creating contrast against the transparent body. Internal refractions split a single white spotlight into rainbow caustic patterns on the mirrored surface below. Fine condensation droplets bead on the surface, catching the light like tiny diamonds. Cold blue-white color palette with a deep charcoal background. A single dramatic spotlight from above-right creating sharp highlights along the ice edges.
 > ```
 
 **ChatGPT**

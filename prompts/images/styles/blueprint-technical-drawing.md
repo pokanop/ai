@@ -8,14 +8,7 @@ White-on-blue (or dark-on-white) engineering schematic style with isometric expl
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Engineering blueprint of a vintage espresso machine rendered as an isometric exploded-view
-> technical drawing, 16:9 landscape format. White linework on a deep navy blueprint
-> background with subtle grid lines. The machine is disassembled into its component parts —
-> boiler, portafilter, group head, steam wand, pressure gauge — floating apart in an
-> exploded isometric view with thin leader lines connecting each part to its assembly position.
-> Dimension lines with measurements in millimeters. Section callout bubbles labeled A-A and
-> B-B showing cross-sections of the boiler and group head. Part numbers in circles.
-> Technical sans-serif annotation text. Precise, clean draftsmanship.
+> Engineering blueprint of a vintage espresso machine rendered as an isometric exploded-view technical drawing, 16:9 landscape format. White linework on a deep navy blueprint background with subtle grid lines. The machine is disassembled into its component parts — boiler, portafilter, group head, steam wand, pressure gauge — floating apart in an exploded isometric view with thin leader lines connecting each part to its assembly position. Dimension lines with measurements in millimeters. Section callout bubbles labeled A-A and B-B showing cross-sections of the boiler and group head. Part numbers in circles. Technical sans-serif annotation text. Precise, clean draftsmanship.
 > ```
 
 **ChatGPT**

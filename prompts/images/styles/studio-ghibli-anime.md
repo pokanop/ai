@@ -8,12 +8,7 @@ Lush, hand-painted watercolor environments with emotionally expressive character
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Anime movie still of a young girl joyfully riding on the back of a giant fluffy calico cat
-> bounding through a meadow of wildflowers at golden hour, Studio Ghibli style by Hayao
-> Miyazaki, 16:9 landscape format. Windswept hair and skirt flowing behind her. The meadow
-> is a lush hand-painted watercolor landscape with towering cumulus clouds, buttercups,
-> poppies, and dappled light. The cat has soft, expressive eyes and fur ruffled by the breeze.
-> Warm golden atmospheric lighting with lens flare from the setting sun.
+> Anime movie still of a young girl joyfully riding on the back of a giant fluffy calico cat bounding through a meadow of wildflowers at golden hour, Studio Ghibli style by Hayao Miyazaki, 16:9 landscape format. Windswept hair and skirt flowing behind her. The meadow is a lush hand-painted watercolor landscape with towering cumulus clouds, buttercups, poppies, and dappled light. The cat has soft, expressive eyes and fur ruffled by the breeze. Warm golden atmospheric lighting with lens flare from the setting sun.
 > ```
 
 **ChatGPT**

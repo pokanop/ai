@@ -8,13 +8,7 @@ Extreme close-up photography revealing microscopic details invisible to the nake
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Extreme cinematic macro photograph of a single honeybee covered in golden pollen grains,
-> perched on a lavender flower, 16:9 landscape format. Shot with a 100mm macro lens at
-> f/2.8. Reveal microscopic details invisible to the naked eye — individual pollen grains
-> clinging to the bee's fuzzy thorax, the iridescent facets of its compound eye, translucent
-> veins in the wings. The lavender field background is transformed into a smooth creamy
-> purple bokeh wash. Dramatic side-lighting from the left, golden hour warmth, creating
-> strong highlights on the pollen and deep shadows between the wing segments.
+> Extreme cinematic macro photograph of a single honeybee covered in golden pollen grains, perched on a lavender flower, 16:9 landscape format. Shot with a 100mm macro lens at f/2.8. Reveal microscopic details invisible to the naked eye — individual pollen grains clinging to the bee's fuzzy thorax, the iridescent facets of its compound eye, translucent veins in the wings. The lavender field background is transformed into a smooth creamy purple bokeh wash. Dramatic side-lighting from the left, golden hour warmth, creating strong highlights on the pollen and deep shadows between the wing segments.
 > ```
 
 **ChatGPT**

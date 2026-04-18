@@ -8,11 +8,7 @@ Clean, stylized 3D profile pictures for social media, gaming platforms, and prof
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Modern 3D avatar render of a red fox wearing a black turtleneck sweater and round
-> tortoiseshell glasses, 1:1 square profile picture format. Stylized geometric features with
-> clean smooth surfaces and a subtle rim light separating the character from the background.
-> Vibrant glowing teal-to-purple gradient background. High-end octane render quality with
-> soft subsurface scattering. Friendly, confident expression.
+> Modern 3D avatar render of a red fox wearing a black turtleneck sweater and round tortoiseshell glasses, 1:1 square profile picture format. Stylized geometric features with clean smooth surfaces and a subtle rim light separating the character from the background. Vibrant glowing teal-to-purple gradient background. High-end octane render quality with soft subsurface scattering. Friendly, confident expression.
 > ```
 
 **ChatGPT**

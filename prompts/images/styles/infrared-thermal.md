@@ -8,14 +8,7 @@ False-color heat-map aesthetic where hot subjects glow in yellows, reds, and whi
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Infrared thermal camera photograph of a large cat (tiger) prowling through a dense forest
-> at night, 16:9 landscape format. The tiger's body glows intensely in bright yellows and
-> oranges — hottest at the face, ears, and paw pads — with its core radiating white-hot
-> thermal energy. The tail and extremities cool to warm reds and magentas. The surrounding
-> foliage is rendered in cool blues and deep purples, with slightly warmer teal patches where
-> sunlight heated the leaves earlier. The ground shows blue-purple with faint warm footprints
-> trailing behind the tiger. False-color thermal palette with a temperature scale bar along
-> the right edge. Slight pixelation characteristic of thermal sensor resolution.
+> Infrared thermal camera photograph of a large cat (tiger) prowling through a dense forest at night, 16:9 landscape format. The tiger's body glows intensely in bright yellows and oranges — hottest at the face, ears, and paw pads — with its core radiating white-hot thermal energy. The tail and extremities cool to warm reds and magentas. The surrounding foliage is rendered in cool blues and deep purples, with slightly warmer teal patches where sunlight heated the leaves earlier. The ground shows blue-purple with faint warm footprints trailing behind the tiger. False-color thermal palette with a temperature scale bar along the right edge. Slight pixelation characteristic of thermal sensor resolution.
 > ```
 
 **ChatGPT**

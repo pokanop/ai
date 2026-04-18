@@ -8,13 +8,7 @@ Screen-printed aesthetic with limited 3–4 color palettes, heavy ink texture, h
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Screen-printed concert poster illustration for a fictional band called "The Midnight Owls"
-> playing at "The Roxy" on October 31st, 11:17 vertical format. A giant spectral owl with
-> spread wings perches atop a crescent moon over a city skyline silhouette. Limited 4-color
-> screen print — midnight navy, burnt orange, cream, and metallic gold on kraft paper stock.
-> Visible screen-print texture: halftone dots in gradients, slight ink bleed at edges, and
-> paper fiber visible through transparent ink layers. Bold hand-drawn serif typography with
-> the band name arching over the owl. Inspired by the Fillmore poster tradition.
+> Screen-printed concert poster illustration for a fictional band called "The Midnight Owls" playing at "The Roxy" on October 31st, 11:17 vertical format. A giant spectral owl with spread wings perches atop a crescent moon over a city skyline silhouette. Limited 4-color screen print — midnight navy, burnt orange, cream, and metallic gold on kraft paper stock. Visible screen-print texture: halftone dots in gradients, slight ink bleed at edges, and paper fiber visible through transparent ink layers. Bold hand-drawn serif typography with the band name arching over the owl. Inspired by the Fillmore poster tradition.
 > ```
 
 **ChatGPT**

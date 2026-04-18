@@ -8,14 +8,7 @@ Real-world scenes — cities, landscapes, events — photographed to look like t
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Tilt-shift miniature photograph of a bustling Tokyo intersection at midday seen from a
-> high rooftop, 16:9 landscape format. The extreme tilt-shift lens effect makes everything
-> appear toy-sized — tiny cars queue at miniature traffic lights, toy-like pedestrians cross
-> in neat streams, and buildings look like plastic model kits. Only a narrow horizontal band
-> across the center is in sharp focus; everything above and below dissolves into smooth
-> creamy blur. Colors are slightly oversaturated — the red brake lights, yellow taxis, and
-> green trees pop with toy-like vibrancy. Bright, even overhead daylight eliminating most
-> shadows to reinforce the model-like illusion.
+> Tilt-shift miniature photograph of a bustling Tokyo intersection at midday seen from a high rooftop, 16:9 landscape format. The extreme tilt-shift lens effect makes everything appear toy-sized — tiny cars queue at miniature traffic lights, toy-like pedestrians cross in neat streams, and buildings look like plastic model kits. Only a narrow horizontal band across the center is in sharp focus; everything above and below dissolves into smooth creamy blur. Colors are slightly oversaturated — the red brake lights, yellow taxis, and green trees pop with toy-like vibrancy. Bright, even overhead daylight eliminating most shadows to reinforce the model-like illusion.
 > ```
 
 **ChatGPT**

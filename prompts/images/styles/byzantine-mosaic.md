@@ -8,14 +8,7 @@ Gold-leaf backgrounds, tesserae tile textures, hieratic frontal poses, halos, an
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Byzantine mosaic artwork depicting a regal empress holding a chalice and an orb, standing
-> between two attendants, 16:9 landscape format. Entirely composed of tiny square glass
-> tesserae tiles — each individual tile visible with slight angular variation catching
-> light differently. Opulent gold leaf tesserae background radiating sacred light. The
-> empress has a jeweled crown, a golden halo, and flat hieratic frontal pose with large
-> solemn almond-shaped eyes. Rich jewel-toned tesserae — deep lapis lazuli blue robes,
-> emerald green accents, ruby red borders, and amber gold throughout. Inspired by the
-> mosaics of San Vitale in Ravenna.
+> Byzantine mosaic artwork depicting a regal empress holding a chalice and an orb, standing between two attendants, 16:9 landscape format. Entirely composed of tiny square glass tesserae tiles — each individual tile visible with slight angular variation catching light differently. Opulent gold leaf tesserae background radiating sacred light. The empress has a jeweled crown, a golden halo, and flat hieratic frontal pose with large solemn almond-shaped eyes. Rich jewel-toned tesserae — deep lapis lazuli blue robes, emerald green accents, ruby red borders, and amber gold throughout. Inspired by the mosaics of San Vitale in Ravenna.
 > ```
 
 **ChatGPT**

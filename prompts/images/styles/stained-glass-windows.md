@@ -8,12 +8,7 @@ Luminous scenes constructed from fractured panes of vibrant colored glass, separ
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Magnificent stained glass window depicting a peacock with its tail feathers fully spread
-> in a radial fan, surrounded by intertwining flowering vines, 4:5 vertical format. The tail
-> feathers are composed of hundreds of jewel-toned glass panes — sapphire blue, emerald
-> green, and amber gold eye-spots — separated by thick dark lead came lines. The body is
-> deep royal purple glass. Brilliant volumetric god rays streaming through from behind,
-> casting colorful projected light patterns. Inspired by Gothic cathedral rose windows.
+> Magnificent stained glass window depicting a peacock with its tail feathers fully spread in a radial fan, surrounded by intertwining flowering vines, 4:5 vertical format. The tail feathers are composed of hundreds of jewel-toned glass panes — sapphire blue, emerald green, and amber gold eye-spots — separated by thick dark lead came lines. The body is deep royal purple glass. Brilliant volumetric god rays streaming through from behind, casting colorful projected light patterns. Inspired by Gothic cathedral rose windows.
 > ```
 
 **ChatGPT**

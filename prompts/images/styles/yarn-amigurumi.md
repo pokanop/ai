@@ -8,12 +8,7 @@ Cozy, tactile scenes where everything — characters and environments — is cra
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Macro photograph of a tiny crocheted baby dragon sleeping on top of a stack of miniature
-> knitted books, 16:9 landscape format. The dragon is made from emerald-green and gold yarn
-> with individually visible stitches and tiny fuzzy fibers catching the light along its wings.
-> One nostril releases a single wisp of crocheted orange "flame" yarn. The books have
-> different colored yarn spines. Everything sits on a knitted patchwork quilt. Soft warm
-> directional lighting from a miniature yarn fireplace glowing in the background.
+> Macro photograph of a tiny crocheted baby dragon sleeping on top of a stack of miniature knitted books, 16:9 landscape format. The dragon is made from emerald-green and gold yarn with individually visible stitches and tiny fuzzy fibers catching the light along its wings. One nostril releases a single wisp of crocheted orange "flame" yarn. The books have different colored yarn spines. Everything sits on a knitted patchwork quilt. Soft warm directional lighting from a miniature yarn fireplace glowing in the background.
 > ```
 
 **ChatGPT**

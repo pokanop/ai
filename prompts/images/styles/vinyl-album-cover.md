@@ -8,13 +8,7 @@ Classic album cover compositions designed for the square vinyl format — bold i
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Album cover art for a jazz record titled "Midnight in Blue," 1:1 square format. A lone
-> saxophone player silhouetted against a smoky blue spotlight in an intimate underground
-> club. Deep midnight blue and warm amber color palette. Film grain texture throughout.
-> The smoke catches the spotlight beam in volumetric layers. Moody, cinematic composition
-> with the musician slightly off-center. A vintage cocktail glass on a small table in the
-> foreground. Inspired by the iconic Blue Note Records cover photography of Francis Wolff.
-> Bold sans-serif typography reading "MIDNIGHT IN BLUE" at the top in cream white.
+> Album cover art for a jazz record titled "Midnight in Blue," 1:1 square format. A lone saxophone player silhouetted against a smoky blue spotlight in an intimate underground club. Deep midnight blue and warm amber color palette. Film grain texture throughout. The smoke catches the spotlight beam in volumetric layers. Moody, cinematic composition with the musician slightly off-center. A vintage cocktail glass on a small table in the foreground. Inspired by the iconic Blue Note Records cover photography of Francis Wolff. Bold sans-serif typography reading "MIDNIGHT IN BLUE" at the top in cream white.
 > ```
 
 **ChatGPT**

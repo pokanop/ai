@@ -8,14 +8,7 @@ Dramatic false-color SEM (Scanning Electron Microscope) imagery at extreme magni
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> False-color scanning electron microscope (SEM) image of a single pollen grain from a
-> sunflower at 5000x magnification, 1:1 square format. The pollen grain is roughly spherical
-> with a surface covered in intricate spiky protrusions — each spike perfectly geometric with
-> a hexagonal base. False-color applied: the spikes are rendered in metallic gold, the body
-> in deep teal, and the background in charcoal black. Characteristic SEM depth-of-field —
-> sharp across the near hemisphere, slightly soft on the far side. Bright electron beam
-> highlighting creating stark metallic reflections on the spike tips. Scale bar reading
-> "10 μm" in the lower right corner. Specimen ID label in the upper left.
+> False-color scanning electron microscope (SEM) image of a single pollen grain from a sunflower at 5000x magnification, 1:1 square format. The pollen grain is roughly spherical with a surface covered in intricate spiky protrusions — each spike perfectly geometric with a hexagonal base. False-color applied: the spikes are rendered in metallic gold, the body in deep teal, and the background in charcoal black. Characteristic SEM depth-of-field — sharp across the near hemisphere, slightly soft on the far side. Bright electron beam highlighting creating stark metallic reflections on the spike tips. Scale bar reading "10 μm" in the lower right corner. Specimen ID label in the upper left.
 > ```
 
 **ChatGPT**

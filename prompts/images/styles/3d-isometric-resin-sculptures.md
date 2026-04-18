@@ -8,14 +8,7 @@ Open, handcrafted miniature resin sculptures with richly textured surfaces and i
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> 3D isometric render of a miniature open-top handcrafted resin sculpture featuring an
-> enchanted treehouse nestled in a tiny ancient forest, 1:1 square format. The sculpture is
-> an open diorama with no glass enclosure — every element is exposed and touchable, like
-> an artisan-made collectible figurine. Glowing mushrooms at the base emit warm amber
-> light. Richly textured matte and satin resin finish with visible hand-sculpted details —
-> tiny bark grooves on the tree, individually shaped leaves, moss textures on rocks. Soft
-> studio lighting emphasizing surface texture and depth. Candy-bright greens, ambers, and
-> purples against a pure white background.
+> 3D isometric render of a miniature open-top handcrafted resin sculpture featuring an enchanted treehouse nestled in a tiny ancient forest, 1:1 square format. The sculpture is an open diorama with no glass enclosure — every element is exposed and touchable, like an artisan-made collectible figurine. Glowing mushrooms at the base emit warm amber light. Richly textured matte and satin resin finish with visible hand-sculpted details — tiny bark grooves on the tree, individually shaped leaves, moss textures on rocks. Soft studio lighting emphasizing surface texture and depth. Candy-bright greens, ambers, and purples against a pure white background.
 > ```
 
 **ChatGPT**

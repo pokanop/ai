@@ -8,14 +8,7 @@ Arcimboldo-inspired portraits composed entirely from arranged fruits, vegetables
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Arcimboldo-style portrait composed entirely of fresh fruits and vegetables, viewed from
-> the front against a dark background, 4:5 vertical format. The hair is a cascade of purple
-> grapes and blackberries. The forehead is a smooth butternut squash. Eyes are two halved
-> kiwi fruits with blueberry pupils. The nose is a perfectly ripe strawberry, mouth formed
-> by a curved red chili pepper. Cheeks are ripe peaches, chin is a small pear. The neck and
-> shoulders are layered artichoke leaves and banana peels. Each element is photorealistic
-> with visible texture — droplets of moisture on the grapes, fine hairs on the peach skin.
-> Dramatic Rembrandt lighting from the upper left, dark moody background, 8K macro detail.
+> Arcimboldo-style portrait composed entirely of fresh fruits and vegetables, viewed from the front against a dark background, 4:5 vertical format. The hair is a cascade of purple grapes and blackberries. The forehead is a smooth butternut squash. Eyes are two halved kiwi fruits with blueberry pupils. The nose is a perfectly ripe strawberry, mouth formed by a curved red chili pepper. Cheeks are ripe peaches, chin is a small pear. The neck and shoulders are layered artichoke leaves and banana peels. Each element is photorealistic with visible texture — droplets of moisture on the grapes, fine hairs on the peach skin. Dramatic Rembrandt lighting from the upper left, dark moody background, 8K macro detail.
 > ```
 
 **ChatGPT**

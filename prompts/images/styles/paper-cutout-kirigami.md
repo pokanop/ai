@@ -8,12 +8,7 @@ Multi-layered paper craft scenes with visible paper textures, crisp cut edges, a
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> 3D layered paper-cut illustration of a hot air balloon festival over a mountain valley at
-> sunrise, 16:9 landscape format. Seven colorful balloons at different depths, each cut from
-> a different colored paper — crimson, saffron, teal, coral. Multiple layers of thick textured
-> paper forming mountain ridges, pine trees, and wispy clouds. Deep drop shadows separate
-> each layer creating a pronounced sense of depth. Soft warm directional light from the
-> right, making the paper edges glow.
+> 3D layered paper-cut illustration of a hot air balloon festival over a mountain valley at sunrise, 16:9 landscape format. Seven colorful balloons at different depths, each cut from a different colored paper — crimson, saffron, teal, coral. Multiple layers of thick textured paper forming mountain ridges, pine trees, and wispy clouds. Deep drop shadows separate each layer creating a pronounced sense of depth. Soft warm directional light from the right, making the paper edges glow.
 > ```
 
 **ChatGPT**

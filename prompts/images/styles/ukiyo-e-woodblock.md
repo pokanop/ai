@@ -8,12 +8,7 @@ Traditional Japanese woodblock printing with flat color planes separated by bold
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Traditional Japanese Ukiyo-e woodblock print depicting a giant octopus emerging from
-> towering crashing waves near a small wooden fishing boat with two terrified fishermen,
-> 16:9 landscape format. Mount Fuji visible in the distant background through sea spray.
-> Flat color planes separated by bold black contour lines in the Edo-period style.
-> Historically authentic muted pigments — indigo for the sea, vermillion for the octopus,
-> ochre for the boat. Stylized curling wave crests. Subtle aged washi paper texture.
+> Traditional Japanese Ukiyo-e woodblock print depicting a giant octopus emerging from towering crashing waves near a small wooden fishing boat with two terrified fishermen, 16:9 landscape format. Mount Fuji visible in the distant background through sea spray. Flat color planes separated by bold black contour lines in the Edo-period style. Historically authentic muted pigments — indigo for the sea, vermillion for the octopus, ochre for the boat. Stylized curling wave crests. Subtle aged washi paper texture.
 > ```
 
 **ChatGPT**

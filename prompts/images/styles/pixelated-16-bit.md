@@ -8,12 +8,7 @@ Authentic retro video game pixel art evoking the SNES and Sega Genesis era — l
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> 16-bit pixel art scene of a tiny knight with a glowing blue sword facing an enormous
-> fire-breathing dragon inside a treasure-filled cavern, 16:9 landscape format. Authentic
-> SNES visual style. Limited curated color palette with warm golds for treasure, fiery oranges
-> for the dragon's breath, and cool blues for the knight's enchanted blade. Each individual
-> pixel clearly visible with crisp boundaries — no anti-aliasing. Side-scrolling perspective
-> with the dragon taking up most of the right side of the frame.
+> 16-bit pixel art scene of a tiny knight with a glowing blue sword facing an enormous fire-breathing dragon inside a treasure-filled cavern, 16:9 landscape format. Authentic SNES visual style. Limited curated color palette with warm golds for treasure, fiery oranges for the dragon's breath, and cool blues for the knight's enchanted blade. Each individual pixel clearly visible with crisp boundaries — no anti-aliasing. Side-scrolling perspective with the dragon taking up most of the right side of the frame.
 > ```
 
 **ChatGPT**

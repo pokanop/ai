@@ -8,12 +8,7 @@ Miniature tilt-shift–style architectural models of real or imaginary landmarks
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Highly detailed miniature architectural diorama of the Roman Colosseum during a gladiator
-> match, 16:9 landscape format. Pure white background. Tilt-shift photography effect
-> making it appear like a tiny handcrafted model. Include miniature details — sculpted
-> figurines of spectators filling the stands, tiny gladiators in the arena, sponge-material
-> cypress trees surrounding the exterior. Warm studio directional lighting from the upper
-> right casting soft shadows across the arched facade.
+> Highly detailed miniature architectural diorama of the Roman Colosseum during a gladiator match, 16:9 landscape format. Pure white background. Tilt-shift photography effect making it appear like a tiny handcrafted model. Include miniature details — sculpted figurines of spectators filling the stands, tiny gladiators in the arena, sponge-material cypress trees surrounding the exterior. Warm studio directional lighting from the upper right casting soft shadows across the arched facade.
 > ```
 
 **ChatGPT**

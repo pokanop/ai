@@ -8,14 +8,7 @@ Subjects rendered as thread on fabric with visible canvas weave, cross-stitch gr
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Close-up photograph of a completed cross-stitch embroidery piece in a round wooden hoop,
-> depicting a cozy cottage with a thatched roof surrounded by a wildflower garden at sunset,
-> 1:1 square format. Every element is rendered in tiny X-shaped cross-stitches on cream
-> Aida cloth — the visible grid of the fabric weave forms the underlying structure. Rich
-> DMC thread colors: warm golden yellows for the sunset sky, forest greens for the garden,
-> rustic browns for the cottage, and pops of lavender, coral, and poppy red in the flowers.
-> Soft natural window light highlighting the raised thread texture and subtle shadows in the
-> stitch valleys.
+> Close-up photograph of a completed cross-stitch embroidery piece in a round wooden hoop, depicting a cozy cottage with a thatched roof surrounded by a wildflower garden at sunset, 1:1 square format. Every element is rendered in tiny X-shaped cross-stitches on cream Aida cloth — the visible grid of the fabric weave forms the underlying structure. Rich DMC thread colors: warm golden yellows for the sunset sky, forest greens for the garden, rustic browns for the cottage, and pops of lavender, coral, and poppy red in the flowers. Soft natural window light highlighting the raised thread texture and subtle shadows in the stitch valleys.
 > ```
 
 **ChatGPT**

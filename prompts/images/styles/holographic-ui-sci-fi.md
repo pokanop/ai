@@ -8,14 +8,7 @@ Transparent floating UI panels, holographic projections, wireframe meshes, scanl
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Sci-fi holographic UI display showing a detailed 3D wireframe model of the human heart
-> rotating in mid-air, projected above a dark glass table in a futuristic medical lab, 16:9
-> landscape format. The heart model is rendered as a transparent cyan wireframe mesh with
-> glowing edge lines and pulsing data nodes at key anatomical points. Floating translucent
-> UI panels surround the heart — vital signs, waveform readouts, and anatomical labels in
-> thin sans-serif typography. Horizontal scanline interference effect across the projection.
-> Cyan and warm amber accent color palette against a deep charcoal environment. Subtle
-> volumetric light cone from the projector below. Minority Report and Iron Man HUD aesthetic.
+> Sci-fi holographic UI display showing a detailed 3D wireframe model of the human heart rotating in mid-air, projected above a dark glass table in a futuristic medical lab, 16:9 landscape format. The heart model is rendered as a transparent cyan wireframe mesh with glowing edge lines and pulsing data nodes at key anatomical points. Floating translucent UI panels surround the heart — vital signs, waveform readouts, and anatomical labels in thin sans-serif typography. Horizontal scanline interference effect across the projection. Cyan and warm amber accent color palette against a deep charcoal environment. Subtle volumetric light cone from the projector below. Minority Report and Iron Man HUD aesthetic.
 > ```
 
 **ChatGPT**

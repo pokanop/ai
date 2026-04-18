@@ -8,12 +8,7 @@ Victorian-era aesthetics fused with retro-futuristic mechanical engineering — 
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Detailed steampunk portrait of a young woman inventor in her cluttered workshop,
-> surrounded by clockwork songbirds perched on copper branches, 16:9 landscape format. She
-> wears brass aviator goggles pushed up on her forehead and a leather apron with tool loops.
-> Polished brass gears, burnished copper pipes, and glass pneumatic tubes fill the background.
-> One clockwork robin sits on her outstretched finger, wings mid-unfold. Warm sepia and gold
-> color palette. Cinematic amber lighting with wisps of volumetric steam.
+> Detailed steampunk portrait of a young woman inventor in her cluttered workshop, surrounded by clockwork songbirds perched on copper branches, 16:9 landscape format. She wears brass aviator goggles pushed up on her forehead and a leather apron with tool loops. Polished brass gears, burnished copper pipes, and glass pneumatic tubes fill the background. One clockwork robin sits on her outstretched finger, wings mid-unfold. Warm sepia and gold color palette. Cinematic amber lighting with wisps of volumetric steam.
 > ```
 
 **ChatGPT**

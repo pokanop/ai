@@ -8,14 +8,7 @@ Sugar skull aesthetics, marigold flowers, papel picado banners, vibrant saturate
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Día de los Muertos portrait illustration of a woman with elaborate calavera sugar skull
-> face paint — intricate symmetrical floral patterns in white on her face with black eye
-> sockets and a heart-shaped nose, 4:5 vertical format. Her hair is adorned with a crown
-> of bright orange cempasúchil marigolds and deep purple dahlias. Papel picado tissue
-> paper banners in fuchsia, yellow, and turquoise flutter in the background. Vibrant
-> saturated colors throughout — the palette celebrates life rather than mourns death.
-> Ornate decorative border of marigold vines and sugar skulls framing the portrait. Rich
-> hand-painted illustration style with folk art patterns.
+> Día de los Muertos portrait illustration of a woman with elaborate calavera sugar skull face paint — intricate symmetrical floral patterns in white on her face with black eye sockets and a heart-shaped nose, 4:5 vertical format. Her hair is adorned with a crown of bright orange cempasúchil marigolds and deep purple dahlias. Papel picado tissue paper banners in fuchsia, yellow, and turquoise flutter in the background. Vibrant saturated colors throughout — the palette celebrates life rather than mourns death. Ornate decorative border of marigold vines and sugar skulls framing the portrait. Rich hand-painted illustration style with folk art patterns.
 > ```
 
 **ChatGPT**

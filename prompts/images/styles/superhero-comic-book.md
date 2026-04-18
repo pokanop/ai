@@ -8,12 +8,7 @@ Dynamic, action-packed comic book panels with heavy ink outlines, halftone dot s
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Dynamic comic book panel featuring a librarian superhero mid-air, levitating dozens of
-> glowing books around her in a telekinetic spiral, 16:9 landscape format. She wears a cape
-> made of flowing book pages and horn-rimmed glasses. Classic Marvel Comics visual language:
-> heavy black ink outlines, bold flat colors with halftone dot shading in the shadows, dramatic
-> foreshortening from below, and speed lines radiating outward. Explosive city rooftop
-> background at sunset with debris and energy effects.
+> Dynamic comic book panel featuring a librarian superhero mid-air, levitating dozens of glowing books around her in a telekinetic spiral, 16:9 landscape format. She wears a cape made of flowing book pages and horn-rimmed glasses. Classic Marvel Comics visual language: heavy black ink outlines, bold flat colors with halftone dot shading in the shadows, dramatic foreshortening from below, and speed lines radiating outward. Explosive city rooftop background at sunset with debris and energy effects.
 > ```
 
 **ChatGPT**

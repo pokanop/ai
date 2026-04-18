@@ -8,13 +8,7 @@ Top-down isometric urban grids with tiny buildings, vehicles, parks, and pedestr
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Isometric pixel art cityscape of a bustling downtown district at sunset, 16:9 landscape
-> format. Top-down 45-degree isometric perspective showing a grid of city blocks. Tiny pixel
-> buildings of varying heights — a skyscraper, a corner café with a red awning, a park with
-> pixel trees, a parking lot with tiny cars. Miniature pixel pedestrians crossing streets.
-> Warm sunset lighting casting long isometric shadows to the east. Saturated but harmonious
-> color palette with warm terracotta, teal, cream, and coral. Each pixel clearly defined
-> with no anti-aliasing. SimCity and Habbo Hotel aesthetic.
+> Isometric pixel art cityscape of a bustling downtown district at sunset, 16:9 landscape format. Top-down 45-degree isometric perspective showing a grid of city blocks. Tiny pixel buildings of varying heights — a skyscraper, a corner café with a red awning, a park with pixel trees, a parking lot with tiny cars. Miniature pixel pedestrians crossing streets. Warm sunset lighting casting long isometric shadows to the east. Saturated but harmonious color palette with warm terracotta, teal, cream, and coral. Each pixel clearly defined with no anti-aliasing. SimCity and Habbo Hotel aesthetic.
 > ```
 
 **ChatGPT**

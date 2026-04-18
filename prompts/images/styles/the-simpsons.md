@@ -8,11 +8,7 @@ Matt Groening's iconic art style — yellow skin, bulging eyes, distinct overbit
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> 2D cartoon illustration of a hipster barista with a man-bun and handlebar mustache, drawn
-> exactly in The Simpsons art style by Matt Groening, 16:9 landscape format. Bright yellow
-> skin, large round bulging eyes, prominent overbite, four-fingered hands pouring latte art.
-> Flat unshaded colors with clean black outlines — no gradients or shading. Set inside a
-> Springfield coffee shop with a chalkboard menu reading "Duff Roast" in the background.
+> 2D cartoon illustration of a hipster barista with a man-bun and handlebar mustache, drawn exactly in The Simpsons art style by Matt Groening, 16:9 landscape format. Bright yellow skin, large round bulging eyes, prominent overbite, four-fingered hands pouring latte art. Flat unshaded colors with clean black outlines — no gradients or shading. Set inside a Springfield coffee shop with a chalkboard menu reading "Duff Roast" in the background.
 > ```
 
 **ChatGPT**

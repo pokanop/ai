@@ -8,15 +8,7 @@ Optimistic eco-futurism — lush vertical gardens on Art Nouveau architecture, s
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Solarpunk cityscape at golden hour — a thriving urban neighborhood where nature and
-> technology coexist in harmony, 16:9 landscape format. Art Nouveau-inspired buildings with
-> curved organic facades covered in lush vertical gardens: cascading ferns, flowering vines,
-> and fruit trees growing from integrated planters at every level. Solar panel arrays shaped
-> like giant flower petals crown each rooftop. A crystal-clear canal runs through the center of
-> the street, lined with wildflowers and crossed by a graceful wooden footbridge. Cyclists,
-> gardeners, and children populate the scene. Warm golden-hour sunlight bathes everything in
-> amber, with volumetric light filtering through the green canopy. Butterflies and birds are
-> visible. The palette is dominated by lush greens, warm golds, and terracotta.
+> Solarpunk cityscape at golden hour — a thriving urban neighborhood where nature and technology coexist in harmony, 16:9 landscape format. Art Nouveau-inspired buildings with curved organic facades covered in lush vertical gardens: cascading ferns, flowering vines, and fruit trees growing from integrated planters at every level. Solar panel arrays shaped like giant flower petals crown each rooftop. A crystal-clear canal runs through the center of the street, lined with wildflowers and crossed by a graceful wooden footbridge. Cyclists, gardeners, and children populate the scene. Warm golden-hour sunlight bathes everything in amber, with volumetric light filtering through the green canopy. Butterflies and birds are visible. The palette is dominated by lush greens, warm golds, and terracotta.
 > ```
 
 **ChatGPT**

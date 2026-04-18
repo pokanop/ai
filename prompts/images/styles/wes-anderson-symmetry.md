@@ -8,13 +8,7 @@ Perfectly centered compositions, pastel color palettes (pink, mint, mustard), do
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Photograph of a perfectly symmetrical hotel lobby in the Wes Anderson visual style, 16:9
-> landscape format. Dead-center composition with the reception desk as the focal point. Pastel
-> color palette — blush pink walls, mint-green trim, mustard-yellow velvet chairs, and a
-> burgundy carpet runner leading straight to camera. Dollhouse-like interior with miniature
-> brass mail slots on the back wall, a vintage rotary phone, and a bell on the counter. Two
-> identical bellhops in matching uniforms stand on either side of the desk in mirror poses.
-> Flat, even lighting with no dramatic shadows. Deadpan, symmetrical, obsessively composed.
+> Photograph of a perfectly symmetrical hotel lobby in the Wes Anderson visual style, 16:9 landscape format. Dead-center composition with the reception desk as the focal point. Pastel color palette — blush pink walls, mint-green trim, mustard-yellow velvet chairs, and a burgundy carpet runner leading straight to camera. Dollhouse-like interior with miniature brass mail slots on the back wall, a vintage rotary phone, and a bell on the counter. Two identical bellhops in matching uniforms stand on either side of the desk in mirror poses. Flat, even lighting with no dramatic shadows. Deadpan, symmetrical, obsessively composed.
 > ```
 
 **ChatGPT**

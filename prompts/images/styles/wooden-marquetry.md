@@ -8,14 +8,7 @@ Scenes composed entirely from different wood veneers — walnut, maple, cherry, 
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Photograph of a wooden marquetry artwork depicting a majestic eagle in flight over
-> a mountainous forest landscape, 16:9 landscape format. The entire image is composed
-> from precisely cut and fitted wood veneers — the eagle's body in rich dark walnut with
-> grain lines following the feather direction, wings in striped zebrawood, mountains in pale
-> maple, sky in honey-toned cherry, and pine trees in deep mahogany. Each piece is cut with
-> razor-sharp precision and fitted seamlessly. The natural wood grain direction changes at
-> every boundary, creating visual contrast. Finished with a satin lacquer that deepens the
-> grain colors. Studio lighting with a warm amber tone emphasizing the wood's natural luster.
+> Photograph of a wooden marquetry artwork depicting a majestic eagle in flight over a mountainous forest landscape, 16:9 landscape format. The entire image is composed from precisely cut and fitted wood veneers — the eagle's body in rich dark walnut with grain lines following the feather direction, wings in striped zebrawood, mountains in pale maple, sky in honey-toned cherry, and pine trees in deep mahogany. Each piece is cut with razor-sharp precision and fitted seamlessly. The natural wood grain direction changes at every boundary, creating visual contrast. Finished with a satin lacquer that deepens the grain colors. Studio lighting with a warm amber tone emphasizing the wood's natural luster.
 > ```
 
 **ChatGPT**

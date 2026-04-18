@@ -8,14 +8,7 @@ Subjects integrated into bold geometric textile patterns with vivid primary colo
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Portrait illustration of a woman in profile with her silhouette filled entirely with
-> vibrant Ankara wax print patterns — bold geometric shapes in saffron yellow, royal blue,
-> kelly green, and hot pink on a white background, 4:5 vertical format. The patterns
-> transition from large-scale geometric motifs at the top (chevrons, circles, zigzags) to
-> smaller intricate repeating patterns at the bottom, creating visual weight. Her headwrap
-> is a different but complementary Kente-inspired pattern with narrow woven stripes in gold
-> and green. The background is clean white, making the vibrant textile patterns pop. Crisp
-> graphic illustration style with clean edges.
+> Portrait illustration of a woman in profile with her silhouette filled entirely with vibrant Ankara wax print patterns — bold geometric shapes in saffron yellow, royal blue, kelly green, and hot pink on a white background, 4:5 vertical format. The patterns transition from large-scale geometric motifs at the top (chevrons, circles, zigzags) to smaller intricate repeating patterns at the bottom, creating visual weight. Her headwrap is a different but complementary Kente-inspired pattern with narrow woven stripes in gold and green. The background is clean white, making the vibrant textile patterns pop. Crisp graphic illustration style with clean edges.
 > ```
 
 **ChatGPT**

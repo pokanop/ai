@@ -8,12 +8,7 @@ Tiny figures interacting with full-size food, office supplies, or nature as if t
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Macro photograph of two tiny figurine hikers with backpacks trekking across the surface of
-> a halved avocado, using the pit as a mountain summit, 16:9 landscape format. The avocado
-> flesh is their rolling green landscape, with a tiny flag planted on top of the pit. A third
-> figurine sits at the base having a picnic on the avocado skin. Real food photographed at
-> macro scale with the figurines at approximately 1:87 HO scale. Shallow depth of field,
-> warm natural window light from the left casting long shadows across the avocado surface.
+> Macro photograph of two tiny figurine hikers with backpacks trekking across the surface of a halved avocado, using the pit as a mountain summit, 16:9 landscape format. The avocado flesh is their rolling green landscape, with a tiny flag planted on top of the pit. A third figurine sits at the base having a picnic on the avocado skin. Real food photographed at macro scale with the figurines at approximately 1:87 HO scale. Shallow depth of field, warm natural window light from the left casting long shadows across the avocado surface.
 > ```
 
 **ChatGPT**

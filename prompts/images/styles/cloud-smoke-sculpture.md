@@ -8,13 +8,7 @@ Subjects formed entirely from volumetric clouds or swirling smoke, with dramatic
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Photograph of a majestic lion formed entirely from dense white cumulus clouds against a
-> vivid deep blue sky, 16:9 landscape format. The lion's mane is a turbulent mass of billowing
-> cloud wisps, with individual vapor tendrils curling outward and catching golden sunlight.
-> The body is denser, more defined cloud mass, while the tail and paws dissolve into thin
-> wisps that trail off into the open sky. Dramatic golden-hour side-lighting from the left
-> creates strong highlights on the cloud surfaces and deep blue shadows in the recesses.
-> The lion appears to be mid-roar, mouth open, with a small burst of cloud "breath" escaping.
+> Photograph of a majestic lion formed entirely from dense white cumulus clouds against a vivid deep blue sky, 16:9 landscape format. The lion's mane is a turbulent mass of billowing cloud wisps, with individual vapor tendrils curling outward and catching golden sunlight. The body is denser, more defined cloud mass, while the tail and paws dissolve into thin wisps that trail off into the open sky. Dramatic golden-hour side-lighting from the left creates strong highlights on the cloud surfaces and deep blue shadows in the recesses. The lion appears to be mid-roar, mouth open, with a small burst of cloud "breath" escaping.
 > ```
 
 **ChatGPT**

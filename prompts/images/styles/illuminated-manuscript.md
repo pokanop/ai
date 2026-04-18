@@ -8,14 +8,7 @@ Medieval hand-lettered pages with gold leaf, elaborate decorated initials, intri
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Illuminated manuscript page depicting a knight on horseback battling a dragon in a
-> miniature painted scene at the center of the page, 4:5 vertical format. The scene is
-> framed by an elaborate border of intertwining acanthus leaves, vine scrolls, and tiny
-> gold leaf flowers on a deep ultramarine blue background. A large decorated initial "D"
-> in burnished gold leaf with red and blue filigree occupies the upper left. The
-> illustration uses the flat perspective and bright tempera pigments of a medieval
-> manuscript — vermillion, ultramarine, malachite green, and burnished gold. Visible
-> aged vellum texture with slight yellowing and occasional ink splatter.
+> Illuminated manuscript page depicting a knight on horseback battling a dragon in a miniature painted scene at the center of the page, 4:5 vertical format. The scene is framed by an elaborate border of intertwining acanthus leaves, vine scrolls, and tiny gold leaf flowers on a deep ultramarine blue background. A large decorated initial "D" in burnished gold leaf with red and blue filigree occupies the upper left. The illustration uses the flat perspective and bright tempera pigments of a medieval manuscript — vermillion, ultramarine, malachite green, and burnished gold. Visible aged vellum texture with slight yellowing and occasional ink splatter.
 > ```
 
 **ChatGPT**

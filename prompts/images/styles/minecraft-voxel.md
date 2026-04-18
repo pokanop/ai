@@ -8,11 +8,7 @@ Blocky, volumetric voxel aesthetics with cubic geometry and ray-traced lighting,
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> 3D voxel art scene of a floating island village suspended in the sky, connected by wooden
-> plank bridges, with waterfalls cascading off the edges into the clouds below, 16:9 landscape
-> format. Constructed entirely from perfectly cubic blocks in the Minecraft visual style. RTX
-> ray-traced lighting with golden-hour sunbeams filtering through the waterfall mist. Lush
-> green grass blocks, oak wood, and glowing lantern blocks. Isometric camera perspective.
+> 3D voxel art scene of a floating island village suspended in the sky, connected by wooden plank bridges, with waterfalls cascading off the edges into the clouds below, 16:9 landscape format. Constructed entirely from perfectly cubic blocks in the Minecraft visual style. RTX ray-traced lighting with golden-hour sunbeams filtering through the waterfall mist. Lush green grass blocks, oak wood, and glowing lantern blocks. Isometric camera perspective.
 > ```
 
 **ChatGPT**

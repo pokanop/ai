@@ -8,12 +8,7 @@ Neon-soaked, rain-drenched dystopian cityscapes with high contrast, glowing sign
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Cinematic cyberpunk noir photograph of a trenchcoated detective standing under a broken
-> neon sign, checking a holographic display projected from her wrist device, 16:9 landscape
-> format. Narrow alleyway in a dystopian Tokyo-inspired city at night. Heavy rain falling
-> through dense fog, each raindrop catching the glow of the neon signs in magenta, cyan, and
-> electric blue. Wet asphalt reflecting all the light sources in long vertical streaks. Low
-> dramatic camera angle, high contrast. Her face half-lit in cyan, half in shadow.
+> Cinematic cyberpunk noir photograph of a trenchcoated detective standing under a broken neon sign, checking a holographic display projected from her wrist device, 16:9 landscape format. Narrow alleyway in a dystopian Tokyo-inspired city at night. Heavy rain falling through dense fog, each raindrop catching the glow of the neon signs in magenta, cyan, and electric blue. Wet asphalt reflecting all the light sources in long vertical streaks. Low dramatic camera angle, high contrast. Her face half-lit in cyan, half in shadow.
 > ```
 
 **ChatGPT**

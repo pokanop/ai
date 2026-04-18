@@ -8,11 +8,7 @@ Macro photography of Lego minifigures and brick-built environments, capturing th
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Macro photograph of a Lego astronaut minifigure planting a tiny Lego flag on a miniature
-> Lego Mars base, 16:9 landscape format. A small Lego rover with translucent orange wheels
-> parked nearby. Glossy ABS plastic texture with visible injection mold seam lines on every
-> brick. Classic Lego colors — white spacesuit, red planet surface, blue flag. Cinematic
-> side-lighting highlighting the plastic sheen, tilt-shift macro lens with shallow depth of field.
+> Macro photograph of a Lego astronaut minifigure planting a tiny Lego flag on a miniature Lego Mars base, 16:9 landscape format. A small Lego rover with translucent orange wheels parked nearby. Glossy ABS plastic texture with visible injection mold seam lines on every brick. Classic Lego colors — white spacesuit, red planet surface, blue flag. Cinematic side-lighting highlighting the plastic sheen, tilt-shift macro lens with shallow depth of field.
 > ```
 
 **ChatGPT**

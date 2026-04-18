@@ -8,12 +8,7 @@ Ultra-clean, black-and-white line art with bold strokes and generous negative sp
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Minimalist black-and-white line art illustration of a person sitting cross-legged under a
-> large tree, reading a book while a small bird perches on a low branch above them, 1:1
-> square format. Notion app illustration style. Bold confident strokes with uniform line
-> weight. Highly abstracted — the tree is a simple circle on a line, the person reduced to
-> essential shapes. No shading, no gradients, no fills. Only black lines against a pure white
-> background with generous negative space.
+> Minimalist black-and-white line art illustration of a person sitting cross-legged under a large tree, reading a book while a small bird perches on a low branch above them, 1:1 square format. Notion app illustration style. Bold confident strokes with uniform line weight. Highly abstracted — the tree is a simple circle on a line, the person reduced to essential shapes. No shading, no gradients, no fills. Only black lines against a pure white background with generous negative space.
 > ```
 
 **ChatGPT**
