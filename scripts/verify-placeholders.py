@@ -14,6 +14,7 @@ def verify_placeholders(repo_root):
     missing_images = {} # Missing Image path -> List of Markdown files referencing it
     total_images_checked = 0
     total_missing = 0
+    sample_prompts = {}
 
     # Walk through all markdown files
     for root, _, files in os.walk(repo_root):
@@ -31,6 +32,17 @@ def verify_placeholders(repo_root):
                     print(f"Warning: Could not read {md_path}: {e}")
                     continue
                 
+                try:
+                    relative_md_str = str(md_path.relative_to(repo_root))
+                except ValueError:
+                    relative_md_str = str(md_path)
+
+                # Extract Sample Prompt
+                prompt_match = re.search(r'> \*\*Sample prompt.*?\n> ```text\n(.*?)\n> ```', content, re.DOTALL)
+                if prompt_match:
+                    prompt_text = re.sub(r'^> ?', '', prompt_match.group(1), flags=re.MULTILINE)
+                    sample_prompts[relative_md_str] = prompt_text.strip()
+
                 # Find all images
                 images = MD_IMAGE_RE.findall(content) + HTML_IMAGE_RE.findall(content)
                 
@@ -54,16 +66,11 @@ def verify_placeholders(repo_root):
                         except ValueError:
                             relative_img = resolved_img_path
                             
-                        try:
-                            relative_md = md_path.relative_to(repo_root)
-                        except ValueError:
-                            relative_md = md_path
-                            
                         img_key = str(relative_img)
                         if img_key not in missing_images:
                             missing_images[img_key] = []
-                        if str(relative_md) not in missing_images[img_key]:
-                            missing_images[img_key].append(str(relative_md))
+                        if relative_md_str not in missing_images[img_key]:
+                            missing_images[img_key].append(relative_md_str)
                             total_missing += 1
 
     class Colors:
@@ -85,6 +92,16 @@ def verify_placeholders(repo_root):
     print(f"Total Missing Images:       {Colors.FAIL}{Colors.BOLD}{total_missing}{Colors.ENDC}")
     print(f"{Colors.OKCYAN}{'-' * 110}{Colors.ENDC}")
     
+    missing_md_files = {md for mds in missing_images.values() for md in mds}
+    prompts_to_print = {Path(md).stem: prompt for md, prompt in sample_prompts.items() if md in missing_md_files}
+    
+    if prompts_to_print:
+        print(f"\n📝 {Colors.HEADER}{Colors.BOLD}EXTRACTED SAMPLE PROMPTS FOR MISSING IMAGES:{Colors.ENDC}\n")
+        for md_name, prompt in sorted(prompts_to_print.items()):
+            print(f"{Colors.BOLD}{md_name}{Colors.ENDC}:")
+            print(f"{Colors.OKGREEN}{prompt}{Colors.ENDC}\n")
+        print(f"{Colors.OKCYAN}{'=' * 110}{Colors.ENDC}")
+
     if not missing_images:
         print(f"\n✅ {Colors.OKGREEN}Success! All placeholder images referenced in documents are present.{Colors.ENDC}\n")
         print(f"{Colors.OKCYAN}{'=' * 110}{Colors.ENDC}")
