@@ -48,7 +48,7 @@ Prompts optimized for:
 - **Midjourney** - Stylized creative imagery
 - **Stable Diffusion** - Fine-tuned control
 
-[`prompts/images/`](prompts/images/)
+[`prompts/images/`](prompts/images/README.md)
 
 </td>
 <td width="50%" valign="top">
