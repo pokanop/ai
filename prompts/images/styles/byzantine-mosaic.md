@@ -2,30 +2,48 @@
 
 [← Back to Image Prompts](../README.md)
 
-Gold-leaf backgrounds, tesserae tile textures, hieratic frontal poses, halos, and jewel-toned glass tiles. The sacred, regal aesthetic of Byzantine church mosaics from Ravenna and Constantinople — opulent, flat, and timeless.
+Scenes composed entirely from small square tesserae (tiles) set in plaster — gold leaf tesserae for backgrounds, colored glass smalti for figures, and stone pieces for details. The visual language of Ravenna's churches, Hagia Sophia, and Eastern Orthodox iconography. Figures are frontal, hieratic, and adorned with halos of gold mosaic. The slight angular variation of each tessera catches light differently, creating a shimmering, living surface.
+
+**Best for:** Art prints · Social media posts · Desktop wallpapers · Greeting cards · Religious art · Home décor
 
 ![Byzantine Mosaic Example](../../../assets/placeholder-byzantine.jpeg)
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Byzantine mosaic artwork depicting a regal empress holding a chalice and an orb, standing between two attendants, 16:9 landscape format. Entirely composed of tiny square glass tesserae tiles — each individual tile visible with slight angular variation catching light differently. Opulent gold leaf tesserae background radiating sacred light. The empress has a jeweled crown, a golden halo, and flat hieratic frontal pose with large solemn almond-shaped eyes. Rich jewel-toned tesserae — deep lapis lazuli blue robes, emerald green accents, ruby red borders, and amber gold throughout. Inspired by the mosaics of San Vitale in Ravenna.
+> Byzantine mosaic depicting a regal peacock with tail feathers fully displayed, composed entirely from small square tesserae tiles set in pale plaster, 1:1 square format. Gold leaf tesserae create a shimmering background. The peacock's body is rendered in deep blue and green glass smalti tesserae, with eye-spots on each tail feather in gold, emerald, and sapphire. Each individual tessera is visible — small square tiles approximately 1cm, set at slightly varying angles to catch light. Visible grout lines between every tile. The overall effect is luminous and shimmering. Warm museum lighting.
 > ```
 
-**ChatGPT**
+---
+
+## Prompt Variations
+
+### 🔵 Nano Banana 2 _(Featured)_
+
+**Variation 1 — Sacred / Icon** — Byzantine mosaic icon of [SAINT/FIGURE] with gold halo, frontal pose, gold tesserae background, glass smalti for robes, visible tiles and grout, Ravenna aesthetic, [FORMAT].
+
+**Variation 2 — Animal / Nature** — Byzantine mosaic of [ANIMAL], gold leaf background, colored smalti, visible square tesserae, grout lines, shimmering, [FORMAT].
+
+**Variation 3 — Portrait / Modern Subject** — Byzantine mosaic portrait of [MODERN SUBJECT], frontal pose, gold tesserae background, smalti features, visible tiles, hieratic formal style, [FORMAT].
+
+**Variation 4 — Decorative Pattern** — Byzantine geometric mosaic floor pattern, [MOTIF], stone and marble tesserae, visible grout, warm tones, top-down view, [FORMAT].
+
+**Variation 5 — Narrative Scene** — Byzantine mosaic narrative scene of [SCENE], gold background, multiple figures, smalti colors, visible tesserae, Ravenna church aesthetic, [FORMAT].
+
+### ChatGPT / Midjourney / Stable Diffusion — Standard templates with "Byzantine mosaic, square tesserae, gold leaf background, glass smalti, visible grout lines, shimmering" core keywords.
+
+---
+
+## 🔄 Image-to-Image Transformations
+
+**Nano Banana 2** _(Featured)_
 ```text
-Create a Byzantine mosaic artwork depicting [SUBJECT] in a [ENVIRONMENT]. The image is entirely composed of tiny square glass tesserae tiles — each individual tile should be visible with slight angular variation catching light differently. Use an opulent gold leaf tesserae background radiating sacred light. The subject should be rendered in a flat hieratic frontal pose with large solemn almond-shaped eyes and a golden halo. Rich jewel-toned tesserae — deep lapis lazuli blue, emerald green, ruby red, and amber gold. Inspired by the mosaics of Ravenna and Hagia Sophia.
+Using the attached photo, recreate the subject as a Byzantine mosaic. Convert all surfaces to small square tesserae tiles set in plaster. Use gold leaf tesserae for the background. Use colored glass smalti for the subject. Each tile visible and set at slightly varying angles. Visible grout lines. Frontal, formal composition. Ravenna church mosaic aesthetic.
 ```
 
-**Midjourney**
-```text
-Byzantine mosaic artwork of [SUBJECT] in [ENVIRONMENT], composed of tiny square glass tesserae tiles, opulent gold leaf background, flat hieratic frontal pose, golden halo, solemn almond eyes, jewel-toned tiles — lapis blue emerald ruby amber, Ravenna mosaic style --ar 16:9 --s 200
-```
+---
 
-**Stable Diffusion**
-- **Prompt:** `Byzantine mosaic, [SUBJECT] in [ENVIRONMENT], tiny square glass tesserae tiles, gold leaf background, flat hieratic pose, golden halo, large almond eyes, lapis blue emerald ruby amber palette, Ravenna style, masterpiece`
-- **Negative Prompt:** `photograph, 3d, realistic, smooth, perspective, modern`
-
-**Nano Banana 2**
-```text
-Byzantine mosaic artwork depicting [SUBJECT] in a [ENVIRONMENT], 16:9 landscape format. Entirely composed of tiny square glass tesserae tiles — each individual tile visible with slight angular variation catching light differently. Opulent gold leaf tesserae background radiating sacred light. Flat hieratic frontal pose with large solemn almond-shaped eyes and a golden halo. Rich jewel-toned tesserae — deep lapis lazuli blue, emerald green, ruby red, and amber gold. Inspired by the mosaics of San Vitale in Ravenna.
-```
+## 💡 Tips & Best Practices
+- **Individual tesserae must be visible**: "Small square tesserae approximately 1cm" prevents the AI from producing smooth, un-tiled surfaces.
+- **Gold background is canonical**: "Gold leaf tesserae background" is the defining feature of Byzantine mosaic.
+- **Visible grout lines**: Without grout, it's stained glass. Grout between every tile defines mosaic.
+- **Pairs well with:** [Illuminated Manuscript](illuminated-manuscript.md) (same era, different medium), [Stained Glass Windows](stained-glass-windows.md) (similar translucent beauty)

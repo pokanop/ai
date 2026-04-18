@@ -2,30 +2,48 @@
 
 [← Back to Image Prompts](../README.md)
 
-Translucent subjects revealing internal structure — skeletal systems, mechanical internals, botanical cross-sections. Glowing edges against dark backgrounds with the distinctive look of radiographic, CT, or MRI imaging applied to unexpected subjects.
+The ghostly translucency of X-ray, CT scan, and MRI imaging — where the external disappears and internal structures are revealed. Dense materials (bone, metal) appear bright white, soft tissue appears in grey gradients, and air appears black. The style strips away all surface detail to expose the hidden architecture underneath, creating images that are simultaneously clinical and hauntingly beautiful.
 
-![X-Ray Example](../../../assets/placeholder-xray.jpeg)
+**Best for:** Art prints · Desktop wallpapers · Social media posts · Educational content · Poster prints · Album covers · Conceptual art
+
+![X-Ray Example](../../../assets/placeholder-x-ray.jpeg)
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> X-ray radiograph of a violin displayed against a dark background, 4:5 vertical format. The wooden body is translucent, revealing the internal bracing patterns, the bass bar, the sound post, and the four strings running as bright white lines through the ghostly body. The scroll and tuning pegs show their mechanical structure — tiny screws and wood grain visible through the translucent surface. Bone-white and silver-grey tones on a deep black background. The thicker wood sections appear more opaque while thinner panels are nearly transparent. Subtle edge glow where materials meet air. Clean clinical presentation against pure black, as if mounted on a medical light box.
+> X-ray radiograph of a pair of canvas sneakers viewed from the side, on a pure black background, 16:9 landscape format. The canvas fabric is faintly translucent grey, revealing the internal structure — rubber sole layers, metal eyelets as bright white rings, metal zipper pull, the heel counter, and the shoe's internal foam padding. The laces appear as thin grey strands threading through bright white eyelets. Typical X-ray tonal range — bright white for dense materials, grey gradients for soft materials, black for air. Medical imaging lightbox aesthetic.
 > ```
 
-**ChatGPT**
+---
+
+## Prompt Variations
+
+### 🔵 Nano Banana 2 _(Featured)_
+
+**Variation 1 — Object / Product** — X-ray of [OBJECT], translucent exterior revealing internal mechanisms, bone-white for dense parts, grey gradients for soft, black background, medical aesthetic, [FORMAT].
+
+**Variation 2 — Botanical / Nature** — X-ray of [FLOWER/PLANT], translucent petals and leaves showing vein structures, stem cross-section visible, delicate grey tones, black background, [FORMAT].
+
+**Variation 3 — Animal / Anatomical** — X-ray of [ANIMAL], skeletal structure visible, graduated density rendering, anatomical accuracy, black background, medical imaging, [FORMAT].
+
+**Variation 4 — Collection / Still Life** — X-ray of [COLLECTION — e.g., a handbag's contents / toolbox / suitcase], revealing hidden objects inside, varying densities, black background, airport-security / forensic aesthetic, [FORMAT].
+
+**Variation 5 — Portrait / Human** — X-ray-style portrait of [SUBJECT], skull structure visible through translucent skin, dental work bright white, soft tissue as grey, black background, clinical beauty, [FORMAT].
+
+### ChatGPT / Midjourney / Stable Diffusion — Standard templates with "X-ray radiograph, translucent, internal structure visible, bright white for dense, grey gradients, black background, medical imaging" core keywords.
+
+---
+
+## 🔄 Image-to-Image Transformations
+
+**Nano Banana 2** _(Featured)_
 ```text
-Create an X-ray radiograph of [SUBJECT] displayed against a deep black background. The exterior is translucent, revealing internal structures — [DESCRIBE INTERNAL DETAILS, e.g., "bones and joints," "mechanical gears and springs," "seeds and vascular structures"]. Thicker sections appear more opaque while thinner areas are nearly transparent. Bone-white and silver-grey tones only. Subtle edge glow where materials meet air. Clean clinical presentation as if mounted on a medical light box. The effect should reveal hidden beauty in the internal architecture.
+Using the attached photo, transform it into an X-ray radiograph. Make the exterior translucent to reveal internal structures. Dense materials (bone, metal, hard plastic) appear bright white. Soft materials appear as grey gradients. Air is pure black. Strip away all color and surface texture — only density matters. Pure black background. Medical imaging lightbox aesthetic.
 ```
 
-**Midjourney**
-```text
-X-ray radiograph of [SUBJECT], translucent revealing internal structure — [INTERNAL DETAILS], bone-white and silver-grey tones on deep black background, edge glow, clinical presentation, medical light box aesthetic --ar 4:5
-```
+---
 
-**Stable Diffusion**
-- **Prompt:** `X-ray radiograph, [SUBJECT], translucent body revealing internal structure, bone-white silver-grey tones, deep black background, edge glow, clinical medical imaging aesthetic, 8k detail`
-- **Negative Prompt:** `color, opaque, illustration, cartoon, normal photograph, bright`
-
-**Nano Banana 2**
-```text
-X-ray radiograph of [SUBJECT] displayed against a deep black background, 4:5 vertical format. Exterior is translucent, revealing internal structures — [DESCRIBE INTERNAL DETAILS]. Thicker sections appear more opaque while thinner areas are nearly transparent. Bone-white and silver-grey tones only. Subtle edge glow where materials meet air. Clean clinical presentation as if mounted on a medical light box. Hidden beauty revealed in the internal architecture.
-```
+## 💡 Tips & Best Practices
+- **Density = brightness**: "Dense materials bright white, soft materials grey, air black" — this IS the physics of X-ray.
+- **Translucency reveals structure**: The subject's exterior should be see-through, showing what's hidden inside.
+- **Black background**: X-rays are always on a pure black (lightbox) background.
+- **Pairs well with:** [Electron Microscope](electron-microscope.md) (both reveal hidden structures), [Frosted Glass / Ice Sculpture](frosted-glass-ice-sculpture.md) (similar transparency aesthetic)

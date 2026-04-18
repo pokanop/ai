@@ -2,13 +2,47 @@
 
 [← Back to Main Repository](../../README.md)
 
-A comprehensive library of **57 optimized image generation prompt styles** across 11 categories, tailored for the four major AI platforms. Each style doc contains copy-paste prompts for ChatGPT, Midjourney, Stable Diffusion, and Nano Banana 2 — simply replace `[PLACEHOLDERS]` with your own content.
+A comprehensive library of **58 optimized image generation prompt styles** across 11 categories, each with multiple contextual prompt variations tailored for real-world use cases. Every style doc provides copy-paste prompts for Nano Banana 2 _(featured)_, ChatGPT, Midjourney, and Stable Diffusion — simply replace `[PLACEHOLDERS]` with your own content.
+
+---
+
+## ⚡ Quick Start with Nano Banana 2
+
+If you just want to generate something great right now:
+
+1. Pick a style from the [categories below](#-professional--persona).
+2. Open the style doc and go to the **Nano Banana 2** section (listed first).
+3. Choose the variation that matches your use case (e.g., "Social Media Post," "Desktop Wallpaper," "Character Portrait").
+4. Copy the prompt, replace the `[PLACEHOLDERS]`, and paste into Nano Banana.
+5. Iterate — use follow-up messages to refine colors, composition, lighting, or details.
+
+> **Have a reference photo?** Jump to the [Image-to-Image Transformations](#-using-reference-images-image-to-image) section to transform existing images into any style.
 
 ---
 
 ## Platform Guide
 
-Each prompt is provided in four platform-specific variants. Understanding how each platform interprets prompts will help you get the best results.
+Each prompt is provided in four platform-specific variants. Understanding their strengths will help you get the best results.
+
+### 🔵 Nano Banana 2 _(Featured — Best Overall Quality)_
+
+> *Nano Banana 2 (powered by Gemini 3.1 Flash Image) is a major upgrade over the original. Treat it as a full-featured creative engine, not a quick-filter tool.*
+
+- **Style**: Detailed, structured natural language. Front-load the asset type and primary subject, then layer in style, lighting, and composition details.
+- **Strengths**: Combines pro-model quality with flash-model speed. Supports multi-turn conversational refinement, search grounding (reference real-world subjects by name), accurate text rendering, character consistency (up to 5 characters), and output up to 4K resolution.
+- **Why It's Featured**: NB2 consistently produces the most detailed, accurate, and stylistically faithful results across all 57 styles in this library. Its conversational refinement loop means you can iterate toward perfection without re-writing your entire prompt.
+- **Key Tips**:
+
+  | Tip | Details |
+  |-----|---------|
+  | **Be specific, not vague** | NB2's reasoning engine rewards precise descriptors for textures, colors, and lighting over generic adjectives |
+  | **Front-load important details** | Place the asset type and primary subject at the beginning of your prompt |
+  | **Specify aspect ratios** | Explicitly state the format: `16:9` for wallpapers, `4:5` for Instagram, `9:16` for stories, `1:1` for profile pictures |
+  | **Iterate conversationally** | Refine with follow-ups: "Change the palette to warmer tones," "Move the subject left," "Add more texture to the background" |
+  | **Leverage search grounding** | For real-world subjects, ask the model to reference accurate imagery: "Use image search to find accurate reference for [specific subject]" |
+  | **Use positive framing** | Instead of "no cars," describe the scene you *do* want: "empty, deserted street" |
+  | **Specify camera/lens** | For photographic styles, include lens (85mm, 35mm, macro), aperture (f/1.8, f/8), and camera angle (low, eye-level, bird's eye) |
+  | **Name your lighting** | Use specific lighting terms: "Rembrandt lighting," "golden hour," "tungsten warm glow," "volumetric fog" |
 
 ### ChatGPT (GPT-4o Image Generation)
 
@@ -43,44 +77,115 @@ Each prompt is provided in four platform-specific variants. Understanding how ea
 - **Negative Prompts**: Use sparingly and only for *specific unwanted elements*. Bloated negative prompt lists degrade output quality on modern models. Try generating without negatives first, then add targeted exclusions as needed.
 - **Tips**: Avoid over-weighting (e.g., `(keyword:1.5)`) — use it to nudge, not force. Ensure your resolution matches the model's native aspect ratio.
 
-### Nano Banana 2
+---
 
-> *Nano Banana 2 (powered by Gemini 3.1 Flash Image) is a major upgrade over the original. Treat it as a full-featured creative engine, not a quick-filter tool.*
+## 📐 Aspect Ratio Cheat Sheet
 
-- **Style**: Detailed, structured natural language — similar to ChatGPT. Front-load the asset type and primary subject, then layer in style, lighting, and composition details.
-- **Strengths**: Combines pro-model quality with flash-model speed. Supports multi-turn conversational refinement, search grounding (reference real-world subjects by name), accurate text rendering, character consistency (up to 5 characters), and output up to 4K resolution.
-- **Key Tips**:
-  - **Be specific, not vague** — NB2's reasoning engine rewards precise descriptors for textures, colors, and lighting over generic adjectives.
-  - **Front-load important details** — Place the asset type and primary subject at the beginning of your prompt.
-  - **Specify aspect ratios** — Explicitly state the intended format (e.g., `16:9` for desktop wallpaper, `4:5` for Instagram, `9:16` for stories).
-  - **Iterate conversationally** — Refine results with follow-up commands (e.g., "Change the color palette to warmer tones," "Move the subject to the left").
-  - **Leverage search grounding** — For real-world subjects, ask the model to reference accurate imagery (e.g., "Use image search to find accurate reference for [specific bird species]").
-  - **Use positive framing** — Instead of "no cars," describe the scene you *do* want (e.g., "empty, deserted street").
+Quick reference for common output formats:
+
+| Use Case | Ratio | Pixels (Recommended) | Notes |
+|----------|-------|----------------------|-------|
+| Instagram Post | `1:1` | 1080×1080 | Square feed post |
+| Instagram Portrait | `4:5` | 1080×1350 | Tallest feed format, maximum real estate |
+| Instagram / TikTok Story | `9:16` | 1080×1920 | Full-screen vertical |
+| LinkedIn / Twitter Header | `3:1` | 1500×500 | Wide banner |
+| Desktop Wallpaper | `16:9` | 3840×2160 | Standard widescreen / 4K |
+| Ultrawide Wallpaper | `21:9` | 3440×1440 | Ultrawide monitors |
+| Phone Wallpaper | `9:19.5` | 1290×2796 | iPhone Pro Max |
+| Profile Picture / App Icon | `1:1` | 512×512 or 1024×1024 | Square, tight crop |
+| Pinterest Pin | `2:3` | 1000×1500 | Tall vertical |
+| YouTube Thumbnail | `16:9` | 1280×720 | Standard video thumbnail |
+| Poster / Print (A-series) | `1:1.414` | 2480×3508 | A4 at 300 DPI |
+| Book Cover | `2:3` | 1600×2400 | Standard paperback |
 
 ---
 
 ## 🖼️ Using Reference Images (Image-to-Image)
 
-When you want to stylize an existing photo (e.g., turning a portrait into a Pixar character), each platform handles reference images differently:
+When you want to stylize an existing photo (e.g., turning a portrait into a Pixar character or transforming a landscape into a watercolor), each platform handles reference images differently. Each style doc includes a dedicated **🔄 Image-to-Image Transformations** section with platform-specific prompts.
 
-| Platform | How to Use a Reference Image |
-|----------|------------------------------|
-| **ChatGPT** | Upload the image to the conversation, then prompt: *"Using the attached image as a reference for the subject's appearance…"* |
-| **Midjourney** | Place the image URL at the start of your prompt. Control adherence with `--iw` (0–2). For character consistency, use `--cref [URL]`. |
-| **Stable Diffusion** | Use the **Img2Img** or **ControlNet** pipeline. Adjust `Denoising Strength` (0.4–0.7) to balance the original image against the new style. |
-| **Nano Banana 2** | Upload your image to the conversation and describe the transformation. Supports conversational follow-ups to refine the result. |
+### Nano Banana 2 _(Featured)_
 
-> Styles marked with a 🔄 icon in their individual docs include dedicated **Image-to-Image Variations**.
+Upload your image to the conversation, then describe the transformation:
+
+```text
+"Using the attached image as the base, transform it into [STYLE]. Preserve the subject's appearance and pose, but apply [SPECIFIC STYLE DETAILS]. Use a [ASPECT RATIO] format."
+```
+
+**Conversational refinement** — After the initial result, iterate with follow-ups:
+- "Increase the intensity of the style — push it further from photorealism"
+- "Keep the subject's face more recognizable"
+- "Change the background to [NEW ENVIRONMENT] while keeping the style"
+- "Apply the style only to the background — keep the subject photorealistic"
+
+### ChatGPT
+
+Upload the image to the conversation, then prompt:
+
+```text
+"Using the attached image as a reference for the subject's appearance, create a [STYLE] version. Preserve the person's likeness, clothing, and pose. [ADDITIONAL STYLE DETAILS]."
+```
+
+### Midjourney
+
+Place the image URL at the **start** of your prompt:
+
+```text
+[IMAGE_URL] [STYLE DESCRIPTION] --iw [WEIGHT] --ar [RATIO]
+```
+
+| Parameter | Recommended Value | Purpose |
+|-----------|-------------------|---------|
+| `--iw` | `1.0–1.5` for style transfer, `1.5–2.0` for close preservation | Controls how closely the output follows the reference |
+| `--cref` | Use for character consistency across multiple images | Maintains identity (face, features) across generations |
+| `--sref` | Use to apply a style from a separate reference | Applies the aesthetic of another image |
+
+### Stable Diffusion
+
+Use the **Img2Img** pipeline with these recommended settings:
+
+| Setting | Light Stylization | Medium Transformation | Heavy Restyling |
+|---------|-------------------|----------------------|-----------------|
+| **Denoising Strength** | 0.3–0.45 | 0.45–0.65 | 0.65–0.85 |
+| **Use Case** | Subtle filter effect | Balanced style transfer | New artwork based on composition |
+
+- **ControlNet** alternative: For preserving exact pose/composition while completely changing style, use ControlNet with the `canny` or `openpose` preprocessor.
+- **Prompt**: Describe the desired output style. The original image provides composition/structure.
+- **Negative Prompt**: Target specific unwanted artifacts only.
+
+---
+
+## 🎯 Choosing the Right Style by Use Case
+
+Not sure which style to pick? Start from what you need:
+
+| Use Case | Recommended Styles |
+|----------|-------------------|
+| **LinkedIn / Professional headshot** | [Cinematic Headshots](styles/cinematic-headshots.md) |
+| **Social media profile picture** | [Modern Avatars](styles/modern-avatars.md), [Pixar](styles/pixar-3d-animation.md), [The Simpsons](styles/the-simpsons.md) |
+| **App icon / thumbnail** | [3D Isometric Resin](styles/3d-isometric-resin-sculptures.md), [Minimalist Notion](styles/minimalist-notion-style.md), [Pixelated 16-bit](styles/pixelated-16-bit.md) |
+| **Desktop wallpaper** | [Solarpunk](styles/solarpunk.md), [Cyberpunk Noir](styles/cyberpunk-noir.md), [Bioluminescent Underwater](styles/bioluminescent-underwater.md), [Double Exposure](styles/double-exposure.md) |
+| **Instagram / social media post** | [Wes Anderson](styles/wes-anderson-symmetry.md), [Studio Ghibli](styles/studio-ghibli-anime.md), [Claymation](styles/claymation-stop-motion.md) |
+| **Poster / print** | [Art Deco](styles/art-deco-illustration.md), [Concert Poster](styles/concert-poster.md), [Soviet Constructivist](styles/soviet-constructivist.md) |
+| **Album / book cover** | [Vinyl Album Cover](styles/vinyl-album-cover.md), [Double Exposure](styles/double-exposure.md), [Glitch Art](styles/glitch-art.md) |
+| **Children's content** | [Yarn / Amigurumi](styles/yarn-amigurumi.md), [Claymation](styles/claymation-stop-motion.md), [Paper Cutout](styles/paper-cutout-kirigami.md) |
+| **Educational / scientific** | [Botanical Illustration](styles/botanical-illustration.md), [Blueprint](styles/blueprint-technical-drawing.md), [Electron Microscope](styles/electron-microscope.md) |
+| **Holiday / greeting card** | [Stained Glass](styles/stained-glass-windows.md), [Illuminated Manuscript](styles/illuminated-manuscript.md), [Embroidered](styles/embroidered-cross-stitch.md) |
+| **Game asset / concept art** | [Isometric Pixel City](styles/isometric-pixel-city.md), [Holographic UI](styles/holographic-ui-sci-fi.md), [Steampunk](styles/steampunk-contraptions.md) |
+| **Brand / marketing asset** | [Art Nouveau](styles/art-nouveau-mucha.md), [Minimalist Notion](styles/minimalist-notion-style.md), [Wes Anderson](styles/wes-anderson-symmetry.md) |
+| **Photo-to-character conversion** | [Pixar](styles/pixar-3d-animation.md), [The Simpsons](styles/the-simpsons.md), [Lego](styles/lego-photography.md), [Studio Ghibli](styles/studio-ghibli-anime.md) |
+| **Turning a photo into fine art** | [Ukiyo-e Woodblock](styles/ukiyo-e-woodblock.md), [Art Nouveau](styles/art-nouveau-mucha.md), [Byzantine Mosaic](styles/byzantine-mosaic.md) |
 
 ---
 
 ## How to Use These Prompts
 
-1. **Find a style** from the categories below.
+1. **Find a style** from the categories below or use the [use-case guide](#-choosing-the-right-style-by-use-case) above.
 2. **Click through** to the individual style doc.
-3. **Copy the prompt** for your platform.
-4. **Replace placeholders** — `[SUBJECT]`, `[ENVIRONMENT]`, `[COLOR]`, etc. — with your desired content.
-5. **Iterate** — adjust details, swap environments, or refine lighting based on initial results.
+3. **Pick a variation** that matches your intended output (profile pic, wallpaper, poster, etc.).
+4. **Copy the prompt** for your platform — Nano Banana 2 is listed first and recommended.
+5. **Replace placeholders** — `[SUBJECT]`, `[ENVIRONMENT]`, `[COLOR]`, etc. — with your desired content.
+6. **Iterate** — adjust details, swap environments, or refine lighting based on initial results.
 
 > **Contribute!** Generated a great image with one of these prompts? Submit a PR to replace the placeholder image in the style doc with your result!
 
@@ -155,6 +260,7 @@ When you want to stylize an existing photo (e.g., turning a portrait into a Pixa
 | 28 | [Cyberpunk Noir](styles/cyberpunk-noir.md) | Neon-soaked rain-drenched dystopian cityscapes with Blade Runner aesthetics |
 | 29 | [Steampunk Contraptions](styles/steampunk-contraptions.md) | Victorian brass gears, copper pipes, leather straps, and billowing steam |
 | 30 | [Glitch Art / Databending](styles/glitch-art.md) | Intentionally corrupted imagery with pixel sorting and color channel displacement |
+| 31 | [Vaporwave / Synthwave Retrowave](styles/vaporwave-synthwave.md) | Neon grids, chrome gradients, and 80s nostalgia — from ironic vaporwave to earnest retrowave |
 
 ---
 
@@ -162,15 +268,15 @@ When you want to stylize an existing photo (e.g., turning a portrait into a Pixa
 
 | # | Style | Description |
 |---|-------|-------------|
-| 31 | [Art Nouveau / Alphonse Mucha](styles/art-nouveau-mucha.md) | Ornate decorative posters with flowing organic lines and floral borders |
-| 32 | [Byzantine Mosaic](styles/byzantine-mosaic.md) | Gold-leaf tesserae tiles, hieratic frontal poses, and jewel-toned sacred art |
-| 33 | [Soviet Constructivist Propaganda](styles/soviet-constructivist.md) | Bold geometric compositions with red/black/cream palettes and photomontage |
-| 34 | [Illuminated Manuscript](styles/illuminated-manuscript.md) | Medieval gold-leaf pages with decorated initials and acanthus leaf borders |
-| 35 | [Ukiyo-e Woodblock](styles/ukiyo-e-woodblock.md) | Traditional Japanese flat color planes with bold contour lines — Hokusai and Hiroshige |
-| 36 | [Día de los Muertos](styles/dia-de-los-muertos.md) | Sugar skulls, marigolds, papel picado, and vibrant Mexican folk art patterns |
-| 37 | [Aboriginal Dot Painting](styles/aboriginal-dot-painting.md) | Concentric dot patterns in earth-toned ochre palettes with dreamtime symbolism |
-| 38 | [Persian Miniature Painting](styles/persian-miniature.md) | Jewel-toned flat-perspective scenes with gold leaf accents and geometric borders |
-| 39 | [West African Kente / Ankara Portraits](styles/kente-ankara-portraits.md) | Bold geometric textile patterns in vivid primary colors celebrating West African heritage |
+| 32 | [Art Nouveau / Alphonse Mucha](styles/art-nouveau-mucha.md) | Ornate decorative posters with flowing organic lines and floral borders |
+| 33 | [Byzantine Mosaic](styles/byzantine-mosaic.md) | Gold-leaf tesserae tiles, hieratic frontal poses, and jewel-toned sacred art |
+| 34 | [Soviet Constructivist Propaganda](styles/soviet-constructivist.md) | Bold geometric compositions with red/black/cream palettes and photomontage |
+| 35 | [Illuminated Manuscript](styles/illuminated-manuscript.md) | Medieval gold-leaf pages with decorated initials and acanthus leaf borders |
+| 36 | [Ukiyo-e Woodblock](styles/ukiyo-e-woodblock.md) | Traditional Japanese flat color planes with bold contour lines — Hokusai and Hiroshige |
+| 37 | [Día de los Muertos](styles/dia-de-los-muertos.md) | Sugar skulls, marigolds, papel picado, and vibrant Mexican folk art patterns |
+| 38 | [Aboriginal Dot Painting](styles/aboriginal-dot-painting.md) | Concentric dot patterns in earth-toned ochre palettes with dreamtime symbolism |
+| 39 | [Persian Miniature Painting](styles/persian-miniature.md) | Jewel-toned flat-perspective scenes with gold leaf accents and geometric borders |
+| 40 | [West African Kente / Ankara Portraits](styles/kente-ankara-portraits.md) | Bold geometric textile patterns in vivid primary colors celebrating West African heritage |
 
 ---
 
@@ -178,11 +284,11 @@ When you want to stylize an existing photo (e.g., turning a portrait into a Pixa
 
 | # | Style | Description |
 |---|-------|-------------|
-| 40 | [Double Exposure](styles/double-exposure.md) | Two images blended — a silhouette filled with a landscape, surreal and evocative |
-| 41 | [Stained Glass Windows](styles/stained-glass-windows.md) | Jewel-toned glass panes with lead came lines and volumetric god rays |
-| 42 | [Impossible Architecture / Escher](styles/impossible-architecture-escher.md) | Mind-bending Penrose stairs, recursive geometry, and paradoxical spatial relationships |
-| 43 | [Fruit / Food Art Portraiture](styles/food-art-portraiture.md) | Arcimboldo-inspired portraits composed from arranged fruits, vegetables, and objects |
-| 44 | [Bioluminescent Underwater](styles/bioluminescent-underwater.md) | Glowing deep-sea creatures and particles against the absolute black of the abyss |
+| 41 | [Double Exposure](styles/double-exposure.md) | Two images blended — a silhouette filled with a landscape, surreal and evocative |
+| 42 | [Stained Glass Windows](styles/stained-glass-windows.md) | Jewel-toned glass panes with lead came lines and volumetric god rays |
+| 43 | [Impossible Architecture / Escher](styles/impossible-architecture-escher.md) | Mind-bending Penrose stairs, recursive geometry, and paradoxical spatial relationships |
+| 44 | [Fruit / Food Art Portraiture](styles/food-art-portraiture.md) | Arcimboldo-inspired portraits composed from arranged fruits, vegetables, and objects |
+| 45 | [Bioluminescent Underwater](styles/bioluminescent-underwater.md) | Glowing deep-sea creatures and particles against the absolute black of the abyss |
 
 ---
 
@@ -190,13 +296,13 @@ When you want to stylize an existing photo (e.g., turning a portrait into a Pixa
 
 | # | Style | Description |
 |---|-------|-------------|
-| 45 | [Cinematic Macro Photography](styles/cinematic-macro-photography.md) | Extreme close-ups revealing microscopic details with dramatic lighting and bokeh |
-| 46 | [Long Exposure Light Painting](styles/long-exposure-light-painting.md) | Flowing light trails from steel wool, LEDs, and sparklers against black backgrounds |
-| 47 | [Cyanotype / Sun Print](styles/cyanotype-sun-print.md) | Prussian blue and white botanical silhouettes on handmade paper |
-| 48 | [Tilt-Shift Miniature Effect](styles/tilt-shift-miniature.md) | Real-world scenes made to look like tiny toy models through selective focus blur |
-| 49 | [Daguerreotype / Tintype](styles/daguerreotype-tintype.md) | Antique metallic-tone photographs with oval vignettes and Victorian formal posing |
-| 50 | [Infrared Thermal Photography](styles/infrared-thermal.md) | False-color FLIR heat maps — hot subjects in yellow/red against cool blue/purple |
-| 51 | [X-Ray / Medical Imaging](styles/x-ray-imaging.md) | Translucent subjects revealing internal structure in silver-grey tones |
+| 46 | [Cinematic Macro Photography](styles/cinematic-macro-photography.md) | Extreme close-ups revealing microscopic details with dramatic lighting and bokeh |
+| 47 | [Long Exposure Light Painting](styles/long-exposure-light-painting.md) | Flowing light trails from steel wool, LEDs, and sparklers against black backgrounds |
+| 48 | [Cyanotype / Sun Print](styles/cyanotype-sun-print.md) | Prussian blue and white botanical silhouettes on handmade paper |
+| 49 | [Tilt-Shift Miniature Effect](styles/tilt-shift-miniature.md) | Real-world scenes made to look like tiny toy models through selective focus blur |
+| 50 | [Daguerreotype / Tintype](styles/daguerreotype-tintype.md) | Antique metallic-tone photographs with oval vignettes and Victorian formal posing |
+| 51 | [Infrared Thermal Photography](styles/infrared-thermal.md) | False-color FLIR heat maps — hot subjects in yellow/red against cool blue/purple |
+| 52 | [X-Ray / Medical Imaging](styles/x-ray-imaging.md) | Translucent subjects revealing internal structure in silver-grey tones |
 
 ---
 
@@ -204,9 +310,9 @@ When you want to stylize an existing photo (e.g., turning a portrait into a Pixa
 
 | # | Style | Description |
 |---|-------|-------------|
-| 52 | [Botanical Illustration](styles/botanical-illustration.md) | Precise scientific watercolor illustrations with Latin annotations and cross-sections |
-| 53 | [Blueprint / Technical Drawing](styles/blueprint-technical-drawing.md) | White-on-blue engineering schematics with exploded isometric views and dimension lines |
-| 54 | [Electron Microscope / Nanoscale](styles/electron-microscope.md) | False-color SEM imagery revealing alien beauty at extreme magnification |
+| 53 | [Botanical Illustration](styles/botanical-illustration.md) | Precise scientific watercolor illustrations with Latin annotations and cross-sections |
+| 54 | [Blueprint / Technical Drawing](styles/blueprint-technical-drawing.md) | White-on-blue engineering schematics with exploded isometric views and dimension lines |
+| 55 | [Electron Microscope / Nanoscale](styles/electron-microscope.md) | False-color SEM imagery revealing alien beauty at extreme magnification |
 
 ---
 
@@ -214,6 +320,6 @@ When you want to stylize an existing photo (e.g., turning a portrait into a Pixa
 
 | # | Style | Description |
 |---|-------|-------------|
-| 55 | [Holographic / UI Sci-Fi](styles/holographic-ui-sci-fi.md) | Floating wireframe projections with HUD overlays — Minority Report / Iron Man aesthetic |
-| 56 | [Solarpunk](styles/solarpunk.md) | Optimistic eco-futurism with vertical gardens, solar petals, and golden-hour warmth |
-| 57 | [Retrofuturism / Raygun Gothic](styles/retrofuturism-raygun-gothic.md) | 1950s space-age chrome rockets, bubble helmets, and Jetsons-style architecture |
+| 56 | [Holographic / UI Sci-Fi](styles/holographic-ui-sci-fi.md) | Floating wireframe projections with HUD overlays — Minority Report / Iron Man aesthetic |
+| 57 | [Solarpunk](styles/solarpunk.md) | Optimistic eco-futurism with vertical gardens, solar petals, and golden-hour warmth |
+| 58 | [Retrofuturism / Raygun Gothic](styles/retrofuturism-raygun-gothic.md) | 1950s space-age chrome rockets, bubble helmets, and Jetsons-style architecture |

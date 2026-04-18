@@ -2,30 +2,50 @@
 
 [← Back to Image Prompts](../README.md)
 
-Ornate decorative poster art with flowing organic lines, floral borders, muted pastel palettes, and ethereal feminine figures. Inspired by Alphonse Mucha's iconic advertising posters and the organic forms of the Art Nouveau movement (1890–1910).
+Flowing organic lines, elaborate floral borders, ethereal female figures, and ornamental typography in the decorative poster style of Alphonse Mucha. Art Nouveau celebrates the beauty of natural curves — every line flows, every border blooms, and every figure is framed by ornate botanical arabesques. The palette is muted and earthy with metallic gold accents, and the composition follows a strict vertical format with the figure centered and encircled by decorative elements.
+
+**Best for:** Poster prints · Social media posts · Art prints · Greeting cards · Book covers · Wedding stationery · Brand assets
 
 ![Art Nouveau Example](../../../assets/placeholder-art-nouveau.jpeg)
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Art Nouveau poster illustration in the style of Alphonse Mucha, depicting a woman with flowing auburn hair intertwined with blooming wisteria vines, 4:5 vertical format. Her hair and the vines form a single continuous organic composition that fills the decorative circular halo behind her head. Ornate floral border with symmetrical lily-of-the-valley motifs along the sides and a decorative cartouche at the bottom reading "PRINTEMPS." Muted pastel palette — dusty rose, sage green, gold, and cream on an aged ivory background. Flat lithographic print texture with subtle ink registration variation.
+> Art Nouveau poster illustration in the style of Alphonse Mucha — an ethereal woman with flowing auburn hair intertwined with lily flowers, standing within an ornate circular halo border of interlocking floral arabesques, 4:5 vertical format. Muted earth-tone palette — warm ochre, sage green, dusty rose, and cream with metallic gold accents on the border and hair ornaments. Flowing organic lines — no sharp angles anywhere. Elaborate floral border frame with lilies, vines, and geometric Art Nouveau motifs. Decorative typography reading "[TEXT]" in an organic Art Nouveau typeface at the bottom. Flat decorative style with minimal shading. Printed on cream paper.
 > ```
 
-**ChatGPT**
+---
+
+## Prompt Variations
+
+### 🔵 Nano Banana 2 _(Featured)_
+
+**Variation 1 — Figure with Floral Frame** _(Poster, Print)_ — Mucha-style figure within ornate circular halo, flowing hair intertwined with [FLOWERS], muted palette with gold accents, floral border, decorative typography, [FORMAT].
+
+**Variation 2 — Seasonal / Allegorical** _(Art Print, Social Media)_ — Art Nouveau personification of [SEASON/CONCEPT], surrounded by appropriate flora, circular halo, Mucha palette, ornate border, [FORMAT].
+
+**Variation 3 — Product / Advertisement** _(Brand, Social Media)_ — Art Nouveau advertising poster for [PRODUCT], Mucha figure holding/presenting it, ornate border, decorative lettering, muted palette, [FORMAT].
+
+**Variation 4 — Botanical Panel** _(Home Décor, Print)_ — Art Nouveau decorative panel of [FLOWERS/BOTANICAL], no figure, flowing organic lines, geometric Art Nouveau motifs, muted palette with gold, [FORMAT].
+
+**Variation 5 — Portrait** _(Profile Picture, Gift)_ — Art Nouveau portrait of [SUBJECT], circular halo frame, flowing hair with botanical elements, Mucha flat decorative style, muted palette, [FORMAT].
+
+### ChatGPT / Midjourney / Stable Diffusion — Standard templates with "Art Nouveau, Alphonse Mucha, flowing organic lines, ornate floral border, muted earth tones, gold accents" core keywords.
+
+---
+
+## 🔄 Image-to-Image Transformations
+
+**Nano Banana 2** _(Featured)_
 ```text
-Create an Art Nouveau poster illustration in the style of Alphonse Mucha depicting [SUBJECT] surrounded by [FLORAL/ORGANIC ELEMENTS]. The composition features flowing organic lines where hair, clothing, and botanical elements merge into a single continuous decorative design. Include an ornate circular halo or arch behind the subject's head and a decorative floral border framing the entire piece. Use a muted pastel palette — dusty rose, sage green, gold, and cream. Add a decorative cartouche at the bottom with text reading "[TITLE]." Flat lithographic print texture with subtle ink variation.
+Using the attached photo, transform it into an Art Nouveau poster in the style of Alphonse Mucha. Restyle the figure with flowing organic lines and flat decorative shading. Add an ornate circular halo border of interlocking floral arabesques. Remap colors to muted earth tones with metallic gold accents. Intertwine botanical elements with the hair/clothing. Add decorative typography. Cream paper background.
 ```
 
-**Midjourney**
-```text
-Art Nouveau poster in the style of Alphonse Mucha, [SUBJECT] with flowing organic lines intertwined with [FLORAL/ORGANIC ELEMENTS], ornate circular halo, decorative floral border, muted pastel palette — dusty rose sage green gold cream, flat lithographic texture, aged ivory background --ar 4:5 --s 250
-```
+---
 
-**Stable Diffusion**
-- **Prompt:** `Art Nouveau poster, Alphonse Mucha style, [SUBJECT] with [FLORAL/ORGANIC ELEMENTS], flowing organic lines, ornate circular halo, decorative floral border, muted pastels, dusty rose sage green gold, lithographic print texture, masterpiece`
-- **Negative Prompt:** `photograph, 3d, modern, bold saturated colors, minimalist`
-
-**Nano Banana 2**
-```text
-Art Nouveau poster illustration in the style of Alphonse Mucha depicting [SUBJECT] surrounded by [FLORAL/ORGANIC ELEMENTS], 4:5 vertical format. Flowing organic lines where subject, clothing, and botanical elements merge into a single continuous decorative composition. Ornate circular halo behind the head and decorative floral border framing the piece. Muted pastel palette — dusty rose, sage green, gold, and cream on aged ivory. Decorative cartouche at the bottom reading "[TITLE]." Flat lithographic print texture with subtle ink registration variation.
-```
+## 💡 Tips & Best Practices
+- **"In the style of Alphonse Mucha"**: This single reference is the most effective anchor for Art Nouveau poster art.
+- **Flowing lines, no sharp angles**: "Flowing organic lines — no sharp angles anywhere" is the compositional rule.
+- **Circular halo border**: The ornate circular frame behind the figure is Mucha's signature compositional device.
+- **Muted + gold**: Muted earth tones (ochre, sage, dusty rose) with metallic gold accents — NOT vivid primaries.
+- **Common pitfalls**: "Art Nouveau" without "Mucha" often produces Art Deco (geometric, angular — the opposite). Always name the artist.
+- **Pairs well with:** [Art Deco Illustration](art-deco-illustration.md) (successor movement, geometric vs. organic), [Botanical Illustration](botanical-illustration.md) (shares floral subject matter)

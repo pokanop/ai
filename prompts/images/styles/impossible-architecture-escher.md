@@ -2,30 +2,48 @@
 
 [← Back to Image Prompts](../README.md)
 
-Mind-bending recursive geometry with Penrose stairs, impossible triangles, gravity-defying rooms, and paradoxical spatial relationships. Inspired by M.C. Escher's lithographs, the mathematical surrealism of Roger Penrose, and the visual puzzles of Oscar Reutersvärd.
+M.C. Escher-inspired impossible constructions — staircases that loop back on themselves, water flowing uphill, gravity-defying structures where up is down, and architectural paradoxes rendered with photorealistic precision. The style's power comes from the tension between the impossible geometry and the realistic rendering that makes your brain insist it should work.
 
-![Impossible Architecture Example](../../../assets/placeholder-escher.jpeg)
+**Best for:** Desktop wallpapers · Art prints · Social media posts · Puzzle/game art · Educational illustrations · Poster prints
+
+![Escher Example](../../../assets/placeholder-escher.jpeg)
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Detailed architectural illustration in the style of M.C. Escher depicting an impossible library where staircases connect floors that loop back onto themselves, 16:9 landscape format. Readers walk on staircases that defy gravity — some walk upside-down on the underside of bridges, others ascend stairs that seamlessly become the ceiling. Bookshelves line every surface including walls and ceilings. Penrose triangle geometry embedded in the staircase structure. Precise technical pen-and-ink rendering with crosshatch shading on a cream paper background. Multiple impossible vanishing points creating a spatial paradox. Calm, contemplative atmosphere despite the impossibility.
+> Photorealistic render of an impossible Escher-style architectural courtyard with staircases that connect in impossible ways — one staircase ascends to a platform that is simultaneously the bottom of another staircase going in the opposite direction, 16:9 landscape format. Multiple figures walk on the staircases at impossible orientations — some walk on the underside as if gravity pulls them in different directions. Classical stone architecture with vaulted arches. Warm afternoon sunlight casting shadows that contradict each other. Every element is rendered with architectural precision — the impossibility is in the geometry, not the rendering.
 > ```
 
-**ChatGPT**
+---
+
+## Prompt Variations
+
+### 🔵 Nano Banana 2 _(Featured)_
+
+**Variation 1 — Impossible Staircase** — Escher-style infinite staircase, Penrose steps, multiple gravity directions, figures walking at impossible angles, classical architecture, photorealistic, [FORMAT].
+
+**Variation 2 — Impossible Waterway** — Water flowing in impossible loops, aqueducts feeding back into themselves, waterfalls flowing upward, Escher logic, photorealistic, [FORMAT].
+
+**Variation 3 — Tessellation** — Escher-style interlocking tessellation pattern where [SHAPES — e.g., birds transform into fish], seamless morphing, mathematically precise, [FORMAT].
+
+**Variation 4 — Interior Paradox** — Impossible interior where a room's ceiling is another room's floor, doors lead to contradictory spaces, figures at multiple gravity orientations, photorealistic, [FORMAT].
+
+**Variation 5 — Modern Urban** — Modern city with Escher-style impossible architecture — buildings that bridge and connect impossibly, streets that loop, contradictory perspectives, photorealistic, [FORMAT].
+
+### ChatGPT / Midjourney / Stable Diffusion — Standard templates with "impossible architecture, Escher, Penrose, contradictory geometry, photorealistic rendering" core keywords.
+
+---
+
+## 🔄 Image-to-Image Transformations
+
+**Nano Banana 2** _(Featured)_
 ```text
-Create a detailed architectural illustration in the style of M.C. Escher depicting [SUBJECT] in an impossible [ENVIRONMENT] where spatial relationships are paradoxical. Include staircases that loop back onto themselves, surfaces where gravity works in different directions simultaneously, and [SPECIFIC IMPOSSIBLE ELEMENT, e.g., "Penrose stairs," "impossible triangles," "gravity-defying walkways"]. Use precise technical pen-and-ink rendering with crosshatch shading on a cream paper background. Multiple impossible vanishing points creating spatial paradox. The mood should be calm and contemplative despite the geometric impossibility.
+Using the attached architectural photo, introduce Escher-style impossible geometry. Make staircases that loop impossibly, doorways that lead to contradictory spaces, and perspectives that contradict each other. Keep the rendering photorealistic — the impossibility should be geometrical, not visual. Preserve the original materials and lighting but warp the spatial logic.
 ```
 
-**Midjourney**
-```text
-M.C. Escher style impossible architecture, [SUBJECT] in [ENVIRONMENT], paradoxical spatial relationships, Penrose stairs, gravity-defying surfaces, looping staircases, precise pen-and-ink crosshatch rendering, cream paper, multiple impossible vanishing points, calm contemplative mood --ar 16:9 --s 200
-```
+---
 
-**Stable Diffusion**
-- **Prompt:** `M.C. Escher style, impossible architecture, [SUBJECT] in [ENVIRONMENT], paradoxical geometry, Penrose stairs, gravity-defying, looping staircases, technical pen-and-ink, crosshatch shading, cream paper, masterpiece`
-- **Negative Prompt:** `photograph, color, realistic, normal geometry, perspective correct`
-
-**Nano Banana 2**
-```text
-Detailed architectural illustration in the style of M.C. Escher depicting [SUBJECT] in an impossible [ENVIRONMENT], 16:9 landscape format. Paradoxical spatial relationships — staircases that loop back onto themselves, surfaces where gravity works in different directions simultaneously, and Penrose triangle geometry. Precise technical pen-and-ink rendering with crosshatch shading on a cream paper background. Multiple impossible vanishing points creating spatial paradox. Calm, contemplative atmosphere despite the geometric impossibility.
-```
+## 💡 Tips & Best Practices
+- **Photorealistic rendering + impossible geometry**: The magic is in the contrast. The rendering must be convincing; only the spatial logic should be impossible.
+- **Multiple gravity directions**: "Figures walking at impossible orientations — some on the underside" is the classic Escher device.
+- **Contradictory shadows**: Shadows that point in different directions imply multiple light sources / impossible geometry.
+- **Pairs well with:** [Brutalist Architecture](brutalist-architecture.md) (similar architectural drama), [3D Isometric Resin Sculptures](3d-isometric-resin-sculptures.md) (similar spatial playfulness)

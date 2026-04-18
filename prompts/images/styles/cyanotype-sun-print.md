@@ -2,30 +2,48 @@
 
 [← Back to Image Prompts](../README.md)
 
-Photographic prints in Prussian blue and white, with botanical subjects pressed onto sensitized paper. The distinctive two-tone aesthetic of Anna Atkins' pioneering photographic process from the 1840s — one of the earliest forms of photography.
+The oldest photographic printing process — Prussian blue prints made by exposing iron-salt treated paper to UV light with objects or negatives placed on top. Unexposed areas remain white, exposed areas turn deep Prussian blue, creating a striking two-tone monochromatic image. The process produces visible brush strokes at the paper edges where the chemistry was hand-applied, and the blue has a unique luminous depth that no digital filter can truly replicate.
+
+**Best for:** Art prints · Social media posts · Botanical art · Home décor · Greeting cards · Desktop wallpapers
 
 ![Cyanotype Example](../../../assets/placeholder-cyanotype.jpeg)
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Cyanotype sun print of a collection of pressed wildflowers and ferns arranged on a sheet of handmade paper, 4:5 vertical format. The botanical specimens appear as detailed white silhouettes against a rich Prussian blue background — every leaf vein, petal edge, and stem is captured in precise white negative detail. Fern fronds arc gracefully across the composition with smaller flowers (Queen Anne's lace, daisies, and clover) scattered between them. The print has the characteristic uneven exposure of a hand-coated sun print — slightly darker at the center, lighter at the edges. Visible handmade paper fiber texture. Subtle blue-to-white tonal gradient in the background from uneven UV exposure.
+> Cyanotype sun print of a botanical specimen — fern fronds arranged on chemistry-coated paper, creating a white silhouette against deep Prussian blue, 4:5 vertical format. The fern's individual pinnae (leaflets) are clearly defined as crisp white shapes. The background is rich, deep Prussian blue with subtle tonal variation. Visible hand-applied chemistry edges — the blue fades to raw white paper at the borders with visible brush strokes. The print shows the slight texture of watercolor paper. Authentic Anna Atkins / historical photogram aesthetic.
 > ```
 
-**ChatGPT**
+---
+
+## Prompt Variations
+
+### 🔵 Nano Banana 2 _(Featured)_
+
+**Variation 1 — Botanical Photogram** — Cyanotype of [PLANT/BOTANICAL], white silhouette on Prussian blue, crisp leaf/petal detail, brush-stroked edges, watercolor paper texture, Anna Atkins aesthetic, [FORMAT].
+
+**Variation 2 — Object Arrangement** — Cyanotype photogram of [OBJECTS — e.g., keys, watches, tools, feathers] arranged on paper, white silhouettes on blue, hand-applied edges, [FORMAT].
+
+**Variation 3 — Portrait / Figure** — Cyanotype-style portrait of [SUBJECT], deep blue tones, white highlights, brush-stroked chemistry edges, watercolor paper, [FORMAT].
+
+**Variation 4 — Landscape** — Cyanotype landscape of [SCENE], deep Prussian blue tonal range, white highlights, chemistry-edge borders, paper texture, [FORMAT].
+
+**Variation 5 — Toned / Multi-Tone** — Tea-toned or bleached cyanotype of [SUBJECT], split toning — warm sepia in the highlights, Prussian blue in the shadows, alchemy aesthetic, [FORMAT].
+
+### ChatGPT / Midjourney / Stable Diffusion — Standard templates with "cyanotype, Prussian blue, sun print, white silhouette, hand-applied edges, watercolor paper, photogram" core keywords.
+
+---
+
+## 🔄 Image-to-Image Transformations
+
+**Nano Banana 2** _(Featured)_
 ```text
-Create a cyanotype sun print of [SUBJECT] arranged on handmade paper. The subjects appear as detailed white silhouettes against a rich Prussian blue background — every fine detail captured in precise white negative form. The print should have the characteristic uneven exposure of a hand-coated sun print — slightly darker at the center, lighter at the edges. Visible handmade paper fiber texture throughout. Only two tones: Prussian blue and white. The composition should feel like an archival scientific specimen pressed with care. Inspired by Anna Atkins' botanical cyanotypes.
+Using the attached photo, recreate it as a cyanotype sun print. Convert to two-tone — deep Prussian blue for shadows and midtones, white for highlights. Add hand-applied chemistry edges with visible brush strokes fading to raw paper. Watercolor paper texture. Anna Atkins / historical photogram aesthetic.
 ```
 
-**Midjourney**
-```text
-Cyanotype sun print of [SUBJECT], detailed white silhouettes on rich Prussian blue background, precise negative detail, uneven hand-coated exposure, handmade paper fiber texture, two-tone blue and white, Anna Atkins botanical style --ar 4:5
-```
+---
 
-**Stable Diffusion**
-- **Prompt:** `Cyanotype sun print, [SUBJECT], white silhouettes on Prussian blue, precise negative detail, uneven exposure, handmade paper texture, two-tone, Anna Atkins style, archival botanical aesthetic`
-- **Negative Prompt:** `color, photograph, modern, digital, 3d, smooth paper`
-
-**Nano Banana 2**
-```text
-Cyanotype sun print of [SUBJECT] on handmade paper, 4:5 vertical format. Subjects appear as detailed white silhouettes against a rich Prussian blue background — every fine detail captured in precise white negative form. Characteristic uneven exposure of a hand-coated sun print — darker at center, lighter at edges. Visible handmade paper fiber texture. Only two tones: Prussian blue and white. Archival scientific specimen aesthetic inspired by Anna Atkins' pioneering botanical cyanotypes.
-```
+## 💡 Tips & Best Practices
+- **Prussian blue is the only color**: Cyanotype is strictly monochromatic Prussian blue + white. No other colors.
+- **Brush-stroked edges**: "Hand-applied chemistry edges" where the blue fades to raw paper with visible brush marks authenticates the process.
+- **Anna Atkins reference**: The first photographer to use cyanotype for botanical specimens. Her name anchors the aesthetic.
+- **Pairs well with:** [Daguerreotype / Tintype](daguerreotype-tintype.md) (same era alt-process photography), [Botanical Illustration](botanical-illustration.md) (botanical subjects)

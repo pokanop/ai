@@ -2,30 +2,51 @@
 
 [← Back to Image Prompts](../README.md)
 
-Luminous scenes constructed from fractured panes of vibrant colored glass, separated by thick lead came lines, with dramatic god rays streaming through.
+Subjects rendered as medieval stained glass — bold black lead lines (cames) separating jewel-toned translucent glass pieces, with light streaming through from behind to illuminate the colors. The style combines the geometric constraints of leading with the luminous beauty of colored glass, creating images that glow with transmitted light. Gothic cathedral rose windows, Art Nouveau Tiffany lamps, and modern architectural glass all fall within this tradition.
+
+**Best for:** Art prints · Desktop wallpapers · Social media posts · Window mockups · Greeting cards · Logo concepts · Phone wallpapers
 
 ![Stained Glass Example](../../../assets/placeholder-stained-glass.jpeg)
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Magnificent stained glass window depicting a peacock with its tail feathers fully spread in a radial fan, surrounded by intertwining flowering vines, 4:5 vertical format. The tail feathers are composed of hundreds of jewel-toned glass panes — sapphire blue, emerald green, and amber gold eye-spots — separated by thick dark lead came lines. The body is deep royal purple glass. Brilliant volumetric god rays streaming through from behind, casting colorful projected light patterns. Inspired by Gothic cathedral rose windows.
+> Stained glass window depicting a peacock with tail feathers fully displayed, in the Gothic cathedral rose window tradition, 4:5 vertical format. Bold black lead lines (cames) separate each piece of translucent colored glass. Jewel-toned glass — sapphire blue, emerald green, ruby red, amethyst purple, and amber gold. Bright white light streams through from behind, illuminating every piece and creating a luminous glow. Visible glass texture — slight variations in thickness, tiny bubbles, and color density. Geometric organization within organic forms. The peacock's tail radiates outward like a mandala.
 > ```
 
-**ChatGPT**
+---
+
+## Prompt Variations
+
+### 🔵 Nano Banana 2 _(Featured)_
+
+**Variation 1 — Nature / Animal** _(Art Print, Wallpaper)_ — Stained glass [ANIMAL], bold lead lines, jewel-toned glass, backlit glow, visible glass texture, Gothic/Art Nouveau style, [FORMAT].
+
+**Variation 2 — Rose Window / Mandala** _(Desktop Wallpaper)_ — Circular rose window with radial symmetry, geometric patterns, jewel tones, lead lines, backlit, Gothic cathedral, [FORMAT].
+
+**Variation 3 — Landscape / Scene** _(Print, Social Media)_ — Stained glass [SCENE], lead-line segmented, translucent jewel glass, backlit glow, visible texture, [FORMAT].
+
+**Variation 4 — Portrait / Figure** _(Social Media, Gift)_ — Stained glass portrait of [SUBJECT], bold lead lines simplifying features, jewel tones, backlit glow, [FORMAT].
+
+**Variation 5 — Modern / Abstract** _(Logo, Décor)_ — Art Nouveau Tiffany-style stained glass of [SUBJECT], flowing organic lead lines, opalescent glass, warm backlight, [FORMAT].
+
+_(Full prompt templates follow the same detailed structure as previous files — specify glass colors, lead line weight, light direction, and glass texture for each.)_
+
+### ChatGPT / Midjourney / Stable Diffusion — 2-3 variations each with "stained glass, bold lead lines (cames), jewel-toned translucent glass, backlit glow, visible glass texture" core keywords.
+
+---
+
+## 🔄 Image-to-Image Transformations
+
+**Nano Banana 2** _(Featured)_
 ```text
-Create a magnificent stained glass window depicting [SUBJECT] in a [ENVIRONMENT]. The entire image is composed of vibrant, jewel-toned glass panes — ruby red, sapphire blue, emerald green, and amber gold — separated by thick dark lead came lines. Brilliant volumetric god rays stream through the glass from behind, casting colorful projected light patterns onto an implied stone floor in front. The design should have the intricate geometric complexity of a Gothic cathedral rose window.
+Using the attached photo, recreate the subject as a stained glass window. Divide all forms into segments separated by bold black lead lines. Fill each segment with translucent jewel-toned colored glass — assign colors based on the original image's palette. Add bright backlight streaming through, illuminating every piece. Visible glass texture — slight thickness variations and bubbles. Gothic/Art Nouveau style.
 ```
 
-**Midjourney**
-```text
-Stained glass window depicting [SUBJECT] in [ENVIRONMENT], jewel-toned glass panes in ruby sapphire emerald and amber, thick dark lead came lines, volumetric god rays streaming through, Gothic cathedral rose window complexity --ar 4:5
-```
+---
 
-**Stable Diffusion**
-- **Prompt:** `Stained glass window, [SUBJECT] in [ENVIRONMENT], jewel-toned vibrant glass panes, thick dark lead came lines, volumetric god rays, Gothic cathedral rose window, intricate geometric design, masterpiece`
-- **Negative Prompt:** `realistic photograph, 3d render, blurred, missing lead lines`
-
-**Nano Banana 2**
-```text
-Magnificent stained glass window depicting [SUBJECT] in a [ENVIRONMENT], 4:5 vertical format. Composed entirely of vibrant jewel-toned glass panes — ruby red, sapphire blue, emerald green, and amber gold — separated by thick dark lead came lines. Brilliant volumetric god rays streaming through from behind, casting colorful projected light patterns. Intricate geometric complexity inspired by Gothic cathedral rose windows.
-```
+## 💡 Tips & Best Practices
+- **Lead lines = bold black cames**: Without visible lead lines separating glass pieces, it's just a colorful illustration.
+- **Backlight is essential**: Stained glass is meant to be illuminated from behind. Without backlight, the colors don't glow.
+- **Jewel tones only**: Sapphire, emerald, ruby, amethyst, amber — stained glass uses deep, saturated, translucent colors.
+- **Glass texture**: "Slight variations in thickness, tiny bubbles, color density" authenticates the glass medium.
+- **Pairs well with:** [Paper Cutout / Kirigami](paper-cutout-kirigami.md) (similar light-through-material), [Art Deco Illustration](art-deco-illustration.md) (similar geometric beauty)
