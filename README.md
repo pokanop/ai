@@ -43,7 +43,7 @@ Whether you're generating stunning visuals, crafting compelling videos, synthesi
 <img src="assets/features-icons.svg" alt="Images" width="80">
 
 Prompts optimized for:
-- **Nano Banana** - Quick, playful image generation
+- **Nano Banana 2** - Fast, high-fidelity image generation
 - **DALL-E 3** - Photorealistic & artistic outputs
 - **Midjourney** - Stylized creative imagery
 - **Stable Diffusion** - Fine-tuned control
