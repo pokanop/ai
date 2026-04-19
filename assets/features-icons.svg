@@ -1,15 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
   <defs>
-    <linearGradient id="imgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#667eea"/>
-      <stop offset="100%" style="stop-color:#764ba2"/>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="imgGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#E879F9"/>
     </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
   </defs>
-  <rect width="200" height="200" rx="24" fill="#1a1a2e"/>
-  <rect x="40" y="40" width="120" height="100" rx="12" fill="url(#imgGrad)" opacity="0.2"/>
-  <rect x="50" y="50" width="100" height="80" rx="8" fill="none" stroke="url(#imgGrad)" stroke-width="2"/>
-  <circle cx="75" cy="75" r="12" fill="url(#imgGrad)"/>
-  <path d="M55 120 L85 95 L105 110 L145 75" stroke="url(#imgGrad)" stroke-width="2" fill="none" stroke-linecap="round"/>
-  <rect x="60" y="150" width="80" height="8" rx="4" fill="url(#imgGrad)" opacity="0.5"/>
-  <rect x="70" y="165" width="60" height="6" rx="3" fill="url(#imgGrad)" opacity="0.3"/>
+  <circle cx="100" cy="100" r="90" fill="url(#halo)"/>
+  <g transform="translate(0,0)" filter="url(#shadow)">
+    <rect x="40" y="40" width="120" height="100" rx="12" fill="url(#imgGrad)" opacity="0.3"/>
+    <rect x="50" y="50" width="100" height="80" rx="8" fill="none" stroke="url(#imgGrad)" stroke-width="4"/>
+    <circle cx="75" cy="75" r="16" fill="url(#imgGrad)"/>
+    <path d="M55 120 L85 90 L105 110 L145 70" stroke="url(#imgGrad)" stroke-width="4" fill="none" stroke-linejoin="round"/>
+    <circle cx="75" cy="75" r="4" fill="#ffffff" opacity="0.9"/>
+  </g>
 </svg>

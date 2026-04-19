@@ -8,6 +8,15 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'AI Prompts & Skills',
+      favicon: '/favicon.svg',
+      head: [
+        { tag: 'link', attrs: { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/ai/favicon.png' } },
+        { tag: 'link', attrs: { rel: 'apple-touch-icon', sizes: '180x180', href: '/ai/apple-touch-icon.png' } },
+        { tag: 'meta', attrs: { property: 'og:image', content: 'https://pokanop.github.io/ai/assets/og-image.png' } },
+        { tag: 'meta', attrs: { property: 'twitter:image', content: 'https://pokanop.github.io/ai/assets/og-image.png' } },
+        { tag: 'meta', attrs: { property: 'twitter:card', content: 'summary_large_image' } },
+        { tag: 'meta', attrs: { name: 'twitter:title', content: 'AI Prompts & Skills' } },
+      ],
       logo: {
         src: './src/assets/logo.svg',
         alt: 'AI Prompts Logo',

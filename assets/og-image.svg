@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#312E81"/>
+    </linearGradient>
+    <linearGradient id="grad1" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="50%" stop-color="#9333EA"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14B8A6"/>
+      <stop offset="50%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="drop-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#heroBg)"/>
+  <circle cx="600" cy="315" r="500" fill="url(#halo)"/>
+
+  <!-- Large central logo -->
+  <g transform="translate(600, 240) scale(2.5)" filter="url(#drop-shadow)">
+    <path d="M0 -70 C0 -20, 20 0, 70 0 C20 0, 0 20, 0 70 C0 20, -20 0, -70 0 C-20 0, 0 -20, 0 -70 Z" fill="url(#grad1)"/>
+    <path d="M0 -50 C0 -15, 15 0, 50 0 C15 0, 0 15, 0 50 C0 15, -15 0, -50 0 C-15 0, 0 -15, 0 -50 Z" fill="url(#grad2)" transform="rotate(45)"/>
+    <path d="M0 -28 C0 -8, 8 0, 28 0 C8 0, 0 8, 0 28 C0 8, -8 0, -28 0 C-8 0, 0 -8, 0 -28 Z" fill="#ffffff" opacity="0.95"/>
+  </g>
+
+  <text x="600" y="470" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="800" fill="white">
+    AI Prompts &amp; Skills
+  </text>
+  <text x="600" y="525" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="rgba(255,255,255,0.7)">
+    Curated prompts and workflows for GenAI
+  </text>
+</svg>

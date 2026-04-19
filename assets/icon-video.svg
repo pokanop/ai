@@ -1,16 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
   <defs>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#EC4899" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#EC4899" stop-opacity="0"/>
+    </radialGradient>
     <linearGradient id="vidGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#f093fb"/>
-      <stop offset="100%" style="stop-color:#f5576c"/>
+      <stop offset="0%" stop-color="#F43F5E"/>
+      <stop offset="100%" stop-color="#EC4899"/>
     </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
   </defs>
-  <rect width="200" height="200" rx="24" fill="#1a1a2e"/>
-  <circle cx="100" cy="100" r="50" fill="url(#vidGrad)" opacity="0.2"/>
-  <circle cx="100" cy="100" r="40" fill="url(#vidGrad)" opacity="0.3"/>
-  <path d="M85 75 L85 125 L125 100 Z" fill="url(#vidGrad)"/>
-  <rect x="40" y="155" width="120" height="6" rx="3" fill="url(#vidGrad)" opacity="0.4"/>
-  <rect x="40" y="155" width="60" height="6" rx="3" fill="url(#vidGrad)"/>
-  <circle cx="165" cy="45" r="20" fill="url(#vidGrad)" opacity="0.3"/>
-  <text x="165" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="white">VEO</text>
+  <circle cx="100" cy="100" r="90" fill="url(#halo)"/>
+  <g filter="url(#shadow)" transform="translate(0,0)">
+    <circle cx="100" cy="100" r="60" fill="url(#vidGrad)" opacity="0.4"/>
+    <circle cx="100" cy="100" r="50" fill="none" stroke="url(#vidGrad)" stroke-width="4"/>
+    <path d="M85 70 L85 130 L135 100 Z" fill="url(#vidGrad)"/>
+    <path d="M90 85 L90 115 L115 100 Z" fill="#ffffff" opacity="0.9"/>
+  </g>
 </svg>

@@ -19,16 +19,11 @@
       <stop offset="50%" stop-color="#06B6D4"/> <!-- Cyan -->
       <stop offset="100%" stop-color="#3B82F6"/> <!-- Blue -->
     </linearGradient>
-    
-    <filter id="drop-shadow" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.3"/>
-    </filter>
   </defs>
 
-  <!-- Optional soft halo for blending into both light and dark backgrounds -->
   <circle cx="100" cy="100" r="90" fill="url(#halo)"/>
 
-  <g transform="translate(100,100)" filter="url(#drop-shadow)">
+  <g transform="translate(100,100)">
     <!-- Base large spark (Vertical/Horizontal) -->
     <path d="M0 -70 
              C0 -20, 20 0, 70 0 
@@ -52,8 +47,5 @@
              C0 8, -8 0, -28 0 
              C-8 0, 0 -8, 0 -28 Z" 
           fill="#ffffff" opacity="0.95"/>
-          
-    <!-- Core glowing center -->
-    <circle cx="0" cy="0" r="6" fill="#FDF4FF" opacity="0.9"/>
   </g>
 </svg>

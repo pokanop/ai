@@ -1,39 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#667eea"/>
-      <stop offset="100%" style="stop-color:#764ba2"/>
+    <!-- Background glow for soft lighting -->
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Gradient 1: Indigo to Pink for outer spark -->
+    <linearGradient id="grad1" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="50%" stop-color="#9333EA"/>
+      <stop offset="100%" stop-color="#EC4899"/>
     </linearGradient>
-    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#f093fb"/>
-      <stop offset="100%" style="stop-color:#f5576c"/>
+
+    <!-- Gradient 2: Cyan to Blue for inner 45-deg spark -->
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14B8A6"/> <!-- Teal -->
+      <stop offset="50%" stop-color="#06B6D4"/> <!-- Cyan -->
+      <stop offset="100%" stop-color="#3B82F6"/> <!-- Blue -->
     </linearGradient>
-    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+    
+    <filter id="drop-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.3"/>
     </filter>
   </defs>
-  
-  <rect width="400" height="400" rx="40" fill="url(#bg)"/>
-  
-  <circle cx="200" cy="200" r="120" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
-  <circle cx="200" cy="200" r="90" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
-  <circle cx="200" cy="200" r="60" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
-  
-  <g filter="url(#blur)" opacity="0.5">
-    <circle cx="150" cy="120" r="20" fill="url(#glow)"/>
-    <circle cx="280" cy="180" r="15" fill="url(#glow)"/>
-    <circle cx="180" cy="290" r="18" fill="url(#glow)"/>
+
+  <!-- Optional soft halo for blending into both light and dark backgrounds -->
+  <circle cx="100" cy="100" r="90" fill="url(#halo)"/>
+
+  <g transform="translate(100,100)" filter="url(#drop-shadow)">
+    <!-- Base large spark (Vertical/Horizontal) -->
+    <path d="M0 -70 
+             C0 -20, 20 0, 70 0 
+             C20 0, 0 20, 0 70 
+             C0 20, -20 0, -70 0 
+             C-20 0, 0 -20, 0 -70 Z" 
+          fill="url(#grad1)"/>
+
+    <!-- Layered secondary spark (Rotated 45 degrees) -->
+    <path d="M0 -50 
+             C0 -15, 15 0, 50 0 
+             C15 0, 0 15, 0 50 
+             C0 15, -15 0, -50 0 
+             C-15 0, 0 -15, 0 -50 Z" 
+          fill="url(#grad2)" transform="rotate(45)"/>
+
+    <!-- Third inner layer spark for high contrast -->
+    <path d="M0 -28 
+             C0 -8, 8 0, 28 0 
+             C8 0, 0 8, 0 28 
+             C0 8, -8 0, -28 0 
+             C-8 0, 0 -8, 0 -28 Z" 
+          fill="#ffffff" opacity="0.95"/>
+          
+    <!-- Core glowing center -->
+    <circle cx="0" cy="0" r="6" fill="#FDF4FF" opacity="0.9"/>
   </g>
-  
-  <g transform="translate(200,200)">
-    <path d="M-40,-50 L40,-50 L40,10 L20,10 L20,50 L-20,50 L-20,10 L-40,10 Z" fill="white" opacity="0.9"/>
-    <rect x="-30" y="-40" width="60" height="8" rx="2" fill="url(#glow)"/>
-    <rect x="-30" y="-26" width="45" height="6" rx="2" fill="rgba(255,255,255,0.5)"/>
-    <rect x="-30" y="-16" width="55" height="6" rx="2" fill="rgba(255,255,255,0.5)"/>
-    <circle cx="0" cy="30" r="12" fill="url(#glow)"/>
-    <path d="M-5,28 L0,35 L8,25" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
-  
-  <text x="200" y="360" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" fill="white">AI Prompts</text>
-  <text x="200" y="382" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="rgba(255,255,255,0.7)" letter-spacing="3">SKILLS &amp; FOUNDATIONS</text>
 </svg>
