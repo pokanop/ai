@@ -26,6 +26,7 @@ const IMAGE_CATEGORIES = {
   'professional': [
     'cinematic-headshots',
     'modern-avatars',
+    'professional-headshots',
   ],
   'toy-miniature': [
     'lego-photography',
