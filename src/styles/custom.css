@@ -26,6 +26,9 @@
 
   --sl-font: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
   --sl-font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+
+  /* Wider content area to reduce gutters between sidebars and content */
+  --sl-content-width: 55rem;
 }
 
 [data-theme='light'] {
@@ -78,6 +81,38 @@ nav.sidebar .top-level > li > details > summary {
   margin-top: 0;
   padding-top: 0;
   border-top: none;
+}
+
+/* ── Layout fixes: three-column alignment ────────────────────────────── */
+
+@media (min-width: 72rem) {
+  /* Override the complex width formula — let the main pane fill remaining space */
+  [data-has-sidebar][data-has-toc] .main-pane {
+    width: auto !important;
+    flex: 1 1 0% !important;
+    min-width: 0;
+    /* Explicitly un-set Starlight's "auto 0" default which pushes left */
+    --sl-content-margin-inline: auto !important;
+  }
+
+  /* Center the inner content container within the main pane */
+  [data-has-sidebar][data-has-toc] .main-pane .content-panel .sl-container {
+    margin-inline: auto !important;
+  }
+
+  /* Fix right sidebar: exact fixed width, no extra space absorption */
+  .right-sidebar-container {
+    width: var(--sl-sidebar-width) !important;
+    flex: 0 0 var(--sl-sidebar-width) !important;
+  }
+
+  /* Hard-pin the fixed sidebar to the right viewport edge */
+  .right-sidebar {
+    width: var(--sl-sidebar-width) !important;
+    right: 0 !important;
+    left: auto !important;
+    border-inline-start: 1px solid var(--sl-color-hairline) !important;
+  }
 }
 
 /* ── Table styling ────────────────────────────────────────────────────── */
