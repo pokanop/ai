@@ -50,16 +50,23 @@ const { image, bestFor = [], samplePrompt } = Astro.props;
   }
 
   .hero-image-container {
+    width: fit-content;
+    margin: 0 auto 1.25rem auto;
     border-radius: 12px;
     overflow: hidden;
-    margin-bottom: 1.25rem;
     border: 1px solid var(--sl-color-gray-5);
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--sl-color-gray-7);
   }
 
   .hero-image {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+    max-height: 480px;
+    object-fit: contain;
     display: block;
   }
 
