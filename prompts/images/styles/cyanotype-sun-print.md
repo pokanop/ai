@@ -10,7 +10,7 @@ The oldest photographic printing process — Prussian blue prints made by exposi
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Cyanotype sun print of a botanical specimen — fern fronds arranged on chemistry-coated paper, creating a white silhouette against deep Prussian blue, 4:5 vertical format. The fern's individual pinnae (leaflets) are clearly defined as crisp white shapes. The background is rich, deep Prussian blue with subtle tonal variation. Visible hand-applied chemistry edges — the blue fades to raw white paper at the borders with visible brush strokes. The print shows the slight texture of watercolor paper. Authentic Anna Atkins / historical photogram aesthetic.
+> Cyanotype sun print of a botanical specimen — fern fronds arranged on chemistry-coated paper, creating a white silhouette against deep Prussian blue, 3:4 vertical format. The fern's individual pinnae (leaflets) are clearly defined as crisp white shapes. The background is rich, deep Prussian blue with subtle tonal variation. Visible hand-applied chemistry edges — the blue fades to raw white paper at the borders with visible brush strokes. The print shows the slight texture of watercolor paper. Authentic Anna Atkins / historical photogram aesthetic.
 > ```
 
 ---

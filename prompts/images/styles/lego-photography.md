@@ -43,7 +43,7 @@ Macro photograph of a sweeping Lego landscape with no minifigures — [SCENE —
 
 **Variation 5 — Holiday / Seasonal Scene** _(Greeting Card, Social Media)_
 ```text
-Macro photograph of a Lego [HOLIDAY — e.g., Christmas] scene — [DETAILS — e.g., a minifigure family decorating a brick-built Christmas tree, tiny Lego presents with printed wrapping paper patterns, a fireplace made from red and grey bricks], 4:5 vertical format. Glossy ABS plastic texture with visible injection mold seam lines on every piece. Warm tungsten lighting from the brick fireplace casting a golden glow. Translucent Lego pieces for fairy lights and candle flames. Shallow depth of field. Cozy, charming, nostalgic.
+Macro photograph of a Lego [HOLIDAY — e.g., Christmas] scene — [DETAILS — e.g., a minifigure family decorating a brick-built Christmas tree, tiny Lego presents with printed wrapping paper patterns, a fireplace made from red and grey bricks], 3:4 vertical format. Glossy ABS plastic texture with visible injection mold seam lines on every piece. Warm tungsten lighting from the brick fireplace casting a golden glow. Translucent Lego pieces for fairy lights and candle flames. Shallow depth of field. Cozy, charming, nostalgic.
 ```
 
 ### ChatGPT
@@ -55,12 +55,12 @@ Create a macro photograph of a Lego minifigure depicting [SUBJECT], tight crop f
 
 **Variation 2 — Action Scene**
 ```text
-Create a macro photograph of Lego minifigures in a dynamic action scene: [SCENE]. Every element must be constructed from Lego bricks. Glossy ABS plastic texture with injection mold seam lines. Dramatic cinematic side-lighting. Tilt-shift macro lens with shallow depth of field. 16:9 landscape format.
+Create a macro photograph of Lego minifigures in a dynamic action scene: [SCENE]. Every element must be constructed from Lego bricks. Glossy ABS plastic texture with injection mold seam lines. Dramatic cinematic side-lighting. Tilt-shift macro lens with shallow depth of field. 3:2 landscape format.
 ```
 
 **Variation 3 — Real-World Recreation**
 ```text
-Create a macro photograph recreating [FAMOUS SCENE] entirely with Lego minifigures and bricks. Match the lighting and composition of the original but make every element recognizably Lego. Glossy plastic textures, injection mold seams, classic primary colors. The humor comes from the epic-meets-tiny contrast. 16:9 landscape format.
+Create a macro photograph recreating [FAMOUS SCENE] entirely with Lego minifigures and bricks. Match the lighting and composition of the original but make every element recognizably Lego. Glossy plastic textures, injection mold seams, classic primary colors. The humor comes from the epic-meets-tiny contrast. 3:2 landscape format.
 ```
 
 ### Midjourney

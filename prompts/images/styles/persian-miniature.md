@@ -10,7 +10,7 @@ Richly detailed paintings from the Persian manuscript tradition — flat perspec
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Persian miniature painting depicting a royal garden party — courtiers seated on silk carpets under a flowering canopy, musicians playing, a central fountain, and a peacock on Nassā architecture in the background — on aged cream paper, 4:5 vertical format. Flat perspective with multiple scenes visible simultaneously. Rich mineral pigments — lapis lazuli blue, vermillion, malachite green, saffron gold. Gold leaf accents on architecture, clothing, and the ornate floral border frame. Every textile pattern, tile design, and flower petal individually rendered. Microscopic detail visible at every scale. Intricate floral border frame with arabesques.
+> Persian miniature painting depicting a royal garden party — courtiers seated on silk carpets under a flowering canopy, musicians playing, a central fountain, and a peacock on Nassā architecture in the background — on aged cream paper, 3:4 vertical format. Flat perspective with multiple scenes visible simultaneously. Rich mineral pigments — lapis lazuli blue, vermillion, malachite green, saffron gold. Gold leaf accents on architecture, clothing, and the ornate floral border frame. Every textile pattern, tile design, and flower petal individually rendered. Microscopic detail visible at every scale. Intricate floral border frame with arabesques.
 > ```
 
 ---

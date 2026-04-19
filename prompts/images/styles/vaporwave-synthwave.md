@@ -48,7 +48,7 @@ Synthwave album cover — bold chrome 3D typography reading "[TEXT]" floating ov
 
 **Variation 1 — Landscape**
 ```text
-Create a synthwave landscape: chrome grid to vanishing point, massive gradient sunset in [COLORS], palm silhouettes, neon-pulsing grid lines, scanline overlay. 16:9 landscape format.
+Create a synthwave landscape: chrome grid to vanishing point, massive gradient sunset in [COLORS], palm silhouettes, neon-pulsing grid lines, scanline overlay. 3:2 landscape format.
 ```
 
 **Variation 2 — Statue / Vaporwave**
@@ -58,7 +58,7 @@ Create a vaporwave aesthetic render of [OBJECT]. Half marble, half neon wirefram
 
 **Variation 3 — Character Silhouette**
 ```text
-Create a synthwave silhouette of [FIGURE] against a massive gradient sunset. Chrome grid floor. Neon edge-glow. Horizontal sun stripes. Outrun aesthetic. 9:16 vertical format.
+Create a synthwave silhouette of [FIGURE] against a massive gradient sunset. Chrome grid floor. Neon edge-glow. Horizontal sun stripes. Outrun aesthetic. 2:3 vertical format.
 ```
 
 ### Midjourney

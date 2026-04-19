@@ -10,7 +10,7 @@ Dramatic, studio-quality portrait photography with professional lighting and sha
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Photorealistic cinematic headshot photograph of an elderly lighthouse keeper with deep-set blue eyes and a salt-and-pepper beard, 4:5 vertical portrait format. 85mm lens with f/1.8 aperture. Rembrandt lighting — single key light at 45 degrees casting a triangular highlight on the shadowed cheek. Background is a softly blurred stormy coastline at dusk. Weathered skin texture with sun spots and smile lines, sharp focus locked on the eyes.
+> Photorealistic cinematic headshot photograph of an elderly lighthouse keeper with deep-set blue eyes and a salt-and-pepper beard, 3:4 vertical portrait format. 85mm lens with f/1.8 aperture. Rembrandt lighting — single key light at 45 degrees casting a triangular highlight on the shadowed cheek. Background is a softly blurred stormy coastline at dusk. Weathered skin texture with sun spots and smile lines, sharp focus locked on the eyes.
 > ```
 
 ---
@@ -23,17 +23,17 @@ Dramatic, studio-quality portrait photography with professional lighting and sha
 
 **Variation 1 — Front-Facing Professional Headshot** _(LinkedIn, Team Page)_
 ```text
-Photorealistic cinematic headshot photograph of [SUBJECT], front-facing composition looking directly into camera, 4:5 vertical portrait format. 85mm lens with f/1.8 aperture creating a creamy shallow depth of field. Rembrandt lighting — single key light at 45 degrees casting a triangular highlight on the shadowed cheek. Background is a softly blurred [ENVIRONMENT]. Natural skin texture with visible pores, sharp focus locked on the eyes. Professional, approachable expression.
+Photorealistic cinematic headshot photograph of [SUBJECT], front-facing composition looking directly into camera, 3:4 vertical portrait format. 85mm lens with f/1.8 aperture creating a creamy shallow depth of field. Rembrandt lighting — single key light at 45 degrees casting a triangular highlight on the shadowed cheek. Background is a softly blurred [ENVIRONMENT]. Natural skin texture with visible pores, sharp focus locked on the eyes. Professional, approachable expression.
 ```
 
 **Variation 2 — Three-Quarter Profile** _(Author Bio, Speaker Card)_
 ```text
-Photorealistic cinematic headshot photograph of [SUBJECT], three-quarter profile view with the subject turned slightly away from camera, chin angled toward the key light, 4:5 vertical portrait format. 85mm lens with f/2.0 aperture. Split lighting — one side of the face illuminated, the other falling into rich shadow. Background is a softly blurred [ENVIRONMENT]. Natural skin texture with fine detail, sharp focus on the near eye. Contemplative, confident expression.
+Photorealistic cinematic headshot photograph of [SUBJECT], three-quarter profile view with the subject turned slightly away from camera, chin angled toward the key light, 3:4 vertical portrait format. 85mm lens with f/2.0 aperture. Split lighting — one side of the face illuminated, the other falling into rich shadow. Background is a softly blurred [ENVIRONMENT]. Natural skin texture with fine detail, sharp focus on the near eye. Contemplative, confident expression.
 ```
 
 **Variation 3 — Side Profile / Silhouette** _(Editorial, Creative Branding)_
 ```text
-Photorealistic cinematic side profile photograph of [SUBJECT], looking into the distance, 4:5 vertical portrait format. 100mm lens with f/2.8 aperture. Backlit with a strong rim light creating a glowing edge along the jawline, nose, and forehead. The face is in partial shadow with just enough fill to reveal expression. Background is a softly blurred [ENVIRONMENT] with warm golden tones. Sharp focus on the profile edge.
+Photorealistic cinematic side profile photograph of [SUBJECT], looking into the distance, 3:4 vertical portrait format. 100mm lens with f/2.8 aperture. Backlit with a strong rim light creating a glowing edge along the jawline, nose, and forehead. The face is in partial shadow with just enough fill to reveal expression. Background is a softly blurred [ENVIRONMENT] with warm golden tones. Sharp focus on the profile edge.
 ```
 
 **Variation 4 — Environmental Portrait** _(Personal Brand, About Page)_
@@ -43,24 +43,24 @@ Photorealistic cinematic environmental portrait of [SUBJECT] in their natural wo
 
 **Variation 5 — Dramatic Low-Key Portrait** _(Acting Headshot, Creative Portfolio)_
 ```text
-Photorealistic low-key cinematic headshot of [SUBJECT] emerging from a near-black background, 4:5 vertical portrait format. 85mm lens with f/1.4 aperture. Single hard light source from a 45-degree angle creating deep, sculpted shadows across the face. Only the key features — eyes, bridge of nose, cheekbone — catch the light. Skin texture is hyper-realistic with visible pores and fine hairs. The mood is intense and introspective.
+Photorealistic low-key cinematic headshot of [SUBJECT] emerging from a near-black background, 3:4 vertical portrait format. 85mm lens with f/1.4 aperture. Single hard light source from a 45-degree angle creating deep, sculpted shadows across the face. Only the key features — eyes, bridge of nose, cheekbone — catch the light. Skin texture is hyper-realistic with visible pores and fine hairs. The mood is intense and introspective.
 ```
 
 ### ChatGPT
 
 **Variation 1 — Front-Facing Professional**
 ```text
-Create a cinematic headshot photograph of [SUBJECT] looking directly into the camera. Use an 85mm portrait lens with an f/1.8 aperture to produce a creamy, shallow depth of field. The background is a softly blurred [ENVIRONMENT]. Light the face with Rembrandt lighting — a single key light at 45 degrees creating the signature triangular highlight on the shadowed cheek. Skin texture should be hyper-realistic with natural pores and fine detail. Sharp focus on the eyes. 4:5 vertical crop. 8K resolution.
+Create a cinematic headshot photograph of [SUBJECT] looking directly into the camera. Use an 85mm portrait lens with an f/1.8 aperture to produce a creamy, shallow depth of field. The background is a softly blurred [ENVIRONMENT]. Light the face with Rembrandt lighting — a single key light at 45 degrees creating the signature triangular highlight on the shadowed cheek. Skin texture should be hyper-realistic with natural pores and fine detail. Sharp focus on the eyes. 2:3 vertical crop. 8K resolution.
 ```
 
 **Variation 2 — Three-Quarter Profile**
 ```text
-Create a cinematic three-quarter profile headshot of [SUBJECT], turned slightly away from camera with the chin angled toward the light. 85mm portrait lens, f/2.0, split lighting with one side illuminated and the other in rich shadow. Background is a softly blurred [ENVIRONMENT]. Natural skin texture, sharp focus on the near eye. The expression is contemplative and confident. 4:5 vertical crop.
+Create a cinematic three-quarter profile headshot of [SUBJECT], turned slightly away from camera with the chin angled toward the light. 85mm portrait lens, f/2.0, split lighting with one side illuminated and the other in rich shadow. Background is a softly blurred [ENVIRONMENT]. Natural skin texture, sharp focus on the near eye. The expression is contemplative and confident. 2:3 vertical crop.
 ```
 
 **Variation 3 — Environmental Portrait**
 ```text
-Create a cinematic environmental portrait of [SUBJECT] in a [ENVIRONMENT], positioned at a rule-of-thirds intersection with their workspace visible in the background. 35mm lens, f/2.8, natural window light. The subject is in sharp focus while the meaningful background details fall into gentle bokeh. 16:9 landscape format. Warm, professional tone.
+Create a cinematic environmental portrait of [SUBJECT] in a [ENVIRONMENT], positioned at a rule-of-thirds intersection with their workspace visible in the background. 35mm lens, f/2.8, natural window light. The subject is in sharp focus while the meaningful background details fall into gentle bokeh. 3:2 landscape format. Warm, professional tone.
 ```
 
 ### Midjourney
@@ -102,7 +102,7 @@ Transform existing photos into cinematic headshots:
 
 **Nano Banana 2** _(Featured)_
 ```text
-Using the attached photo as reference, create a cinematic headshot with dramatic Rembrandt lighting. Soften the background into a blurred [ENVIRONMENT] while preserving the subject's exact likeness, expression, and features. Enhance skin texture to be hyper-realistic. Sharp focus on the eyes. 4:5 vertical portrait format.
+Using the attached photo as reference, create a cinematic headshot with dramatic Rembrandt lighting. Soften the background into a blurred [ENVIRONMENT] while preserving the subject's exact likeness, expression, and features. Enhance skin texture to be hyper-realistic. Sharp focus on the eyes. 3:4 vertical portrait format.
 ```
 > 💡 **Follow-up refinements:**
 > - "Shift to split lighting — put half the face in shadow"
@@ -112,7 +112,7 @@ Using the attached photo as reference, create a cinematic headshot with dramatic
 
 **ChatGPT**
 ```text
-[Upload Photo] "Enhance this portrait with dramatic cinematic Rembrandt lighting. Soften the background into a blurred [ENVIRONMENT] while preserving the subject's likeness exactly. Boost skin texture detail. Sharp focus on the eyes. 4:5 crop."
+[Upload Photo] "Enhance this portrait with dramatic cinematic Rembrandt lighting. Soften the background into a blurred [ENVIRONMENT] while preserving the subject's likeness exactly. Boost skin texture detail. Sharp focus on the eyes. 2:3 crop."
 ```
 
 **Midjourney**

@@ -38,7 +38,7 @@ Close-up photograph of a brutalist building facade showing a repeating geometric
 
 **Variation 4 — Brutalist + Nature** _(Social Media, Conceptual)_
 ```text
-Photograph of a brutalist concrete structure being reclaimed by nature — [SCENE — e.g., a massive concrete tower with vegetation growing from every crack and window opening, hanging vines cascading down the raw concrete faces, moss and lichen covering the lower surfaces], 4:5 vertical format. The contrast between the geometric brutalist forms and the organic, uncontrolled vegetation creates visual tension. Raw concrete texture still visible under the greenery. Soft overcast lighting. The structure feels both monument and ruin.
+Photograph of a brutalist concrete structure being reclaimed by nature — [SCENE — e.g., a massive concrete tower with vegetation growing from every crack and window opening, hanging vines cascading down the raw concrete faces, moss and lichen covering the lower surfaces], 3:4 vertical format. The contrast between the geometric brutalist forms and the organic, uncontrolled vegetation creates visual tension. Raw concrete texture still visible under the greenery. Soft overcast lighting. The structure feels both monument and ruin.
 ```
 
 **Variation 5 — Fictional / Speculative Brutalist** _(Concept Art, Wallpaper)_
@@ -50,17 +50,17 @@ Photograph of a speculative brutalist megastructure — [STRUCTURE — e.g., a m
 
 **Variation 1 — Single Building**
 ```text
-Create a photograph of a monolithic brutalist [BUILDING TYPE]. Massive geometric volumes. Raw concrete with visible formwork lines. Dramatic angular shadows. Human figure for scale. Monochromatic grey palette. Harsh directional sunlight. 16:9 landscape format.
+Create a photograph of a monolithic brutalist [BUILDING TYPE]. Massive geometric volumes. Raw concrete with visible formwork lines. Dramatic angular shadows. Human figure for scale. Monochromatic grey palette. Harsh directional sunlight. 3:2 landscape format.
 ```
 
 **Variation 2 — Interior**
 ```text
-Create a photograph of a brutalist interior: [SPACE]. Raw concrete walls. Geometric repetition. Natural light from above creating geometric shadows. Shot from below. Monumental scale. 9:16 vertical format.
+Create a photograph of a brutalist interior: [SPACE]. Raw concrete walls. Geometric repetition. Natural light from above creating geometric shadows. Shot from below. Monumental scale. 2:3 vertical format.
 ```
 
 **Variation 3 — Facade Pattern**
 ```text
-Create a close-up photograph of a brutalist facade: [PATTERN]. Repeating geometric recesses creating shadow boxes. Visible concrete texture. Architectural abstraction. 16:9 landscape format.
+Create a close-up photograph of a brutalist facade: [PATTERN]. Repeating geometric recesses creating shadow boxes. Visible concrete texture. Architectural abstraction. 3:2 landscape format.
 ```
 
 ### Midjourney

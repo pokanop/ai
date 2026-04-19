@@ -55,7 +55,7 @@ Create a minimalist black-and-white line art illustration of [SUBJECT] in the No
 
 **Variation 2 — Scene**
 ```text
-Create a minimalist line art illustration of [SCENE]. Notion app style. Abstracted figures and objects. Bold uniform strokes. No shading or fills. Pure white background with generous negative space. 16:9 landscape format.
+Create a minimalist line art illustration of [SCENE]. Notion app style. Abstracted figures and objects. Bold uniform strokes. No shading or fills. Pure white background with generous negative space. 3:2 landscape format.
 ```
 
 **Variation 3 — With Accent Color**

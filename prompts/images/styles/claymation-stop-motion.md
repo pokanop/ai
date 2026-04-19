@@ -55,12 +55,12 @@ Create a stop-motion claymation character portrait of [SUBJECT]. Sculpted from m
 
 **Variation 2 — Full Scene**
 ```text
-Create a stop-motion claymation still of [SUBJECT] in [ENVIRONMENT]. Everything sculpted from clay with visible fingerprints and tool marks. Handbuilt miniature set with imperfections. Warm tungsten lighting. Shallow depth of field. Laika Studios aesthetic. 16:9 landscape format.
+Create a stop-motion claymation still of [SUBJECT] in [ENVIRONMENT]. Everything sculpted from clay with visible fingerprints and tool marks. Handbuilt miniature set with imperfections. Warm tungsten lighting. Shallow depth of field. Laika Studios aesthetic. 3:2 landscape format.
 ```
 
 **Variation 3 — Behind-the-Scenes**
 ```text
-Create a claymation "behind the scenes" still showing [CHARACTER] on a miniature set with edges visible — wooden stage floor, sculpting tools, unused clay blocks, wire armature partially visible. Workshop lighting. 16:9 landscape format.
+Create a claymation "behind the scenes" still showing [CHARACTER] on a miniature set with edges visible — wooden stage floor, sculpting tools, unused clay blocks, wire armature partially visible. Workshop lighting. 3:2 landscape format.
 ```
 
 ### Midjourney

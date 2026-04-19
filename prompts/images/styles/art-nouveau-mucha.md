@@ -10,7 +10,7 @@ Flowing organic lines, elaborate floral borders, ethereal female figures, and or
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Art Nouveau poster illustration in the style of Alphonse Mucha — an ethereal woman with flowing auburn hair intertwined with lily flowers, standing within an ornate circular halo border of interlocking floral arabesques, 4:5 vertical format. Muted earth-tone palette — warm ochre, sage green, dusty rose, and cream with metallic gold accents on the border and hair ornaments. Flowing organic lines — no sharp angles anywhere. Elaborate floral border frame with lilies, vines, and geometric Art Nouveau motifs. Decorative typography reading "[TEXT]" in an organic Art Nouveau typeface at the bottom. Flat decorative style with minimal shading. Printed on cream paper.
+> Art Nouveau poster illustration in the style of Alphonse Mucha — an ethereal woman with flowing auburn hair intertwined with lily flowers, standing within an ornate circular halo border of interlocking floral arabesques, 3:4 vertical format. Muted earth-tone palette — warm ochre, sage green, dusty rose, and cream with metallic gold accents on the border and hair ornaments. Flowing organic lines — no sharp angles anywhere. Elaborate floral border frame with lilies, vines, and geometric Art Nouveau motifs. Decorative typography reading "[TEXT]" in an organic Art Nouveau typeface at the bottom. Flat decorative style with minimal shading. Printed on cream paper.
 > ```
 
 ---

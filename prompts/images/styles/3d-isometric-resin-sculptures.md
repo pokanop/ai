@@ -60,7 +60,7 @@ Create a 3D isometric render of a miniature open-top resin sculpture depicting [
 
 **Variation 3 — Collection Display**
 ```text
-Create a 3D isometric render showing three miniature open-top resin sculptures displayed side by side: [SCENE 1], [SCENE 2], and [SCENE 3]. Same art style and lighting across all three — matte and satin resin finish, hand-sculpted details, candy-bright colors. Pure white background. Collectible display aesthetic. 16:9 landscape format.
+Create a 3D isometric render showing three miniature open-top resin sculptures displayed side by side: [SCENE 1], [SCENE 2], and [SCENE 3]. Same art style and lighting across all three — matte and satin resin finish, hand-sculpted details, candy-bright colors. Pure white background. Collectible display aesthetic. 3:2 landscape format.
 ```
 
 ### Midjourney

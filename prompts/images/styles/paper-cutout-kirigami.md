@@ -28,7 +28,7 @@ Multi-layered paper craft scenes with visible paper textures, crisp cut edges, a
 
 **Variation 2 — Character / Portrait** _(Social Media, Greeting Card)_
 ```text
-3D layered paper-cut illustration of [SUBJECT — e.g., a girl with an umbrella walking through a paper rain shower], 4:5 vertical format. The figure is constructed from multiple precise paper layers — body, clothing, hair, and accessory are each separate cut sheets stacked for depth. Thick textured colored paper in [PALETTE]. The background is a multi-layered paper [ENVIRONMENT] with deep drop shadows between layers. Softly backlit — light passing through thinner paper sections creates a subtle translucent glow.
+3D layered paper-cut illustration of [SUBJECT — e.g., a girl with an umbrella walking through a paper rain shower], 3:4 vertical format. The figure is constructed from multiple precise paper layers — body, clothing, hair, and accessory are each separate cut sheets stacked for depth. Thick textured colored paper in [PALETTE]. The background is a multi-layered paper [ENVIRONMENT] with deep drop shadows between layers. Softly backlit — light passing through thinner paper sections creates a subtle translucent glow.
 ```
 
 **Variation 3 — Pop-Up Book Style** _(Children's Content, Social Media)_
@@ -38,7 +38,7 @@ Multi-layered paper craft scenes with visible paper textures, crisp cut edges, a
 
 **Variation 4 — Seasonal / Holiday** _(Greeting Card, Social Media)_
 ```text
-3D layered paper-cut illustration of a [HOLIDAY/SEASON — e.g., winter holiday] scene — [DETAILS — e.g., a snowy village with paper pine trees, a church with a glowing cut-out window, and paper snowflakes hanging from above], 4:5 vertical format. Multiple layers of thick textured paper in [PALETTE — e.g., white, icy blue, silver, and forest green with gold accents]. Deep drop shadows between layers. Soft warm backlighting creating a gentle glow through the thinner paper cuts. Festive, elegant.
+3D layered paper-cut illustration of a [HOLIDAY/SEASON — e.g., winter holiday] scene — [DETAILS — e.g., a snowy village with paper pine trees, a church with a glowing cut-out window, and paper snowflakes hanging from above], 3:4 vertical format. Multiple layers of thick textured paper in [PALETTE — e.g., white, icy blue, silver, and forest green with gold accents]. Deep drop shadows between layers. Soft warm backlighting creating a gentle glow through the thinner paper cuts. Festive, elegant.
 ```
 
 **Variation 5 — Shadow Box / Framed Diorama** _(Art Print, Gift)_
@@ -50,12 +50,12 @@ Multi-layered paper craft scenes with visible paper textures, crisp cut edges, a
 
 **Variation 1 — Landscape**
 ```text
-Create a 3D layered paper-cut illustration of [SCENE]. Multiple layers of thick textured colored paper with crisp cut edges. Deep drop shadows between each layer creating depth. Warm directional light making paper edges glow. Visible paper fiber texture. 16:9 landscape format.
+Create a 3D layered paper-cut illustration of [SCENE]. Multiple layers of thick textured colored paper with crisp cut edges. Deep drop shadows between each layer creating depth. Warm directional light making paper edges glow. Visible paper fiber texture. 3:2 landscape format.
 ```
 
 **Variation 2 — Pop-Up Book**
 ```text
-Create a 3D paper-cut illustration styled as an open pop-up book: [SCENE] rising from the center fold. Book pages visible at the bottom. Paper layers fold upward at 90-degree angles. Deep shadows. Bright cheerful palette. Studio lighting. 16:9 landscape format.
+Create a 3D paper-cut illustration styled as an open pop-up book: [SCENE] rising from the center fold. Book pages visible at the bottom. Paper layers fold upward at 90-degree angles. Deep shadows. Bright cheerful palette. Studio lighting. 3:2 landscape format.
 ```
 
 **Variation 3 — Shadow Box**

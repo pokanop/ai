@@ -55,12 +55,12 @@ Create a cell-shaded 3D character portrait of [SUBJECT]. Thick black ink outline
 
 **Variation 2 — Action Scene**
 ```text
-Create a cell-shaded 3D action scene of [SUBJECT] in [ACTION]. Thick black outlines, flat color zones, hard-edged shadows, speed lines, dramatic camera angle. [ENVIRONMENT] in the same cell-shaded style. 16:9 landscape format.
+Create a cell-shaded 3D action scene of [SUBJECT] in [ACTION]. Thick black outlines, flat color zones, hard-edged shadows, speed lines, dramatic camera angle. [ENVIRONMENT] in the same cell-shaded style. 3:2 landscape format.
 ```
 
 **Variation 3 — Environment**
 ```text
-Create a cell-shaded 3D landscape of [ENVIRONMENT]. Every surface has thick ink outlines. Flat color zones with hard-edged shadows. Cross-hatching on darkest areas. Golden-hour lighting. Breath of the Wild / Wind Waker aesthetic. 16:9 landscape format.
+Create a cell-shaded 3D landscape of [ENVIRONMENT]. Every surface has thick ink outlines. Flat color zones with hard-edged shadows. Cross-hatching on darkest areas. Golden-hour lighting. Breath of the Wild / Wind Waker aesthetic. 3:2 landscape format.
 ```
 
 ### Midjourney

@@ -33,12 +33,12 @@ Photograph of an ice sculpture of [OBJECT — e.g., an ornate throne with armres
 
 **Variation 3 — Floral / Botanical** _(Social Media, Greeting Card)_
 ```text
-Photograph of a delicate ice sculpture of [SUBJECT — e.g., a single rose with unfurling petals and a stem with two leaves], on a mirrored surface, 4:5 vertical format. Each petal is thin enough to be partially translucent, with frosted edges and crystal-clear centers. Internal refractions create subtle rainbow caustics inside the petals. Tiny condensation droplets on every surface. Individual ice crystal facets visible at the edges. Cold blue-white palette with a dark background. Soft spotlight from above creating a gentle halo glow around the flower.
+Photograph of a delicate ice sculpture of [SUBJECT — e.g., a single rose with unfurling petals and a stem with two leaves], on a mirrored surface, 3:4 vertical format. Each petal is thin enough to be partially translucent, with frosted edges and crystal-clear centers. Internal refractions create subtle rainbow caustics inside the petals. Tiny condensation droplets on every surface. Individual ice crystal facets visible at the edges. Cold blue-white palette with a dark background. Soft spotlight from above creating a gentle halo glow around the flower.
 ```
 
 **Variation 4 — Human Figure** _(Art Print, Social Media)_
 ```text
-Photograph of an ice sculpture of [FIGURE — e.g., a dancer in an arabesque pose], on a mirrored pedestal in a dark gallery, 4:5 vertical format. Major body forms carved from crystal-clear ice — torso, limbs. Detailed elements — hair, fabric folds, facial features — in frosted matte finish. The transparent body reveals internal light paths, creating prismatic rainbow refractions. Condensation droplets on all surfaces. Single dramatic spotlight from behind and above creating a bright rim light along the figure's silhouette. Cold blue-white palette. Elegant, ethereal.
+Photograph of an ice sculpture of [FIGURE — e.g., a dancer in an arabesque pose], on a mirrored pedestal in a dark gallery, 3:4 vertical format. Major body forms carved from crystal-clear ice — torso, limbs. Detailed elements — hair, fabric folds, facial features — in frosted matte finish. The transparent body reveals internal light paths, creating prismatic rainbow refractions. Condensation droplets on all surfaces. Single dramatic spotlight from behind and above creating a bright rim light along the figure's silhouette. Cold blue-white palette. Elegant, ethereal.
 ```
 
 **Variation 5 — Melting / Transient** _(Conceptual Art, Social Media)_
@@ -50,17 +50,17 @@ Photograph of an ice sculpture of [SUBJECT — e.g., a clock face] in the proces
 
 **Variation 1 — Animal**
 ```text
-Create a photograph of an ice sculpture depicting [ANIMAL] on a mirrored pedestal in a dark gallery. Crystal-clear ice with frosted matte details. Internal refractions, rainbow caustic patterns, condensation droplets. Cold blue-white palette. Single dramatic spotlight. 16:9 landscape format.
+Create a photograph of an ice sculpture depicting [ANIMAL] on a mirrored pedestal in a dark gallery. Crystal-clear ice with frosted matte details. Internal refractions, rainbow caustic patterns, condensation droplets. Cold blue-white palette. Single dramatic spotlight. 3:2 landscape format.
 ```
 
 **Variation 2 — Floral**
 ```text
-Create a photograph of a delicate ice sculpture of [FLOWER] on a mirrored surface. Thin translucent petals with frosted edges. Rainbow caustics inside the petals. Condensation droplets. Cold palette, dark background. Soft spotlight with halo glow. 4:5 vertical format.
+Create a photograph of a delicate ice sculpture of [FLOWER] on a mirrored surface. Thin translucent petals with frosted edges. Rainbow caustics inside the petals. Condensation droplets. Cold palette, dark background. Soft spotlight with halo glow. 2:3 vertical format.
 ```
 
 **Variation 3 — Melting**
 ```text
-Create a photograph of an ice sculpture of [SUBJECT] in the process of melting — dripping, sagging, meltwater pooling. Mix of clear and frosted ice. Glistening wet surfaces. Distorted caustic patterns in the meltwater. Dramatic spotlight. Ephemeral mood. 16:9 landscape format.
+Create a photograph of an ice sculpture of [SUBJECT] in the process of melting — dripping, sagging, meltwater pooling. Mix of clear and frosted ice. Glistening wet surfaces. Distorted caustic patterns in the meltwater. Dramatic spotlight. Ephemeral mood. 3:2 landscape format.
 ```
 
 ### Midjourney

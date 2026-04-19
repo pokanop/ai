@@ -38,7 +38,7 @@ Tilt-shift photograph of a miniature architectural diorama depicting [SCENE — 
 
 **Variation 4 — Seasonal Landmark** _(Greeting Card, Holiday Content)_
 ```text
-Tilt-shift photograph of a miniature architectural diorama of [LANDMARK] during [SEASON — e.g., winter with fresh snow covering the rooftops and tiny model evergreen trees dusted in white], 4:5 vertical format. Wooden display base. Miniature string lights along the eaves emitting tiny warm glows. Frost detail on the windows. Tiny figurines bundled in winter clothing. Soft cool-toned studio lighting with warm accent from the miniature lights. Tilt-shift lens. Festive, cozy atmosphere.
+Tilt-shift photograph of a miniature architectural diorama of [LANDMARK] during [SEASON — e.g., winter with fresh snow covering the rooftops and tiny model evergreen trees dusted in white], 3:4 vertical format. Wooden display base. Miniature string lights along the eaves emitting tiny warm glows. Frost detail on the windows. Tiny figurines bundled in winter clothing. Soft cool-toned studio lighting with warm accent from the miniature lights. Tilt-shift lens. Festive, cozy atmosphere.
 ```
 
 **Variation 5 — Under Construction / Cutaway** _(Educational, Technical)_
@@ -50,17 +50,17 @@ Tilt-shift photograph of a miniature architectural diorama showing [LANDMARK] as
 
 **Variation 1 — Famous Landmark**
 ```text
-Create a tilt-shift photograph of a miniature architectural diorama of [LANDMARK]. The model sits on a wooden display base with a brass nameplate. Incredibly detailed at 1:500 scale with tiny figurines for scale reference. Warm studio lighting with soft shadows. Tilt-shift lens creating selective focus on the model. 16:9 landscape format.
+Create a tilt-shift photograph of a miniature architectural diorama of [LANDMARK]. The model sits on a wooden display base with a brass nameplate. Incredibly detailed at 1:500 scale with tiny figurines for scale reference. Warm studio lighting with soft shadows. Tilt-shift lens creating selective focus on the model. 3:2 landscape format.
 ```
 
 **Variation 2 — City Block**
 ```text
-Create a tilt-shift photograph of a miniature diorama depicting [CITY SCENE] at 1:200 scale. Multiple buildings with architectural detail — roofs, balconies, windows. Miniature figurines of pedestrians and vehicles. Warm afternoon lighting. Tilt-shift lens effect. 16:9 landscape format.
+Create a tilt-shift photograph of a miniature diorama depicting [CITY SCENE] at 1:200 scale. Multiple buildings with architectural detail — roofs, balconies, windows. Miniature figurines of pedestrians and vehicles. Warm afternoon lighting. Tilt-shift lens effect. 3:2 landscape format.
 ```
 
 **Variation 3 — Seasonal**
 ```text
-Create a tilt-shift photograph of a miniature diorama of [LANDMARK] in [SEASON]. Add seasonal details — [DETAILS]. Tiny figurines in seasonal clothing. Warm studio lighting. Tilt-shift lens. Festive atmosphere. 4:5 vertical format.
+Create a tilt-shift photograph of a miniature diorama of [LANDMARK] in [SEASON]. Add seasonal details — [DETAILS]. Tiny figurines in seasonal clothing. Warm studio lighting. Tilt-shift lens. Festive atmosphere. 2:3 vertical format.
 ```
 
 ### Midjourney

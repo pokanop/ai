@@ -10,7 +10,7 @@ The earliest photographic processes — portraits on mirror-polished silver plat
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Daguerreotype portrait on a mirror-polished silver plate of a person in Victorian-era clothing, seated in a formal pose, 4:5 vertical format. The silver surface is reflective — you can see the faint ghost of the photography studio reflected in the dark areas. Extraordinarily fine detail on the face and clothing fabric. Slight motion blur on the hands due to long exposure. The image shifts between positive and negative tones depending on the viewing angle. Dark velvet background. Housed in an ornate brass mat and leather case. The plate shows age — slight tarnishing at the edges, oxidation patterns. Haunting, luminous, otherworldly.
+> Daguerreotype portrait on a mirror-polished silver plate of a person in Victorian-era clothing, seated in a formal pose, 3:4 vertical format. The silver surface is reflective — you can see the faint ghost of the photography studio reflected in the dark areas. Extraordinarily fine detail on the face and clothing fabric. Slight motion blur on the hands due to long exposure. The image shifts between positive and negative tones depending on the viewing angle. Dark velvet background. Housed in an ornate brass mat and leather case. The plate shows age — slight tarnishing at the edges, oxidation patterns. Haunting, luminous, otherworldly.
 > ```
 
 ---

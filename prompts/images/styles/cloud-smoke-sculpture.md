@@ -28,7 +28,7 @@ Photograph of [ANIMAL — e.g., a galloping horse] formed entirely from dense wh
 
 **Variation 2 — Human Figure / Portrait** _(Social Media, Conceptual Art)_
 ```text
-Photograph of a human figure — [SUBJECT — e.g., a woman with flowing hair reaching upward] — formed entirely from swirling white smoke against a pure black background, 4:5 vertical portrait format. The face and torso are dense enough to show recognizable features and expression. The hair is a dynamic stream of smoke flowing upward and dispersing. The fingers and lower body dissolve into thin tendrils that trail off into the darkness. A single dramatic spotlight from above creates bright highlights on the smoke surfaces while the rest falls into blackness. The smoke has subtle internal turbulence patterns — curling, folding, swirling.
+Photograph of a human figure — [SUBJECT — e.g., a woman with flowing hair reaching upward] — formed entirely from swirling white smoke against a pure black background, 3:4 vertical portrait format. The face and torso are dense enough to show recognizable features and expression. The hair is a dynamic stream of smoke flowing upward and dispersing. The fingers and lower body dissolve into thin tendrils that trail off into the darkness. A single dramatic spotlight from above creates bright highlights on the smoke surfaces while the rest falls into blackness. The smoke has subtle internal turbulence patterns — curling, folding, swirling.
 ```
 
 **Variation 3 — Object / Symbol** _(Logo Concept, Brand Imagery)_
@@ -50,17 +50,17 @@ Photograph of [SUBJECT — e.g., a phoenix] formed from swirling colored smoke a
 
 **Variation 1 — Animal**
 ```text
-Create a photograph of [ANIMAL] formed entirely from dense white cumulus clouds against a deep blue sky. Core body clearly defined, extremities dissolving into thin wisps. Individual vapor tendrils curling outward. Golden-hour side-lighting with strong highlights and deep blue shadows. 16:9 landscape format.
+Create a photograph of [ANIMAL] formed entirely from dense white cumulus clouds against a deep blue sky. Core body clearly defined, extremities dissolving into thin wisps. Individual vapor tendrils curling outward. Golden-hour side-lighting with strong highlights and deep blue shadows. 3:2 landscape format.
 ```
 
 **Variation 2 — Figure on Black**
 ```text
-Create a photograph of [FIGURE] formed from swirling white smoke against a pure black background. Recognizable features in the dense core, dissolving into tendrils at the edges. Single dramatic spotlight from above. Internal smoke turbulence patterns visible. 4:5 vertical format.
+Create a photograph of [FIGURE] formed from swirling white smoke against a pure black background. Recognizable features in the dense core, dissolving into tendrils at the edges. Single dramatic spotlight from above. Internal smoke turbulence patterns visible. 2:3 vertical format.
 ```
 
 **Variation 3 — Colored Smoke**
 ```text
-Create a photograph of [SUBJECT] formed from swirling colored smoke — [COLOR GRADIENT]. Dense core defines the shape, thin wisps dissolve at edges. Pure black background. Dramatic backlighting making thin smoke glow. 9:16 vertical format.
+Create a photograph of [SUBJECT] formed from swirling colored smoke — [COLOR GRADIENT]. Dense core defines the shape, thin wisps dissolve at edges. Pure black background. Dramatic backlighting making thin smoke glow. 2:3 vertical format.
 ```
 
 ### Midjourney

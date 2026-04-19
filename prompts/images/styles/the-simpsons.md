@@ -55,12 +55,12 @@ Create a 2D cartoon illustration of [SUBJECT] drawn exactly in the art style of 
 
 **Variation 2 — Springfield Scene**
 ```text
-Create a 2D cartoon illustration of [SUBJECT] in [SPRINGFIELD LOCATION], drawn in The Simpsons art style. Yellow skin, bulging eyes, overbites, four-fingered hands. Flat colors, clean outlines. Background in the show's painting style. Authentic Springfield details. 16:9 landscape format.
+Create a 2D cartoon illustration of [SUBJECT] in [SPRINGFIELD LOCATION], drawn in The Simpsons art style. Yellow skin, bulging eyes, overbites, four-fingered hands. Flat colors, clean outlines. Background in the show's painting style. Authentic Springfield details. 3:2 landscape format.
 ```
 
 **Variation 3 — Group / Family**
 ```text
-Create a 2D cartoon illustration of [NUMBER] people on the Simpsons couch: [DESCRIBE EACH]. The Simpsons art style — yellow skin, bulging eyes, overbites, four-fingered hands. Flat colors, clean outlines. Simpsons living room background. 16:9 landscape format.
+Create a 2D cartoon illustration of [NUMBER] people on the Simpsons couch: [DESCRIBE EACH]. The Simpsons art style — yellow skin, bulging eyes, overbites, four-fingered hands. Flat colors, clean outlines. Simpsons living room background. 3:2 landscape format.
 ```
 
 ### Midjourney

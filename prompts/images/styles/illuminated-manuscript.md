@@ -10,7 +10,7 @@ Medieval illuminated manuscript borders, ornate gilded initials, and richly deco
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Illuminated manuscript page on aged vellum, featuring a large ornate gilded initial letter "S" at the top left, 4:5 vertical format. The initial is decorated with Celtic knotwork interlace in gold leaf, ultramarine blue, and vermillion red, with tiny marginal illustrations of birds and vines growing from the letter. The main body contains Latin text in Gothic blackletter script. An elaborate decorative border runs down the left side and across the bottom — intertwined acanthus vines, heraldic shields, and grotesque creatures in gold and rich mineral pigments. The vellum shows realistic aging — slight foxing, warm yellowed tone, visible animal-skin texture.
+> Illuminated manuscript page on aged vellum, featuring a large ornate gilded initial letter "S" at the top left, 3:4 vertical format. The initial is decorated with Celtic knotwork interlace in gold leaf, ultramarine blue, and vermillion red, with tiny marginal illustrations of birds and vines growing from the letter. The main body contains Latin text in Gothic blackletter script. An elaborate decorative border runs down the left side and across the bottom — intertwined acanthus vines, heraldic shields, and grotesque creatures in gold and rich mineral pigments. The vellum shows realistic aging — slight foxing, warm yellowed tone, visible animal-skin texture.
 > ```
 
 ---

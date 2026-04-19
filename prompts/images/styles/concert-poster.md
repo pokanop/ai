@@ -10,7 +10,7 @@ Screen-printed aesthetic with limited 3–4 color palettes, heavy ink texture, h
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Screen-printed concert poster illustration for a fictional band called "The Midnight Owls" playing at "The Roxy" on October 31st, 11:17 vertical format. A giant spectral owl with spread wings perches atop a crescent moon over a city skyline silhouette. Limited 4-color screen print — midnight navy, burnt orange, cream, and metallic gold on kraft paper stock. Visible screen-print texture: halftone dots in gradients, slight ink bleed at edges, and paper fiber visible through transparent ink layers. Bold hand-drawn serif typography with the band name arching over the owl. Inspired by the Fillmore poster tradition.
+> Screen-printed concert poster illustration for a fictional band called "The Midnight Owls" playing at "The Roxy" on October 31st, 9:16 vertical format. A giant spectral owl with spread wings perches atop a crescent moon over a city skyline silhouette. Limited 4-color screen print — midnight navy, burnt orange, cream, and metallic gold on kraft paper stock. Visible screen-print texture: halftone dots in gradients, slight ink bleed at edges, and paper fiber visible through transparent ink layers. Bold hand-drawn serif typography with the band name arching over the owl. Inspired by the Fillmore poster tradition.
 > ```
 
 ---
@@ -23,44 +23,44 @@ Screen-printed aesthetic with limited 3–4 color palettes, heavy ink texture, h
 
 **Variation 1 — Band / Artist Poster** _(Event Poster, Collectible Print)_
 ```text
-Screen-printed concert poster for [BAND NAME] playing at [VENUE] on [DATE], 11:17 vertical format. [CENTRAL IMAGERY — e.g., a massive kraken rising from the sea, tentacles wrapping around a lighthouse]. Limited [N]-color screen print — [COLORS — e.g., deep teal, rust red, cream, and black] on [PAPER — e.g., cream cotton paper]. Visible screen-print texture: halftone dots in gradients, slight ink bleed at edges, paper fiber visible through transparent ink layers. Bold hand-drawn [TYPOGRAPHY STYLE — e.g., Art Nouveau serif] lettering with the band name as the dominant element. [SUPPORT ACTS / DETAILS] in smaller type at the bottom.
+Screen-printed concert poster for [BAND NAME] playing at [VENUE] on [DATE], 9:16 vertical format. [CENTRAL IMAGERY — e.g., a massive kraken rising from the sea, tentacles wrapping around a lighthouse]. Limited [N]-color screen print — [COLORS — e.g., deep teal, rust red, cream, and black] on [PAPER — e.g., cream cotton paper]. Visible screen-print texture: halftone dots in gradients, slight ink bleed at edges, paper fiber visible through transparent ink layers. Bold hand-drawn [TYPOGRAPHY STYLE — e.g., Art Nouveau serif] lettering with the band name as the dominant element. [SUPPORT ACTS / DETAILS] in smaller type at the bottom.
 ```
 
 **Variation 2 — Festival Poster** _(Festival Branding, Print)_
 ```text
-Screen-printed festival poster for "[FESTIVAL NAME]" featuring [NUMBER] acts, 11:17 vertical format. [CENTRAL IMAGERY — e.g., a massive sun with radiating beams over a desert landscape with silhouetted festival tents]. Limited 5-color screen print — [COLORS] on [PAPER]. Halftone dots, ink bleed, paper texture. Multiple bands/artists listed in decreasing font sizes — headline act at the top in large hand-drawn type, support acts in progressively smaller lettering below. Festival dates, location, and ticket info at the bottom. Collectible art-poster aesthetic.
+Screen-printed festival poster for "[FESTIVAL NAME]" featuring [NUMBER] acts, 9:16 vertical format. [CENTRAL IMAGERY — e.g., a massive sun with radiating beams over a desert landscape with silhouetted festival tents]. Limited 5-color screen print — [COLORS] on [PAPER]. Halftone dots, ink bleed, paper texture. Multiple bands/artists listed in decreasing font sizes — headline act at the top in large hand-drawn type, support acts in progressively smaller lettering below. Festival dates, location, and ticket info at the bottom. Collectible art-poster aesthetic.
 ```
 
 **Variation 3 — Minimalist / Modern Gig Poster** _(Social Media, Gallery Print)_
 ```text
-Minimalist screen-printed gig poster for [BAND NAME] at [VENUE], 11:17 vertical format. [CENTRAL IMAGERY — e.g., a single bold geometric shape — a circle subdivided into four quadrants with a tiny silhouette figure in one quadrant]. Limited 2-color screen print — [COLORS — e.g., neon pink and black] on white paper. Large areas of negative space. Halftone dot gradients where the two colors overlap. Clean, modern sans-serif typography. The design could work as a fine art print independent of the event.
+Minimalist screen-printed gig poster for [BAND NAME] at [VENUE], 9:16 vertical format. [CENTRAL IMAGERY — e.g., a single bold geometric shape — a circle subdivided into four quadrants with a tiny silhouette figure in one quadrant]. Limited 2-color screen print — [COLORS — e.g., neon pink and black] on white paper. Large areas of negative space. Halftone dot gradients where the two colors overlap. Clean, modern sans-serif typography. The design could work as a fine art print independent of the event.
 ```
 
 **Variation 4 — Vintage / Retro Gig Poster** _(Wall Art, Decoration)_
 ```text
-Vintage-style screen-printed poster for a fictional [ERA — e.g., 1960s] concert: "[BAND NAME]" at [VENUE], 11:17 vertical format. [IMAGERY — e.g., a stylized electric guitar bursting with radiating sound waves]. Limited 4-color screen print — [COLORS — e.g., burnt orange, olive green, cream, and chocolate brown] on aged kraft paper with visible foxing and edge wear. Hand-drawn psychedelic or woodcut-style typography. The poster looks like an authentic vintage find — slightly faded ink, paper aging. Fillmore / Avalon Ballroom era aesthetic.
+Vintage-style screen-printed poster for a fictional [ERA — e.g., 1960s] concert: "[BAND NAME]" at [VENUE], 9:16 vertical format. [IMAGERY — e.g., a stylized electric guitar bursting with radiating sound waves]. Limited 4-color screen print — [COLORS — e.g., burnt orange, olive green, cream, and chocolate brown] on aged kraft paper with visible foxing and edge wear. Hand-drawn psychedelic or woodcut-style typography. The poster looks like an authentic vintage find — slightly faded ink, paper aging. Fillmore / Avalon Ballroom era aesthetic.
 ```
 
 **Variation 5 — Non-Music Event Poster** _(Event Promotion, Social Media)_
 ```text
-Screen-printed event poster for [EVENT — e.g., a craft beer festival / book fair / film screening / food market], 11:17 vertical format. [CENTRAL IMAGERY — e.g., an oversized pint glass overflowing with stylized hops and barley sheaves]. Limited 4-color screen print — [COLORS] on [PAPER]. Visible halftone dots, ink bleed, paper fiber through transparent layers. Hand-drawn typography with the event name prominent. Date, location, and details in supporting text. Artisan, handmade aesthetic.
+Screen-printed event poster for [EVENT — e.g., a craft beer festival / book fair / film screening / food market], 9:16 vertical format. [CENTRAL IMAGERY — e.g., an oversized pint glass overflowing with stylized hops and barley sheaves]. Limited 4-color screen print — [COLORS] on [PAPER]. Visible halftone dots, ink bleed, paper fiber through transparent layers. Hand-drawn typography with the event name prominent. Date, location, and details in supporting text. Artisan, handmade aesthetic.
 ```
 
 ### ChatGPT
 
 **Variation 1 — Band Poster**
 ```text
-Create a screen-printed concert poster for [BAND NAME] at [VENUE] on [DATE]. [CENTRAL IMAGERY]. Limited [N]-color screen print — [COLORS] on [PAPER]. Halftone dots, ink bleed, paper texture. Bold hand-drawn typography. 11:17 vertical format.
+Create a screen-printed concert poster for [BAND NAME] at [VENUE] on [DATE]. [CENTRAL IMAGERY]. Limited [N]-color screen print — [COLORS] on [PAPER]. Halftone dots, ink bleed, paper texture. Bold hand-drawn typography. 2:3 vertical format.
 ```
 
 **Variation 2 — Festival Poster**
 ```text
-Create a screen-printed festival poster for "[FESTIVAL NAME]." [IMAGERY]. Limited 5-color print — [COLORS] on [PAPER]. Multiple acts listed in decreasing font sizes. Halftone texture. Collectible art-poster aesthetic. 11:17 vertical format.
+Create a screen-printed festival poster for "[FESTIVAL NAME]." [IMAGERY]. Limited 5-color print — [COLORS] on [PAPER]. Multiple acts listed in decreasing font sizes. Halftone texture. Collectible art-poster aesthetic. 2:3 vertical format.
 ```
 
 **Variation 3 — Minimalist**
 ```text
-Create a minimalist screen-printed gig poster for [BAND NAME] at [VENUE]. [SIMPLE IMAGERY]. Limited 2-color print — [COLORS]. Large negative space. Halftone gradients. Clean modern typography. 11:17 vertical format.
+Create a minimalist screen-printed gig poster for [BAND NAME] at [VENUE]. [SIMPLE IMAGERY]. Limited 2-color print — [COLORS]. Large negative space. Halftone gradients. Clean modern typography. 2:3 vertical format.
 ```
 
 ### Midjourney

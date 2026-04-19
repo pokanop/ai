@@ -23,7 +23,7 @@ Dynamic action panels with heavy ink outlines, halftone dot shading, speed lines
 
 **Variation 1 — Heroic Pose / Cover Art** _(Poster, Social Media)_
 ```text
-Comic book cover illustration of [SUBJECT — e.g., an armored warrior queen standing atop a cliff with her sword raised against a stormy sky], 2:3 vertical cover format. Heavy black ink outlines on every form. Classic halftone dot shading in the shadows and mid-tones. Bold primary color palette — [COLORS]. Dramatic low camera angle looking up at the figure. Wind-swept cape/hair adding dynamic motion. Title banner area at the top. Classic Marvel/DC Silver Age comic book aesthetic.
+Comic book cover illustration of [SUBJECT — e.g., an armored warrior queen standing atop a cliff with her sword raised against a stormy sky], 3:4 vertical cover format. Heavy black ink outlines on every form. Classic halftone dot shading in the shadows and mid-tones. Bold primary color palette — [COLORS]. Dramatic low camera angle looking up at the figure. Wind-swept cape/hair adding dynamic motion. Title banner area at the top. Classic Marvel/DC Silver Age comic book aesthetic.
 ```
 
 **Variation 2 — Action Panel / Dynamic Scene** _(Social Media Post, Wallpaper)_
@@ -43,7 +43,7 @@ Comic book panel sequence showing an origin story in three horizontal panels sta
 
 **Variation 5 — Villain Portrait** _(Social Media, Fan Art)_
 ```text
-Comic book portrait of a menacing villain — [CHARACTER — e.g., a shadow sorcerer with a cracked obsidian mask, glowing violet eyes, and tendrils of dark energy swirling from their hands], 4:5 vertical format. Heavy black ink outlines with extra-thick lines on the silhouette. Deep shadows with halftone dot shading. Limited color palette — predominantly dark tones ([DARK COLOR]) with a single piercing accent color ([ACCENT COLOR]) on the eyes/energy. Dramatic overhead lighting casting the face half in shadow. Crosshatched background. Menacing, imposing composition.
+Comic book portrait of a menacing villain — [CHARACTER — e.g., a shadow sorcerer with a cracked obsidian mask, glowing violet eyes, and tendrils of dark energy swirling from their hands], 3:4 vertical format. Heavy black ink outlines with extra-thick lines on the silhouette. Deep shadows with halftone dot shading. Limited color palette — predominantly dark tones ([DARK COLOR]) with a single piercing accent color ([ACCENT COLOR]) on the eyes/energy. Dramatic overhead lighting casting the face half in shadow. Crosshatched background. Menacing, imposing composition.
 ```
 
 ### ChatGPT
@@ -55,12 +55,12 @@ Create a comic book cover illustration of [SUBJECT] in a dramatic heroic pose wi
 
 **Variation 2 — Action Panel**
 ```text
-Create a comic book action panel of [SUBJECT] mid-combat: [ACTION]. Heavy ink outlines, halftone shading, speed lines, impact debris, onomatopoeic "[SOUND]" text in jagged lettering. Bold colors. Dramatic foreshortening. 16:9 landscape format.
+Create a comic book action panel of [SUBJECT] mid-combat: [ACTION]. Heavy ink outlines, halftone shading, speed lines, impact debris, onomatopoeic "[SOUND]" text in jagged lettering. Bold colors. Dramatic foreshortening. 3:2 landscape format.
 ```
 
 **Variation 3 — Character Sheet**
 ```text
-Create a comic book character design sheet for [CHARACTER]: front, three-quarter, and rear views side by side on a white background. Heavy ink outlines, flat colors, halftone shading. Annotation labels pointing to key design elements. 16:9 landscape format.
+Create a comic book character design sheet for [CHARACTER]: front, three-quarter, and rear views side by side on a white background. Heavy ink outlines, flat colors, halftone shading. Annotation labels pointing to key design elements. 3:2 landscape format.
 ```
 
 ### Midjourney

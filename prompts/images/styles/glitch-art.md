@@ -10,7 +10,7 @@ Digital corruption aesthetics — scan lines, pixel sorting, data-moshing, chrom
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Glitch art portrait of a woman looking directly at camera, 4:5 vertical format. The image appears corrupted — horizontal scan lines distort sections of the face, RGB color channels split apart with red shifted left and cyan shifted right, pixel-sorted vertical streaks drag portions of the hair downward into data ribbons. JPEG artifact blocks appear in the corrupted zones. The uncorrupted areas are crisp and photorealistic, creating contrast with the broken sections. Neon cyan and magenta dominate the color palette against a dark background. The overall effect is beautiful and unsettling.
+> Glitch art portrait of a woman looking directly at camera, 3:4 vertical format. The image appears corrupted — horizontal scan lines distort sections of the face, RGB color channels split apart with red shifted left and cyan shifted right, pixel-sorted vertical streaks drag portions of the hair downward into data ribbons. JPEG artifact blocks appear in the corrupted zones. The uncorrupted areas are crisp and photorealistic, creating contrast with the broken sections. Neon cyan and magenta dominate the color palette against a dark background. The overall effect is beautiful and unsettling.
 > ```
 
 ---
@@ -53,12 +53,12 @@ Create a glitch art portrait of [SUBJECT]. RGB channel split, horizontal scan li
 
 **Variation 2 — Landscape**
 ```text
-Create a glitch art landscape of [SCENE]. Pixel-sorted bands, data-moshed sections, JPEG artifacts, RGB displacement. Foreground intact, sky heavily corrupted. Vivid neon bleeds. 16:9 landscape format.
+Create a glitch art landscape of [SCENE]. Pixel-sorted bands, data-moshed sections, JPEG artifacts, RGB displacement. Foreground intact, sky heavily corrupted. Vivid neon bleeds. 3:2 landscape format.
 ```
 
 **Variation 3 — Vaporwave**
 ```text
-Create a vaporwave-glitch hybrid of [SUBJECT]. Scan lines, RGB split, JPEG blocks, pixel sorting. Pastel pink-cyan gradient background. Windows error dialogs. Retro internet aesthetic. 9:16 vertical format.
+Create a vaporwave-glitch hybrid of [SUBJECT]. Scan lines, RGB split, JPEG blocks, pixel sorting. Pastel pink-cyan gradient background. Windows error dialogs. Retro internet aesthetic. 2:3 vertical format.
 ```
 
 ### Midjourney

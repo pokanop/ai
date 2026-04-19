@@ -28,7 +28,7 @@ Photograph in the Wes Anderson visual style of a [ROOM — e.g., vintage booksho
 
 **Variation 2 — Exterior / Building Facade** _(Social Media, Print)_
 ```text
-Photograph in the Wes Anderson visual style of a [BUILDING — e.g., pastel-colored apartment building facade with matching shutters, window boxes of flowers, and a centered entrance with an awning], 4:5 vertical format. Perfectly symmetrical facade — windows mirrored on both sides, identical planters, matching curtains. Curated pastel palette — [PALETTE — e.g., lemon yellow walls, baby blue shutters, coral awning, white trim]. Flat front-on composition shot dead-center. Clear sky as background. Vintage hand-painted sign above the entrance reading "[NAME]." Flat even lighting. Whimsical, precise.
+Photograph in the Wes Anderson visual style of a [BUILDING — e.g., pastel-colored apartment building facade with matching shutters, window boxes of flowers, and a centered entrance with an awning], 3:4 vertical format. Perfectly symmetrical facade — windows mirrored on both sides, identical planters, matching curtains. Curated pastel palette — [PALETTE — e.g., lemon yellow walls, baby blue shutters, coral awning, white trim]. Flat front-on composition shot dead-center. Clear sky as background. Vintage hand-painted sign above the entrance reading "[NAME]." Flat even lighting. Whimsical, precise.
 ```
 
 **Variation 3 — Character Lineup** _(Social Media, Poster)_
@@ -50,17 +50,17 @@ Photograph in the Wes Anderson visual style of [VEHICLE/SCENE — e.g., a vintag
 
 **Variation 1 — Interior**
 ```text
-Create a photograph in the Wes Anderson visual style of a [ROOM]. Perfectly symmetrical dead-center composition. Curated pastel palette — [PALETTE]. Dollhouse-like precision with every object placed. Flat even lighting. Vintage details. 16:9 landscape format.
+Create a photograph in the Wes Anderson visual style of a [ROOM]. Perfectly symmetrical dead-center composition. Curated pastel palette — [PALETTE]. Dollhouse-like precision with every object placed. Flat even lighting. Vintage details. 3:2 landscape format.
 ```
 
 **Variation 2 — Building Facade**
 ```text
-Create a front-on photograph of a [BUILDING FACADE] in Wes Anderson style. Perfectly symmetrical with matching elements mirrored. Pastel palette — [PALETTE]. Flat composition. Hand-painted signage. 4:5 vertical format.
+Create a front-on photograph of a [BUILDING FACADE] in Wes Anderson style. Perfectly symmetrical with matching elements mirrored. Pastel palette — [PALETTE]. Flat composition. Hand-painted signage. 2:3 vertical format.
 ```
 
 **Variation 3 — Character Lineup**
 ```text
-Create a Wes Anderson-style photograph of [NUMBER] characters in a symmetrical row. Each in coordinated pastels — [PALETTE]. Deadpan expressions. Flat [COLOR] wall background. Even lighting. 16:9 landscape format.
+Create a Wes Anderson-style photograph of [NUMBER] characters in a symmetrical row. Each in coordinated pastels — [PALETTE]. Deadpan expressions. Flat [COLOR] wall background. Even lighting. 3:2 landscape format.
 ```
 
 ### Midjourney

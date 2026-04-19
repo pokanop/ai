@@ -50,12 +50,12 @@ Isometric pixel art close-up of a single detailed building — [BUILDING — e.g
 
 **Variation 1 — Urban Neighborhood**
 ```text
-Create an isometric pixel art cityscape from a 2:1 isometric angle showing [NEIGHBORHOOD]. Every building is a detailed pixel sprite. [SPECIFIC DETAILS]. Limited 64-color palette. Tiny pedestrian and vehicle sprites. [LIGHTING]. SimCity aesthetic. 16:9 landscape format.
+Create an isometric pixel art cityscape from a 2:1 isometric angle showing [NEIGHBORHOOD]. Every building is a detailed pixel sprite. [SPECIFIC DETAILS]. Limited 64-color palette. Tiny pedestrian and vehicle sprites. [LIGHTING]. SimCity aesthetic. 3:2 landscape format.
 ```
 
 **Variation 2 — Fantasy Town**
 ```text
-Create an isometric pixel art medieval town. Castle, cobblestone streets, timber houses, market square. Pixel sprites with visible grid. 48-color earth-tone palette. Warm golden sunlight. RPG aesthetic. 16:9 landscape format.
+Create an isometric pixel art medieval town. Castle, cobblestone streets, timber houses, market square. Pixel sprites with visible grid. 48-color earth-tone palette. Warm golden sunlight. RPG aesthetic. 3:2 landscape format.
 ```
 
 **Variation 3 — Single Building**

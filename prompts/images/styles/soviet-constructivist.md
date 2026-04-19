@@ -10,7 +10,7 @@ Bold revolutionary propaganda posters with limited red-black-cream palettes, str
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Soviet Constructivist propaganda poster featuring a figure pointing dramatically toward the horizon while standing atop geometric shapes, 11:17 vertical format. Strict limited palette — bold red, matte black, and cream. Strong diagonal composition — all elements angled at 30 degrees. Angular radiating beams emanate from behind the figure. Bold geometric sans-serif Russian typography at the top reading "[TEXT]" in stark red. Photomontage-style contrast — the figure is high-contrast black and white while the background is flat geometric red and cream. Rodchenko / El Lissitzky aesthetic. Printed on aged paper with visible grain.
+> Soviet Constructivist propaganda poster featuring a figure pointing dramatically toward the horizon while standing atop geometric shapes, 9:16 vertical format. Strict limited palette — bold red, matte black, and cream. Strong diagonal composition — all elements angled at 30 degrees. Angular radiating beams emanate from behind the figure. Bold geometric sans-serif Russian typography at the top reading "[TEXT]" in stark red. Photomontage-style contrast — the figure is high-contrast black and white while the background is flat geometric red and cream. Rodchenko / El Lissitzky aesthetic. Printed on aged paper with visible grain.
 > ```
 
 ---

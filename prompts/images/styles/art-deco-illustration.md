@@ -10,7 +10,7 @@ Gatsby-era geometric elegance with metallic gold and black palettes, radiating s
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Art Deco poster illustration of a woman in a flowing golden gown standing atop the spire of a stylized skyscraper, arms outstretched, with radiating geometric sunburst beams behind her, 4:5 vertical format. Strict symmetrical composition. Color palette limited to gold leaf, matte black, cream, and a single accent of deep emerald green. Geometric patterns — chevrons, zigzags, and stepped pyramids — frame the border. Streamlined stylized figure with elongated proportions. Metallic gold foil texture on all gold elements. Bold sans-serif typography reading "[TITLE]" at the bottom in a decorative cartouche.
+> Art Deco poster illustration of a woman in a flowing golden gown standing atop the spire of a stylized skyscraper, arms outstretched, with radiating geometric sunburst beams behind her, 3:4 vertical format. Strict symmetrical composition. Color palette limited to gold leaf, matte black, cream, and a single accent of deep emerald green. Geometric patterns — chevrons, zigzags, and stepped pyramids — frame the border. Streamlined stylized figure with elongated proportions. Metallic gold foil texture on all gold elements. Bold sans-serif typography reading "[TITLE]" at the bottom in a decorative cartouche.
 > ```
 
 ---
@@ -23,7 +23,7 @@ Gatsby-era geometric elegance with metallic gold and black palettes, radiating s
 
 **Variation 1 — Event Poster / Invitation** _(Poster, Wedding Invite)_
 ```text
-Art Deco poster illustration for [EVENT — e.g., a New Year's Eve gala], 4:5 vertical format. [CENTRAL IMAGE — e.g., a Champagne coupe fountain on a pedestal with cascading bubbles transformed into geometric diamond shapes]. Strict symmetrical composition. Color palette limited to gold leaf, matte black, cream, and [ACCENT — e.g., deep sapphire blue]. Geometric Art Deco borders — chevrons, zigzags, and stepped pyramid motifs. Metallic gold foil texture on all gold elements. Bold sans-serif typography reading "[EVENT NAME]" at the top and "[DATE / VENUE]" at the bottom in decorative cartouches.
+Art Deco poster illustration for [EVENT — e.g., a New Year's Eve gala], 3:4 vertical format. [CENTRAL IMAGE — e.g., a Champagne coupe fountain on a pedestal with cascading bubbles transformed into geometric diamond shapes]. Strict symmetrical composition. Color palette limited to gold leaf, matte black, cream, and [ACCENT — e.g., deep sapphire blue]. Geometric Art Deco borders — chevrons, zigzags, and stepped pyramid motifs. Metallic gold foil texture on all gold elements. Bold sans-serif typography reading "[EVENT NAME]" at the top and "[DATE / VENUE]" at the bottom in decorative cartouches.
 ```
 
 **Variation 2 — Architectural / Cityscape** _(Desktop Wallpaper, Print)_
@@ -33,7 +33,7 @@ Art Deco illustration of [SCENE — e.g., a grand skyscraper viewed from below, 
 
 **Variation 3 — Portrait / Figure** _(Social Media, Art Print)_
 ```text
-Art Deco portrait illustration of [SUBJECT — e.g., a woman in a fur-collared evening coat with marcelled hair], 4:5 vertical format. Inspired by Tamara de Lempicka — elongated proportions, gleaming surfaces, sharp geometric shadows. The figure is positioned centrally with geometric radiating beams behind. Color palette of gold, black, cream, and [ACCENT]. Background filled with Deco geometric patterns — fans, chevrons, concentric circles. Metallic gold accents on jewelry and highlights. Glamorous, luxurious, confident.
+Art Deco portrait illustration of [SUBJECT — e.g., a woman in a fur-collared evening coat with marcelled hair], 3:4 vertical format. Inspired by Tamara de Lempicka — elongated proportions, gleaming surfaces, sharp geometric shadows. The figure is positioned centrally with geometric radiating beams behind. Color palette of gold, black, cream, and [ACCENT]. Background filled with Deco geometric patterns — fans, chevrons, concentric circles. Metallic gold accents on jewelry and highlights. Glamorous, luxurious, confident.
 ```
 
 **Variation 4 — Product / Menu Design** _(Brand Asset, Menu Cover)_
@@ -50,12 +50,12 @@ Seamless repeating Art Deco geometric pattern, tileable, 1:1 square format. Inte
 
 **Variation 1 — Event Poster**
 ```text
-Create an Art Deco poster for [EVENT]. Strict symmetrical composition. [CENTRAL IMAGE]. Gold, black, cream, and [ACCENT] palette. Geometric borders — chevrons, zigzags. Metallic gold foil texture. Typography reading "[TEXT]." 1920s luxury. 4:5 vertical format.
+Create an Art Deco poster for [EVENT]. Strict symmetrical composition. [CENTRAL IMAGE]. Gold, black, cream, and [ACCENT] palette. Geometric borders — chevrons, zigzags. Metallic gold foil texture. Typography reading "[TEXT]." 1920s luxury. 2:3 vertical format.
 ```
 
 **Variation 2 — Portrait**
 ```text
-Create an Art Deco portrait of [SUBJECT] inspired by Tamara de Lempicka. Elongated proportions, geometric shadows, radiating beams background. Gold, black, cream palette. Metallic gold accents. Glamorous, confident. 4:5 vertical format.
+Create an Art Deco portrait of [SUBJECT] inspired by Tamara de Lempicka. Elongated proportions, geometric shadows, radiating beams background. Gold, black, cream palette. Metallic gold accents. Glamorous, confident. 2:3 vertical format.
 ```
 
 **Variation 3 — Pattern**

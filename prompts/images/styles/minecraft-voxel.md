@@ -50,7 +50,7 @@ Minecraft-style voxel render of a [SCENE — e.g., cherry blossom grove with pin
 
 **Variation 1 — Landscape / Wallpaper**
 ```text
-Create a Minecraft-style voxel environment of [ENVIRONMENT]. Everything must be composed of blocky cubic geometry — visible voxel cubes. Apply RTX ray-traced lighting with [LIGHTING DESCRIPTION]. Include volumetric fog and reflective water surfaces. Cinematic wide-angle composition. 16:9 landscape format.
+Create a Minecraft-style voxel environment of [ENVIRONMENT]. Everything must be composed of blocky cubic geometry — visible voxel cubes. Apply RTX ray-traced lighting with [LIGHTING DESCRIPTION]. Include volumetric fog and reflective water surfaces. Cinematic wide-angle composition. 3:2 landscape format.
 ```
 
 **Variation 2 — Character Portrait**
@@ -60,7 +60,7 @@ Create a Minecraft-style voxel character portrait of [CHARACTER] in classic Mine
 
 **Variation 3 — Interior Build**
 ```text
-Create a Minecraft-style voxel interior of [INTERIOR]. RTX ray-traced lighting with warm torchlight and cool moonlight through windows. Every block texture clearly visible. Atmospheric and cozy. 16:9 landscape format.
+Create a Minecraft-style voxel interior of [INTERIOR]. RTX ray-traced lighting with warm torchlight and cool moonlight through windows. Every block texture clearly visible. Atmospheric and cozy. 3:2 landscape format.
 ```
 
 ### Midjourney

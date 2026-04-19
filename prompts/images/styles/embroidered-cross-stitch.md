@@ -43,7 +43,7 @@ Close-up photograph of a completed cross-stitch [HOLIDAY — e.g., Christmas] or
 
 **Variation 5 — Embroidery with Mixed Techniques** _(Art Print, Advanced Craft)_
 ```text
-Close-up photograph of an advanced embroidery piece in a large oval wooden hoop depicting [SCENE — e.g., a botanical arrangement of wildflowers — poppies, daisies, and lavender], 4:5 vertical format. Mixed embroidery techniques on natural linen: French knots for flower centers, satin stitch for petals with smooth thread surfaces, backstitch for stems and text, and cross-stitch for background fill. Rich variation of thread types — glossy silk, matte cotton, fuzzy wool. Visible fabric texture beneath and between stitches. Soft natural sidelight revealing the three-dimensional thread relief.
+Close-up photograph of an advanced embroidery piece in a large oval wooden hoop depicting [SCENE — e.g., a botanical arrangement of wildflowers — poppies, daisies, and lavender], 3:4 vertical format. Mixed embroidery techniques on natural linen: French knots for flower centers, satin stitch for petals with smooth thread surfaces, backstitch for stems and text, and cross-stitch for background fill. Rich variation of thread types — glossy silk, matte cotton, fuzzy wool. Visible fabric texture beneath and between stitches. Soft natural sidelight revealing the three-dimensional thread relief.
 ```
 
 ### ChatGPT

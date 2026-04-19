@@ -33,7 +33,7 @@ Macro photograph of a complete amigurumi scene — [SCENE — e.g., a tiny yarn 
 
 **Variation 3 — Holiday / Seasonal** _(Greeting Card, Social Media)_
 ```text
-Macro photograph of an amigurumi [HOLIDAY — e.g., Christmas] scene — [DETAILS — e.g., a crocheted Christmas tree decorated with tiny knitted ornaments and a yarn star on top, surrounded by miniature wrapped presents made from patterned fabric scraps and yarn bows], 4:5 vertical format. Every element is yarn, thread, or fabric. Individually visible stitches with fuzzy fibers. Warm tungsten lighting from [LIGHT SOURCE — e.g., a tiny knitted fireplace with orange yarn "flames"]. Cozy, festive, handmade charm.
+Macro photograph of an amigurumi [HOLIDAY — e.g., Christmas] scene — [DETAILS — e.g., a crocheted Christmas tree decorated with tiny knitted ornaments and a yarn star on top, surrounded by miniature wrapped presents made from patterned fabric scraps and yarn bows], 3:4 vertical format. Every element is yarn, thread, or fabric. Individually visible stitches with fuzzy fibers. Warm tungsten lighting from [LIGHT SOURCE — e.g., a tiny knitted fireplace with orange yarn "flames"]. Cozy, festive, handmade charm.
 ```
 
 **Variation 4 — Animal / Pet Portrait** _(Social Media, Nursery Art)_
@@ -55,12 +55,12 @@ Create a macro photograph of an adorable amigurumi crocheted doll of [SUBJECT]. 
 
 **Variation 2 — Full Scene**
 ```text
-Create a macro photograph of a complete amigurumi yarn scene: [SCENE]. Every element — buildings, vegetation, ground — crafted from yarn. Visible stitches with fuzzy edges. Multiple yarn textures. Warm golden-hour lighting. 16:9 landscape format.
+Create a macro photograph of a complete amigurumi yarn scene: [SCENE]. Every element — buildings, vegetation, ground — crafted from yarn. Visible stitches with fuzzy edges. Multiple yarn textures. Warm golden-hour lighting. 3:2 landscape format.
 ```
 
 **Variation 3 — Holiday**
 ```text
-Create a macro photograph of an amigurumi [HOLIDAY] scene: [DETAILS]. All yarn, thread, and fabric. Visible stitches. Warm firelight glow. Cozy, festive, handmade charm. 4:5 vertical format.
+Create a macro photograph of an amigurumi [HOLIDAY] scene: [DETAILS]. All yarn, thread, and fabric. Visible stitches. Warm firelight glow. Cozy, festive, handmade charm. 2:3 vertical format.
 ```
 
 ### Midjourney

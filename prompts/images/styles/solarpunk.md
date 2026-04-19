@@ -26,7 +26,7 @@ Photograph of a solarpunk [SCENE — e.g., city intersection with buildings wrap
 
 **Variation 2 — Architecture Close-Up** _(Social Media, Concept Art)_
 ```text
-Photograph of a solarpunk building facade — [BUILDING — e.g., a community library with a living wall of ferns and mosses, a rooftop greenhouse visible through glass, integrated photovoltaic glazing that shifts color in the sunlight, and a spiral external staircase wrapped in wisteria], 4:5 vertical format. Every surface supports life — even the stairs have moss between the treads. Warm sunlight. The building breathes — it feels more organism than structure. Dense botanical detail.
+Photograph of a solarpunk building facade — [BUILDING — e.g., a community library with a living wall of ferns and mosses, a rooftop greenhouse visible through glass, integrated photovoltaic glazing that shifts color in the sunlight, and a spiral external staircase wrapped in wisteria], 3:4 vertical format. Every surface supports life — even the stairs have moss between the treads. Warm sunlight. The building breathes — it feels more organism than structure. Dense botanical detail.
 ```
 
 **Variation 3 — Interior** _(Social Media, Lifestyle)_
@@ -48,9 +48,9 @@ Photograph of a solarpunk community event — [SCENE — e.g., a neighborhood ha
 
 ### ChatGPT
 ```text
-Var 1: Create a solarpunk urban scene: [SCENE]. Technology and nature interwoven. Art Nouveau organic architecture. Golden-hour sunlight. Lush, dense, hopeful. 16:9 landscape format.
-Var 2: Create a solarpunk building facade: [BUILDING]. Every surface supports life. Integrated solar tech. Warm sunlight. Dense botanical detail. 4:5 vertical format.
-Var 3: Create a solarpunk community event: [SCENE]. Rooftop garden, communal activity, green skyline. Golden-hour light. Joyful. 16:9 landscape format.
+Var 1: Create a solarpunk urban scene: [SCENE]. Technology and nature interwoven. Art Nouveau organic architecture. Golden-hour sunlight. Lush, dense, hopeful. 3:2 landscape format.
+Var 2: Create a solarpunk building facade: [BUILDING]. Every surface supports life. Integrated solar tech. Warm sunlight. Dense botanical detail. 2:3 vertical format.
+Var 3: Create a solarpunk community event: [SCENE]. Rooftop garden, communal activity, green skyline. Golden-hour light. Joyful. 3:2 landscape format.
 ```
 
 ### Midjourney

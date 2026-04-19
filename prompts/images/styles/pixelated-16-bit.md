@@ -55,7 +55,7 @@ Create a 16-bit pixel art character sprite of [CHARACTER]. SNES-era aesthetic. F
 
 **Variation 2 — Landscape**
 ```text
-Create a 16-bit pixel art landscape of [SCENE]. SNES aesthetic. Visible square pixels. 32-color palette. Dithering patterns. Multiple parallax layers. Nostalgic, detailed. 16:9 landscape format.
+Create a 16-bit pixel art landscape of [SCENE]. SNES aesthetic. Visible square pixels. 32-color palette. Dithering patterns. Multiple parallax layers. Nostalgic, detailed. 3:2 landscape format.
 ```
 
 **Variation 3 — Game Boy Monochrome**

@@ -26,7 +26,7 @@ Photograph of a steampunk [ANIMAL — e.g., mechanical dragonfly] constructed fr
 
 **Variation 2 — Wearable / Fashion** _(Character Design, Social Media)_
 ```text
-Photograph of a person wearing steampunk [ITEM — e.g., a mechanical prosthetic arm with brass forearm plates, visible gear trains powering the articulated copper fingers, leather straps and buckles at the shoulder joint], 4:5 vertical portrait format. Warm aged brass and copper with polished highlights. Tiny steam valves at the elbow and wrist joints. Victorian-era clothing — [OUTFIT DETAILS]. Warm amber gas lamp lighting. The mechanical and organic blend seamlessly. H.G. Wells aesthetic.
+Photograph of a person wearing steampunk [ITEM — e.g., a mechanical prosthetic arm with brass forearm plates, visible gear trains powering the articulated copper fingers, leather straps and buckles at the shoulder joint], 3:4 vertical portrait format. Warm aged brass and copper with polished highlights. Tiny steam valves at the elbow and wrist joints. Victorian-era clothing — [OUTFIT DETAILS]. Warm amber gas lamp lighting. The mechanical and organic blend seamlessly. H.G. Wells aesthetic.
 ```
 
 **Variation 3 — Vehicle / Machine** _(Desktop Wallpaper, Concept Art)_
@@ -48,9 +48,9 @@ Macro photograph of an exposed steampunk clockwork mechanism, 1:1 square format.
 
 ### ChatGPT
 ```text
-Var 1: Create a steampunk [ANIMAL] from brass gears, copper, and leather. Every component interlocks. Warm patina. Steam venting. Workshop lighting. 16:9 format.
-Var 2: Create a steampunk [VEHICLE]. Exposed mechanisms, ornate brass, riveted panels. Jules Verne aesthetic. 16:9 format.
-Var 3: Create a steampunk workshop interior. Dense detail, gas lamps, workbenches, instruments. Warm amber. 16:9 format.
+Var 1: Create a steampunk [ANIMAL] from brass gears, copper, and leather. Every component interlocks. Warm patina. Steam venting. Workshop lighting. 3:2 format.
+Var 2: Create a steampunk [VEHICLE]. Exposed mechanisms, ornate brass, riveted panels. Jules Verne aesthetic. 3:2 format.
+Var 3: Create a steampunk workshop interior. Dense detail, gas lamps, workbenches, instruments. Warm amber. 3:2 format.
 ```
 
 ### Midjourney

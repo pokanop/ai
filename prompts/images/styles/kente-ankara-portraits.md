@@ -10,7 +10,7 @@ Portraits featuring vibrant West African textile traditions — Kente cloth (gol
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Portrait photograph of a woman wearing traditional Kente cloth draped over one shoulder, with elaborate gold statement jewelry and a matching headwrap in vibrant Ankara wax print, 4:5 vertical format. The Kente cloth features authentic geometric patterns in gold, emerald green, and royal blue silk threads. The Ankara headwrap has bold, repeating floral motifs in hot pink, orange, and yellow. Warm golden-hour sidelight creating a regal glow on the skin. Clean, earth-toned background. Confident, composed expression. Cultural pride and elegance.
+> Portrait photograph of a woman wearing traditional Kente cloth draped over one shoulder, with elaborate gold statement jewelry and a matching headwrap in vibrant Ankara wax print, 3:4 vertical format. The Kente cloth features authentic geometric patterns in gold, emerald green, and royal blue silk threads. The Ankara headwrap has bold, repeating floral motifs in hot pink, orange, and yellow. Warm golden-hour sidelight creating a regal glow on the skin. Clean, earth-toned background. Confident, composed expression. Cultural pride and elegance.
 > ```
 
 ---

@@ -43,14 +43,14 @@ Cyberpunk noir photograph of a cluttered hacker's den — [DETAILS — e.g., mul
 
 **Variation 5 — Panoramic Skyline** _(Ultra-Wide Wallpaper, Print)_
 ```text
-Cinematic panoramic photograph of a cyberpunk megacity skyline at night, 21:9 ultra-wide format. Towering arcology towers pierce through a layer of smog and neon haze. Holographic advertisements the size of buildings project into the air. Flying vehicle traffic lanes visible as streams of light at multiple altitude levels. The foreground shows rain-soaked rooftop infrastructure — antennae, cables, ventilation units. Deep below, the street level glows with dense neon. Blade Runner 2049 establishing shot aesthetic.
+Cinematic panoramic photograph of a cyberpunk megacity skyline at night, 16:9 ultra-wide format. Towering arcology towers pierce through a layer of smog and neon haze. Holographic advertisements the size of buildings project into the air. Flying vehicle traffic lanes visible as streams of light at multiple altitude levels. The foreground shows rain-soaked rooftop infrastructure — antennae, cables, ventilation units. Deep below, the street level glows with dense neon. Blade Runner 2049 establishing shot aesthetic.
 ```
 
 ### ChatGPT
 
 **Variation 1 — Street Scene**
 ```text
-Create a cyberpunk night scene: [SCENE] in a rain-soaked megacity alley. Neon signs, wet reflections, atmospheric haze. Deep shadows with neon edge-lights. Blade Runner aesthetic. 16:9 landscape format.
+Create a cyberpunk night scene: [SCENE] in a rain-soaked megacity alley. Neon signs, wet reflections, atmospheric haze. Deep shadows with neon edge-lights. Blade Runner aesthetic. 3:2 landscape format.
 ```
 
 **Variation 2 — Character Portrait**
@@ -60,7 +60,7 @@ Create a cyberpunk noir portrait of [SUBJECT] with [CYBERNETIC DETAILS]. Hard ne
 
 **Variation 3 — Skyline**
 ```text
-Create a cyberpunk megacity skyline at night. Towering buildings, holographic ads, flying traffic, smog and neon haze. Blade Runner 2049 aesthetic. 16:9 landscape format.
+Create a cyberpunk megacity skyline at night. Towering buildings, holographic ads, flying traffic, smog and neon haze. Blade Runner 2049 aesthetic. 3:2 landscape format.
 ```
 
 ### Midjourney

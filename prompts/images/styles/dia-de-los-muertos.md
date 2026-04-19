@@ -10,7 +10,7 @@ The vibrant visual language of Mexico's Day of the Dead celebration — sugar sk
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Portrait photograph of a woman with elaborate Día de los Muertos (Day of the Dead) sugar skull face paint — intricate floral patterns around the eyes, a painted nose as an inverted heart, and decorative line work across the forehead and chin — wearing a flower crown of vibrant orange marigolds (cempasúchil), 4:5 vertical format. Rich, saturated palette — deep purples, hot pinks, vivid oranges, and gold. Warm candlelight glow mixed with dramatic side-lighting. Bokeh background of out-of-focus papel picado banners and marigolds. Celebratory, vibrant, honoring the departed.
+> Portrait photograph of a woman with elaborate Día de los Muertos (Day of the Dead) sugar skull face paint — intricate floral patterns around the eyes, a painted nose as an inverted heart, and decorative line work across the forehead and chin — wearing a flower crown of vibrant orange marigolds (cempasúchil), 3:4 vertical format. Rich, saturated palette — deep purples, hot pinks, vivid oranges, and gold. Warm candlelight glow mixed with dramatic side-lighting. Bokeh background of out-of-focus papel picado banners and marigolds. Celebratory, vibrant, honoring the departed.
 > ```
 
 ---

@@ -36,12 +36,12 @@ Retrofuturist illustration of a [VEHICLE — e.g., two-seater flying car with a 
 
 **Variation 4 — City Panorama** _(Ultra-Wide Wallpaper, Print)_
 ```text
-Retrofuturist panoramic illustration of a city of tomorrow, 21:9 ultra-wide format. Geodesic dome buildings, glass-tube elevated walkways, chrome spire towers, atomic-powered monorails on elevated tracks, and flying cars in color-coded traffic lanes. [PASTEL PALETTE] buildings with chrome accents. A massive chrome and glass World's Fair-style exposition building at the center. Citizens in streamlined futuristic clothing walk on moving sidewalks. Bright blue sky with one or two chrome rocketships ascending. 1960s boundless optimism.
+Retrofuturist panoramic illustration of a city of tomorrow, 16:9 ultra-wide format. Geodesic dome buildings, glass-tube elevated walkways, chrome spire towers, atomic-powered monorails on elevated tracks, and flying cars in color-coded traffic lanes. [PASTEL PALETTE] buildings with chrome accents. A massive chrome and glass World's Fair-style exposition building at the center. Citizens in streamlined futuristic clothing walk on moving sidewalks. Bright blue sky with one or two chrome rocketships ascending. 1960s boundless optimism.
 ```
 
 **Variation 5 — Robot / Android** _(Social Media, Character Design)_
 ```text
-Retrofuturist illustration of a friendly household robot — [DESIGN — e.g., chrome dome head with a single glowing blue eye, accordion-style segmented torso, pincer hands holding a serving tray of futuristic food pills], 4:5 vertical format. Mid-century sci-fi design language — rounded chrome body, atomic logo on the chest plate, antenna on the head. [PASTEL] domestic background. The robot has a cheerful, servile posture. Inspired by Robby the Robot and 1950s sci-fi illustration. Bright, clean, optimistic.
+Retrofuturist illustration of a friendly household robot — [DESIGN — e.g., chrome dome head with a single glowing blue eye, accordion-style segmented torso, pincer hands holding a serving tray of futuristic food pills], 3:4 vertical format. Mid-century sci-fi design language — rounded chrome body, atomic logo on the chest plate, antenna on the head. [PASTEL] domestic background. The robot has a cheerful, servile posture. Inspired by Robby the Robot and 1950s sci-fi illustration. Bright, clean, optimistic.
 ```
 
 ### ChatGPT — **3 variations** | Midjourney — **3 variations** | Stable Diffusion — **2 variations**
@@ -50,9 +50,9 @@ _(Following the same template structure as previous files — abbreviated for sp
 
 ### ChatGPT
 ```text
-Var 1: Create a retrofuturist illustration of [SCENE]. Chrome and pastel palette. Streamlined shapes. Atomic motifs. 1960s World's Fair optimism. 16:9 landscape.
-Var 2: Create a retrofuturist city panorama with geodesic domes, monorails, flying cars. Pastel and chrome. Bright optimistic. 16:9 landscape.
-Var 3: Create a retrofuturist robot character — chrome dome head, friendly design, pastel domestic background. Mid-century sci-fi. 4:5 vertical.
+Var 1: Create a retrofuturist illustration of [SCENE]. Chrome and pastel palette. Streamlined shapes. Atomic motifs. 1960s World's Fair optimism. 3:2 landscape.
+Var 2: Create a retrofuturist city panorama with geodesic domes, monorails, flying cars. Pastel and chrome. Bright optimistic. 3:2 landscape.
+Var 3: Create a retrofuturist robot character — chrome dome head, friendly design, pastel domestic background. Mid-century sci-fi. 2:3 vertical.
 ```
 
 ### Midjourney

@@ -10,7 +10,7 @@ Scientific botanical art in the tradition of Maria Sibylla Merian and Pierre-Jos
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Botanical illustration of a Rosa damascena (Damask rose) in full bloom with one bud and three leaves on a thorned stem, scientific illustration style on cream cotton rag paper, 4:5 vertical format. Rendered in fine watercolor — delicate transparent washes building up the petal colors from pale blush to deep pink at the edges. Every stamen, pistil, and petal vein is individually rendered with hairline detail. Two small anatomical details in the lower corner: a cross-section of the hip and a magnified view of the leaf edge showing serration. Latin name in italic copperplate below. Soft natural daylight. Museum-quality scientific illustration.
+> Botanical illustration of a Rosa damascena (Damask rose) in full bloom with one bud and three leaves on a thorned stem, scientific illustration style on cream cotton rag paper, 3:4 vertical format. Rendered in fine watercolor — delicate transparent washes building up the petal colors from pale blush to deep pink at the edges. Every stamen, pistil, and petal vein is individually rendered with hairline detail. Two small anatomical details in the lower corner: a cross-section of the hip and a magnified view of the leaf edge showing serration. Latin name in italic copperplate below. Soft natural daylight. Museum-quality scientific illustration.
 > ```
 
 ---

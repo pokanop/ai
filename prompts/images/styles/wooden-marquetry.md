@@ -33,12 +33,12 @@ Photograph of a wooden marquetry artwork depicting [SCENE — e.g., a Paris skyl
 
 **Variation 3 — Botanical / Floral** _(Greeting Card, Home Décor)_
 ```text
-Photograph of a wooden marquetry artwork depicting [DESIGN — e.g., a bouquet of roses and peonies in a classical vase], 4:5 vertical format. Each petal is a separate piece of veneer — [ASSIGNMENTS — e.g., rose petals in padauk and bloodwood showing warm reds, peony petals in pale sycamore and holly, leaves in satinwood and green-tinted poplar, vase in figured maple burl, background in plain walnut]. Grain lines follow the natural curves of each petal. Razor-sharp precision, seamless fit. Satin lacquer. Warm studio lighting.
+Photograph of a wooden marquetry artwork depicting [DESIGN — e.g., a bouquet of roses and peonies in a classical vase], 3:4 vertical format. Each petal is a separate piece of veneer — [ASSIGNMENTS — e.g., rose petals in padauk and bloodwood showing warm reds, peony petals in pale sycamore and holly, leaves in satinwood and green-tinted poplar, vase in figured maple burl, background in plain walnut]. Grain lines follow the natural curves of each petal. Razor-sharp precision, seamless fit. Satin lacquer. Warm studio lighting.
 ```
 
 **Variation 4 — Portrait / Face** _(Art Print, Gift)_
 ```text
-Photograph of a wooden marquetry portrait depicting [SUBJECT — e.g., a woman in profile with flowing hair against a moonlit sky], 4:5 vertical format. Skin tones achieved through careful selection of pale veneers — [ASSIGNMENTS — e.g., face in honey-toned pearwood, hair in dark walnut with grain following the flow, lips in padauk, eye in ebony and holly, moonlight sky in graduated birch to cherry]. Each feature defined by the grain direction change at piece boundaries. Master-level precision. Satin lacquer finish. Warm directional studio lighting.
+Photograph of a wooden marquetry portrait depicting [SUBJECT — e.g., a woman in profile with flowing hair against a moonlit sky], 3:4 vertical format. Skin tones achieved through careful selection of pale veneers — [ASSIGNMENTS — e.g., face in honey-toned pearwood, hair in dark walnut with grain following the flow, lips in padauk, eye in ebony and holly, moonlight sky in graduated birch to cherry]. Each feature defined by the grain direction change at piece boundaries. Master-level precision. Satin lacquer finish. Warm directional studio lighting.
 ```
 
 **Variation 5 — Geometric / Abstract** _(Logo Concept, Modern Décor)_
@@ -50,12 +50,12 @@ Photograph of a wooden marquetry artwork featuring a geometric abstract design �
 
 **Variation 1 — Wildlife**
 ```text
-Create a photograph of a wooden marquetry artwork depicting [SUBJECT]. The image is composed entirely from precisely cut wood veneers — assign different species to each element: [WOOD ASSIGNMENTS]. Each piece cut with precision, grain direction changing at every boundary. Satin lacquer finish. Warm amber studio lighting. 16:9 landscape format.
+Create a photograph of a wooden marquetry artwork depicting [SUBJECT]. The image is composed entirely from precisely cut wood veneers — assign different species to each element: [WOOD ASSIGNMENTS]. Each piece cut with precision, grain direction changing at every boundary. Satin lacquer finish. Warm amber studio lighting. 3:2 landscape format.
 ```
 
 **Variation 2 — Botanical**
 ```text
-Create a photograph of a wooden marquetry floral artwork: [DESIGN]. Each petal is a separate veneer piece in [WOOD SPECIES]. Grain lines follow natural petal curves. Razor-sharp precision. Satin lacquer. Warm lighting. 4:5 vertical format.
+Create a photograph of a wooden marquetry floral artwork: [DESIGN]. Each petal is a separate veneer piece in [WOOD SPECIES]. Grain lines follow natural petal curves. Razor-sharp precision. Satin lacquer. Warm lighting. 2:3 vertical format.
 ```
 
 **Variation 3 — Geometric**

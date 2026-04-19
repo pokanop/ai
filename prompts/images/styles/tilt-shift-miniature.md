@@ -41,14 +41,14 @@ Tilt-shift photograph of [SCENE — e.g., a football stadium during a match, sho
 
 **Variation 5 — Seasonal / Holiday Scene** _(Greeting Card, Social Media)_
 ```text
-Tilt-shift photograph of [SCENE — e.g., a Christmas market village square from above], 4:5 vertical format. Narrow focus on the market stalls — stall canopies, tiny shoppers, and miniature string lights. Oversaturated Christmas colors — red, green, gold. Snow on rooftops looks like model snow flock. The scene appears to be a miniature Christmas village display. Warm tungsten from the market lights contrasting with cool blue twilight sky.
+Tilt-shift photograph of [SCENE — e.g., a Christmas market village square from above], 3:4 vertical format. Narrow focus on the market stalls — stall canopies, tiny shoppers, and miniature string lights. Oversaturated Christmas colors — red, green, gold. Snow on rooftops looks like model snow flock. The scene appears to be a miniature Christmas village display. Warm tungsten from the market lights contrasting with cool blue twilight sky.
 ```
 
 ### ChatGPT / Midjourney / Stable Diffusion — Standard template.
 
 ### ChatGPT
 ```text
-Var 1: Create a tilt-shift photograph of [SCENE] from a high angle. Narrow focus band, dramatic blur, oversaturated model-like colors. Must look like a scale model. 16:9 landscape format.
+Var 1: Create a tilt-shift photograph of [SCENE] from a high angle. Narrow focus band, dramatic blur, oversaturated model-like colors. Must look like a scale model. 3:2 landscape format.
 Var 2: Create a tilt-shift aerial photograph of [SCENE]. Miniature effect. Saturated paint colors. [FORMAT].
 ```
 

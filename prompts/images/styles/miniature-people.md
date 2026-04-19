@@ -38,29 +38,29 @@ Macro photograph of tiny figurines exploring [OBJECT — e.g., a potted succulen
 
 **Variation 4 — Seasonal / Holiday** _(Greeting Card, Social Media)_
 ```text
-Macro photograph of tiny figurines in a [HOLIDAY] scene using everyday objects — [SCENE — e.g., miniature ice skaters skating on the frozen surface of a spilled coffee puddle on a white saucer, a sugar cube serving as a warming hut with a tiny paper flag], 4:5 vertical format. The spilled coffee has a realistic glossy frozen-liquid surface. A full-size coffee mug looms in the background. Warm festive studio lighting. Tilt-shift macro lens. Cozy, playful holiday mood.
+Macro photograph of tiny figurines in a [HOLIDAY] scene using everyday objects — [SCENE — e.g., miniature ice skaters skating on the frozen surface of a spilled coffee puddle on a white saucer, a sugar cube serving as a warming hut with a tiny paper flag], 3:4 vertical format. The spilled coffee has a realistic glossy frozen-liquid surface. A full-size coffee mug looms in the background. Warm festive studio lighting. Tilt-shift macro lens. Cozy, playful holiday mood.
 ```
 
 **Variation 5 — Narrative Moment / Story Scene** _(Editorial, Art Print)_
 ```text
-Macro photograph telling a micro-story — [NARRATIVE — e.g., a tiny figurine proposing to another on the rim of a wine glass at sunset, the wine reflecting golden light upward onto their faces, a miniature string quartet playing on the saucer below], 4:5 vertical portrait format. The wine glass surface shows realistic reflections and refractions at macro scale. The wine inside catches warm backlight. Cinematic golden-hour lighting. Tilt-shift macro lens with very shallow depth of field focused on the couple. Romantic, emotionally resonant.
+Macro photograph telling a micro-story — [NARRATIVE — e.g., a tiny figurine proposing to another on the rim of a wine glass at sunset, the wine reflecting golden light upward onto their faces, a miniature string quartet playing on the saucer below], 3:4 vertical portrait format. The wine glass surface shows realistic reflections and refractions at macro scale. The wine inside catches warm backlight. Cinematic golden-hour lighting. Tilt-shift macro lens with very shallow depth of field focused on the couple. Romantic, emotionally resonant.
 ```
 
 ### ChatGPT
 
 **Variation 1 — Food as Landscape**
 ```text
-Create a macro photograph of tiny figurines using [FOOD] as a landscape: [SCENE]. The food surface should be treated as realistic terrain at miniature scale. Full-size objects blurred in background for scale. Warm studio lighting. Tilt-shift macro lens with shallow depth of field. Whimsical and charming. 16:9 landscape format.
+Create a macro photograph of tiny figurines using [FOOD] as a landscape: [SCENE]. The food surface should be treated as realistic terrain at miniature scale. Full-size objects blurred in background for scale. Warm studio lighting. Tilt-shift macro lens with shallow depth of field. Whimsical and charming. 3:2 landscape format.
 ```
 
 **Variation 2 — Tech / Office Object**
 ```text
-Create a macro photograph of tiny figurines interacting with a full-size [OBJECT]: [SCENE]. The object's surface textures are visible at macro scale. Dramatic lighting from the object itself when possible. Tilt-shift macro lens. Action-oriented mood. 16:9 landscape format.
+Create a macro photograph of tiny figurines interacting with a full-size [OBJECT]: [SCENE]. The object's surface textures are visible at macro scale. Dramatic lighting from the object itself when possible. Tilt-shift macro lens. Action-oriented mood. 3:2 landscape format.
 ```
 
 **Variation 3 — Narrative Moment**
 ```text
-Create a macro photograph telling a micro-story: [NARRATIVE]. The everyday object becomes a dramatic stage. Cinematic lighting matching the emotional tone. Very shallow depth of field focused on the key characters. 4:5 vertical format.
+Create a macro photograph telling a micro-story: [NARRATIVE]. The everyday object becomes a dramatic stage. Cinematic lighting matching the emotional tone. Very shallow depth of field focused on the key characters. 2:3 vertical format.
 ```
 
 ### Midjourney

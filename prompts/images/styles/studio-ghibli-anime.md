@@ -55,12 +55,12 @@ Create an anime character portrait of [SUBJECT] in the art style of a Studio Ghi
 
 **Variation 2 — Landscape**
 ```text
-Create an anime landscape in Studio Ghibli style by Hayao Miyazaki — [ENVIRONMENT]. No human figures. Lush hand-painted watercolor with visible brushstrokes. Towering cumulus clouds. Warm golden-hour lighting. Rich emerald, cerulean, and ochre palette. 16:9 landscape format.
+Create an anime landscape in Studio Ghibli style by Hayao Miyazaki — [ENVIRONMENT]. No human figures. Lush hand-painted watercolor with visible brushstrokes. Towering cumulus clouds. Warm golden-hour lighting. Rich emerald, cerulean, and ochre palette. 3:2 landscape format.
 ```
 
 **Variation 3 — Character with Creature**
 ```text
-Create an anime movie still of [SUBJECT] encountering [CREATURE] in a [ENVIRONMENT], Studio Ghibli style by Miyazaki. Hand-painted watercolor background, dappled light, floating pollen. Wide-eyed wonder expression. Magical but grounded. 16:9 landscape format.
+Create an anime movie still of [SUBJECT] encountering [CREATURE] in a [ENVIRONMENT], Studio Ghibli style by Miyazaki. Hand-painted watercolor background, dappled light, floating pollen. Wide-eyed wonder expression. Magical but grounded. 3:2 landscape format.
 ```
 
 ### Midjourney

@@ -31,7 +31,7 @@ Photograph of a holographic medical display showing a rotating 3D anatomical mod
 
 **Variation 3 — Personal Device / Phone** _(Social Media, Product Vision)_
 ```text
-Photograph of a person holding their hand out with a holographic personal interface projecting upward from a device on their wrist, 4:5 vertical format. The holographic display shows [CONTENT — e.g., a message thread, weather widget, music player, and a miniature 3D map]. Translucent cyan hologram panels. The hologram light illuminates the person's face. Thin projection lines from the wrist device to the floating display. Busy urban street in the background, slightly blurred. Near-future everyday tech aesthetic.
+Photograph of a person holding their hand out with a holographic personal interface projecting upward from a device on their wrist, 3:4 vertical format. The holographic display shows [CONTENT — e.g., a message thread, weather widget, music player, and a miniature 3D map]. Translucent cyan hologram panels. The hologram light illuminates the person's face. Thin projection lines from the wrist device to the floating display. Busy urban street in the background, slightly blurred. Near-future everyday tech aesthetic.
 ```
 
 **Variation 4 — Vehicle HUD** _(Wallpaper, Game Concept)_
@@ -48,17 +48,17 @@ Holographic data visualization floating in a dark void — [VISUALIZATION — e.
 
 **Variation 1 — Command Center**
 ```text
-Create a photograph of someone interacting with floating holographic UI panels in a dark command center. Multiple translucent [COLOR] displays showing [DATA]. Particle effects at touch points. Dark environment, holograms as light source. Minority Report aesthetic. 16:9 landscape format.
+Create a photograph of someone interacting with floating holographic UI panels in a dark command center. Multiple translucent [COLOR] displays showing [DATA]. Particle effects at touch points. Dark environment, holograms as light source. Minority Report aesthetic. 3:2 landscape format.
 ```
 
 **Variation 2 — Medical**
 ```text
-Create a holographic medical display: rotating 3D [ANATOMICAL MODEL] with data panels showing [READOUTS]. Amber holograms. Thin labeled connections. Clinical sci-fi. 16:9 landscape format.
+Create a holographic medical display: rotating 3D [ANATOMICAL MODEL] with data panels showing [READOUTS]. Amber holograms. Thin labeled connections. Clinical sci-fi. 3:2 landscape format.
 ```
 
 **Variation 3 — Data Visualization**
 ```text
-Create a holographic data visualization: [VISUALIZATION] floating in dark void. [COLOR] scheme. Floating labels and stats. Pure abstract data. 16:9 landscape format.
+Create a holographic data visualization: [VISUALIZATION] floating in dark void. [COLOR] scheme. Floating labels and stats. Pure abstract data. 3:2 landscape format.
 ```
 
 ### Midjourney

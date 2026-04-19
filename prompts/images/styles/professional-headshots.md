@@ -10,7 +10,7 @@ Polished, corporate-grade portrait photography optimized for business and profes
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Professional business headshot photograph of an executive woman in her 40s wearing a tailored charcoal blazer over an ivory silk blouse, 4:5 vertical portrait format. 85mm portrait lens at f/2.0. Clean corporate studio lighting — soft key light from 45 degrees with a fill light reducing shadows to a 2:1 ratio. Neutral grey seamless paper backdrop. Sharp focus on the eyes, natural skin texture with visible pores, warm confident smile with closed lips. Hair neatly styled. Subtle catchlights in both eyes.
+> Professional business headshot photograph of an executive woman in her 40s wearing a tailored charcoal blazer over an ivory silk blouse, 3:4 vertical portrait format. 85mm portrait lens at f/2.0. Clean corporate studio lighting — soft key light from 45 degrees with a fill light reducing shadows to a 2:1 ratio. Neutral grey seamless paper backdrop. Sharp focus on the eyes, natural skin texture with visible pores, warm confident smile with closed lips. Hair neatly styled. Subtle catchlights in both eyes.
 > ```
 
 ---
@@ -23,12 +23,12 @@ Polished, corporate-grade portrait photography optimized for business and profes
 
 **Variation 1 — Classic Corporate Headshot** _(LinkedIn, Team Page, Business Card)_
 ```text
-Professional business headshot photograph of [SUBJECT — e.g., a man in his 30s with short dark hair and a trimmed beard], 4:5 vertical portrait format. 85mm portrait lens at f/2.0 with a shallow depth of field. Clean studio lighting — large softbox key light at 45 degrees with a fill reflector on the opposite side reducing shadows to a 2:1 ratio. [BACKDROP — e.g., neutral grey seamless paper]. Subject wearing [ATTIRE — e.g., a navy suit with a white dress shirt and no tie]. Sharp focus locked on the eyes, natural skin texture with visible pores. Warm, approachable expression with a slight closed-mouth smile. Subtle catchlights in both eyes. Professional corporate photography.
+Professional business headshot photograph of [SUBJECT — e.g., a man in his 30s with short dark hair and a trimmed beard], 3:4 vertical portrait format. 85mm portrait lens at f/2.0 with a shallow depth of field. Clean studio lighting — large softbox key light at 45 degrees with a fill reflector on the opposite side reducing shadows to a 2:1 ratio. [BACKDROP — e.g., neutral grey seamless paper]. Subject wearing [ATTIRE — e.g., a navy suit with a white dress shirt and no tie]. Sharp focus locked on the eyes, natural skin texture with visible pores. Warm, approachable expression with a slight closed-mouth smile. Subtle catchlights in both eyes. Professional corporate photography.
 ```
 
 **Variation 2 — Warm Executive Portrait** _(CEO/Founder Bio, About Page, Annual Report)_
 ```text
-Professional executive portrait photograph of [SUBJECT], seated with a relaxed, authoritative posture, slight forward lean suggesting engagement, 4:5 vertical format. 85mm lens at f/2.8. Three-point studio lighting — warm-toned key light through a large octabox at 30 degrees, subtle hair light from behind separating the subject from the background, and a fill card on the shadow side. [BACKDROP — e.g., dark charcoal gradient fading to black at edges]. Subject wearing [ATTIRE — e.g., a tailored charcoal suit with a light blue open-collar dress shirt]. Hands clasped or resting naturally. Sharp focus on the eyes, warm color grade, natural skin texture. Confident, trustworthy expression. Executive editorial quality.
+Professional executive portrait photograph of [SUBJECT], seated with a relaxed, authoritative posture, slight forward lean suggesting engagement, 3:4 vertical format. 85mm lens at f/2.8. Three-point studio lighting — warm-toned key light through a large octabox at 30 degrees, subtle hair light from behind separating the subject from the background, and a fill card on the shadow side. [BACKDROP — e.g., dark charcoal gradient fading to black at edges]. Subject wearing [ATTIRE — e.g., a tailored charcoal suit with a light blue open-collar dress shirt]. Hands clasped or resting naturally. Sharp focus on the eyes, warm color grade, natural skin texture. Confident, trustworthy expression. Executive editorial quality.
 ```
 
 **Variation 3 — Clean White Background** _(Company Website, ID Badge, Directory)_
@@ -38,7 +38,7 @@ Professional headshot photograph of [SUBJECT] against a pure white seamless back
 
 **Variation 4 — Outdoor Natural Light Professional** _(Personal Brand, Startup, Creative Industry)_
 ```text
-Professional outdoor headshot photograph of [SUBJECT] in natural golden-hour light, 4:5 vertical portrait format. 85mm lens at f/1.8 creating a creamy bokeh background. Subject positioned in open shade with golden-hour sunlight providing a warm rim light along one side of the face and hair. [BACKGROUND — e.g., softly blurred urban streetscape with warm-toned buildings]. Subject wearing [ATTIRE — e.g., a fitted blazer over a casual knit sweater]. Natural, relaxed expression with a genuine smile. Sharp focus on the eyes, warm skin tones, natural color grading. Professional but approachable — suitable for a startup founder or creative director.
+Professional outdoor headshot photograph of [SUBJECT] in natural golden-hour light, 3:4 vertical portrait format. 85mm lens at f/1.8 creating a creamy bokeh background. Subject positioned in open shade with golden-hour sunlight providing a warm rim light along one side of the face and hair. [BACKGROUND — e.g., softly blurred urban streetscape with warm-toned buildings]. Subject wearing [ATTIRE — e.g., a fitted blazer over a casual knit sweater]. Natural, relaxed expression with a genuine smile. Sharp focus on the eyes, warm skin tones, natural color grading. Professional but approachable — suitable for a startup founder or creative director.
 ```
 
 **Variation 5 — Headshot with Branded Color Background** _(Marketing Materials, Conference Badge, Social Media)_
@@ -50,12 +50,12 @@ Professional headshot photograph of [SUBJECT] against a solid [BRAND COLOR — e
 
 **Variation 1 — Classic Corporate Headshot**
 ```text
-Create a professional corporate headshot photograph of [SUBJECT] suitable for a LinkedIn profile or company team page. Use an 85mm portrait lens with f/2.0 aperture. Light with a clean soft studio setup — large softbox key light at 45 degrees with a fill reflector opposite. Place the subject against a [BACKDROP — e.g., neutral grey seamless paper]. The expression should be warm and approachable with a slight smile. Sharp focus on the eyes with natural, realistic skin texture. 4:5 vertical crop. High-end corporate portrait quality.
+Create a professional corporate headshot photograph of [SUBJECT] suitable for a LinkedIn profile or company team page. Use an 85mm portrait lens with f/2.0 aperture. Light with a clean soft studio setup — large softbox key light at 45 degrees with a fill reflector opposite. Place the subject against a [BACKDROP — e.g., neutral grey seamless paper]. The expression should be warm and approachable with a slight smile. Sharp focus on the eyes with natural, realistic skin texture. 2:3 vertical crop. High-end corporate portrait quality.
 ```
 
 **Variation 2 — Warm Executive Portrait**
 ```text
-Create a professional executive portrait of [SUBJECT] in a seated pose with an authoritative but approachable demeanor. Three-point lighting with a warm-toned key light, hair/rim light, and fill card. Dark [BACKDROP] gradient background. Subject wearing [ATTIRE]. Warm color grade, natural skin texture, sharp focus on the eyes. 4:5 vertical format. The image should communicate leadership and trustworthiness.
+Create a professional executive portrait of [SUBJECT] in a seated pose with an authoritative but approachable demeanor. Three-point lighting with a warm-toned key light, hair/rim light, and fill card. Dark [BACKDROP] gradient background. Subject wearing [ATTIRE]. Warm color grade, natural skin texture, sharp focus on the eyes. 2:3 vertical format. The image should communicate leadership and trustworthiness.
 ```
 
 **Variation 3 — Clean White Background**
@@ -102,7 +102,7 @@ Transform existing photos into polished professional headshots:
 
 **Nano Banana 2** _(Featured)_
 ```text
-Using the attached photo as reference, create a polished professional headshot. Replace the background with a clean [BACKDROP — e.g., neutral grey seamless paper]. Apply clean corporate studio lighting — soft key light at 45 degrees with fill to reduce harsh shadows. Preserve the subject's exact likeness, expression, and attire. Enhance skin texture to be natural and realistic without over-smoothing. Ensure sharp focus on the eyes with subtle catchlights. 4:5 vertical portrait format.
+Using the attached photo as reference, create a polished professional headshot. Replace the background with a clean [BACKDROP — e.g., neutral grey seamless paper]. Apply clean corporate studio lighting — soft key light at 45 degrees with fill to reduce harsh shadows. Preserve the subject's exact likeness, expression, and attire. Enhance skin texture to be natural and realistic without over-smoothing. Ensure sharp focus on the eyes with subtle catchlights. 3:4 vertical portrait format.
 ```
 > 💡 **Follow-up refinements:**
 > - "Switch the background to pure white"
@@ -113,7 +113,7 @@ Using the attached photo as reference, create a polished professional headshot. 
 
 **ChatGPT**
 ```text
-[Upload Photo] "Transform this into a polished corporate headshot. Replace the background with a clean [BACKDROP]. Apply soft, even studio lighting. Preserve the subject's likeness and attire exactly. Natural skin texture, sharp focus on the eyes. 4:5 vertical crop."
+[Upload Photo] "Transform this into a polished corporate headshot. Replace the background with a clean [BACKDROP]. Apply soft, even studio lighting. Preserve the subject's likeness and attire exactly. Natural skin texture, sharp focus on the eyes. 2:3 vertical crop."
 ```
 
 **Midjourney**

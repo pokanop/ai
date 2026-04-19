@@ -25,8 +25,8 @@ const ASSETS_SRC = join(ROOT, 'assets');
 const IMAGE_CATEGORIES = {
   'professional': [
     'cinematic-headshots',
-    'modern-avatars',
     'professional-headshots',
+    'modern-avatars',
   ],
   'toy-miniature': [
     'lego-photography',
@@ -417,6 +417,10 @@ function generateImagePromptMdx(data) {
     const desc = data.description.substring(0, 160).replace(/"/g, '\\"');
     lines.push(`description: "${desc}"`);
   }
+  if (data.sidebarOrder) {
+    lines.push('sidebar:');
+    lines.push(`  order: ${data.sidebarOrder}`);
+  }
   lines.push('---');
   lines.push('');
   lines.push("import { Tabs, TabItem, Card, LinkCard } from '@astrojs/starlight/components';");
@@ -693,6 +697,13 @@ function main() {
     const content = readFileSync(styleFile, 'utf-8');
 
     const parsed = parseImagePrompt(content, styleFile);
+
+    const categoryArray = IMAGE_CATEGORIES[category] || [];
+    const sortOrder = categoryArray.indexOf(slug) + 1;
+    if (sortOrder > 0) {
+      parsed.sidebarOrder = sortOrder;
+    }
+
     const mdx = generateImagePromptMdx(parsed);
 
     const outDir = join(DOCS_OUT, 'prompts', 'images', 'styles', category);

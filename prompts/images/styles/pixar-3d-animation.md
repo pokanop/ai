@@ -55,12 +55,12 @@ Create a 3D animated character portrait of [SUBJECT] in the signature style of a
 
 **Variation 2 — Full Scene**
 ```text
-Create a 3D animated movie still of [SUBJECT] in a whimsical [ENVIRONMENT], Pixar animation style. Vibrant colors, expressive character poses, large eyes with iris reflections. Warm amber key light with cool blue fill. Rich environmental detail. Framed like a movie promotional poster. 16:9 landscape format.
+Create a 3D animated movie still of [SUBJECT] in a whimsical [ENVIRONMENT], Pixar animation style. Vibrant colors, expressive character poses, large eyes with iris reflections. Warm amber key light with cool blue fill. Rich environmental detail. Framed like a movie promotional poster. 3:2 landscape format.
 ```
 
 **Variation 3 — Group Photo Conversion**
 ```text
-Create a 3D animated Pixar-style group portrait of [NUMBER] characters: [DESCRIBE EACH]. Each has a distinct personality but shares the same art style — large expressive eyes, soft skin, exaggerated proportions. Warm lighting with cool fill. Joyful atmosphere. 16:9 landscape format.
+Create a 3D animated Pixar-style group portrait of [NUMBER] characters: [DESCRIBE EACH]. Each has a distinct personality but shares the same art style — large expressive eyes, soft skin, exaggerated proportions. Warm lighting with cool fill. Joyful atmosphere. 3:2 landscape format.
 ```
 
 ### Midjourney

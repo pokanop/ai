@@ -10,7 +10,7 @@ Subjects rendered as medieval stained glass — bold black lead lines (cames) se
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Stained glass window depicting a peacock with tail feathers fully displayed, in the Gothic cathedral rose window tradition, 4:5 vertical format. Bold black lead lines (cames) separate each piece of translucent colored glass. Jewel-toned glass — sapphire blue, emerald green, ruby red, amethyst purple, and amber gold. Bright white light streams through from behind, illuminating every piece and creating a luminous glow. Visible glass texture — slight variations in thickness, tiny bubbles, and color density. Geometric organization within organic forms. The peacock's tail radiates outward like a mandala.
+> Stained glass window depicting a peacock with tail feathers fully displayed, in the Gothic cathedral rose window tradition, 3:4 vertical format. Bold black lead lines (cames) separate each piece of translucent colored glass. Jewel-toned glass — sapphire blue, emerald green, ruby red, amethyst purple, and amber gold. Bright white light streams through from behind, illuminating every piece and creating a luminous glow. Visible glass texture — slight variations in thickness, tiny bubbles, and color density. Geometric organization within organic forms. The peacock's tail radiates outward like a mandala.
 > ```
 
 ---

@@ -10,7 +10,7 @@ Two images merged into a single frame — typically a human silhouette filled wi
 
 > **Sample prompt used to generate the above image (Nano Banana 2):**
 > ```text
-> Double exposure photograph merging a side-profile silhouette of a woman with an autumn forest landscape, 4:5 vertical format. The darkest areas of the silhouette — hair, jawline, shoulder — reveal dense golden and crimson autumn foliage. The lighter skin areas blend with the soft misty sky visible between the trees. The silhouette's outline is crisp and recognizable against a clean white background. Warm amber and gold color palette. The two images blend seamlessly — neither dominates, they coexist as a single unified composition.
+> Double exposure photograph merging a side-profile silhouette of a woman with an autumn forest landscape, 3:4 vertical format. The darkest areas of the silhouette — hair, jawline, shoulder — reveal dense golden and crimson autumn foliage. The lighter skin areas blend with the soft misty sky visible between the trees. The silhouette's outline is crisp and recognizable against a clean white background. Warm amber and gold color palette. The two images blend seamlessly — neither dominates, they coexist as a single unified composition.
 > ```
 
 ---
@@ -26,7 +26,7 @@ Double exposure photograph merging a [ANGLE — e.g., side-profile / front-facin
 
 **Variation 2 — Portrait + Cityscape** _(Social Media, Book Cover)_
 ```text
-Double exposure photograph merging a [ANGLE] silhouette of [SUBJECT] with [CITYSCAPE — e.g., the New York skyline at golden hour with the sun setting between skyscrapers], 4:5 vertical format. The buildings and light emerge through the dark areas of the silhouette. Warm urban colors — [PALETTE]. Clean white background. The city and the person are one — a visual metaphor for urban identity.
+Double exposure photograph merging a [ANGLE] silhouette of [SUBJECT] with [CITYSCAPE — e.g., the New York skyline at golden hour with the sun setting between skyscrapers], 3:4 vertical format. The buildings and light emerge through the dark areas of the silhouette. Warm urban colors — [PALETTE]. Clean white background. The city and the person are one — a visual metaphor for urban identity.
 ```
 
 **Variation 3 — Portrait + Texture** _(Album Cover, Art Print)_
@@ -41,7 +41,7 @@ Double exposure merging the silhouette of [ANIMAL — e.g., a wolf howling] with
 
 **Variation 5 — Multi-Exposure / Triple** _(Social Media, Experimental)_
 ```text
-Triple exposure photograph layering three elements: [ELEMENT 1 — e.g., a ballet dancer in mid-leap], [ELEMENT 2 — e.g., scattered rose petals], and [ELEMENT 3 — e.g., soft window light with curtain shadows], 4:5 vertical format. The dancer's silhouette is filled with rose petals, while the window light creates atmospheric depth across the entire image. [PALETTE — e.g., soft pinks, warm whites, and golden light]. Ethereal, layered, dreamlike. The three exposures create a visual poem.
+Triple exposure photograph layering three elements: [ELEMENT 1 — e.g., a ballet dancer in mid-leap], [ELEMENT 2 — e.g., scattered rose petals], and [ELEMENT 3 — e.g., soft window light with curtain shadows], 3:4 vertical format. The dancer's silhouette is filled with rose petals, while the window light creates atmospheric depth across the entire image. [PALETTE — e.g., soft pinks, warm whites, and golden light]. Ethereal, layered, dreamlike. The three exposures create a visual poem.
 ```
 
 ### ChatGPT

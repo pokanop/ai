@@ -37,7 +37,7 @@ Each prompt is provided in four platform-specific variants. Understanding their 
   |-----|---------|
   | **Be specific, not vague** | NB2's reasoning engine rewards precise descriptors for textures, colors, and lighting over generic adjectives |
   | **Front-load important details** | Place the asset type and primary subject at the beginning of your prompt |
-  | **Specify aspect ratios** | Explicitly state the format: `16:9` for wallpapers, `4:5` for Instagram, `9:16` for stories, `1:1` for profile pictures |
+  | **Specify aspect ratios** | Explicitly state the format: `16:9` for wallpapers, `3:4` for Instagram, `9:16` for stories, `1:1` for profile pictures |
   | **Iterate conversationally** | Refine with follow-ups: "Change the palette to warmer tones," "Move the subject left," "Add more texture to the background" |
   | **Leverage search grounding** | For real-world subjects, ask the model to reference accurate imagery: "Use image search to find accurate reference for [specific subject]" |
   | **Use positive framing** | Instead of "no cars," describe the scene you *do* want: "empty, deserted street" |
@@ -81,7 +81,11 @@ Each prompt is provided in four platform-specific variants. Understanding their 
 
 ## 📐 Aspect Ratio Cheat Sheet
 
-Quick reference for common output formats:
+Quick reference for common output formats. Note that aspect ratio capabilities vary by platform:
+- **Nano Banana 2**: Fixed presets (`16:9`, `4:3`, `1:1`, `3:4`, `9:16`).
+- **ChatGPT**: Fixed presets (`1:1`, `3:2`, `2:3`).
+- **Midjourney & Stable Diffusion**: Fully dynamic support for precise pixel dimensions and custom ratios.
+
 
 | Use Case | Ratio | Pixels (Recommended) | Notes |
 |----------|-------|----------------------|-------|
