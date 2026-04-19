@@ -1,0 +1,155 @@
+/* ────────────────────────────────────────────────────────────────────────────
+ * Custom Starlight Theme
+ *
+ * Dark-mode optimized for image-heavy content.
+ * Purple/blue accent palette matching existing repo branding.
+ * ──────────────────────────────────────────────────────────────────────────── */
+
+/* ── Typography (must come first) ──────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── Color Palette ─────────────────────────────────────────────────────── */
+:root {
+  --sl-color-accent-low: #1a1040;
+  --sl-color-accent: #7c5cbf;
+  --sl-color-accent-high: #b794f4;
+
+  --sl-color-white: #f0edf6;
+  --sl-color-gray-1: #d4cde2;
+  --sl-color-gray-2: #b0a7c4;
+  --sl-color-gray-3: #8b80a5;
+  --sl-color-gray-4: #544b6e;
+  --sl-color-gray-5: #302847;
+  --sl-color-gray-6: #1e1733;
+  --sl-color-gray-7: #140f24;
+  --sl-color-black: #0d0a18;
+
+  --sl-font: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --sl-font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+}
+
+[data-theme='light'] {
+  --sl-color-accent-low: #ede8f5;
+  --sl-color-accent: #7c5cbf;
+  --sl-color-accent-high: #4a2d8b;
+
+  --sl-color-white: #1a1040;
+  --sl-color-gray-1: #2d2155;
+  --sl-color-gray-2: #544b6e;
+  --sl-color-gray-3: #6b6088;
+  --sl-color-gray-4: #b0a7c4;
+  --sl-color-gray-5: #d4cde2;
+  --sl-color-gray-6: #ede8f5;
+  --sl-color-gray-7: #f7f4fc;
+  --sl-color-black: #ffffff;
+}
+
+/* ── Global Enhancements ──────────────────────────────────────────────── */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better image rendering */
+img {
+  border-radius: 8px;
+}
+
+/* Code block refinement */
+pre {
+  border: 1px solid var(--sl-color-gray-5) !important;
+  border-radius: 8px !important;
+}
+
+/* ── Sidebar refinements ──────────────────────────────────────────────── */
+nav.sidebar .top-level > li > details > summary {
+  font-weight: 600;
+}
+
+/* ── Content area ─────────────────────────────────────────────────────── */
+.sl-markdown-content h2 {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--sl-color-gray-5);
+}
+
+.sl-markdown-content h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+/* ── Table styling ────────────────────────────────────────────────────── */
+.sl-markdown-content table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.875rem;
+}
+
+.sl-markdown-content th {
+  background: var(--sl-color-gray-6);
+  font-weight: 600;
+}
+
+.sl-markdown-content td,
+.sl-markdown-content th {
+  padding: 0.625rem 0.875rem;
+  border: 1px solid var(--sl-color-gray-5);
+}
+
+.sl-markdown-content tr:hover td {
+  background: var(--sl-color-gray-6);
+}
+
+/* ── Starlight Tabs enhancement ───────────────────────────────────────── */
+starlight-tabs [role="tablist"] {
+  gap: 0;
+  border-bottom: 2px solid var(--sl-color-gray-5);
+}
+
+starlight-tabs [role="tab"] {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.15s ease;
+}
+
+starlight-tabs [role="tab"][aria-selected="true"] {
+  border-bottom-color: var(--sl-color-accent);
+  color: var(--sl-color-accent-high);
+}
+
+starlight-tabs [role="tabpanel"] {
+  padding: 1rem 0;
+}
+
+/* ── Asides / Callouts ────────────────────────────────────────────────── */
+.starlight-aside {
+  border-radius: 8px;
+}
+
+/* ── Link cards ───────────────────────────────────────────────────────── */
+.sl-link-card {
+  border-radius: 8px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.sl-link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ── Print / narrow screen adjustments ────────────────────────────────── */
+@media (max-width: 640px) {
+  .prompt-block .prompt-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .best-for {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "ai",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "sync": "bun run scripts/sync-docs.mjs",
+    "dev": "bun run scripts/sync-docs.mjs && astro dev",
+    "build": "bun run scripts/sync-docs.mjs && astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@astrojs/react": "^5.0.3",
+    "@astrojs/starlight": "^0.38.3",
+    "astro": "^6.1.8",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  }
+}

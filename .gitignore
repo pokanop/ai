@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Astro build output
+dist/
+.astro/
+
+# Generated docs (built from source .md files by sync-docs.mjs)
+src/content/docs/
+
+# Static assets (copied from assets/ by sync-docs.mjs)
+public/assets/
+
+# Bun
+bun.lock
+
+# OS
+.DS_Store
+
+# Environment
+.env
+.env.*

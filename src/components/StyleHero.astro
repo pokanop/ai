@@ -1,0 +1,144 @@
+---
+/**
+ * StyleHero — Hero section for image prompt style pages
+ *
+ * Displays the hero image, "best for" badges, and expandable sample prompt.
+ */
+interface Props {
+  image?: string;
+  bestFor?: string[];
+  samplePrompt?: string;
+}
+
+const { image, bestFor = [], samplePrompt } = Astro.props;
+---
+
+<div class="style-hero">
+  {image && (
+    <div class="hero-image-container">
+      <img src={image} alt="Style example" class="hero-image" loading="eager" />
+    </div>
+  )}
+
+  {bestFor.length > 0 && (
+    <div class="best-for">
+      <span class="best-for-label">Best for:</span>
+      <div class="best-for-badges">
+        {bestFor.map((use) => (
+          <span class="badge">{use}</span>
+        ))}
+      </div>
+    </div>
+  )}
+
+  {samplePrompt && (
+    <details class="sample-prompt">
+      <summary>
+        <span class="sample-prompt-icon">✨</span>
+        Sample prompt used to generate the hero image
+      </summary>
+      <div class="sample-prompt-content">
+        <pre><code>{samplePrompt}</code></pre>
+      </div>
+    </details>
+  )}
+</div>
+
+<style>
+  .style-hero {
+    margin-bottom: 2rem;
+  }
+
+  .hero-image-container {
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--sl-color-gray-5);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .best-for {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .best-for-label {
+    font-weight: 600;
+    color: var(--sl-color-white);
+    font-size: 0.875rem;
+  }
+
+  .best-for-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.25rem 0.625rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: linear-gradient(135deg, var(--sl-color-accent) 0%, var(--sl-color-accent-high) 100%);
+    color: var(--sl-color-black);
+    white-space: nowrap;
+  }
+
+  .sample-prompt {
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .sample-prompt summary {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--sl-color-gray-2);
+    background: var(--sl-color-gray-6);
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .sample-prompt summary:hover {
+    background: var(--sl-color-gray-5);
+  }
+
+  .sample-prompt-icon {
+    font-size: 1rem;
+  }
+
+  .sample-prompt-content {
+    padding: 1rem;
+    background: var(--sl-color-gray-7);
+  }
+
+  .sample-prompt-content pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    color: var(--sl-color-gray-2);
+  }
+
+  .sample-prompt-content code {
+    background: none;
+    padding: 0;
+    font-family: var(--sl-font-mono);
+  }
+</style>
