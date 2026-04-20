@@ -589,11 +589,14 @@ function generateGenericMdx(content, title) {
   return lines.join('\n');
 }
 
-function generateCategoryIndexMdx(content, title) {
+function generateCategoryIndexMdx(content, title, allStyles) {
   const lines = [];
   lines.push('---');
   lines.push(`title: "${escapeForJsx(title)}"`);
   lines.push('---');
+  lines.push('');
+  lines.push("import { CardGrid } from '@astrojs/starlight/components';");
+  lines.push("import GalleryCard from '@components/GalleryCard.astro';");
   lines.push('');
 
   let body = content;
@@ -603,8 +606,35 @@ function generateCategoryIndexMdx(content, title) {
   // Strip nav links
   body = body.replace(/\[← Back[^\]]*\]\([^)]*\)\s*\n*/g, '');
 
-  // Rewrite internal links to .md files to use Starlight slug routing
-  // e.g., (styles/vaporwave-synthwave.md) → (/ai/prompts/images/styles/retro-digital/vaporwave-synthwave/)
+  // Find all category markdown tables and replace them with CardGrid components
+  body = body.replace(/\| # \| Style \| Description \|\r?\n(?:\|[^\n]*\r?\n?)+/g, (match) => {
+    // Extract the style slugs from the table rows
+    const slugs = [...match.matchAll(/\]\(styles\/([a-z0-9-]+)\.md\)/g)].map(m => m[1]);
+    if (slugs.length === 0) return match;
+    
+    // We already know the category by checking the first slug
+    const category = STYLE_TO_CATEGORY[slugs[0]];
+    if (!category) return match;
+    
+    let gridHtml = '<CardGrid>\n';
+    for (const slug of slugs) {
+      const style = allStyles?.find(s => s.slug === slug);
+      if (!style) continue;
+      
+      let shortDesc = style.description || '';
+      if (shortDesc.length > 100) shortDesc = shortDesc.substring(0, 97) + '...';
+      
+      let attrs = `title="${escapeForJsx(style.title)}" href="/ai/prompts/images/styles/${category}/${style.slug}/" description="${escapeForJsx(shortDesc)}"`;
+      if (style.heroImage) {
+        attrs += ` image="${escapeForJsx(style.heroImage)}"`;
+      }
+      gridHtml += `  <GalleryCard ${attrs} />\n`;
+    }
+    gridHtml += '</CardGrid>\n\n';
+    return gridHtml;
+  });
+
+  // Rewrite remaining internal links to .md files to use Starlight slug routing
   body = body.replace(/\(styles\/([^)]+)\.md\)/g, (match, slug) => {
     const category = STYLE_TO_CATEGORY[slug];
     if (category) {
@@ -681,15 +711,13 @@ function main() {
   // ── 2. Image Prompts ────────────────────────────────────────────────
   console.log('  🖼️  Generating image prompt pages...');
 
-  // Image prompts index
-  const imgIndexMdx = generateCategoryIndexMdx(imagesReadme, 'Image Generation Prompts');
-  ensureDir(join(DOCS_OUT, 'prompts', 'images'));
-  writeOut(join(DOCS_OUT, 'prompts', 'images', 'index.mdx'), imgIndexMdx);
-  pageCount++;
+  // Image prompts index moved below
 
   // Individual style pages
   const stylesDir = join(ROOT, 'prompts', 'images', 'styles');
   const styleFiles = findFiles(stylesDir, /\.md$/);
+
+  const allStyles = [];
 
   for (const styleFile of styleFiles) {
     const slug = basename(styleFile, '.md');
@@ -697,6 +725,14 @@ function main() {
     const content = readFileSync(styleFile, 'utf-8');
 
     const parsed = parseImagePrompt(content, styleFile);
+
+    allStyles.push({
+      slug,
+      category,
+      title: parsed.title,
+      description: parsed.description,
+      heroImage: parsed.heroImage
+    });
 
     const categoryArray = IMAGE_CATEGORIES[category] || [];
     const sortOrder = categoryArray.indexOf(slug) + 1;
@@ -711,6 +747,12 @@ function main() {
     writeOut(join(outDir, `${slug}.mdx`), mdx);
     pageCount++;
   }
+
+  // Image prompts index (Overview page with dynamic gallery injection)
+  const imgIndexMdx = generateCategoryIndexMdx(imagesReadme, 'Image Generation Prompts', allStyles);
+  ensureDir(join(DOCS_OUT, 'prompts', 'images'));
+  writeOut(join(DOCS_OUT, 'prompts', 'images', 'index.mdx'), imgIndexMdx);
+  pageCount++;
 
   // ── 3. Video/Audio/Text Prompt placeholders ─────────────────────────
   console.log('  📋 Generating placeholder sections...');
@@ -785,6 +827,7 @@ function main() {
 
   console.log(`✅ sync-docs: Generated ${pageCount} pages in src/content/docs/`);
 }
+
 
 function writeOut(path, content) {
   ensureDir(dirname(path));
