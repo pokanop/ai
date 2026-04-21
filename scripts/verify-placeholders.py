@@ -50,6 +50,11 @@ def verify_placeholders(repo_root):
                     if img_path.startswith(('http://', 'https://', 'data:')):
                          continue # Skip external URLs and data URIs
                     
+                    # Ensure path has an image extension to avoid capturing doc examples like `![alt](path)`
+                    _, ext = os.path.splitext(img_path.split('#')[0].split('?')[0])
+                    if ext.lower() not in ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp', '.ico']:
+                        continue
+                    
                     # Clean the path from anchors or queries
                     img_path_clean = img_path.split('#')[0].split('?')[0]
                     
