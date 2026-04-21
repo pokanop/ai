@@ -2,7 +2,7 @@
 
 [← Back to Main Repository](../../README.md)
 
-A comprehensive library of **59 optimized image generation prompt styles** across 11 categories, each with multiple contextual prompt variations tailored for real-world use cases. Every style doc provides copy-paste prompts for Nano Banana 2 _(featured)_, ChatGPT, Midjourney, and Stable Diffusion — simply replace `[PLACEHOLDERS]` with your own content.
+A comprehensive library of **66 optimized image generation prompt styles** across 11 categories, each with multiple contextual prompt variations tailored for real-world use cases. Every style doc provides copy-paste prompts for Nano Banana 2 _(featured)_, ChatGPT, Midjourney, and Stable Diffusion — simply replace `[PLACEHOLDERS]` with your own content.
 
 ---
 
@@ -177,8 +177,12 @@ Not sure which style to pick? Start from what you need:
 | **Holiday / greeting card** | [Stained Glass](styles/stained-glass-windows.md), [Illuminated Manuscript](styles/illuminated-manuscript.md), [Embroidered](styles/embroidered-cross-stitch.md) |
 | **Game asset / concept art** | [Isometric Pixel City](styles/isometric-pixel-city.md), [Holographic UI](styles/holographic-ui-sci-fi.md), [Steampunk](styles/steampunk-contraptions.md) |
 | **Brand / marketing asset** | [Art Nouveau](styles/art-nouveau-mucha.md), [Minimalist Notion](styles/minimalist-notion-style.md), [Wes Anderson](styles/wes-anderson-symmetry.md) |
-| **Photo-to-character conversion** | [Pixar](styles/pixar-3d-animation.md), [The Simpsons](styles/the-simpsons.md), [Lego](styles/lego-photography.md), [Studio Ghibli](styles/studio-ghibli-anime.md) |
+| **Photo-to-character conversion** | [Pixar](styles/pixar-3d-animation.md), [The Simpsons](styles/the-simpsons.md), [Lego](styles/lego-photography.md), [Studio Ghibli](styles/studio-ghibli-anime.md), [Collectible Figurines](styles/collectible-figurines.md) |
 | **Turning a photo into fine art** | [Ukiyo-e Woodblock](styles/ukiyo-e-woodblock.md), [Art Nouveau](styles/art-nouveau-mucha.md), [Byzantine Mosaic](styles/byzantine-mosaic.md) |
+| **Product marketing / mockup** | [Glass Embossed 3D](styles/glass-embossed-3d.md), [Exploded Product View](styles/exploded-product-view.md), [Brand Concept Renders](styles/brand-concept-renders.md) |
+| **Movie / TV fan art** | [Movie Diorama Cube](styles/movie-diorama-cube.md), [Collectible Figurines](styles/collectible-figurines.md), [Superhero Comic Book](styles/superhero-comic-book.md) |
+| **Travel / city content** | [Fridge Magnet Knolling](styles/fridge-magnet-knolling.md), [Landmark Dioramas](styles/landmark-dioramas.md), [Tilt-Shift Miniature](styles/tilt-shift-miniature.md) |
+| **Moody editorial / album art** | [Frosted Silhouette](styles/frosted-silhouette.md), [Double Exposure](styles/double-exposure.md), [Daguerreotype / Tintype](styles/daguerreotype-tintype.md) |
 
 ---
 
@@ -214,6 +218,9 @@ Not sure which style to pick? Start from what you need:
 | 6 | [3D Isometric Resin Sculptures](styles/3d-isometric-resin-sculptures.md) | Open handcrafted miniature resin sculptures with richly textured matte surfaces |
 | 7 | [Landmark Dioramas](styles/landmark-dioramas.md) | Miniature tilt-shift architectural models of real or imaginary landmarks |
 | 8 | [Miniature People in Everyday Objects](styles/miniature-people.md) | Tiny figurines interacting with full-size food and objects as landscapes |
+| 9 | [Collectible Figurines](styles/collectible-figurines.md) | Photorealistic miniature figurines with hand-painted resin prototype finish |
+| 10 | [Fridge Magnet Knolling](styles/fridge-magnet-knolling.md) | Top-down knolled grids of themed 3D souvenir magnets with resin textures |
+| 11 | [Movie Diorama Cube](styles/movie-diorama-cube.md) | Iconic movie scenes in hyper-realistic rounded glass cube dioramas |
 
 ---
 
@@ -221,11 +228,11 @@ Not sure which style to pick? Start from what you need:
 
 | # | Style | Description |
 |---|-------|-------------|
-| 9 | [Pixar / 3D Animation](styles/pixar-3d-animation.md) | Expressive 3D animated characters with large emotive eyes and whimsical environments |
-| 10 | [Superhero Comic Book](styles/superhero-comic-book.md) | Dynamic action panels with heavy ink outlines, halftone shading, and speed lines |
-| 11 | [Cell Shaded Art](styles/cell-shaded-art.md) | Flat-shaded stylized 3D with thick outlines — Borderlands / Breath of the Wild aesthetic |
-| 12 | [The Simpsons](styles/the-simpsons.md) | Matt Groening's iconic yellow-skin, bulging-eye, flat-color art style |
-| 13 | [Studio Ghibli Anime](styles/studio-ghibli-anime.md) | Lush hand-painted watercolor environments with emotionally expressive characters |
+| 12 | [Pixar / 3D Animation](styles/pixar-3d-animation.md) | Expressive 3D animated characters with large emotive eyes and whimsical environments |
+| 13 | [Superhero Comic Book](styles/superhero-comic-book.md) | Dynamic action panels with heavy ink outlines, halftone shading, and speed lines |
+| 14 | [Cell Shaded Art](styles/cell-shaded-art.md) | Flat-shaded stylized 3D with thick outlines — Borderlands / Breath of the Wild aesthetic |
+| 15 | [The Simpsons](styles/the-simpsons.md) | Matt Groening’s iconic yellow-skin, bulging-eye, flat-color art style |
+| 16 | [Studio Ghibli Anime](styles/studio-ghibli-anime.md) | Lush hand-painted watercolor environments with emotionally expressive characters |
 
 ---
 
@@ -233,13 +240,13 @@ Not sure which style to pick? Start from what you need:
 
 | # | Style | Description |
 |---|-------|-------------|
-| 14 | [Made of Yarn / Amigurumi](styles/yarn-amigurumi.md) | Knitted and crocheted characters with visible stitches and warm lighting |
-| 15 | [Paper Cutout / Kirigami](styles/paper-cutout-kirigami.md) | Multi-layered paper craft with crisp cut edges and dramatic drop shadows |
-| 16 | [Claymation / Stop-Motion](styles/claymation-stop-motion.md) | Modeling clay with visible fingerprint impressions and miniature handmade sets |
-| 17 | [Embroidered / Cross-Stitch](styles/embroidered-cross-stitch.md) | Thread on fabric with visible canvas weave and cross-stitch grid patterns |
-| 18 | [Wooden Marquetry / Intarsia](styles/wooden-marquetry.md) | Scenes composed from contrasting wood veneers with natural grain patterns |
-| 19 | [Frosted Glass / Ice Sculpture](styles/frosted-glass-ice-sculpture.md) | Crystalline subjects with internal refractions and condensation droplets |
-| 20 | [Cloud / Smoke Sculpture](styles/cloud-smoke-sculpture.md) | Subjects formed from volumetric clouds, dissolving ethereally at the edges |
+| 17 | [Made of Yarn / Amigurumi](styles/yarn-amigurumi.md) | Knitted and crocheted characters with visible stitches and warm lighting |
+| 18 | [Paper Cutout / Kirigami](styles/paper-cutout-kirigami.md) | Multi-layered paper craft with crisp cut edges and dramatic drop shadows |
+| 19 | [Claymation / Stop-Motion](styles/claymation-stop-motion.md) | Modeling clay with visible fingerprint impressions and miniature handmade sets |
+| 20 | [Embroidered / Cross-Stitch](styles/embroidered-cross-stitch.md) | Thread on fabric with visible canvas weave and cross-stitch grid patterns |
+| 21 | [Wooden Marquetry / Intarsia](styles/wooden-marquetry.md) | Scenes composed from contrasting wood veneers with natural grain patterns |
+| 22 | [Frosted Glass / Ice Sculpture](styles/frosted-glass-ice-sculpture.md) | Crystalline subjects with internal refractions and condensation droplets |
+| 23 | [Cloud / Smoke Sculpture](styles/cloud-smoke-sculpture.md) | Subjects formed from volumetric clouds, dissolving ethereally at the edges |
 
 ---
 
@@ -247,12 +254,15 @@ Not sure which style to pick? Start from what you need:
 
 | # | Style | Description |
 |---|-------|-------------|
-| 21 | [Minimalist Notion Style](styles/minimalist-notion-style.md) | Ultra-clean black-and-white line art with bold strokes and generous negative space |
-| 22 | [Art Deco Illustration](styles/art-deco-illustration.md) | Gatsby-era geometric elegance with gold leaf, sunburst patterns, and 1920s luxury |
-| 23 | [Wes Anderson Symmetry](styles/wes-anderson-symmetry.md) | Perfectly centered compositions with pastel palettes and dollhouse-like interiors |
-| 24 | [Brutalist Architecture](styles/brutalist-architecture.md) | Monolithic raw concrete forms with dramatic shadows and geometric repetition |
-| 25 | [Vinyl Album Cover Art](styles/vinyl-album-cover.md) | Classic square-format album covers with genre-specific aesthetics and typography |
-| 26 | [Concert Poster / Gig Poster](styles/concert-poster.md) | Screen-printed aesthetic with limited color palettes and hand-drawn typography |
+| 24 | [Minimalist Notion Style](styles/minimalist-notion-style.md) | Ultra-clean black-and-white line art with bold strokes and generous negative space |
+| 25 | [Art Deco Illustration](styles/art-deco-illustration.md) | Gatsby-era geometric elegance with gold leaf, sunburst patterns, and 1920s luxury |
+| 26 | [Wes Anderson Symmetry](styles/wes-anderson-symmetry.md) | Perfectly centered compositions with pastel palettes and dollhouse-like interiors |
+| 27 | [Brutalist Architecture](styles/brutalist-architecture.md) | Monolithic raw concrete forms with dramatic shadows and geometric repetition |
+| 28 | [Vinyl Album Cover Art](styles/vinyl-album-cover.md) | Classic square-format album covers with genre-specific aesthetics and typography |
+| 29 | [Concert Poster / Gig Poster](styles/concert-poster.md) | Screen-printed aesthetic with limited color palettes and hand-drawn typography |
+| 30 | [Glass Embossed 3D](styles/glass-embossed-3d.md) | Premium 3D embossed contour renders with blind-emboss monochromatic aesthetic |
+| 31 | [Exploded Product View](styles/exploded-product-view.md) | High-end product photography with deconstructed internals suspended in mid-air |
+| 32 | [Brand Concept Renders](styles/brand-concept-renders.md) | Editorial concept art of fictional luxury brand × product collaborations |
 
 ---
 
@@ -260,12 +270,12 @@ Not sure which style to pick? Start from what you need:
 
 | # | Style | Description |
 |---|-------|-------------|
-| 27 | [Pixelated / 16-bit](styles/pixelated-16-bit.md) | Authentic SNES/Genesis pixel art with limited color palettes and visible pixel grids |
-| 28 | [Isometric Pixel City](styles/isometric-pixel-city.md) | Top-down isometric urban grids in a SimCity/Habbo management-game aesthetic |
-| 29 | [Cyberpunk Noir](styles/cyberpunk-noir.md) | Neon-soaked rain-drenched dystopian cityscapes with Blade Runner aesthetics |
-| 30 | [Steampunk Contraptions](styles/steampunk-contraptions.md) | Victorian brass gears, copper pipes, leather straps, and billowing steam |
-| 31 | [Glitch Art / Databending](styles/glitch-art.md) | Intentionally corrupted imagery with pixel sorting and color channel displacement |
-| 32 | [Vaporwave / Synthwave Retrowave](styles/vaporwave-synthwave.md) | Neon grids, chrome gradients, and 80s nostalgia — from ironic vaporwave to earnest retrowave |
+| 33 | [Pixelated / 16-bit](styles/pixelated-16-bit.md) | Authentic SNES/Genesis pixel art with limited color palettes and visible pixel grids |
+| 34 | [Isometric Pixel City](styles/isometric-pixel-city.md) | Top-down isometric urban grids in a SimCity/Habbo management-game aesthetic |
+| 35 | [Cyberpunk Noir](styles/cyberpunk-noir.md) | Neon-soaked rain-drenched dystopian cityscapes with Blade Runner aesthetics |
+| 36 | [Steampunk Contraptions](styles/steampunk-contraptions.md) | Victorian brass gears, copper pipes, leather straps, and billowing steam |
+| 37 | [Glitch Art / Databending](styles/glitch-art.md) | Intentionally corrupted imagery with pixel sorting and color channel displacement |
+| 38 | [Vaporwave / Synthwave Retrowave](styles/vaporwave-synthwave.md) | Neon grids, chrome gradients, and 80s nostalgia — from ironic vaporwave to earnest retrowave |
 
 ---
 
@@ -273,15 +283,15 @@ Not sure which style to pick? Start from what you need:
 
 | # | Style | Description |
 |---|-------|-------------|
-| 33 | [Art Nouveau / Alphonse Mucha](styles/art-nouveau-mucha.md) | Ornate decorative posters with flowing organic lines and floral borders |
-| 34 | [Byzantine Mosaic](styles/byzantine-mosaic.md) | Gold-leaf tesserae tiles, hieratic frontal poses, and jewel-toned sacred art |
-| 35 | [Soviet Constructivist Propaganda](styles/soviet-constructivist.md) | Bold geometric compositions with red/black/cream palettes and photomontage |
-| 36 | [Illuminated Manuscript](styles/illuminated-manuscript.md) | Medieval gold-leaf pages with decorated initials and acanthus leaf borders |
-| 37 | [Ukiyo-e Woodblock](styles/ukiyo-e-woodblock.md) | Traditional Japanese flat color planes with bold contour lines — Hokusai and Hiroshige |
-| 38 | [Día de los Muertos](styles/dia-de-los-muertos.md) | Sugar skulls, marigolds, papel picado, and vibrant Mexican folk art patterns |
-| 39 | [Aboriginal Dot Painting](styles/aboriginal-dot-painting.md) | Concentric dot patterns in earth-toned ochre palettes with dreamtime symbolism |
-| 40 | [Persian Miniature Painting](styles/persian-miniature.md) | Jewel-toned flat-perspective scenes with gold leaf accents and geometric borders |
-| 41 | [West African Kente / Ankara Portraits](styles/kente-ankara-portraits.md) | Bold geometric textile patterns in vivid primary colors celebrating West African heritage |
+| 39 | [Art Nouveau / Alphonse Mucha](styles/art-nouveau-mucha.md) | Ornate decorative posters with flowing organic lines and floral borders |
+| 40 | [Byzantine Mosaic](styles/byzantine-mosaic.md) | Gold-leaf tesserae tiles, hieratic frontal poses, and jewel-toned sacred art |
+| 41 | [Soviet Constructivist Propaganda](styles/soviet-constructivist.md) | Bold geometric compositions with red/black/cream palettes and photomontage |
+| 42 | [Illuminated Manuscript](styles/illuminated-manuscript.md) | Medieval gold-leaf pages with decorated initials and acanthus leaf borders |
+| 43 | [Ukiyo-e Woodblock](styles/ukiyo-e-woodblock.md) | Traditional Japanese flat color planes with bold contour lines — Hokusai and Hiroshige |
+| 44 | [Día de los Muertos](styles/dia-de-los-muertos.md) | Sugar skulls, marigolds, papel picado, and vibrant Mexican folk art patterns |
+| 45 | [Aboriginal Dot Painting](styles/aboriginal-dot-painting.md) | Concentric dot patterns in earth-toned ochre palettes with dreamtime symbolism |
+| 46 | [Persian Miniature Painting](styles/persian-miniature.md) | Jewel-toned flat-perspective scenes with gold leaf accents and geometric borders |
+| 47 | [West African Kente / Ankara Portraits](styles/kente-ankara-portraits.md) | Bold geometric textile patterns in vivid primary colors celebrating West African heritage |
 
 ---
 
@@ -289,11 +299,11 @@ Not sure which style to pick? Start from what you need:
 
 | # | Style | Description |
 |---|-------|-------------|
-| 42 | [Double Exposure](styles/double-exposure.md) | Two images blended — a silhouette filled with a landscape, surreal and evocative |
-| 43 | [Stained Glass Windows](styles/stained-glass-windows.md) | Jewel-toned glass panes with lead came lines and volumetric god rays |
-| 44 | [Impossible Architecture / Escher](styles/impossible-architecture-escher.md) | Mind-bending Penrose stairs, recursive geometry, and paradoxical spatial relationships |
-| 45 | [Fruit / Food Art Portraiture](styles/food-art-portraiture.md) | Arcimboldo-inspired portraits composed from arranged fruits, vegetables, and objects |
-| 46 | [Bioluminescent Underwater](styles/bioluminescent-underwater.md) | Glowing deep-sea creatures and particles against the absolute black of the abyss |
+| 48 | [Double Exposure](styles/double-exposure.md) | Two images blended — a silhouette filled with a landscape, surreal and evocative |
+| 49 | [Stained Glass Windows](styles/stained-glass-windows.md) | Jewel-toned glass panes with lead came lines and volumetric god rays |
+| 50 | [Impossible Architecture / Escher](styles/impossible-architecture-escher.md) | Mind-bending Penrose stairs, recursive geometry, and paradoxical spatial relationships |
+| 51 | [Fruit / Food Art Portraiture](styles/food-art-portraiture.md) | Arcimboldo-inspired portraits composed from arranged fruits, vegetables, and objects |
+| 52 | [Bioluminescent Underwater](styles/bioluminescent-underwater.md) | Glowing deep-sea creatures and particles against the absolute black of the abyss |
 
 ---
 
@@ -301,13 +311,14 @@ Not sure which style to pick? Start from what you need:
 
 | # | Style | Description |
 |---|-------|-------------|
-| 47 | [Cinematic Macro Photography](styles/cinematic-macro-photography.md) | Extreme close-ups revealing microscopic details with dramatic lighting and bokeh |
-| 48 | [Long Exposure Light Painting](styles/long-exposure-light-painting.md) | Flowing light trails from steel wool, LEDs, and sparklers against black backgrounds |
-| 49 | [Cyanotype / Sun Print](styles/cyanotype-sun-print.md) | Prussian blue and white botanical silhouettes on handmade paper |
-| 50 | [Tilt-Shift Miniature Effect](styles/tilt-shift-miniature.md) | Real-world scenes made to look like tiny toy models through selective focus blur |
-| 51 | [Daguerreotype / Tintype](styles/daguerreotype-tintype.md) | Antique metallic-tone photographs with oval vignettes and Victorian formal posing |
-| 52 | [Infrared Thermal Photography](styles/infrared-thermal.md) | False-color FLIR heat maps — hot subjects in yellow/red against cool blue/purple |
-| 53 | [X-Ray / Medical Imaging](styles/x-ray-imaging.md) | Translucent subjects revealing internal structure in silver-grey tones |
+| 53 | [Cinematic Macro Photography](styles/cinematic-macro-photography.md) | Extreme close-ups revealing microscopic details with dramatic lighting and bokeh |
+| 54 | [Long Exposure Light Painting](styles/long-exposure-light-painting.md) | Flowing light trails from steel wool, LEDs, and sparklers against black backgrounds |
+| 55 | [Cyanotype / Sun Print](styles/cyanotype-sun-print.md) | Prussian blue and white botanical silhouettes on handmade paper |
+| 56 | [Tilt-Shift Miniature Effect](styles/tilt-shift-miniature.md) | Real-world scenes made to look like tiny toy models through selective focus blur |
+| 57 | [Daguerreotype / Tintype](styles/daguerreotype-tintype.md) | Antique metallic-tone photographs with oval vignettes and Victorian formal posing |
+| 58 | [Infrared Thermal Photography](styles/infrared-thermal.md) | False-color FLIR heat maps — hot subjects in yellow/red against cool blue/purple |
+| 59 | [X-Ray / Medical Imaging](styles/x-ray-imaging.md) | Translucent subjects revealing internal structure in silver-grey tones |
+| 60 | [Frosted Silhouette](styles/frosted-silhouette.md) | Moody editorial silhouettes behind frosted glass with low-contrast matte aesthetic |
 
 ---
 
@@ -315,9 +326,9 @@ Not sure which style to pick? Start from what you need:
 
 | # | Style | Description |
 |---|-------|-------------|
-| 54 | [Botanical Illustration](styles/botanical-illustration.md) | Precise scientific watercolor illustrations with Latin annotations and cross-sections |
-| 55 | [Blueprint / Technical Drawing](styles/blueprint-technical-drawing.md) | White-on-blue engineering schematics with exploded isometric views and dimension lines |
-| 56 | [Electron Microscope / Nanoscale](styles/electron-microscope.md) | False-color SEM imagery revealing alien beauty at extreme magnification |
+| 61 | [Botanical Illustration](styles/botanical-illustration.md) | Precise scientific watercolor illustrations with Latin annotations and cross-sections |
+| 62 | [Blueprint / Technical Drawing](styles/blueprint-technical-drawing.md) | White-on-blue engineering schematics with exploded isometric views and dimension lines |
+| 63 | [Electron Microscope / Nanoscale](styles/electron-microscope.md) | False-color SEM imagery revealing alien beauty at extreme magnification |
 
 ---
 
@@ -325,6 +336,6 @@ Not sure which style to pick? Start from what you need:
 
 | # | Style | Description |
 |---|-------|-------------|
-| 57 | [Holographic / UI Sci-Fi](styles/holographic-ui-sci-fi.md) | Floating wireframe projections with HUD overlays — Minority Report / Iron Man aesthetic |
-| 58 | [Solarpunk](styles/solarpunk.md) | Optimistic eco-futurism with vertical gardens, solar petals, and golden-hour warmth |
-| 59 | [Retrofuturism / Raygun Gothic](styles/retrofuturism-raygun-gothic.md) | 1950s space-age chrome rockets, bubble helmets, and Jetsons-style architecture |
+| 64 | [Holographic / UI Sci-Fi](styles/holographic-ui-sci-fi.md) | Floating wireframe projections with HUD overlays — Minority Report / Iron Man aesthetic |
+| 65 | [Solarpunk](styles/solarpunk.md) | Optimistic eco-futurism with vertical gardens, solar petals, and golden-hour warmth |
+| 66 | [Retrofuturism / Raygun Gothic](styles/retrofuturism-raygun-gothic.md) | 1950s space-age chrome rockets, bubble helmets, and Jetsons-style architecture |

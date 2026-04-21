@@ -4,7 +4,7 @@
 
 Ultra-clean, black-and-white line art with bold strokes and generous negative space — the visual language of the Notion app's illustration system and modern corporate illustration. Every subject is reduced to its most essential, recognizable form: a tree is a circle on a line, a person is a few confident curves. The beauty is in restraint — what you leave out matters more than what you include. No color, no shading, no fills — only lines and space.
 
-**Best for:** App icons · Website illustrations · Blog headers · Presentation graphics · Brand assets · Sticker designs · Social media posts
+**Best for:** App icons · Website illustrations · Blog headers · Presentation graphics · Brand assets · Sticker designs · Social media posts · Profile avatars
 
 ![Notion Style Example](../../../assets/placeholder-notion.jpeg)
 
@@ -63,6 +63,11 @@ Create a minimalist line art illustration of [SCENE]. Notion app style. Abstract
 Create a minimalist line art illustration of [SUBJECT]. Black lines on white, Notion style. Add one single flat [COLOR] accent on [ELEMENT]. No gradients or shading. 1:1 square format.
 ```
 
+**Variation 4 — Portrait / Avatar** _(Profile Picture, Social Media)_
+```text
+Create a minimalist, black-and-white flat vector illustration portrait of [PERSON/CHARACTER NAME] in the expressive Notion avatar art style. High contrast, clean 2D vector graphics. Capture their most recognizable features using the fewest possible lines — distinctive hairstyle, glasses, facial hair, signature clothing. Bold uniform strokes. No shading, no gradients. Pure white background. 1:1 square format.
+```
+
 ### Midjourney
 
 **Variation 1 — Icon**
@@ -80,6 +85,11 @@ Minimalist line art illustration, [SCENE], Notion app style, abstracted figures,
 Set of 4 minimalist line art icons in 2x2 grid, [THEMES], Notion style, consistent line weight, no shading no fills, white background --ar 1:1
 ```
 
+**Variation 4 — Portrait / Avatar**
+```text
+Minimalist black-and-white flat vector portrait of [PERSON/CHARACTER], Notion avatar style, high contrast, clean 2D vector graphics, essential features only, bold uniform strokes, no shading, white background --ar 1:1
+```
+
 ### Stable Diffusion
 
 **Variation 1 — Icon**
@@ -89,6 +99,10 @@ Set of 4 minimalist line art icons in 2x2 grid, [THEMES], Notion style, consiste
 **Variation 2 — Scene**
 - **Prompt:** `Minimalist line art, [SCENE], black and white, Notion style, abstracted figures, bold strokes, generous negative space, no shading`
 - **Negative Prompt:** `color, shading, gradients, 3d, realistic, detailed, complex`
+
+**Variation 3 — Portrait / Avatar**
+- **Prompt:** `Minimalist black-and-white flat vector portrait, [PERSON/CHARACTER], Notion avatar style, high contrast, clean 2D vector graphics, essential features, bold uniform strokes, white background`
+- **Negative Prompt:** `color, shading, gradients, 3d, realistic, photographic, detailed face`
 
 ---
 

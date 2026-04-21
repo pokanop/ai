@@ -34,6 +34,9 @@ const IMAGE_CATEGORIES = {
     '3d-isometric-resin-sculptures',
     'landmark-dioramas',
     'miniature-people',
+    'collectible-figurines',
+    'fridge-magnet-knolling',
+    'movie-diorama-cube',
   ],
   'animation-comics': [
     'pixar-3d-animation',
@@ -58,6 +61,9 @@ const IMAGE_CATEGORIES = {
     'brutalist-architecture',
     'vinyl-album-cover',
     'concert-poster',
+    'glass-embossed-3d',
+    'exploded-product-view',
+    'brand-concept-renders',
   ],
   'retro-digital': [
     'pixelated-16-bit',
@@ -93,6 +99,7 @@ const IMAGE_CATEGORIES = {
     'daguerreotype-tintype',
     'infrared-thermal',
     'x-ray-imaging',
+    'frosted-silhouette',
   ],
   'scientific-technical': [
     'botanical-illustration',

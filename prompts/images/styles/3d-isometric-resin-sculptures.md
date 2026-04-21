@@ -63,6 +63,11 @@ Create a 3D isometric render of a miniature open-top resin sculpture depicting [
 Create a 3D isometric render showing three miniature open-top resin sculptures displayed side by side: [SCENE 1], [SCENE 2], and [SCENE 3]. Same art style and lighting across all three — matte and satin resin finish, hand-sculpted details, candy-bright colors. Pure white background. Collectible display aesthetic. 3:2 landscape format.
 ```
 
+**Variation 4 — Real-World Location Diorama** _(Travel Content, Social Media)_
+```text
+Create a clean, minimal 3D isometric diorama of [LOCATION — e.g., a Kyoto bamboo forest pathway], featuring a [DESCRIBE SCENE — e.g., winding stone path through towering bamboo stalks with a small shrine gate]. Open-top miniature with no glass enclosure. Soft studio lighting, realistic materials, smooth edges, miniature model style, high detail. Neutral white background. 1:1 square format.
+```
+
 ### Midjourney
 
 **Variation 1 — Nature Scene**
@@ -80,6 +85,11 @@ Create a 3D isometric render showing three miniature open-top resin sculptures d
 3D isometric render, three miniature open-top resin sculptures side by side, [SCENE 1] and [SCENE 2] and [SCENE 3], matching art style, matte satin resin, candy-bright colors, pure white background, collectible display --ar 16:9
 ```
 
+**Variation 4 — Real-World Location Diorama**
+```text
+Clean minimal 3D isometric diorama of [LOCATION], [DESCRIBE SCENE], open-top miniature, soft studio lighting, realistic materials, smooth edges, high detail, neutral white background --ar 1:1
+```
+
 ### Stable Diffusion
 
 **Variation 1 — Nature Scene**
@@ -93,6 +103,10 @@ Create a 3D isometric render showing three miniature open-top resin sculptures d
 **Variation 3 — Seasonal**
 - **Prompt:** `3D isometric render, miniature resin sculpture, [SEASONAL SCENE], open-top no glass, hand-sculpted details, matte satin resin, warm studio lighting, candy-bright seasonal colors, white background, 8k`
 - **Negative Prompt:** `glass enclosure, transparent dome, snow globe, smooth, flat`
+
+**Variation 4 — Real-World Location Diorama**
+- **Prompt:** `Clean minimal 3D isometric diorama, [LOCATION], [DESCRIBE SCENE], open-top miniature, realistic materials, smooth edges, miniature model style, soft studio lighting, neutral white background, 8k`
+- **Negative Prompt:** `glass enclosure, transparent dome, flat illustration, cartoon, low quality`
 
 ---
 

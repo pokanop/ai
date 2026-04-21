@@ -63,6 +63,11 @@ Create a tilt-shift photograph of a miniature diorama depicting [CITY SCENE] at 
 Create a tilt-shift photograph of a miniature diorama of [LANDMARK] in [SEASON]. Add seasonal details — [DETAILS]. Tiny figurines in seasonal clothing. Warm studio lighting. Tilt-shift lens. Festive atmosphere. 2:3 vertical format.
 ```
 
+**Variation 4 — Floating Base / Clean Studio** _(Social Media, Art Print)_
+```text
+Create a miniature isometric architectural diorama of [LANDMARK NAME], accurately reflecting its real-world structure and proportions, placed on a small floating base with subtle surrounding buildings and landscape elements inspired by the landmark's city. Realistic materials and natural textures — physically accurate stone, concrete, metal, and glass surfaces. True-to-life color palette based on the actual landmark, muted and realistic tones. Off-white studio background with soft, natural lighting, gentle shadows, and clean composition. High-detail, realistic yet refined 3D render. Premium architectural model aesthetic. No people, no text. 1:1 square format.
+```
+
 ### Midjourney
 
 **Variation 1 — Famous Landmark**
@@ -80,6 +85,11 @@ Tilt-shift photograph, miniature diorama of [FANTASY STRUCTURE], wooden base, in
 Tilt-shift photograph, miniature architectural diorama cutaway of [LANDMARK], interior rooms visible, tiny furniture and staircases, wire labels, wooden base, studio lighting, educational exhibit --ar 16:9
 ```
 
+**Variation 4 — Floating Base / Clean Studio**
+```text
+Miniature isometric architectural diorama of [LANDMARK NAME], accurate proportions, small floating base, surrounding buildings and landscape, realistic materials, natural textures, muted realistic tones, off-white studio background, soft natural lighting, no people, no text --ar 1:1
+```
+
 ### Stable Diffusion
 
 **Variation 1 — Famous Landmark**
@@ -89,6 +99,10 @@ Tilt-shift photograph, miniature architectural diorama cutaway of [LANDMARK], in
 **Variation 2 — City Block**
 - **Prompt:** `Tilt-shift photograph, miniature diorama of [CITY SCENE], 1:200 scale, multiple buildings, architectural detail, miniature pedestrians, warm lighting, tilt-shift lens, 8k`
 - **Negative Prompt:** `full size, real city, aerial photograph, flat, sketch`
+
+**Variation 3 — Floating Base / Clean Studio**
+- **Prompt:** `Miniature isometric architectural diorama, [LANDMARK NAME], accurate proportions, floating base, realistic materials, natural textures, muted tones, off-white studio background, soft lighting, premium architectural model, no people, 8k`
+- **Negative Prompt:** `full size, real building, tilt-shift, toy-like, cartoon, illustration, flat`
 
 ---
 
