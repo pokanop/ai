@@ -2,7 +2,7 @@
 
 [← Back to Main Repository](../../README.md)
 
-A comprehensive library of **66 optimized image generation prompt styles** across 11 categories, each with multiple contextual prompt variations tailored for real-world use cases. Every style doc provides copy-paste prompts for Nano Banana 2 _(featured)_, ChatGPT, Midjourney, and Stable Diffusion — simply replace `[PLACEHOLDERS]` with your own content.
+A comprehensive library of **72 optimized image generation prompt styles** across **12 categories**, each with multiple contextual prompt variations tailored for real-world use cases. Every style doc provides copy-paste prompts for Nano Banana 2 _(featured)_, ChatGPT, Midjourney, and Stable Diffusion — simply replace `[PLACEHOLDERS]` with your own content.
 
 ---
 
@@ -307,18 +307,31 @@ Not sure which style to pick? Start from what you need:
 
 ---
 
+## 🖌️ Traditional Art & Sketch
+
+| # | Style | Description |
+|---|-------|-------------|
+| 53 | [Pencil Sketch](styles/pencil-sketch.md) | Detailed graphite pencil drawings with precise linework, intricate cross-hatching, and subtle shading |
+| 54 | [Watercolor Painting](styles/watercolor-painting.md) | Fluid, translucent watercolor art with soft washes, visible color blooms, and delicate blending |
+| 55 | [Oil Painting Impasto](styles/oil-painting-impasto.md) | Rich, vibrant oil paintings with thick impasto brushstrokes and expressive color blending |
+| 56 | [Charcoal Drawing](styles/charcoal-drawing.md) | Dramatic, high-contrast drawings utilizing charcoal with deep blacks and smudged strokes |
+| 57 | [Colored Pencil](styles/colored-pencil.md) | Vibrant, highly detailed illustrations built through careful layering of colored pencils |
+| 58 | [Soft Pastel](styles/soft-pastel.md) | Dreamy, softly blended artworks with luminous powdery colors and distinct pastel grain texture |
+
+---
+
 ## 📷 Photography & Imaging
 
 | # | Style | Description |
 |---|-------|-------------|
-| 53 | [Cinematic Macro Photography](styles/cinematic-macro-photography.md) | Extreme close-ups revealing microscopic details with dramatic lighting and bokeh |
-| 54 | [Long Exposure Light Painting](styles/long-exposure-light-painting.md) | Flowing light trails from steel wool, LEDs, and sparklers against black backgrounds |
-| 55 | [Cyanotype / Sun Print](styles/cyanotype-sun-print.md) | Prussian blue and white botanical silhouettes on handmade paper |
-| 56 | [Tilt-Shift Miniature Effect](styles/tilt-shift-miniature.md) | Real-world scenes made to look like tiny toy models through selective focus blur |
-| 57 | [Daguerreotype / Tintype](styles/daguerreotype-tintype.md) | Antique metallic-tone photographs with oval vignettes and Victorian formal posing |
-| 58 | [Infrared Thermal Photography](styles/infrared-thermal.md) | False-color FLIR heat maps — hot subjects in yellow/red against cool blue/purple |
-| 59 | [X-Ray / Medical Imaging](styles/x-ray-imaging.md) | Translucent subjects revealing internal structure in silver-grey tones |
-| 60 | [Frosted Silhouette](styles/frosted-silhouette.md) | Moody editorial silhouettes behind frosted glass with low-contrast matte aesthetic |
+| 59 | [Cinematic Macro Photography](styles/cinematic-macro-photography.md) | Extreme close-ups revealing microscopic details with dramatic lighting and bokeh |
+| 60 | [Long Exposure Light Painting](styles/long-exposure-light-painting.md) | Flowing light trails from steel wool, LEDs, and sparklers against black backgrounds |
+| 61 | [Cyanotype / Sun Print](styles/cyanotype-sun-print.md) | Prussian blue and white botanical silhouettes on handmade paper |
+| 62 | [Tilt-Shift Miniature Effect](styles/tilt-shift-miniature.md) | Real-world scenes made to look like tiny toy models through selective focus blur |
+| 63 | [Daguerreotype / Tintype](styles/daguerreotype-tintype.md) | Antique metallic-tone photographs with oval vignettes and Victorian formal posing |
+| 64 | [Infrared Thermal Photography](styles/infrared-thermal.md) | False-color FLIR heat maps — hot subjects in yellow/red against cool blue/purple |
+| 65 | [X-Ray / Medical Imaging](styles/x-ray-imaging.md) | Translucent subjects revealing internal structure in silver-grey tones |
+| 66 | [Frosted Silhouette](styles/frosted-silhouette.md) | Moody editorial silhouettes behind frosted glass with low-contrast matte aesthetic |
 
 ---
 
@@ -326,9 +339,9 @@ Not sure which style to pick? Start from what you need:
 
 | # | Style | Description |
 |---|-------|-------------|
-| 61 | [Botanical Illustration](styles/botanical-illustration.md) | Precise scientific watercolor illustrations with Latin annotations and cross-sections |
-| 62 | [Blueprint / Technical Drawing](styles/blueprint-technical-drawing.md) | White-on-blue engineering schematics with exploded isometric views and dimension lines |
-| 63 | [Electron Microscope / Nanoscale](styles/electron-microscope.md) | False-color SEM imagery revealing alien beauty at extreme magnification |
+| 67 | [Botanical Illustration](styles/botanical-illustration.md) | Precise scientific watercolor illustrations with Latin annotations and cross-sections |
+| 68 | [Blueprint / Technical Drawing](styles/blueprint-technical-drawing.md) | White-on-blue engineering schematics with exploded isometric views and dimension lines |
+| 69 | [Electron Microscope / Nanoscale](styles/electron-microscope.md) | False-color SEM imagery revealing alien beauty at extreme magnification |
 
 ---
 
@@ -336,6 +349,6 @@ Not sure which style to pick? Start from what you need:
 
 | # | Style | Description |
 |---|-------|-------------|
-| 64 | [Holographic / UI Sci-Fi](styles/holographic-ui-sci-fi.md) | Floating wireframe projections with HUD overlays — Minority Report / Iron Man aesthetic |
-| 65 | [Solarpunk](styles/solarpunk.md) | Optimistic eco-futurism with vertical gardens, solar petals, and golden-hour warmth |
-| 66 | [Retrofuturism / Raygun Gothic](styles/retrofuturism-raygun-gothic.md) | 1950s space-age chrome rockets, bubble helmets, and Jetsons-style architecture |
+| 70 | [Holographic / UI Sci-Fi](styles/holographic-ui-sci-fi.md) | Floating wireframe projections with HUD overlays — Minority Report / Iron Man aesthetic |
+| 71 | [Solarpunk](styles/solarpunk.md) | Optimistic eco-futurism with vertical gardens, solar petals, and golden-hour warmth |
+| 72 | [Retrofuturism / Raygun Gothic](styles/retrofuturism-raygun-gothic.md) | 1950s space-age chrome rockets, bubble helmets, and Jetsons-style architecture |

@@ -91,6 +91,14 @@ const IMAGE_CATEGORIES = {
     'food-art-portraiture',
     'bioluminescent-underwater',
   ],
+  'traditional-art': [
+    'pencil-sketch',
+    'watercolor-painting',
+    'oil-painting-impasto',
+    'charcoal-drawing',
+    'colored-pencil',
+    'soft-pastel',
+  ],
   'photography': [
     'cinematic-macro-photography',
     'long-exposure-light-painting',

@@ -80,6 +80,11 @@ export default defineConfig({
               autogenerate: { directory: 'prompts/images/styles/fine-art-surreal' },
             },
             {
+              label: 'Traditional Art & Sketch',
+              collapsed: true,
+              autogenerate: { directory: 'prompts/images/styles/traditional-art' },
+            },
+            {
               label: 'Photography & Imaging',
               collapsed: true,
               autogenerate: { directory: 'prompts/images/styles/photography' },
