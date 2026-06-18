@@ -49,25 +49,25 @@ Read `tasks.md` and assess whether the plan is ready to ship.
 
 Run every quality gate discovered for the project. All gates must pass for a release to proceed. See [references/checklist-schema.md](references/checklist-schema.md) for the gate verification format.
 
-Detect gates from `package.json` scripts, `Makefile`, CI configuration, or `pyproject.toml`. Run all of them — the same additive principle from `create-a-prd` applies here.
+**Detect the project's actual gate commands first** from `package.json` scripts, `Makefile`, CI configuration, `pyproject.toml`, `Cargo.toml`, `go.mod`, `build.gradle`, or `Package.swift`. Run all of them — the same additive principle from `create-a-prd` applies here. The commands below are examples to adapt, not defaults to copy.
 
 Common gates (adapt to the project's actual toolchain):
 
 ```bash
 # Type checking
-bun run check / npm run typecheck
+bun run check / npm run typecheck / mypy .
 
 # Formatting
-bun run format / npm run format
+bun run format / npm run format / cargo fmt --check / swift-format lint
 
 # Linting
-bun run lint / npm run lint
+bun run lint / npm run lint / ruff check / cargo clippy / golangci-lint run / swiftlint / ./gradlew lint
 
 # Tests
-bun run test / npm test / pytest / cargo test / go test ./...
+bun run test / npm test / pytest / cargo test / go test ./... / swift test (or xcodebuild test) / ./gradlew test
 
 # Build
-bun run build / npm run build / cargo build / go build ./...
+bun run build / npm run build / cargo build / go build ./... / swift build (or xcodebuild build) / ./gradlew assemble
 ```
 
 **If a gate fails:**

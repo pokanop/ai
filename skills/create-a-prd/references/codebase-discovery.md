@@ -68,17 +68,29 @@ All PRD commands must use the detected package manager. Never mix managers.
 
 - `go build`, `go test`, `go vet`, `golangci-lint`
 
-**Quality gates are additive.** Every script discovered above becomes a required quality gate. Do not pick a subset -- if the project has `build`, `test`, `lint`, `format`, and `check` commands, all five must pass. List each one explicitly in the PRD's quality gates section with its exact command. For example:
+**Quality gates are additive.** Every command discovered above becomes a required quality gate. Do not pick a subset -- if the project has `build`, `test`, `lint`, `format`, and `check` commands, all five must pass. List each one explicitly in the PRD's quality gates section with its exact command.
+
+**Detect the project's actual gate commands first** (from the package manager / build system above and the project's scripts); the commands below are examples to adapt, not defaults to copy. For a JS/TS project the placeholder `<package-manager>` is `bun`, `npm`, `pnpm`, or `yarn`:
 
 ```
-QG-1: bun run check      # Type checking
-QG-2: bun run format      # Formatting verification
-QG-3: bun run lint        # Linting
-QG-4: bun run test        # Test suite
-QG-5: bun run build       # Build succeeds
+QG-1: <package-manager> run check      # Type checking
+QG-2: <package-manager> run format     # Formatting verification
+QG-3: <package-manager> run lint       # Linting
+QG-4: <package-manager> run test       # Test suite
+QG-5: <package-manager> run build      # Build succeeds
 ```
 
-If the project uses a different package manager or build system, adjust accordingly (e.g., `cargo test`, `cargo clippy`, `cargo fmt --check`, `go test ./...`, `go vet ./...`, `pytest`, `ruff check`, `mypy .`).
+For non-JS stacks, map each gate to the project's real toolchain:
+
+| Stack | Type-check | Format | Lint | Test | Build |
+|-------|-----------|--------|------|------|-------|
+| JS/TS (bun) | `bun run check` | `bun run format` | `bun run lint` | `bun run test` | `bun run build` |
+| JS/TS (npm/pnpm) | `npm run typecheck` | `npm run format` | `npm run lint` | `npm test` | `npm run build` |
+| Python | `mypy .` | `ruff format --check` | `ruff check` | `pytest` | — |
+| Rust | — | `cargo fmt --check` | `cargo clippy` | `cargo test` | `cargo build` |
+| Go | `go vet ./...` | `gofmt -l .` | `golangci-lint run` | `go test ./...` | `go build ./...` |
+| Swift / iOS | — | `swift-format lint` | `swiftlint` | `swift test` · `xcodebuild test` | `swift build` · `xcodebuild build` |
+| Android | — | `./gradlew spotlessCheck` | `./gradlew lint` | `./gradlew test` | `./gradlew assemble` |
 
 ### 3. Framework and Architecture
 
