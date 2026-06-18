@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "sync": "bun run scripts/sync-docs.mjs",
+    "validate": "bun run scripts/validate-skills.mjs",
     "dev": "bun run scripts/sync-docs.mjs && astro dev",
     "build": "bun run scripts/sync-docs.mjs && astro build",
     "preview": "astro preview"

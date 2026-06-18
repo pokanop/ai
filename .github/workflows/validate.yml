@@ -1,0 +1,26 @@
+name: Validate Skills
+
+# Spec-compliance gate for skills/<name>/SKILL.md. Runs on every PR and on
+# pushes to main, failing the build before a malformed skill can be silently
+# dropped by the docs build.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      # No `bun install` needed: validate-skills.mjs has no dependencies
+      # (standard fs/path only), so this stays fast and isolated from the
+      # site's dependency graph.
+      - name: Validate skills
+        run: bun run validate
