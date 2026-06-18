@@ -4,15 +4,7 @@ Standards for updating, querying, and reporting progress on the task list.
 
 ## Status Markers
 
-Use these checkbox markers consistently throughout `tasks.md`:
-
-| Status | Marker | Meaning | When to Use |
-|--------|--------|---------|-------------|
-| Not Started | `[ ]` | Work has not begun | Default state for all new tasks |
-| In Progress | `[~]` | Actively being worked on | When work begins on a task |
-| Completed | `[x]` | Done and verified | All acceptance criteria are met |
-| Blocked | `[!]` | Cannot proceed | A dependency is unmet or an open question blocks work |
-| Skipped | `[-]` | Intentionally not doing | Requirements changed or task is no longer relevant |
+The canonical task status markers and their meanings — `[ ]`, `[~]`, `[x]`, `[!]`, `[-]` — are defined in [shared conventions](../../_shared/references/conventions.md#task-status-markers). Use them consistently throughout `tasks.md`. The rules below cover how this skill applies them.
 
 ### Status Rules
 

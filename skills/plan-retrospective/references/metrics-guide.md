@@ -10,15 +10,7 @@ Derived from `tasks.md`. Count top-level task checkboxes only — do not count a
 
 ### Task Counts
 
-Scan `tasks.md` for all top-level task lines (`- [ ]`, `- [x]`, `- [~]`, `- [!]`, `- [-]`):
-
-| Status | Marker | Count as |
-|--------|--------|----------|
-| Completed | `[x]` | Completed |
-| In Progress | `[~]` | In Progress (treat as incomplete for retro metrics) |
-| Blocked | `[!]` | Blocked |
-| Skipped | `[-]` | Skipped |
-| Not Started | `[ ]` | Not Started |
+Scan `tasks.md` for all top-level task lines and count each into a bucket by its [status marker](../../_shared/references/conventions.md#task-status-markers) — `[x]` Completed, `[~]` In Progress, `[!]` Blocked, `[-]` Skipped, `[ ]` Not Started. For retro metrics, treat `[~]` In Progress as incomplete.
 
 **Total tasks** = sum of all status counts
 

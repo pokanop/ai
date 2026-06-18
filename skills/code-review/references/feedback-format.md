@@ -6,14 +6,14 @@ Standards for presenting review findings and tracking resolution across review r
 
 ## Severity Levels
 
-Every finding must be assigned one of these four severities:
+Findings use the single shared [severity scale](../../_shared/references/conventions.md#severity-and-priority). A review applies it with disposition names — which read more naturally on a diff — plus one non-severity callout:
 
-| Severity | Marker | When to Use |
-|----------|--------|-------------|
-| **Blocking** | `🔴 Blocking` | Must be fixed before merge. Use for: correctness bugs, security vulnerabilities, broken acceptance criteria, test failures |
-| **Suggestion** | `🟡 Suggestion` | Should be addressed but won't block merge. Use for: consistency gaps, missing edge-case tests, mild performance concerns, unclear naming |
-| **Nit** | `⚪ Nit` | Minor style or polish. Fix only if you're already touching the line. Use for: formatting preferences, trivial naming tweaks, optional documentation |
-| **Praise** | `✅ Praise` | Something done notably well. Callouts reinforce good patterns. |
+| Code-review term | Canonical severity · priority | Marker | Use for |
+|------------------|-------------------------------|--------|---------|
+| **Blocking** | Critical · `[P0]` | `🔴 Blocking` | Correctness bugs, security vulnerabilities, broken acceptance criteria, test failures |
+| **Suggestion** | Major · `[P1]` | `🟡 Suggestion` | Consistency gaps, missing edge-case tests, mild performance concerns, unclear naming |
+| **Nit** | Minor · `[P2]` | `⚪ Nit` | Formatting preferences, trivial naming tweaks, optional documentation |
+| **Praise** | not a severity | `✅ Praise` | Something done notably well — callouts reinforce good patterns |
 
 **Tips on calibration:**
 

@@ -73,10 +73,7 @@ Use the PRD schema from [../create-a-prd/references/prd-schema.md](../create-a-p
 - **Executive Summary**: what the audit found, overall health assessment
 - **Goals**: achieve design system compliance across the scoped dimensions
 - **Non-Goals**: explicit dimensions or areas not covered by this audit
-- **Findings as Functional Requirements**: each Finding becomes an `FR-N` requirement. Format: "The [component] at [location] shall use [canonical pattern] instead of [current pattern]."
-  - Critical findings → `[P0]`
-  - Major findings → `[P1]`
-  - Minor findings → `[P2]`
+- **Findings as Functional Requirements**: each Finding becomes an `FR-N` requirement. Format: "The [component] at [location] shall use [canonical pattern] instead of [current pattern]." Map each finding's severity to its priority using the [shared severity↔priority mapping](../_shared/references/conventions.md#severity-and-priority): `🔴 Critical → [P0]`, `🟡 Major → [P1]`, `⚪ Minor → [P2]`.
 - **Non-Functional Requirements**: any cross-cutting standards (e.g., "all loading states must use the `LoadingState` component")
 - **Testing Strategy**: how to verify remediation (visual inspection, Storybook snapshot tests, etc.)
 
@@ -104,4 +101,5 @@ Ask the user to confirm before writing the `prd.md`. Once confirmed, write it an
 
 - [references/audit-checklist.md](references/audit-checklist.md) — Dimension-by-dimension audit criteria
 - [references/severity-guide.md](references/severity-guide.md) — How to classify and prioritize findings
+- [../_shared/references/conventions.md](../_shared/references/conventions.md) — Canonical severity↔priority scale and other shared conventions
 - [../create-a-prd/references/prd-schema.md](../create-a-prd/references/prd-schema.md) — PRD structure for the findings report output

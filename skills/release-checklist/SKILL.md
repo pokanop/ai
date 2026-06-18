@@ -37,8 +37,8 @@ Read `tasks.md` and assess whether the plan is ready to ship.
 - Surface all incomplete P0 tasks as blocking items.
 
 **P1 and P2 assessment:**
-- List all incomplete P1 (`🟡`) tasks. These are "should be done" — flag but don't hard-block.
-- List all incomplete P2 (`⚪`) tasks. These are optional — note but do not flag as issues.
+- List all incomplete P1 (`[P1]`) tasks. These are "should be done" — flag but don't hard-block.
+- List all incomplete P2 (`[P2]`) tasks. These are optional — note but do not flag as issues.
 - List all skipped (`[-]`) tasks and confirm their deferrals were intentional.
 
 **Open questions:**
@@ -136,3 +136,4 @@ If the verdict is Go, ask: "Ready to mark this plan complete and archive it?" If
 
 - [references/checklist-schema.md](references/checklist-schema.md) — Full release checklist structure
 - [references/changelog-guide.md](references/changelog-guide.md) — Changelog entry format and writing guidelines
+- [../_shared/references/conventions.md](../_shared/references/conventions.md) — Canonical priority (`[P0]`/`[P1]`/`[P2]`) and status markers used throughout this skill

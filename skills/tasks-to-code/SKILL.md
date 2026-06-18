@@ -22,20 +22,7 @@ It takes a `tasks.md` produced by **prd-to-tasks** and implements one task at a 
 
 ## File Structure
 
-The skill reads from and writes to the same directory as the other skills:
-
-```
-plans/
-├── user-authentication/
-│   ├── prd.md          # Created by create-a-prd
-│   ├── tasks.md        # Created by prd-to-tasks, updated by this skill
-│   └── decisions.md    # Created by this skill (decision log)
-└── archive/
-    └── onboarding-flow/
-        ├── prd.md
-        ├── tasks.md
-        └── decisions.md
-```
+This skill reads `plans/<name>/prd.md` and `tasks.md`, updates `tasks.md`, and writes `plans/<name>/decisions.md`. The full `plans/` layout is defined in [shared conventions](../_shared/references/conventions.md#the-plans-directory).
 
 **Rules:**
 
@@ -191,4 +178,5 @@ When blocked, do not attempt a workaround that violates the task's scope. Surfac
 - [references/implementation-guide.md](references/implementation-guide.md) — Pattern-first implementation principles and discipline rules
 - [references/decision-log.md](references/decision-log.md) — Format and standards for recording implementation decisions
 - [references/verification-guide.md](references/verification-guide.md) — How to verify a task against its acceptance criteria and quality gates
+- [../_shared/references/conventions.md](../_shared/references/conventions.md) — Shared status markers, priority, and the `plans/` layout (single source of truth)
 - [../create-a-prd/references/codebase-discovery.md](../create-a-prd/references/codebase-discovery.md) — Full codebase discovery checklist (shared reference)

@@ -102,14 +102,7 @@ These skills work independently and don't require a plan:
 - Validates coverage before presenting: every PRD requirement must appear in at least one task
 - Task count heuristic: 3–8 tasks per PRD phase, 1–2 tasks per functional requirement
 
-**Status markers in `tasks.md`:**
-| Marker | Meaning |
-|--------|---------|
-| `[ ]` | Not started |
-| `[~]` | In progress |
-| `[x]` | Completed |
-| `[!]` | Blocked |
-| `[-]` | Skipped |
+**Status markers in `tasks.md`:** `[ ]` Not started, `[~]` In progress, `[x]` Completed, `[!]` Blocked, `[-]` Skipped — defined in [shared conventions](_shared/references/conventions.md#task-status-markers).
 
 ---
 
@@ -141,13 +134,7 @@ These skills work independently and don't require a plan:
 
 **What it produces:** Structured review with severity-tiered findings; optional `plans/<name>/review.md` for multi-round tracking
 
-**Severity levels:**
-| Marker | Meaning |
-|--------|---------|
-| 🔴 Blocking | Must fix before merge (correctness bugs, security, unmet acceptance criteria) |
-| 🟡 Suggestion | Should fix but won't block merge |
-| ⚪ Nit | Minor style/polish |
-| ✅ Praise | Something done notably well |
+**Severity levels:** `🔴 Blocking`, `🟡 Suggestion`, `⚪ Nit` — the code-review disposition names for the single [severity↔priority scale](_shared/references/conventions.md#severity-and-priority) (Critical/Major/Minor → P0/P1/P2) — plus `✅ Praise`, a positive callout that is not a severity.
 
 **Key behaviors:**
 - Understands the *why* (PRD task, bug fix, refactor?) before reading code
@@ -193,7 +180,7 @@ These skills work independently and don't require a plan:
 **Key behaviors:**
 - Establishes the project's own design system as the baseline — audits against what the project has established, not external standards
 - Groups systemic issues (e.g., "12 components all use `Loader2` directly instead of `Spinner`") as one finding, not 12
-- Each finding maps to a severity: Critical → P0, Major → P1, Minor → P2
+- Each finding maps to a severity on the shared [severity↔priority scale](_shared/references/conventions.md#severity-and-priority): 🔴 Critical → P0, 🟡 Major → P1, ⚪ Minor → P2
 
 ---
 
@@ -241,6 +228,7 @@ Several skills share reference documents to avoid duplication:
 
 | Reference | Shared By |
 |-----------|-----------|
+| `_shared/references/conventions.md` | **All skills** — status markers, priority, severity↔priority, effort sizes, labels, and the `plans/` layout |
 | `create-a-prd/references/codebase-discovery.md` | `create-a-prd`, `prd-to-tasks`, `tasks-to-code`, `code-review`, `debug-and-fix` |
 | `create-a-prd/references/prd-schema.md` | `create-a-prd`, `ui-design-audit` |
 | `tasks-to-code/references/implementation-guide.md` | `tasks-to-code`, `debug-and-fix` |
@@ -249,21 +237,4 @@ Several skills share reference documents to avoid duplication:
 
 ## `plans/` Directory Convention
 
-All planning artifacts live under a `plans/` directory at the project root:
-
-```
-plans/
-├── active-feature/           # Active work
-│   ├── prd.md
-│   ├── tasks.md
-│   ├── decisions.md
-│   └── retro.md              # Added at close-out
-└── archive/
-    └── completed-feature/    # Archived after plan-retrospective
-        ├── prd.md
-        ├── tasks.md
-        ├── decisions.md
-        └── retro.md
-```
-
-Only active plans live in `plans/`. Completed plans move to `plans/archive/` — preserving the full history while keeping the working directory clean.
+All planning artifacts live in a per-initiative folder under `plans/`; completed plans move to `plans/archive/`, preserving full history while keeping the working directory clean. The canonical layout — which skill creates each file, and the active → archive lifecycle — is defined in [`_shared/references/conventions.md`](_shared/references/conventions.md#the-plans-directory).

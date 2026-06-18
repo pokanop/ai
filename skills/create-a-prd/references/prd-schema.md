@@ -48,7 +48,7 @@ Format: `As a [persona], I want to [action] so that [outcome].`
 Label each story with the prefix **US-N** (e.g., US-1, US-2). Group by persona or workflow. Each story must have:
 
 - **Acceptance Criteria**: Concrete, testable conditions that define "done"
-- **Priority**: P0 (must-have for launch), P1 (should-have), P2 (nice-to-have)
+- **Priority**: `P0` / `P1` / `P2`, as defined in [shared conventions](../../_shared/references/conventions.md#priority)
 
 ### Functional Requirements
 
