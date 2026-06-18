@@ -127,3 +127,51 @@ The most common source of inconsistency in mature codebases — each feature int
 
 ### Respect for Motion Preferences
 - [ ] Does the app respect `prefers-reduced-motion`? (Animations should be disabled or minimal for users who prefer reduced motion)
+
+---
+
+## 7. Accessibility
+
+Accessibility (a11y) is a first-class sweep, not a side effect of the other dimensions. The bar here is **WCAG 2.1 Level AA**. This is the one dimension audited against an external standard rather than the project's own baseline: a UI that is *consistently* inaccessible is still inaccessible. A few items overlap with **Interactive States** (focus) and **Animation and Motion** (reduced motion) — audit them here through the a11y lens ("does this work for a keyboard or screen-reader user?"), not just the consistency lens.
+
+### Color Contrast (WCAG 2.1 AA)
+- [ ] Does normal/body text meet a contrast ratio of at least **4.5:1** against its background?
+- [ ] Does large text (≥ 24px regular, or ≥ 18.66px bold) meet at least **3:1**?
+- [ ] Do meaningful non-text elements (icons, input borders, focus indicators, chart segments) meet at least **3:1** against adjacent colors?
+- [ ] Is any information conveyed by color alone (e.g., a red border with no error icon or text)? Color must not be the only channel.
+- [ ] Do contrast ratios still hold in dark mode and across hover/disabled variants?
+
+### Semantic HTML and Landmarks
+- [ ] Are native elements used where they fit (`<button>`, `<a>`, `<nav>`, `<main>`, `<ul>/<li>`) instead of `<div>`/`<span>` with click handlers?
+- [ ] Does each page expose landmark regions (`<main>`, `<nav>`, `<header>`, `<footer>`, or equivalent ARIA landmarks) so assistive tech can navigate by region?
+- [ ] Is there exactly one `<h1>` per page, with heading levels descending without skipping (`h1 → h2 → h3`)?
+- [ ] Are tables, lists, and forms marked up with native elements (`<table>` with `<th scope>`, not a grid of `<div>`s)?
+
+### ARIA Roles, Labels, and States
+- [ ] Do custom interactive widgets (dropdowns, tabs, accordions, modals, toggles) carry the correct `role` and required ARIA attributes?
+- [ ] Do toggle/expandable controls expose state that updates with the UI (`aria-expanded`, `aria-selected`, `aria-checked`, `aria-pressed`)?
+- [ ] Do modals/dialogs use `role="dialog"` / `aria-modal`, move focus into the dialog on open, and return focus to the trigger on close?
+- [ ] Are dynamic updates (toasts, async results, validation) announced via an appropriate `aria-live` region?
+- [ ] Is ARIA used only to fill gaps native HTML cannot (no redundant `role="button"` on a `<button>`)? Incorrect ARIA is worse than none.
+
+### Keyboard Navigation and Focus
+- [ ] Is every interactive element reachable and operable with the keyboard alone (Tab/Shift+Tab to reach, Enter/Space to activate, Esc to dismiss)?
+- [ ] Does the focus/tab order follow the visual reading order (no positive `tabindex` values creating a confusing path)?
+- [ ] Does every focusable element have a **visible focus indicator**, and is `outline: none` / `focus:outline-none` never used without a visible replacement?
+- [ ] Are there any keyboard traps — focus that enters a widget (menu, modal, embed) and cannot leave via the keyboard?
+
+### Screen-Reader Labels for Non-Text Controls
+- [ ] Do icon-only buttons and links have an accessible name (`aria-label`, `aria-labelledby`, or visually-hidden text)?
+- [ ] Do meaningful images have descriptive `alt` text, and are decorative images marked `alt=""` (or `role="presentation"`) so they are skipped?
+- [ ] Are SVGs that convey meaning given `role="img"` plus a title/`aria-label`, and purely decorative SVGs hidden with `aria-hidden="true"`?
+
+### Forms and Error Association
+- [ ] Does every form control have a programmatically associated `<label>` (via `for`/`id`, not just visual proximity)?
+- [ ] Are validation errors associated with their field (`aria-describedby` pointing at the message) rather than only shown visually?
+- [ ] Are invalid fields marked `aria-invalid="true"` so assistive tech announces the error state?
+- [ ] Are required fields conveyed to assistive tech (`required` / `aria-required`), not only with a visual asterisk?
+
+### Motion and Reduced Motion
+- [ ] Does the app honor `prefers-reduced-motion` by disabling or substantially reducing non-essential animation? (Also audited under Dimension 6, here for a11y compliance.)
+- [ ] Does any content flash more than 3 times per second (seizure risk)?
+- [ ] Are auto-playing or looping animations, carousels, and videos pausable or stoppable?

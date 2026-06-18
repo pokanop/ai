@@ -182,13 +182,14 @@ These skills work independently and don't require a plan:
 
 **What it produces:** `plans/ui-audit-<date>/prd.md` — findings in PRD format, ready for `prd-to-tasks`
 
-**Six audit dimensions** (work through in order, or scope to specific dimensions):
+**Seven audit dimensions** (work through in order, or scope to specific dimensions):
 1. **Loading States** — spinners, skeletons, placeholders, empty states
 2. **Spacing and Sizing** — padding, margin, gap, width, height
 3. **Typography** — font families, sizes, weights, line heights
 4. **Color and Theming** — brand colors, semantic colors, dark mode
 5. **Interactive States** — hover, focus, active, disabled
 6. **Animation and Motion** — transitions, entrance/exit animations
+7. **Accessibility** — WCAG 2.1 AA contrast, semantic HTML, ARIA, keyboard/focus, screen-reader labels, forms, reduced motion
 
 **Key behaviors:**
 - Establishes the project's own design system as the baseline — audits against what the project has established, not external standards

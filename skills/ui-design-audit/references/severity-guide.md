@@ -21,7 +21,7 @@ How to classify and prioritize findings in a UI design audit. Consistent severit
 - **Functionality is broken by a visual issue**: A button that looks disabled but is active, or vice versa
 - **Information fails to load visually**: A component shows raw data, errors, or a blank state during loading
 - **Loading state is absent**: An async operation has no visual feedback, leaving users to wonder if anything is happening
-- **Accessibility is compromised**: No focus state on interactive elements, missing ARIA attributes that screen readers require, contrast ratio below 4.5:1 for body text or 3:1 for large text
+- **Accessibility is compromised (WCAG 2.1 AA)**: A keyboard trap or an interactive element that cannot be reached/operated by keyboard, no visible focus state on interactive elements, an icon-only control or form field with no accessible name, missing ARIA that screen readers require, or a contrast ratio below 4.5:1 for body text / 3:1 for large text
 - **Dark mode breaks a feature**: Text is invisible, a control disappears, or the UI becomes unreadable in dark mode
 - **Error states are missing**: An operation that can fail has no visible error state — users see nothing when it fails
 
@@ -34,6 +34,7 @@ How to classify and prioritize findings in a UI design audit. Consistent severit
 - **Interactive states are missing on non-critical elements**: A secondary button has no hover state — not broken, but feels unpolished
 - **Spacing deviates from the scale by more than one step**: Using `gap-5` where all similar layouts use `gap-4`
 - **Animation is inconsistent**: A modal animates in on one page but not another
+- **Accessibility is degraded but not blocking**: A custom widget missing an ARIA state (`aria-expanded`), a validation error shown visually but not associated via `aria-describedby`, skipped heading levels, a non-text element below 3:1 contrast, or `prefers-reduced-motion` not honored for large motion
 
 **Ask yourself:** "Would a user notice this in repeated use, or would a developer need to call it out specifically?" If a user would notice → Major.
 
@@ -43,8 +44,36 @@ How to classify and prioritize findings in a UI design audit. Consistent severit
 - **Naming or token is slightly off**: A component uses the right color visually but references a token from a different semantic group
 - **An animation duration is slightly off**: `duration-100` vs `duration-150` on a transition
 - **Redundant/duplicate pattern**: Two components do the same thing but are used in different contexts — they should be consolidated, but it doesn't affect the user today
+- **Cosmetic accessibility nit**: A decorative image missing `alt=""` (announced as noise), or redundant ARIA on a native element (`role="button"` on a `<button>`)
 
 **Ask yourself:** "Would a non-designer user ever notice this?" If no → Minor.
+
+---
+
+## Accessibility Severity Mapping (WCAG 2.1 AA)
+
+Accessibility findings (Dimension 7) map to severity by how much they break the experience for keyboard and assistive-tech users. Use this table as the default; calibrate up if the affected control is on a critical path.
+
+| Accessibility violation | Severity |
+|--------------------------|----------|
+| Keyboard trap — focus enters a widget and cannot leave | 🔴 Critical |
+| Interactive element not reachable/operable by keyboard | 🔴 Critical |
+| Text contrast below 4.5:1 (body) or 3:1 (large text) | 🔴 Critical |
+| No visible focus indicator on interactive elements | 🔴 Critical |
+| Icon-only control with no accessible name | 🔴 Critical |
+| Form control with no programmatically associated label | 🔴 Critical |
+| Content flashing more than 3×/second (seizure risk) | 🔴 Critical |
+| Custom widget missing/incorrect ARIA state (`aria-expanded`, etc.) | 🟡 Major |
+| Validation error not associated with its field (`aria-describedby`) | 🟡 Major |
+| Non-semantic element where a native one exists (`<div onClick>`) | 🟡 Major |
+| Skipped heading levels or multiple `<h1>` per page | 🟡 Major |
+| Missing landmark regions (`<main>`, `<nav>`) | 🟡 Major |
+| Non-text element (icon, border) below 3:1 contrast | 🟡 Major |
+| `prefers-reduced-motion` not honored for non-essential animation | 🟡 Major |
+| Decorative image missing `alt=""` (announced as noise) | ⚪ Minor |
+| Redundant ARIA on a native element (`role="button"` on `<button>`) | ⚪ Minor |
+
+These severities flow through the same PRD priority mapping below (Critical → `[P0]`, Major → `[P1]`, Minor → `[P2]`).
 
 ---
 
@@ -90,5 +119,7 @@ Severity is calibrated to the **project's own baseline**, not to an external des
 - Spacing that differs from Material Design or another external standard, unless the project explicitly targets that standard
 - Stylistic preferences (e.g., "I would have used rounded-lg instead of rounded-md")
 - Features that are correctly implemented but could be "improved" — those belong in Future Opportunities, not audit findings
+
+**The exception is accessibility.** WCAG 2.1 AA is a baseline every project shares regardless of its own conventions. A contrast failure, a keyboard trap, or an unlabeled control is a finding even when it is applied consistently across the codebase — "consistently inaccessible" is still inaccessible. Dimension 7 audits against the WCAG standard, not the project's patterns.
 
 The audit answers "does this deviate from what this project has established?" not "how does this compare to my ideal UI?"

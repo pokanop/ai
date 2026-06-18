@@ -17,9 +17,9 @@ The output is a prioritized findings report. Because the report follows the same
 
 ## Scope
 
-A UI design audit examines six dimensions. Work through each in order, or scope the audit to specific dimensions if the user specifies (e.g., "just loading states" or "just spacing and sizing").
+A UI design audit examines seven dimensions. Work through each in order, or scope the audit to specific dimensions if the user specifies (e.g., "just loading states" or "just spacing and sizing").
 
-The six dimensions are defined in [references/audit-checklist.md](references/audit-checklist.md):
+The seven dimensions are defined in [references/audit-checklist.md](references/audit-checklist.md):
 
 1. **Loading States** — Spinners, skeletons, placeholders, and empty states
 2. **Spacing and Sizing** — Padding, margin, gap, width, height consistency
@@ -27,6 +27,7 @@ The six dimensions are defined in [references/audit-checklist.md](references/aud
 4. **Color and Theming** — Brand colors, semantic colors (error, warning, success), dark mode
 5. **Interactive States** — Hover, focus, active, disabled states on all interactive elements
 6. **Animation and Motion** — Transitions, entrance/exit animations, loading animations
+7. **Accessibility** — WCAG 2.1 AA contrast, semantic HTML/landmarks, ARIA, keyboard navigation and focus, screen-reader labels, forms, and reduced motion
 
 ## Workflow
 
@@ -94,7 +95,7 @@ Ask the user to confirm before writing the `prd.md`. Once confirmed, write it an
 
 **Be specific, not vague.** "Inconsistent spacing" is not a finding. "The `Card` component in `src/components/Card.tsx` uses `p-3` but all other cards use `p-4`" is a finding.
 
-**The baseline is the project's own patterns, not external standards.** If the project uses 8px spacing increments, flagging something as wrong because it doesn't use 4px increments (from another system) is wrong. Audit against what the project itself has established.
+**The baseline is the project's own patterns, not external standards.** If the project uses 8px spacing increments, flagging something as wrong because it doesn't use 4px increments (from another system) is wrong. Audit against what the project itself has established. **The one exception is accessibility (Dimension 7): WCAG 2.1 AA is a shared baseline every project must meet, so contrast failures, keyboard traps, and missing labels are findings even when they are applied consistently across the codebase.**
 
 **Severity must be calibrated.** Not every inconsistency is critical. A missing hover state on a secondary action is a minor finding; an inconsistent loading state that shows raw data before it loads is critical. See [references/severity-guide.md](references/severity-guide.md).
 
