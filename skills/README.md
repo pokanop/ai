@@ -58,6 +58,10 @@ tasks-to-code  →  release-checklist  →  plan-retrospective
 
 6. **`plan-retrospective`** — Formally closes the plan. Computes completion metrics and scope drift, captures lessons learned, produces `plans/<name>/retro.md`, and archives the entire plan folder to `plans/archive/<name>/`.
 
+### Worked Example
+
+See one small feature — a persisted dark-mode toggle — carried through the entire pipeline as a set of golden artifacts (PRD → design + ADR → tasks → decisions → review → release → retro): **[examples/dark-mode-toggle](https://github.com/pokanop/ai/tree/main/examples/dark-mode-toggle)**.
+
 ### Design-Driven Workflow
 
 For UI-focused work, `ui-design-audit` plugs in before the build pipeline:

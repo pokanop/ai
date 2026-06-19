@@ -14,6 +14,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync, cpSync, existsSync, readdirSync, statSync, rmSync } from 'fs';
 import { join, dirname, basename, relative, resolve } from 'path';
+import { buildSkillsIndex, serializeIndex, INDEX_PATH, INDEX_REL } from './skills-index.mjs';
 
 const ROOT = resolve(dirname(new URL(import.meta.url).pathname), '..');
 const DOCS_OUT = join(ROOT, 'src', 'content', 'docs');
@@ -994,6 +995,15 @@ function main() {
   }
 
   console.log(`✅ sync-docs: Generated ${pageCount} pages in src/content/docs/`);
+
+  // ── 5. Machine-readable skill catalog ───────────────────────────────
+  // Emit skills/index.json from each SKILL.md's frontmatter so discovery has a
+  // structured source of truth instead of the drift-prone README table. This
+  // file is committed to the repo; validate-skills.mjs fails CI if it ever
+  // falls out of sync with the skills/ directory (see scripts/skills-index.mjs).
+  const index = buildSkillsIndex();
+  writeFileSync(INDEX_PATH, serializeIndex(index), 'utf-8');
+  console.log(`📇 sync-docs: wrote ${INDEX_REL} (${index.skills.length} skills)`);
 
   // Build-time guard: fail if any unrewritten relative .md link survived in the
   // generated MDX. Such a link 404s on the published site. This runs as part of
