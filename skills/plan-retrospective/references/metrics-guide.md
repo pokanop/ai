@@ -4,6 +4,35 @@ How to compute completion, coverage, and scope drift metrics for a plan retrospe
 
 ---
 
+## Compute the numbers with the helper script
+
+Do not hand-count markers. The bundled `plan-metrics.py` helper (in
+`_shared/scripts/`, a sibling of `_shared/references/`) computes the completion
+metrics below directly from `tasks.md`:
+
+```bash
+python3 _shared/scripts/plan-metrics.py plans/<name>/tasks.md
+```
+
+It returns JSON with the status totals, the effective completion rate
+(`completed / (total − skipped)`), and the per-phase breakdown — exactly the
+metrics this guide defines. Read the JSON and report it; the sections below
+explain what each field means.
+
+For the coverage and scope-drift sections, `plan-validate.py` flags requirement
+labels that no task references (`unreferenced-requirement`) and tasks with no
+PRD traceability (`missing-requirements`):
+
+```bash
+python3 _shared/scripts/plan-validate.py plans/<name>/tasks.md --prd plans/<name>/prd.md
+```
+
+The input format and full output schema are documented in
+`_shared/scripts/README.md`. The rules below remain the source of truth for
+*interpreting* the numbers.
+
+---
+
 ## Completion Metrics
 
 Derived from `tasks.md`. Count top-level task checkboxes only — do not count acceptance criteria sub-checkboxes.
