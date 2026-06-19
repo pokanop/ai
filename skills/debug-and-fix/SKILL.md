@@ -124,3 +124,4 @@ Offer to log the fix in `plans/<name>/decisions.md` if the bug is related to an 
 - [references/fix-verification.md](references/fix-verification.md) — How to verify a fix is complete and safe
 - [../tasks-to-code/references/implementation-guide.md](../tasks-to-code/references/implementation-guide.md) — Implementation discipline (shared reference)
 - [../create-a-prd/references/codebase-discovery.md](../create-a-prd/references/codebase-discovery.md) — Test pattern discovery (shared reference)
+- [../_shared/references/conventions.md](../_shared/references/conventions.md) — Shared status markers, severity↔priority scale, and the `plans/` layout (single source of truth)

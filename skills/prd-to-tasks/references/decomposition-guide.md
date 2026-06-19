@@ -6,7 +6,7 @@ How to break a PRD into well-formed, actionable tasks. This guide provides a sys
 
 ### Step 1: Extract the Requirement Inventory
 
-Read the PRD and build an inventory of everything that needs to be implemented. Number each item for traceability:
+Read the PRD and build an inventory of everything that needs to be implemented. Number each item for traceability using the [requirement labels](../../_shared/references/conventions.md#requirement-labels) defined in shared conventions:
 
 | Source | Label Prefix | What to Extract |
 |--------|-------------|-----------------|
@@ -131,14 +131,14 @@ A well-sized task is:
 - **Independently verifiable** (you can check if it's done without other tasks)
 - **Single-responsibility** (one deliverable: one file, one endpoint, one component)
 
-**Sizing heuristics:**
+**Sizing heuristics:** the sizes (`[S]`/`[M]`/`[L]`/`[XL]`), their hour bands, and typical scope are defined in [shared conventions](../../_shared/references/conventions.md#effort-t-shirt-sizes). Use this heuristic to choose between them:
 
-| Size | Typical Scope | When to Use |
-|------|--------------|-------------|
-| S (<1hr) | Config change, simple utility, small fix | One file, straightforward change |
-| M (1-2hr) | Single endpoint, one component, one test suite | Clear scope, known pattern |
-| L (2-4hr) | Complex feature component, multi-file changes | Some unknowns, moderate complexity |
-| XL (4-8hr) | Cross-cutting concern, major integration | **Try to break this down further** |
+| Size | When to Use |
+|------|-------------|
+| `[S]` | One file, straightforward change |
+| `[M]` | Clear scope, known pattern |
+| `[L]` | Some unknowns, moderate complexity |
+| `[XL]` | Cross-cutting concern or major integration — **try to break this down further** |
 
 **Breaking down XL tasks:**
 

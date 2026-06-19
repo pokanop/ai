@@ -66,14 +66,7 @@ Evaluate the change across the dimensions in [references/review-checklist.md](re
 
 ### Phase 4: Produce Feedback
 
-Structure all findings using the format in [references/feedback-format.md](references/feedback-format.md). Every finding has a severity:
-
-| Severity | Marker | Meaning |
-|----------|--------|---------|
-| **Blocking** | `🔴 Blocking` | Must be fixed before the change can be merged. Correctness bugs, security issues, broken acceptance criteria. |
-| **Suggestion** | `🟡 Suggestion` | Should be addressed but won't block merge. Consistency gaps, missing test cases, performance concerns. |
-| **Nit** | `⚪ Nit` | Minor style or polish items. Fix if you're already touching the line; skip otherwise. |
-| **Praise** | `✅ Praise` | Something done notably well. Acknowledge good patterns. |
+Structure all findings using the format in [references/feedback-format.md](references/feedback-format.md). Every finding carries a severity from the single shared [severity scale](../_shared/references/conventions.md#severity-and-priority). Code review applies it using disposition names — `🔴 Blocking` (Critical), `🟡 Suggestion` (Major), `⚪ Nit` (Minor) — plus `✅ Praise`, a positive callout that is not a severity. See [references/feedback-format.md](references/feedback-format.md) for calibration and when to use each.
 
 Present findings grouped by file, then by severity within each file. Always lead with a summary.
 
@@ -113,4 +106,5 @@ When the user asks to "re-review" or "check the updates":
 
 - [references/review-checklist.md](references/review-checklist.md) — Dimension-by-dimension review criteria
 - [references/feedback-format.md](references/feedback-format.md) — Finding severity, presentation format, and review.md schema
+- [../_shared/references/conventions.md](../_shared/references/conventions.md) — Canonical severity↔priority scale and other shared conventions
 - [../create-a-prd/references/codebase-discovery.md](../create-a-prd/references/codebase-discovery.md) — Codebase discovery checklist (shared reference)

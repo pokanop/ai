@@ -92,10 +92,10 @@ Each task uses a checkbox with structured metadata:
 | Field | Required | Format | Description |
 |-------|----------|--------|-------------|
 | Task title | Yes | Short, imperative verb phrase | What to do (e.g., "Create user registration endpoint") |
-| Priority | Yes | `[P0]`, `[P1]`, `[P2]` | Matches PRD priority. P0 = must-have, P1 = should-have, P2 = nice-to-have |
-| Effort | Yes | `[S]`, `[M]`, `[L]`, `[XL]` | T-shirt size estimate. S=<1hr, M=1-2hr, L=2-4hr, XL=4-8hr (break XL down further if possible) |
+| Priority | Yes | `[P0]`, `[P1]`, `[P2]` | Matches the PRD priority. Defined in [shared conventions](../../_shared/references/conventions.md#priority). |
+| Effort | Yes | `[S]`, `[M]`, `[L]`, `[XL]` | T-shirt size estimate. Sizes and hour bands defined in [shared conventions](../../_shared/references/conventions.md#effort-t-shirt-sizes). |
 | Depends on | Yes | Task reference or "None" | Which task(s) must complete before this one can start |
-| Requirements | Yes | PRD section references | Traceability back to specific functional requirements (FR-N), user stories (US-N), or non-functional requirements (NFR-N) from the PRD |
+| Requirements | Yes | PRD section references | Traceability back to specific requirement [labels](../../_shared/references/conventions.md#requirement-labels) (`FR-N`, `US-N`, `NFR-N`) from the PRD |
 | Acceptance Criteria | Yes | Sub-checkboxes | Verifiable conditions. Derived from PRD acceptance criteria and requirements. Each criterion is independently checkable. |
 | Notes | No | Free text | Implementation guidance, patterns to follow, files to modify, gotchas |
 

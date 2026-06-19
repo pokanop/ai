@@ -125,15 +125,7 @@ Iterate until the user confirms the task list is complete.
 
 The task list is a living document. As implementation progresses, the agent (or the user) updates task statuses directly in `tasks.md`. See [references/progress-tracking.md](references/progress-tracking.md) for the tracking conventions.
 
-**Status values:**
-
-| Status | Marker | Meaning |
-|--------|--------|---------|
-| Not Started | `[ ]` | Work has not begun |
-| In Progress | `[~]` | Actively being worked on |
-| Completed | `[x]` | Done and verified |
-| Blocked | `[!]` | Cannot proceed -- see notes |
-| Skipped | `[-]` | Intentionally not doing (with reason) |
+**Status values:** the canonical task status markers (`[ ]`, `[~]`, `[x]`, `[!]`, `[-]`) and their meanings are defined in [shared conventions](../_shared/references/conventions.md#task-status-markers). Use them exactly as written there.
 
 When the user asks to "update tasks", "mark tasks done", "check progress", or "update the task list", read the existing `tasks.md`, apply the requested changes, and write it back. Always preserve the full document structure -- never truncate or drop sections when updating.
 
@@ -163,3 +155,4 @@ If the PRD is updated after `tasks.md` has been generated:
 - [references/task-schema.md](references/task-schema.md) -- Full task document structure with section-by-section guidance
 - [references/decomposition-guide.md](references/decomposition-guide.md) -- How to break a PRD into well-formed tasks
 - [references/progress-tracking.md](references/progress-tracking.md) -- Status conventions, update workflows, and summary reporting
+- [../_shared/references/conventions.md](../_shared/references/conventions.md) -- Shared markers, priority, effort, labels, and the `plans/` layout (single source of truth)

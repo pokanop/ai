@@ -160,6 +160,9 @@ function isLocalFileLink(t) {
 function listSkillDirs() {
   return readdirSync(SKILLS_DIR, { withFileTypes: true })
     .filter((d) => d.isDirectory())
+    // Skip shared / non-skill dirs (e.g. _shared holds cross-skill references,
+    // not a SKILL.md). Underscore- and dot-prefixed dirs are not skills.
+    .filter((d) => !d.name.startsWith('_') && !d.name.startsWith('.'))
     .map((d) => d.name)
     .sort();
 }

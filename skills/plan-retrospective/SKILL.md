@@ -22,26 +22,7 @@ It formally closes a plan by computing what was actually built versus what was p
 
 ## File Structure
 
-The skill reads from and writes to the plan's directory:
-
-```
-plans/
-└── feature-name/
-    ├── prd.md          # Read-only — source of truth for original intent
-    ├── tasks.md        # Read — final task state
-    ├── decisions.md    # Read — decisions made during implementation (if exists)
-    └── retro.md        # CREATED by this skill
-
-→ After confirmation:
-
-plans/
-└── archive/
-    └── feature-name/
-        ├── prd.md
-        ├── tasks.md
-        ├── decisions.md
-        └── retro.md
-```
+This skill reads `plans/<name>/prd.md`, `tasks.md`, and `decisions.md` (if present), writes `plans/<name>/retro.md`, then moves the folder to `plans/archive/<name>/`. The full `plans/` layout and the active → archive lifecycle are defined in [shared conventions](../_shared/references/conventions.md#the-plans-directory).
 
 **Rules:**
 
@@ -142,3 +123,4 @@ Do not archive without explicit user confirmation. The plan folder is the canoni
 
 - [references/retro-schema.md](references/retro-schema.md) — Full retrospective document structure
 - [references/metrics-guide.md](references/metrics-guide.md) — How to compute completion, coverage, and drift metrics
+- [../_shared/references/conventions.md](../_shared/references/conventions.md) — Shared status markers, effort sizes, labels, and the `plans/` layout (single source of truth)

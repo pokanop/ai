@@ -6,11 +6,13 @@ How to classify and prioritize findings in a UI design audit. Consistent severit
 
 ## Severity Levels
 
-| Severity | Label | Color | Definition |
-|----------|-------|-------|------------|
-| Critical | `🔴 Critical` | Red | Broken user experience — the UI fails to communicate information, confuses users, or blocks a workflow |
-| Major | `🟡 Major` | Yellow | Noticeable inconsistency — a trained eye will see it, or it creates friction in repeated use |
-| Minor | `⚪ Minor` | Gray | Subtle deviation — pixel-level or polish-level, does not affect usability |
+Findings use the single shared [severity scale](../../_shared/references/conventions.md#severity-and-priority) — `🔴 Critical` / `🟡 Major` / `⚪ Minor`, mapping to `[P0]` / `[P1]` / `[P2]`. In a UI audit, the levels mean:
+
+| Severity | Marker | In a UI audit |
+|----------|--------|---------------|
+| Critical | `🔴` | Broken user experience — the UI fails to communicate information, confuses users, or blocks a workflow |
+| Major | `🟡` | Noticeable inconsistency — a trained eye will see it, or it creates friction in repeated use |
+| Minor | `⚪` | Subtle deviation — pixel-level or polish-level, does not affect usability |
 
 ---
 
@@ -71,13 +73,7 @@ Do not file 12 separate Minor/Major findings for the same pattern. One finding w
 
 ## Priority Mapping to PRD
 
-When the audit output is formatted as a PRD (for handoff to `create-a-prd` / `prd-to-tasks`), map severities to PRD priorities:
-
-| Audit Severity | PRD Priority | Task Priority |
-|----------------|-------------|---------------|
-| 🔴 Critical | `[P0]` | Must fix before next release |
-| 🟡 Major | `[P1]` | Should fix in the current cycle |
-| ⚪ Minor | `[P2]` | Fix when adjacent work is being done |
+When the audit output is formatted as a PRD (for handoff to `create-a-prd` / `prd-to-tasks`), map each finding's severity to its PRD priority using the canonical [severity↔priority mapping](../../_shared/references/conventions.md#severity-and-priority): `🔴 Critical → [P0]` (fix before next release), `🟡 Major → [P1]` (fix in the current cycle), `⚪ Minor → [P2]` (fix when adjacent work is being done).
 
 ---
 

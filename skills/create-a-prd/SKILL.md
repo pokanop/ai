@@ -11,18 +11,7 @@ metadata:
 
 ## File Structure
 
-All PRDs live under a `plans/` directory at the project root. Each PRD gets its own dasherized subfolder named after the feature or initiative:
-
-```
-plans/
-├── user-authentication/
-│   └── prd.md
-├── search-improvements/
-│   └── prd.md
-└── archive/
-    └── onboarding-flow/
-        └── prd.md
-```
+The PRD is the first artifact in a plan folder. The full `plans/` layout and the active → `plans/archive/<name>/` lifecycle are defined once in [shared conventions](../_shared/references/conventions.md#the-plans-directory); this skill creates `plans/<dasherized-name>/prd.md`.
 
 **Rules:**
 
@@ -30,13 +19,6 @@ plans/
 - The folder name must be lowercase, dasherized, and descriptive (e.g., `api-rate-limiting`, not `feature1`)
 - Create the `plans/` directory if it does not exist
 - The subfolder scopes all artifacts for a single initiative -- companion skills may later add task lists, tracking docs, or other files alongside `prd.md`
-
-### Plan Lifecycle
-
-1. **Active** -- PRD lives in `plans/<name>/`. Work is in progress.
-2. **Completed** -- Once the PRD and all associated tasks are done, move the entire folder to `plans/archive/<name>/`.
-
-This convention keeps the `plans/` directory clean (only active work visible) while preserving a full history under `plans/archive/`.
 
 ## Workflow
 
@@ -89,7 +71,7 @@ Apply the quality standards in [references/quality-standards.md](references/qual
 - Justify every new dependency against the existing stack
 - Ensure every requirement is independently verifiable
 - Keep one requirement per statement
-- Label all requirements for traceability: `FR-N` (functional), `NFR-N` (non-functional), `US-N` (user stories), `QG-N` (quality gates)
+- Label all requirements for traceability using the canonical [requirement labels](../_shared/references/conventions.md#requirement-labels): `FR-N` (functional), `NFR-N` (non-functional), `US-N` (user stories), `QG-N` (quality gates)
 
 ### Phase 2.5: Self-Validation
 
@@ -152,3 +134,4 @@ Once the PRD is confirmed, inform the user that the companion skill **prd-to-tas
 - [references/prd-schema.md](references/prd-schema.md) -- Full PRD document structure with section-by-section guidance
 - [references/codebase-discovery.md](references/codebase-discovery.md) -- Checklist for understanding project conventions before writing
 - [references/quality-standards.md](references/quality-standards.md) -- Writing standards, decision quality criteria, and completeness checklist
+- [../_shared/references/conventions.md](../_shared/references/conventions.md) -- Shared priority, labels, and the `plans/` layout (single source of truth)
