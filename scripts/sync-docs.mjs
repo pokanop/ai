@@ -186,6 +186,76 @@ function escapeForMdx(content) {
   return fixed;
 }
 
+// Reference docs are published one page per file at
+//   /ai/skills/docs/<skill>/references/<file>/
+// Three relative-link forms point at them in skill docs and must be rewritten,
+// or they 404 on the live site (only SKILL.md and these generated reference
+// pages exist there — the raw references/*.md sources are never published):
+//   ](references/<file>.md)              same-skill   (uses currentSkill)
+//   ](../<skill>/references/<file>.md)   cross-skill  (skill named in the path)
+//   ](<file>.md)                         sibling      (only inside a references/ file)
+// An optional #fragment is preserved and re-attached after the trailing slash.
+function rewriteReferenceLinks(content, currentSkill, { sibling = false } = {}) {
+  let out = content;
+
+  // Cross-skill: ](../<skill>/references/<file>.md[#frag])
+  out = out.replace(
+    /\]\(\.\.\/([a-z0-9-]+)\/references\/([a-z0-9-]+)\.md(#[^)]*)?\)/g,
+    (_m, skill, file, frag) => `](/ai/skills/docs/${skill}/references/${file}/${frag || ''})`,
+  );
+
+  // Same-skill: ](references/<file>.md[#frag])
+  out = out.replace(
+    /\]\(references\/([a-z0-9-]+)\.md(#[^)]*)?\)/g,
+    (_m, file, frag) => `](/ai/skills/docs/${currentSkill}/references/${file}/${frag || ''})`,
+  );
+
+  // Sibling references (a references/*.md file linking to one next to it):
+  // ](<file>.md[#frag]) with no slashes. Run last so the slashed forms above
+  // are already consumed.
+  if (sibling) {
+    out = out.replace(
+      /\]\(([a-z0-9-]+)\.md(#[^)]*)?\)/g,
+      (_m, file, frag) => `](/ai/skills/docs/${currentSkill}/references/${file}/${frag || ''})`,
+    );
+  }
+
+  return out;
+}
+
+// MDX (unlike CommonMark) reads a bare `<` as the start of a JSX tag and `{`
+// as a JS expression. Reference docs use `<` as a less-than sign in prose and
+// tables ("< 200ms", "<2min", "S=<1hr"), which makes the MDX compiler throw.
+// Escape those in ordinary text while leaving fenced code blocks and inline
+// code spans alone — there `<placeholder>` samples are meant to render verbatim.
+// A `<` that begins a real tag (`<br`, `</li>`, `<!-- -->`) is preserved so the
+// existing <br>/<img> handling in escapeForMdx still applies.
+function hardenMdxText(content) {
+  const lines = content.split('\n');
+  let inFence = false;
+  for (let i = 0; i < lines.length; i++) {
+    if (/^\s*(```|~~~)/.test(lines[i])) { inFence = !inFence; continue; }
+    if (inFence) continue;
+    lines[i] = lines[i]
+      .split(/(`[^`]*`)/)                                  // keep inline code spans intact
+      .map((seg, idx) => (idx % 2 === 1 ? seg : seg
+        .replace(/\{/g, '&#123;')
+        .replace(/\}/g, '&#125;')
+        .replace(/<(?![A-Za-z/!])/g, '&lt;')))             // escape `<` unless a tag/comment
+      .join('');
+  }
+  return lines.join('\n');
+}
+
+// Title-case a kebab slug for use as a fallback page title.
+function titleFromSlug(slug) {
+  return slug
+    .split('-')
+    .filter(Boolean)
+    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ');
+}
+
 function slugify(name) {
   return name
     .toLowerCase()
@@ -556,7 +626,7 @@ function generateSkillMdx(content, skillName) {
   if (!fmMatch) return null;
 
   const frontmatter = fmMatch[1];
-  const body = fmMatch[2];
+  let body = fmMatch[2];
 
   // Extract name and description from YAML frontmatter
   const nameMatch = frontmatter.match(/^name:\s*(.+)$/m);
@@ -573,8 +643,38 @@ function generateSkillMdx(content, skillName) {
   }
   lines.push('---');
   lines.push('');
-  // Pass through the body as-is (it's standard markdown)
+  // Pass through the body as-is (it's standard markdown), rewriting links to
+  // references/ docs into their published Starlight routes first.
+  body = rewriteReferenceLinks(body, skillName);
   lines.push(escapeForMdx(body));
+
+  return lines.join('\n');
+}
+
+// Generate an MDX page for a single references/<file>.md. Published at
+// /ai/skills/docs/<skillName>/references/<refSlug>/ so the links in SKILL.md
+// (and between reference files) resolve on the live site.
+function generateReferenceMdx(content, skillName, refSlug) {
+  // Title from a leading H1 if present, else a title-cased slug. A leading H1
+  // is stripped so it isn't duplicated under Starlight's frontmatter title.
+  let title = titleFromSlug(refSlug);
+  let body = content;
+  const lead = body.match(/^#\s+(.+?)[ \t]*\r?\n/);
+  if (lead) {
+    title = lead[1].trim();
+    body = body.slice(lead[0].length);
+  }
+
+  body = rewriteReferenceLinks(body, skillName, { sibling: true });
+  body = hardenMdxText(body);
+  body = escapeForMdx(body);
+
+  const lines = [];
+  lines.push('---');
+  lines.push(`title: "${escapeForJsx(title)}"`);
+  lines.push('---');
+  lines.push('');
+  lines.push(body);
 
   return lines.join('\n');
 }
@@ -838,9 +938,72 @@ function main() {
       writeOut(join(skillDocsDir, `${skillName}.mdx`), mdx);
       pageCount++;
     }
+
+    // Publish a page per references/*.md so links in SKILL.md resolve instead
+    // of 404ing. Output: skills/docs/<skill>/references/<file>.mdx
+    //   -> route /ai/skills/docs/<skill>/references/<file>/
+    const refDir = join(ROOT, 'skills', skillName, 'references');
+    if (existsSync(refDir)) {
+      for (const refFile of findFiles(refDir, /\.md$/)) {
+        const refSlug = basename(refFile, '.md');
+        const refContent = readFileSync(refFile, 'utf-8');
+        const refMdx = generateReferenceMdx(refContent, skillName, refSlug);
+        const outDir = join(skillDocsDir, skillName, 'references');
+        ensureDir(outDir);
+        writeOut(join(outDir, `${refSlug}.mdx`), refMdx);
+        pageCount++;
+      }
+    }
   }
 
   console.log(`✅ sync-docs: Generated ${pageCount} pages in src/content/docs/`);
+
+  // Build-time guard: fail if any unrewritten relative .md link survived in the
+  // generated MDX. Such a link 404s on the published site. This runs as part of
+  // `bun run build` (and the CI validate job) so a missing rewrite rule breaks
+  // the build loudly instead of shipping dead links.
+  const brokenLinks = findUnrewrittenMdLinks(DOCS_OUT);
+  if (brokenLinks.length > 0) {
+    console.error(`\n❌ sync-docs: ${brokenLinks.length} unrewritten relative .md link(s) in generated MDX:`);
+    for (const b of brokenLinks) {
+      console.error(`   ${b.file}:${b.line}  →  ${b.target}`);
+    }
+    console.error('\nThese would 404 on the published site. Add a rewrite rule in sync-docs.mjs');
+    console.error('(see rewriteReferenceLinks) or point the link at an absolute https:// URL.');
+    process.exit(1);
+  }
+  console.log('🔗 sync-docs: link check passed — no unrewritten relative .md links.');
+}
+
+// Scan generated MDX for relative links whose target ends in .md — these never
+// resolve on the site (the source .md files are not published). Absolute
+// http(s) links ending in .md (e.g. a GitHub source URL) are allowed. Targets
+// inside fenced code blocks are skipped: they are literal text, not live links.
+function findUnrewrittenMdLinks(dir) {
+  const offenders = [];
+  for (const file of findFiles(dir, /\.mdx$/)) {
+    const lines = readFileSync(file, 'utf-8').split('\n');
+    let inFence = false;
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      if (/^\s*(```|~~~)/.test(line)) { inFence = !inFence; continue; }
+      if (inFence) continue;
+
+      const targets = [];
+      // Markdown links: ](target) — target runs up to whitespace or ')'
+      for (const m of line.matchAll(/\]\(\s*([^)\s]+)/g)) targets.push(m[1]);
+      // HTML attributes: href="target" / src="target"
+      for (const m of line.matchAll(/\b(?:href|src)\s*=\s*"([^"]+)"/g)) targets.push(m[1]);
+
+      for (const raw of targets) {
+        const path = raw.replace(/[#?].*$/, '');       // drop #fragment / ?query
+        if (!/\.md$/i.test(path)) continue;            // not a .md link
+        if (/^https?:\/\//i.test(raw)) continue;       // external URL is fine
+        offenders.push({ file: relative(DOCS_OUT, file), line: i + 1, target: raw });
+      }
+    }
+  }
+  return offenders;
 }
 
 

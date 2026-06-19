@@ -24,3 +24,11 @@ jobs:
       # site's dependency graph.
       - name: Validate skills
         run: bun run validate
+
+      # Generate the docs and fail if any relative .md link survived the
+      # rewrite (it would 404 on the published site). sync-docs.mjs is also
+      # dependency-free, so this stays install-free like the step above. The
+      # same check gates the real `bun run build` in deploy.yml; running it here
+      # catches broken reference links at PR time, before they reach main.
+      - name: Check generated docs for broken reference links
+        run: bun run sync
