@@ -250,6 +250,20 @@ bunx skills add pokanop/ai
 
 Or browse and install individual skills from the [skills.sh leaderboard](https://skills.sh).
 
+#### Multica workspaces
+
+`pokanop/ai` is a **multi-skill repository** — skills live under `skills/<name>/`, not at the repo root. Importing the bare repo URL (`https://github.com/pokanop/ai`) will not work; point Multica at a specific skill instead:
+
+```bash
+# Via GitHub (any skill directory)
+multica skill import --url https://github.com/pokanop/ai/tree/main/skills/code-review
+
+# Via skills.sh
+multica skill import --url https://skills.sh/pokanop/ai/code-review
+```
+
+See [`skills/README.md`](skills/README.md) for the full skill list and import paths.
+
 ---
 
 ## The Possibilities
