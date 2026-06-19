@@ -79,7 +79,7 @@ A list (not tracked for completion) of improvements or features noticed during i
 - **[Noticed during Task N.M]**: [Brief description of the opportunity and why it was deferred.]
 ```
 
-These should not become tasks without going through the PRD and `prd-to-tasks` process first.
+These should not become tasks without going through the PRD and `design-to-tasks` process first.
 
 ## Entry Examples
 

@@ -2,7 +2,7 @@
 # plan-validate.py - deterministic lint for a tasks.md plan
 #
 # Parses a plans/<name>/tasks.md file and reports structural problems that the
-# prd-to-tasks, release-checklist, and plan-retrospective skills otherwise check
+# design-to-tasks, release-checklist, and plan-retrospective skills otherwise check
 # by hand. The skill runs this and interprets the findings instead of eyeballing
 # the task list.
 #

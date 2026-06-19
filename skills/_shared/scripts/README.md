@@ -14,7 +14,7 @@ task is. They use the **Python 3 standard library only** — no `pip install`, n
 Bun/Node. Run them with `python3`.
 
 These scripts are referenced by `plan-retrospective`'s metrics-guide,
-`prd-to-tasks`'s decomposition-guide and progress-tracking, and
+`design-to-tasks`'s decomposition-guide and progress-tracking, and
 `release-checklist`'s checklist-schema. The markers, priorities, effort sizes,
 and requirement labels they recognise are defined once in
 [`../references/conventions.md`](../references/conventions.md).
@@ -44,7 +44,7 @@ alongside them. Invoke them by their path within the installed skill collection
 
 ## Input format
 
-The parser follows the task document schema (`prd-to-tasks`'s task-schema) and
+The parser follows the task document schema (`design-to-tasks`'s task-schema) and
 the shared conventions. The contract:
 
 - **A top-level task** is a checkbox at the **left margin** (no indentation):

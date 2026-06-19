@@ -47,7 +47,7 @@ A refactor changes **structure**, never **observable behavior**. Run every candi
 | The change… | Refactor? | Route |
 |-------------|-----------|-------|
 | Restructures code; same inputs → same outputs, errors, side effects, API | ✅ Yes | This skill |
-| Adds / removes / changes a feature or any output | ❌ No | `create-a-prd` → `prd-to-tasks` → `tasks-to-code` |
+| Adds / removes / changes a feature or any output | ❌ No | `idea-to-prd` → `prd-to-design` → `design-to-tasks` → `tasks-to-code` |
 | Corrects wrong behavior | ❌ No | `debug-and-fix` |
 | Changes a public API, schema, or contract other code relies on | ⚠️ Not pure | The contract change is a feature (PRD); internal cleanup can follow as a refactor |
 | Changes performance characteristics | ⚠️ Careful | Refactor only if outputs are provably identical *and* you have a before/after benchmark; otherwise it is a feature with its own acceptance criteria |

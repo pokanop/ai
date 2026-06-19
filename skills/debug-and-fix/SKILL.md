@@ -88,7 +88,7 @@ Every bug fix must include a test that would have caught the bug before it shipp
 **Test requirements:**
 - The test must fail on the unfixed code and pass on the fixed code
 - The test must describe the bug scenario clearly in its name: `it("returns 404 when session is missing, not 500")`
-- The test must be placed in the correct location following the project's test conventions (see [../create-a-prd/references/codebase-discovery.md](../create-a-prd/references/codebase-discovery.md) for test pattern detection)
+- The test must be placed in the correct location following the project's test conventions (see [../idea-to-prd/references/codebase-discovery.md](../idea-to-prd/references/codebase-discovery.md) for test pattern detection)
 
 If the bug's root cause cannot be tested without major infrastructure work, document this explicitly and write the best available test (e.g., an integration test or a characterization test for a tricky edge case).
 
@@ -123,5 +123,5 @@ Offer to log the fix in `plans/<name>/decisions.md` if the bug is related to an 
 - [references/debugging-guide.md](references/debugging-guide.md) — Hypothesis-driven debugging methodology
 - [references/fix-verification.md](references/fix-verification.md) — How to verify a fix is complete and safe
 - [../tasks-to-code/references/implementation-guide.md](../tasks-to-code/references/implementation-guide.md) — Implementation discipline (shared reference)
-- [../create-a-prd/references/codebase-discovery.md](../create-a-prd/references/codebase-discovery.md) — Test pattern discovery (shared reference)
+- [../idea-to-prd/references/codebase-discovery.md](../idea-to-prd/references/codebase-discovery.md) — Test pattern discovery (shared reference)
 - [../_shared/references/conventions.md](../_shared/references/conventions.md) — Shared status markers, severity↔priority scale, and the `plans/` layout (single source of truth)

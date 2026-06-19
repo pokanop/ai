@@ -106,7 +106,7 @@ Every transformation above is safe **only while it stays internal**. The moment 
 | Thrown error types / messages asserted elsewhere | Callers branch on these |
 | Serialized / persisted formats | Stored data and other readers depend on these |
 
-If the goal requires changing one of these, route the contract change through `create-a-prd` (it needs an acceptance criterion and a migration story). The *internal* cleanup behind a stable surface is still a fine refactor.
+If the goal requires changing one of these, route the contract change through `idea-to-prd` (it needs an acceptance criterion and a migration story). The *internal* cleanup behind a stable surface is still a fine refactor.
 
 When you must change an internal path that something external imports, keep the old path working with a re-export (a thin shim) so the surface stays stable — that keeps the move behavior-preserving.
 

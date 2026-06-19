@@ -102,7 +102,7 @@ Do not file 12 separate Minor/Major findings for the same pattern. One finding w
 
 ## Priority Mapping to PRD
 
-When the audit output is formatted as a PRD (for handoff to `create-a-prd` / `prd-to-tasks`), map each finding's severity to its PRD priority using the canonical [severity↔priority mapping](../../_shared/references/conventions.md#severity-and-priority): `🔴 Critical → [P0]` (fix before next release), `🟡 Major → [P1]` (fix in the current cycle), `⚪ Minor → [P2]` (fix when adjacent work is being done).
+When the audit output is formatted as a PRD (for handoff to `idea-to-prd` / `design-to-tasks`), map each finding's severity to its PRD priority using the canonical [severity↔priority mapping](../../_shared/references/conventions.md#severity-and-priority): `🔴 Critical → [P0]` (fix before next release), `🟡 Major → [P1]` (fix in the current cycle), `⚪ Minor → [P2]` (fix when adjacent work is being done).
 
 ---
 
