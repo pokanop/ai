@@ -188,15 +188,30 @@ function escapeForMdx(content) {
 
 // Reference docs are published one page per file at
 //   /ai/skills/docs/<skill>/references/<file>/
-// Three relative-link forms point at them in skill docs and must be rewritten,
+// and the shared conventions under skills/_shared/references/ are published at
+//   /ai/skills/docs/_shared/references/<file>/
+// Several relative-link forms point at them in skill docs and must be rewritten,
 // or they 404 on the live site (only SKILL.md and these generated reference
 // pages exist there — the raw references/*.md sources are never published):
-//   ](references/<file>.md)              same-skill   (uses currentSkill)
-//   ](../<skill>/references/<file>.md)   cross-skill  (skill named in the path)
-//   ](<file>.md)                         sibling      (only inside a references/ file)
+//   ](references/<file>.md)                 same-skill   (uses currentSkill)
+//   ](../<skill>/references/<file>.md)      cross-skill  (skill named in the path)
+//   ](<file>.md)                            sibling      (only inside a references/ file)
+//   ](_shared/references/<file>.md)         shared, from index / top-level
+//   ](../_shared/references/<file>.md)      shared, from a SKILL.md
+//   ](../../_shared/references/<file>.md)   shared, from a references/*.md file
 // An optional #fragment is preserved and re-attached after the trailing slash.
 function rewriteReferenceLinks(content, currentSkill, { sibling = false } = {}) {
   let out = content;
+
+  // Shared references live at a fixed route regardless of the current skill, so
+  // match any depth of leading ../ (index uses none, a SKILL.md one, a
+  // references/*.md file two) and rewrite to the absolute path. Run first: the
+  // cross-skill rule's [a-z0-9-]+ skill segment already can't match the leading
+  // underscore, but consuming these up front keeps the intent unambiguous.
+  out = out.replace(
+    /\]\((?:\.\.\/)*_shared\/references\/([a-z0-9-]+)\.md(#[^)]*)?\)/g,
+    (_m, file, frag) => `](/ai/skills/docs/_shared/references/${file}/${frag || ''})`,
+  );
 
   // Cross-skill: ](../<skill>/references/<file>.md[#frag])
   out = out.replace(
@@ -915,6 +930,10 @@ function main() {
   let skillsBody = skillsReadme;
   // Rewrite skill directory links: (create-a-prd/) -> (/ai/skills/docs/create-a-prd/)
   skillsBody = skillsBody.replace(/\]\(([a-z0-9-]+)\/\)/g, '](/ai/skills/docs/$1/)');
+  // Rewrite shared-reference links (the index links to _shared/references/*). It
+  // sits in no skill, so only the _shared forms apply; null currentSkill is fine
+  // because the index has no same-skill/sibling references/ links.
+  skillsBody = rewriteReferenceLinks(skillsBody, null);
   const skillsIndexMdx = generateGenericMdx(skillsBody, 'Agent Skills');
   ensureDir(join(DOCS_OUT, 'skills'));
   writeOut(join(DOCS_OUT, 'skills', 'index.mdx'), skillsIndexMdx);
@@ -953,6 +972,24 @@ function main() {
         writeOut(join(outDir, `${refSlug}.mdx`), refMdx);
         pageCount++;
       }
+    }
+  }
+
+  // Shared references (skills/_shared/references/*.md). This dir has no SKILL.md
+  // so the loop above skips it, but many skills link to its conventions via the
+  // _shared/ forms — publish a page per file so those links resolve. Output:
+  // skills/docs/_shared/references/<file>.mdx -> /ai/skills/docs/_shared/references/<file>/
+  const sharedRefDir = join(ROOT, 'skills', '_shared', 'references');
+  if (existsSync(sharedRefDir)) {
+    console.log('  📚 Generating shared reference pages...');
+    for (const refFile of findFiles(sharedRefDir, /\.md$/)) {
+      const refSlug = basename(refFile, '.md');
+      const refContent = readFileSync(refFile, 'utf-8');
+      const refMdx = generateReferenceMdx(refContent, '_shared', refSlug);
+      const outDir = join(skillDocsDir, '_shared', 'references');
+      ensureDir(outDir);
+      writeOut(join(outDir, `${refSlug}.mdx`), refMdx);
+      pageCount++;
     }
   }
 
