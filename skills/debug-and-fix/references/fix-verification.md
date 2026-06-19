@@ -28,14 +28,23 @@ If the bug still occurs after the fix:
 
 ### Step 3: Run All Quality Gates
 
-Run every quality gate for the project. All must pass:
+Run every quality gate for the project. All must pass.
+
+**Detect the project's actual gate commands first** (lockfile, build config, and the project's scripts); the commands below are examples to adapt, not defaults to copy.
 
 ```bash
-# Run the full suite — adapt to the project's actual commands
+# JavaScript / TypeScript (Bun example) — or npm/pnpm/yarn equivalents
 bun run check   # or: npm run typecheck
 bun run lint
 bun run test
 bun run build
+
+# Other stacks (use the project's real toolchain), e.g.:
+#   Python:  ruff check . ; mypy . ; pytest
+#   Rust:    cargo fmt --check ; cargo clippy ; cargo test ; cargo build
+#   Go:      go vet ./... ; go test ./... ; go build ./...
+#   Swift:   swift-format lint ; swiftlint ; swift test ; swift build  (or xcodebuild)
+#   Android: ./gradlew lint ; ./gradlew test ; ./gradlew assemble
 ```
 
 **If a gate fails:**

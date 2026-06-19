@@ -130,7 +130,7 @@ Every phase must end with a verification task that runs **all** quality gates ad
     - [ ] `<package-manager> run build` passes (build)
     - [ ] Phase N features are independently deployable
     - [ ] Manual verification of key user flows for this phase
-  - **Notes**: Quality gates are additive -- include EVERY check script discovered in the project. If the project has 5 scripts (check, format, lint, test, build), all 5 must appear here. Adapt commands to the actual package manager (bun/npm/yarn/pnpm/cargo/go/make/etc.).
+  - **Notes**: Quality gates are additive -- include EVERY check command discovered for the project. If the project defines 5 commands (e.g., check, format, lint, test, build), all 5 must appear here. Detect the project's actual gate commands first and adapt to its real toolchain -- the `<package-manager> run …` form above is the JS/TS shape; other stacks differ (pytest/ruff/mypy, cargo, go, xcodebuild/swift, gradle, etc.).
 ```
 
 ## 3. Dependency Graph (Optional)

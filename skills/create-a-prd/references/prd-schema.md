@@ -168,18 +168,32 @@ If modifying existing systems:
 
 Label each gate with the prefix **QG-N** (e.g., QG-1, QG-2). Quality gates are **additive** -- list every check command the project has and require all of them to pass. Do not pick a subset.
 
-Discover available scripts (see codebase discovery) and include each one as a separate gate:
+**Detect the project's actual gate commands first.** Identify the package manager / build system (see [Codebase Discovery](codebase-discovery.md)) and read the project's real scripts before writing gates. The commands below are illustrative examples to adapt -- never defaults to copy verbatim.
+
+Include each discovered command as a separate gate. The placeholder `<package-manager>` stands for the project's tool (for a JS/TS project, `bun`, `npm`, `pnpm`, or `yarn`):
 
 ```markdown
-QG-1: `bun run check` -- Type checking passes with zero errors
-QG-2: `bun run format` -- Code formatting matches project standards
-QG-3: `bun run lint` -- No lint warnings or errors
-QG-4: `bun run test` -- All existing and new tests pass
-QG-5: `bun run build` -- Build completes successfully
+QG-1: `<package-manager> run check` -- Type checking passes with zero errors
+QG-2: `<package-manager> run format` -- Code formatting matches project standards
+QG-3: `<package-manager> run lint` -- No lint warnings or errors
+QG-4: `<package-manager> run test` -- All existing and new tests pass
+QG-5: `<package-manager> run build` -- Build completes successfully
 QG-6: Code review completed
 ```
 
-Adapt commands to the project's package manager and tooling (npm, yarn, pnpm, cargo, go, make, etc.). If a project has `check`, `format`, `lint`, `test`, and `build` scripts, all five become quality gates -- skipping any one of them is an error.
+Gate commands vary by stack -- map each gate to the project's real toolchain:
+
+| Stack | Type-check | Format | Lint | Test | Build |
+|-------|-----------|--------|------|------|-------|
+| JS/TS (bun) | `bun run check` | `bun run format` | `bun run lint` | `bun run test` | `bun run build` |
+| JS/TS (npm/pnpm) | `npm run typecheck` | `npm run format` | `npm run lint` | `npm test` | `npm run build` |
+| Python | `mypy .` | `ruff format --check` | `ruff check` | `pytest` | — |
+| Rust | — | `cargo fmt --check` | `cargo clippy` | `cargo test` | `cargo build` |
+| Go | `go vet ./...` | `gofmt -l .` | `golangci-lint run` | `go test ./...` | `go build ./...` |
+| Swift / iOS | — | `swift-format lint` | `swiftlint` | `swift test` · `xcodebuild test` | `swift build` · `xcodebuild build` |
+| Android | — | `./gradlew spotlessCheck` | `./gradlew lint` | `./gradlew test` | `./gradlew assemble` |
+
+If the project defines `check`, `format`, `lint`, `test`, and `build` commands, all five become quality gates -- skipping any one of them is an error. Not every stack has all five (e.g., Rust has no separate type-check step); include exactly the gates the project actually defines.
 
 ## 8. Risks and Mitigations
 

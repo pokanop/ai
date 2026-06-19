@@ -8,9 +8,9 @@ Run these steps in order. Do not skip steps or reorder them.
 
 ### Step 1: Run All Quality Gates
 
-Run every quality gate command discovered for the project during Phase 2 (discovery). Quality gates are additive — every gate must pass, not just the ones relevant to the task.
+Run every quality gate command discovered for the project during the discovery step. Quality gates are additive — every gate must pass, not just the ones relevant to the task.
 
-**Common gate commands (adapt to the project's actual package manager and toolchain):**
+**Detect the project's actual gate commands first** (lockfile, build config, and the project's scripts); the commands below are examples to adapt, not defaults to copy. Use the project's package manager and toolchain:
 
 ```
 # JavaScript / TypeScript (Bun example)
@@ -41,6 +41,17 @@ cargo build
 go vet ./...
 go test ./...
 go build ./...
+
+# Swift / iOS (xcodebuild or SwiftPM)
+swift-format lint
+swiftlint
+swift test        # or: xcodebuild test ...
+swift build       # or: xcodebuild build ...
+
+# Android (Gradle)
+./gradlew lint
+./gradlew test
+./gradlew assemble
 ```
 
 **If a quality gate fails:**
