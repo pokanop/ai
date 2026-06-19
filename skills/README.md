@@ -13,6 +13,7 @@ A collection of structured, project-aware agent skills for software development 
 | [`tasks-to-code`](tasks-to-code/) | Implement tasks one at a time | Executing an approved task list |
 | [`code-review`](code-review/) | Structured review of code changes | Reviewing a PR, diff, or set of changed files |
 | [`debug-and-fix`](debug-and-fix/) | Diagnose bugs and add regression tests | Something is broken and needs root-cause analysis |
+| [`refactor`](refactor/) | Restructure code without changing behavior | Cleaning up code or executing a deferred improvement |
 | [`ui-design-audit`](ui-design-audit/) | Sweep UI for design system inconsistencies | Auditing components before a design cleanup |
 | [`security-review`](security-review/) | Lightweight threat model + OWASP-style security sweep | Before launching auth/payments; a dedicated security pass |
 | [`release-checklist`](release-checklist/) | Go/no-go assessment before shipping | Preparing to deploy a completed plan |
@@ -67,6 +68,7 @@ These skills work independently and don't require a plan:
 
 - **`code-review`** — Use any time you need a structured review of a diff, branch, or changed file set. Optionally reads `plans/<name>/tasks.md` to validate acceptance criteria if the change comes from a task.
 - **`debug-and-fix`** — Use when something is broken. Works entirely from a bug report (symptom, steps to reproduce, expected vs. actual). Has no plan dependency.
+- **`refactor`** — Use when code needs restructuring without any behavior change. Closes the loop on the suite's no-gold-plating discipline: it executes the structural improvements that `tasks-to-code`, `code-review`, and `plan-retrospective` defer into `decisions.md` / `retro.md` "Future Opportunities". Has no plan dependency.
 - **`security-review`** — Use for a dedicated, whole-system security pass (a lightweight threat model). Standalone, but can emit its findings as a PRD that feeds `prd-to-tasks`, the same way `ui-design-audit` does. Complements `code-review`'s per-change security check rather than repeating it.
 
 ---
@@ -165,6 +167,36 @@ These skills work independently and don't require a plan:
 
 ---
 
+### `refactor`
+
+**Trigger phrases:** "refactor this", "clean up this code", "reduce duplication", "extract a function", "simplify this", "pay down tech debt"
+
+**Accepts:** A scope-boxed target + a structural goal — often a deferred entry from a `decisions.md` / `retro.md` **Future Opportunities** list
+
+**What it produces:** Restructured code with identical behavior + a summary of the structural changes (no behavior change). No plan required; optionally records follow-ups in `decisions.md`.
+
+**The contract:** *Tests stay green, behavior unchanged.* Same tests pass before and after, no test is modified to accommodate a change, the public surface is identical, and quality gates stay green throughout.
+
+**Workflow phases:**
+1. Scope the refactor (box it; triage refactor vs. feature vs. bug)
+2. Establish the safety net (characterization tests **first** — pin current behavior)
+3. Refactor in small, behavior-preserving steps (one named transformation at a time; tests green after each)
+4. Verify behavior is unchanged (all quality gates; confirm no test was modified to pass)
+5. Report the structural changes
+
+**Key behaviors:**
+- Behavior-preserving only — new behavior routes to `create-a-prd`, bug fixes route to `debug-and-fix`
+- Characterization-tests-first: never restructures behavior that isn't under test
+- Scope-boxed recursively — improvements noticed mid-refactor become new Future Opportunities, not scope creep
+
+**References inside the skill:**
+- `references/intake-and-scope.md` — consuming Future Opportunities, triage, and scope-boxing
+- `references/safety-net.md` — characterization-tests-first methodology and golden-master testing
+- `references/refactoring-catalog.md` — named behavior-preserving transformations and mechanics
+- `references/behavior-preservation.md` — verifying behavior is unchanged
+
+---
+
 ### `ui-design-audit`
 
 **Trigger phrases:** "audit the UI", "check for design inconsistencies", "find loading state issues", "review component consistency"
@@ -250,10 +282,10 @@ Several skills share reference documents to avoid duplication:
 | Reference | Shared By |
 |-----------|-----------|
 | `_shared/references/conventions.md` | **All skills** — status markers, priority, severity↔priority, effort sizes, labels, and the `plans/` layout |
-| `create-a-prd/references/codebase-discovery.md` | `create-a-prd`, `prd-to-tasks`, `tasks-to-code`, `code-review`, `debug-and-fix`, `security-review` |
+| `create-a-prd/references/codebase-discovery.md` | `create-a-prd`, `prd-to-tasks`, `tasks-to-code`, `code-review`, `debug-and-fix`, `refactor`, `security-review` |
 | `create-a-prd/references/prd-schema.md` | `create-a-prd`, `ui-design-audit`, `security-review` |
 | `code-review/references/review-checklist.md` | `code-review`, `security-review` (defers line-level diff checks to it) |
-| `tasks-to-code/references/implementation-guide.md` | `tasks-to-code`, `debug-and-fix` |
+| `tasks-to-code/references/implementation-guide.md` | `tasks-to-code`, `debug-and-fix`, `refactor` |
 
 ---
 
