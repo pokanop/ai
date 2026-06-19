@@ -14,7 +14,7 @@ A **characterization test** documents what the code *currently does* — not wha
 
 ## Step 1: Run the Existing Tests (Baseline)
 
-1. Find the tests that already cover the target. Use the project's test layout (see `../../create-a-prd/references/codebase-discovery.md` for how to detect it).
+1. Find the tests that already cover the target. Use the project's test layout (see `../../idea-to-prd/references/codebase-discovery.md` for how to detect it).
 2. Run them. **They must be green.**
    - If they are **red**, stop. A failing baseline is a bug — route to `debug-and-fix`. Refactoring on a red baseline makes it impossible to tell which change broke what.
 3. Note the exact command and the green result. This is the baseline you will return to after every step in Phase 3.

@@ -1,26 +1,35 @@
 ---
-name: prd-to-tasks
-description: Convert a Product Requirements Document (PRD) into a detailed, actionable task list with progress tracking. Use when the user asks to "create tasks from a PRD", "break down a PRD", "generate a task list", "plan implementation", "create an implementation plan from requirements", or needs to turn an existing PRD into trackable development tasks. Reads the PRD from plans/<name>/prd.md and produces a comprehensive tasks.md in the same directory with hierarchical task decomposition, dependency mapping, effort estimation, and progress tracking.
+name: design-to-tasks
+description: Convert a design or Product Requirements Document (PRD) into a detailed, actionable task list with progress tracking. Use when the user asks to turn a "design to tasks", "create tasks from a design", "break down a design", "create tasks from a PRD", "break down a PRD", "generate a task list", "plan implementation", or "create an implementation plan from requirements". Reads the design from plans/<name>/design.md when present and otherwise falls back to the PRD at plans/<name>/prd.md, then produces a comprehensive tasks.md in the same directory with hierarchical task decomposition, dependency mapping, effort estimation, and progress tracking.
 license: MIT
 metadata:
   author: pokanop
   version: "1.0"
 ---
 
-# PRD to Tasks
+# Design to Tasks
 
 ## Purpose
 
-This skill is the companion to **create-a-prd**. It takes a completed PRD at `plans/<name>/prd.md` and produces a comprehensive, trackable task list at `plans/<name>/tasks.md`. The task list bridges the gap between "what to build" (the PRD) and "how to build it" (the implementation).
+This skill is the third step in the build pipeline:
+
+```
+idea-to-prd  →  prd-to-design  →  design-to-tasks  →  tasks-to-code
+  (what/why)      (architecture)     (task list)         (build)
+```
+
+It takes the architecture produced by **prd-to-design** — `plans/<name>/design.md` — and produces a comprehensive, trackable task list at `plans/<name>/tasks.md`. When no design exists (the design step is optional for simple features), it **falls back to the PRD** at `plans/<name>/prd.md`, so the chain still works as `idea-to-prd → design-to-tasks`. Either way, the PRD remains the authority for requirements and traceability. The task list bridges the gap between "what to build" (the PRD/design) and "how to build it" (the implementation).
 
 ## File Structure
 
-The task list lives alongside the PRD it was derived from:
+The task list lives alongside the design and PRD it was derived from:
 
 ```
 plans/
 ├── user-authentication/
-│   ├── prd.md          # Created by create-a-prd
+│   ├── prd.md          # Created by idea-to-prd
+│   ├── design.md       # Created by prd-to-design (optional)
+│   ├── adr/            # Created by prd-to-design (optional)
 │   └── tasks.md        # Created by this skill
 ├── search-improvements/
 │   ├── prd.md
@@ -33,16 +42,20 @@ plans/
 
 **Rules:**
 
-- Always read the PRD from `plans/<name>/prd.md` before generating tasks
-- Always write the task list to `plans/<name>/tasks.md` in the same directory as the PRD
+- Read `plans/<name>/design.md` first when it exists; otherwise fall back to `plans/<name>/prd.md`. Always read the PRD too — it is the authority for requirements and traceability.
+- Always write the task list to `plans/<name>/tasks.md` in the same directory
 - If `tasks.md` already exists, read it first -- this may be an update, not a fresh generation
-- Never modify the PRD. The task list is a derivative artifact.
+- Never modify the design or the PRD. The task list is a derivative artifact.
 
 ## Workflow
 
-### Phase 1: PRD Analysis
+### Phase 1: Design and PRD Analysis
 
-Read and deeply analyze the PRD. Extract:
+If `plans/<name>/design.md` exists, read it first — it is the primary input. The design turns the PRD's *what/why* into *how*: component boundaries, API/data contracts, sequence flows, and the key decisions (with the ADRs under `plans/<name>/adr/`) that the tasks must implement. Decompose along the component and contract boundaries the design defines, and add a task for each architecture decision that needs building.
+
+Always read the PRD as well, whether or not a design exists — it is the authority for requirements, acceptance criteria, and traceability. When there is no design (the design step is optional for simple features), the PRD is the sole input and decomposition proceeds straight from it.
+
+Read and deeply analyze the design and PRD. Extract:
 
 1. **Scope boundaries** -- Goals, non-goals, and explicit constraints
 2. **Requirements inventory** -- Every functional and non-functional requirement
@@ -53,7 +66,7 @@ Read and deeply analyze the PRD. Extract:
 7. **Risks** -- Technical and operational risks that may require dedicated tasks
 8. **Open questions** -- Unresolved items that block or influence tasks
 
-If the PRD is missing critical sections or is too vague to decompose, stop and tell the user. Do not fabricate tasks from ambiguous requirements. Ask the user to update the PRD first using the `create-a-prd` skill.
+If the PRD is missing critical sections or is too vague to decompose, stop and tell the user. Do not fabricate tasks from ambiguous requirements. Ask the user to update the PRD first using the `idea-to-prd` skill.
 
 **Critical sections required for decomposition** (task generation cannot proceed without these):
 
@@ -67,9 +80,9 @@ If the PRD has requirements but they lack `FR-N`/`NFR-N`/`US-N` labels, number t
 
 ### Phase 2: Codebase Context
 
-If a codebase exists, gather context to make tasks concrete. If the `create-a-prd` skill was used, much of this context may already be captured in the PRD's tech stack alignment section. Supplement as needed, focusing on implementation specifics.
+If a codebase exists, gather context to make tasks concrete. If the `idea-to-prd` skill was used, much of this context may already be captured in the PRD's tech stack alignment section. Supplement as needed, focusing on implementation specifics.
 
-For the full discovery checklist, see the create-a-prd skill's [codebase-discovery.md](../create-a-prd/references/codebase-discovery.md). For task decomposition, focus on:
+For the full discovery checklist, see the idea-to-prd skill's [codebase-discovery.md](../idea-to-prd/references/codebase-discovery.md). For task decomposition, focus on:
 
 - **Existing patterns** -- How similar features were built before (file locations, naming, module boundaries)
 - **Test patterns** -- Where tests live, how they're structured, what utilities exist

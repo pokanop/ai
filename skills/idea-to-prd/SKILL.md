@@ -1,13 +1,22 @@
 ---
-name: create-a-prd
-description: Create detailed, development-ready Product Requirements Documents (PRDs) for software projects. Use when the user asks to "write a PRD", "create requirements", "plan a feature", "document a project spec", "scope a feature", or needs to turn a product idea into a structured specification. Covers problem definition, solution design, user stories, alternatives analysis, implementation planning, testing strategy, and risk assessment. Includes codebase discovery to align PRDs with the project's existing tech stack and conventions.
+name: idea-to-prd
+description: Create detailed, development-ready Product Requirements Documents (PRDs) for software projects. Use when the user asks to turn an "idea to prd", "write a PRD", "create requirements", "plan a feature", "document a project spec", "scope a feature", or needs to turn a product idea into a structured specification. Covers problem definition, solution design, user stories, alternatives analysis, implementation planning, testing strategy, and risk assessment. Includes codebase discovery to align PRDs with the project's existing tech stack and conventions.
 license: MIT
 metadata:
   author: pokanop
   version: "1.0"
 ---
 
-# Create a PRD
+# Idea to PRD
+
+This skill is the first step in the build pipeline — it turns a raw product idea into a structured PRD:
+
+```
+idea-to-prd  →  prd-to-design  →  design-to-tasks  →  tasks-to-code
+  (what/why)      (architecture)     (task list)         (build)
+```
+
+`prd-to-design` is optional — skip it for simple features and hand the PRD straight to `design-to-tasks`.
 
 ## File Structure
 
@@ -115,7 +124,12 @@ Iterate until the user confirms the PRD is complete.
 
 ### Phase 4: Handoff
 
-Once the PRD is confirmed, inform the user that the companion skill **prd-to-tasks** can decompose it into an actionable, trackable task list. The task list will be generated at `plans/<name>/tasks.md` alongside the PRD. This step is optional but recommended before implementation begins.
+Once the PRD is confirmed, point the user to the next step in the pipeline:
+
+- For a non-trivial feature, **prd-to-design** turns the PRD into an architecture (`plans/<name>/design.md` plus ADRs) before tasks are cut.
+- For a simple feature, hand the PRD straight to **design-to-tasks**, which decomposes it into an actionable, trackable task list at `plans/<name>/tasks.md` (it reads `design.md` when present and otherwise falls back to the PRD).
+
+Either step is optional but recommended before implementation begins.
 
 ## Key Principles
 

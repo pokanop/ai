@@ -96,7 +96,7 @@ Lead with the summary, then the grouped findings:
 
 ## Optional: PRD-compatible output
 
-When the user wants remediation tracked, write the report as `plans/security-review-<date>/prd.md` in PRD format so it feeds **prd-to-tasks** — the same handoff `ui-design-audit` uses. Use the create-a-prd PRD schema (linked from the skill's References) and adapt it:
+When the user wants remediation tracked, write the report as `plans/security-review-<date>/prd.md` in PRD format so it feeds **design-to-tasks** — the same handoff `ui-design-audit` uses. Use the idea-to-prd PRD schema (linked from the skill's References) and adapt it:
 
 - **Executive Summary** — overall posture and headline findings.
 - **Goals / Non-Goals** — close the scoped gaps; list dimensions/areas explicitly not reviewed.

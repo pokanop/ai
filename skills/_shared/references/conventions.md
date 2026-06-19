@@ -116,8 +116,10 @@ All planning artifacts for one initiative live in a single dasherized folder und
 ```
 plans/
 ├── <active-feature>/         # Active work
-│   ├── prd.md                # create-a-prd — source of truth for intent
-│   ├── tasks.md              # prd-to-tasks — derived task list, updated by tasks-to-code
+│   ├── prd.md                # idea-to-prd — source of truth for intent
+│   ├── design.md             # prd-to-design — architecture (optional; non-trivial features)
+│   ├── adr/                  # prd-to-design — architecture decision records (NNNN-*.md)
+│   ├── tasks.md              # design-to-tasks — derived task list, updated by tasks-to-code
 │   ├── decisions.md          # tasks-to-code — implementation decision log
 │   ├── review.md             # code-review — optional, multi-round review tracking
 │   └── retro.md              # plan-retrospective — added at close-out
@@ -131,8 +133,10 @@ plans/
 
 - The folder name is lowercase, dasherized, and descriptive (`api-rate-limiting`, not
   `feature1`).
-- `prd.md` is never modified after tasks are generated — it is the historical record of
-  intent. The task list is a derivative artifact.
+- `prd.md` (and `design.md`, when present) is never modified after tasks are generated —
+  it is the historical record of intent and structure. The task list is a derivative artifact.
+- `design.md` and `adr/` are optional: `prd-to-design` adds them for non-trivial features,
+  and `design-to-tasks` falls back to `prd.md` when they are absent.
 - A UI design audit writes its findings as `plans/ui-audit-<date>/prd.md` so they feed
-  straight into `prd-to-tasks`.
+  straight into `design-to-tasks`.
 - Not every file exists for every plan; each skill creates the ones it owns.

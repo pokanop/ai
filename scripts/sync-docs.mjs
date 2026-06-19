@@ -928,7 +928,7 @@ function main() {
   // Skills index (with link rewriting)
   const skillsReadme = readFileSync(join(ROOT, 'skills', 'README.md'), 'utf-8');
   let skillsBody = skillsReadme;
-  // Rewrite skill directory links: (create-a-prd/) -> (/ai/skills/docs/create-a-prd/)
+  // Rewrite skill directory links: (idea-to-prd/) -> (/ai/skills/docs/idea-to-prd/)
   skillsBody = skillsBody.replace(/\]\(([a-z0-9-]+)\/\)/g, '](/ai/skills/docs/$1/)');
   // Rewrite shared-reference links (the index links to _shared/references/*). It
   // sits in no skill, so only the _shared forms apply; null currentSkill is fine

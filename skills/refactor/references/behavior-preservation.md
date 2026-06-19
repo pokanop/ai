@@ -42,7 +42,7 @@ Unacceptable:
 - Deleted or skipped tests.
 - A modified golden master / approval file.
 
-If a test *had* to change its expectations, stop: the change is a behavior change. Either it belongs in `debug-and-fix` (if the old behavior was a bug) or `create-a-prd` (if it is a new/changed feature). Surface it; do not absorb it into the refactor.
+If a test *had* to change its expectations, stop: the change is a behavior change. Either it belongs in `debug-and-fix` (if the old behavior was a bug) or `idea-to-prd` (if it is a new/changed feature). Surface it; do not absorb it into the refactor.
 
 ### Step 3: Confirm the Public Surface Is Identical
 

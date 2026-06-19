@@ -14,8 +14,8 @@ metadata:
 This skill provides the final gate before a plan's changes are deployed to production. It answers two questions: "Is the implementation complete?" and "Is it safe to ship?" Poor answers to either question create incidents. This skill exists to catch both.
 
 ```
-create-a-prd  →  prd-to-tasks  →  tasks-to-code  →  release-checklist
-                                                        (ship)
+idea-to-prd  →  prd-to-design  →  design-to-tasks  →  tasks-to-code  →  release-checklist
+                                                                            (ship)
 ```
 
 ## Inputs
@@ -49,7 +49,7 @@ Read `tasks.md` and assess whether the plan is ready to ship.
 
 Run every quality gate discovered for the project. All gates must pass for a release to proceed. See [references/checklist-schema.md](references/checklist-schema.md) for the gate verification format.
 
-**Detect the project's actual gate commands first** from `package.json` scripts, `Makefile`, CI configuration, `pyproject.toml`, `Cargo.toml`, `go.mod`, `build.gradle`, or `Package.swift`. Run all of them — the same additive principle from `create-a-prd` applies here. The commands below are examples to adapt, not defaults to copy.
+**Detect the project's actual gate commands first** from `package.json` scripts, `Makefile`, CI configuration, `pyproject.toml`, `Cargo.toml`, `go.mod`, `build.gradle`, or `Package.swift`. Run all of them — the same additive principle from `idea-to-prd` applies here. The commands below are examples to adapt, not defaults to copy.
 
 Common gates (adapt to the project's actual toolchain):
 

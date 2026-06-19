@@ -1,6 +1,6 @@
 ---
 name: ui-design-audit
-description: Audit a UI codebase for design system inconsistencies and produce a structured findings report. Use when the user asks to "audit the UI", "check for design inconsistencies", "find loading state issues", "review component consistency", "check the design system", or needs a systematic sweep of visual and interaction quality across the application. Produces a prioritized findings report and a PRD-compatible output that feeds directly into create-a-prd and prd-to-tasks.
+description: Audit a UI codebase for design system inconsistencies and produce a structured findings report. Use when the user asks to "audit the UI", "check for design inconsistencies", "find loading state issues", "review component consistency", "check the design system", or needs a systematic sweep of visual and interaction quality across the application. Produces a prioritized findings report and a PRD-compatible output that feeds directly into idea-to-prd and design-to-tasks.
 license: MIT
 metadata:
   author: pokanop
@@ -13,7 +13,7 @@ metadata:
 
 Design consistency degrades incrementally — one slightly-off spacing here, a non-standard loading state there. This skill performs a structured sweep of the UI codebase to surface these inconsistencies before they compound into a fragmented user experience.
 
-The output is a prioritized findings report. Because the report follows the same structure as a PRD, it feeds directly into **create-a-prd** (to formalize findings as requirements) and then **prd-to-tasks** (to generate remediation tasks).
+The output is a prioritized findings report. Because the report follows the same structure as a PRD, it feeds directly into **idea-to-prd** (to formalize findings as requirements) and then **design-to-tasks** (to generate remediation tasks).
 
 ## Scope
 
@@ -60,7 +60,7 @@ Group findings by dimension, then by severity within each dimension.
 
 ### Phase 3: Produce the Findings Report
 
-Write a structured findings report as `plans/<name>/prd.md` — using the PRD format so it can be immediately handed off to **prd-to-tasks** for remediation planning.
+Write a structured findings report as `plans/<name>/prd.md` — using the PRD format so it can be immediately handed off to **design-to-tasks** for remediation planning.
 
 **Report structure:**
 
@@ -69,7 +69,7 @@ plans/ui-audit-<date>/
 └── prd.md   ← findings formatted as a PRD-compatible requirements document
 ```
 
-Use the PRD schema from [../create-a-prd/references/prd-schema.md](../create-a-prd/references/prd-schema.md) as the output structure. Adapt it:
+Use the PRD schema from [../idea-to-prd/references/prd-schema.md](../idea-to-prd/references/prd-schema.md) as the output structure. Adapt it:
 
 - **Executive Summary**: what the audit found, overall health assessment
 - **Goals**: achieve design system compliance across the scoped dimensions
@@ -86,7 +86,7 @@ Present the findings summary to the user:
 2. Top 3-5 critical findings that should be fixed first
 3. Full findings list grouped by dimension
 
-Ask the user to confirm before writing the `prd.md`. Once confirmed, write it and offer to run **prd-to-tasks** to generate a remediation task list.
+Ask the user to confirm before writing the `prd.md`. Once confirmed, write it and offer to run **design-to-tasks** to generate a remediation task list.
 
 ## Key Principles
 
@@ -103,4 +103,4 @@ Ask the user to confirm before writing the `prd.md`. Once confirmed, write it an
 - [references/audit-checklist.md](references/audit-checklist.md) — Dimension-by-dimension audit criteria
 - [references/severity-guide.md](references/severity-guide.md) — How to classify and prioritize findings
 - [../_shared/references/conventions.md](../_shared/references/conventions.md) — Canonical severity↔priority scale and other shared conventions
-- [../create-a-prd/references/prd-schema.md](../create-a-prd/references/prd-schema.md) — PRD structure for the findings report output
+- [../idea-to-prd/references/prd-schema.md](../idea-to-prd/references/prd-schema.md) — PRD structure for the findings report output

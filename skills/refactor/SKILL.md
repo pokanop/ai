@@ -1,6 +1,6 @@
 ---
 name: refactor
-description: Safely restructure existing code without changing its behavior — characterization tests first, one small behavior-preserving step at a time, with every quality gate green throughout. Use when the user says "refactor this", "clean up this code", "reduce duplication", "extract a function/component", "simplify this", "untangle this module", "pay down tech debt", or wants to execute a deferred improvement from a decisions.md or retro.md "Future Opportunities" list. Scope-boxed and behavior-preserving, so tests stay green and observable behavior is unchanged. New behavior or bug fixes are out of scope — those route to create-a-prd or debug-and-fix.
+description: Safely restructure existing code without changing its behavior — characterization tests first, one small behavior-preserving step at a time, with every quality gate green throughout. Use when the user says "refactor this", "clean up this code", "reduce duplication", "extract a function/component", "simplify this", "untangle this module", "pay down tech debt", or wants to execute a deferred improvement from a decisions.md or retro.md "Future Opportunities" list. Scope-boxed and behavior-preserving, so tests stay green and observable behavior is unchanged. New behavior or bug fixes are out of scope — those route to idea-to-prd or debug-and-fix.
 license: MIT
 metadata:
   author: pokanop
@@ -28,7 +28,7 @@ Concretely, when a refactor is complete:
 3. **Observable behavior is identical.** Same inputs produce the same outputs, the same side effects, the same errors, the same public API. Only the internal structure changed.
 4. **Every quality gate stays green throughout.** Lint, typecheck, test, and build pass after *each* step, not just at the end.
 
-If any of these cannot hold, the change you are contemplating is not a pure refactor. Route it: new or changed behavior goes through [`create-a-prd`](../create-a-prd/), a bug fix goes through [`debug-and-fix`](../debug-and-fix/).
+If any of these cannot hold, the change you are contemplating is not a pure refactor. Route it: new or changed behavior goes through [`idea-to-prd`](../idea-to-prd/), a bug fix goes through [`debug-and-fix`](../debug-and-fix/).
 
 ## Inputs
 
@@ -54,7 +54,7 @@ Not every "Future Opportunity" or cleanup request is a refactor. Classify the wo
 | The change… | Is it a refactor? | Route to |
 |-------------|-------------------|----------|
 | Restructures code, observable behavior identical | ✅ Yes | This skill |
-| Adds, removes, or changes a feature or output | ❌ No | [`create-a-prd`](../create-a-prd/) → `prd-to-tasks` → `tasks-to-code` |
+| Adds, removes, or changes a feature or output | ❌ No | [`idea-to-prd`](../idea-to-prd/) → `prd-to-design` → `design-to-tasks` → `tasks-to-code` |
 | Fixes incorrect behavior | ❌ No | [`debug-and-fix`](../debug-and-fix/) |
 | Changes a public API / contract other code depends on | ⚠️ Not pure | Treat the contract change as a feature (PRD); the internal cleanup can follow as a refactor |
 | Improves performance with a measurable behavior-equivalent change | ⚠️ Careful | Refactor only if outputs are provably identical and you have a benchmark; otherwise treat as a feature with its own acceptance criteria |
@@ -71,7 +71,7 @@ Box the work before you start. An unbounded refactor is how a one-function clean
 2. **Read the source context** — if this came from a `decisions.md` / `retro.md` Future Opportunity, read the original entry and the decision around it.
 3. **Triage** (see the table above) — confirm this is behavior-preserving. If it is not, stop and route it.
 4. **Set the boundary** — list the files in scope and state explicitly what is out of scope. Improvements you notice outside the box are logged as new Future Opportunities, not done now. The no-gold-plating rule applies *recursively* — even to refactors.
-5. **Discover the patterns** — understand how this area of the code is structured and tested before changing it. See [../create-a-prd/references/codebase-discovery.md](../create-a-prd/references/codebase-discovery.md), focusing on test layout and the conventions the refactored code must keep matching.
+5. **Discover the patterns** — understand how this area of the code is structured and tested before changing it. See [../idea-to-prd/references/codebase-discovery.md](../idea-to-prd/references/codebase-discovery.md), focusing on test layout and the conventions the refactored code must keep matching.
 
 See [references/intake-and-scope.md](references/intake-and-scope.md) for how to consume Future Opportunities and keep a refactor scope-boxed.
 
@@ -147,4 +147,4 @@ If you noticed further improvements while working, list them as new **Future Opp
 - [references/refactoring-catalog.md](references/refactoring-catalog.md) — Named behavior-preserving transformations and their step-by-step mechanics
 - [references/behavior-preservation.md](references/behavior-preservation.md) — How to verify behavior is unchanged: quality gates, the "no test modified" rule, and equivalence techniques
 - [../tasks-to-code/references/implementation-guide.md](../tasks-to-code/references/implementation-guide.md) — Pattern-first implementation discipline and minimal footprint (shared reference)
-- [../create-a-prd/references/codebase-discovery.md](../create-a-prd/references/codebase-discovery.md) — Codebase and test-pattern discovery (shared reference)
+- [../idea-to-prd/references/codebase-discovery.md](../idea-to-prd/references/codebase-discovery.md) — Codebase and test-pattern discovery (shared reference)

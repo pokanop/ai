@@ -4,7 +4,7 @@
 # Parses a plans/<name>/tasks.md file and emits the status totals, the
 # effective completion rate (excluding intentionally skipped tasks), and a
 # per-phase breakdown. Replaces hand-counting checkbox markers in the
-# plan-retrospective, release-checklist, and prd-to-tasks skills: the skill
+# plan-retrospective, release-checklist, and design-to-tasks skills: the skill
 # runs this and interprets the numbers instead of computing them by eye.
 #
 # Counting follows the conventions in ../references/conventions.md:

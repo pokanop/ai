@@ -120,10 +120,11 @@ Agent Skills are folders containing instructions, scripts, and resources that ag
 | Skill | Description |
 |-------|-------------|
 | [`code-review`](skills/code-review/) | Structured code review process with actionable feedback |
-| [`create-a-prd`](skills/create-a-prd/) | Create a Product Requirements Document from a feature idea |
 | [`debug-and-fix`](skills/debug-and-fix/) | Systematic debugging and root-cause analysis |
+| [`design-to-tasks`](skills/design-to-tasks/) | Break a design (or PRD) into actionable engineering tasks |
+| [`idea-to-prd`](skills/idea-to-prd/) | Create a Product Requirements Document from a feature idea |
 | [`plan-retrospective`](skills/plan-retrospective/) | Reflect on completed work and capture learnings |
-| [`prd-to-tasks`](skills/prd-to-tasks/) | Break a PRD into actionable engineering tasks |
+| [`prd-to-design`](skills/prd-to-design/) | Turn a PRD into a technical design and ADRs |
 | [`release-checklist`](skills/release-checklist/) | Pre-release verification and deployment checklist |
 | [`tasks-to-code`](skills/tasks-to-code/) | Implement engineering tasks from a task list |
 | [`ui-design-audit`](skills/ui-design-audit/) | Audit UI components for design consistency |
@@ -214,10 +215,11 @@ ai/
 │   └── text/              # Text & content prompts
 ├── skills/                # Agent Skills (agentskills.io format)
 │   ├── code-review/
-│   ├── create-a-prd/
 │   ├── debug-and-fix/
+│   ├── design-to-tasks/
+│   ├── idea-to-prd/
 │   ├── plan-retrospective/
-│   ├── prd-to-tasks/
+│   ├── prd-to-design/
 │   ├── release-checklist/
 │   ├── tasks-to-code/
 │   └── ui-design-audit/

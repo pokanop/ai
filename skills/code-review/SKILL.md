@@ -43,7 +43,7 @@ Before reading any code, understand *why* the change exists.
 
 ### Phase 2: Codebase Discovery
 
-Run targeted discovery to understand the project's conventions in the areas the change touches. See [../create-a-prd/references/codebase-discovery.md](../create-a-prd/references/codebase-discovery.md) for the full checklist. Focus on:
+Run targeted discovery to understand the project's conventions in the areas the change touches. See [../idea-to-prd/references/codebase-discovery.md](../idea-to-prd/references/codebase-discovery.md) for the full checklist. Focus on:
 
 - **Patterns in the changed area** — How does the surrounding code handle similar concerns?
 - **Test conventions** — Where do tests live? What testing patterns are expected?
@@ -107,4 +107,4 @@ When the user asks to "re-review" or "check the updates":
 - [references/review-checklist.md](references/review-checklist.md) — Dimension-by-dimension review criteria
 - [references/feedback-format.md](references/feedback-format.md) — Finding severity, presentation format, and review.md schema
 - [../_shared/references/conventions.md](../_shared/references/conventions.md) — Canonical severity↔priority scale and other shared conventions
-- [../create-a-prd/references/codebase-discovery.md](../create-a-prd/references/codebase-discovery.md) — Codebase discovery checklist (shared reference)
+- [../idea-to-prd/references/codebase-discovery.md](../idea-to-prd/references/codebase-discovery.md) — Codebase discovery checklist (shared reference)

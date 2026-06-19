@@ -8,8 +8,9 @@ A collection of structured, project-aware agent skills for software development 
 
 | Skill | Purpose | Use When |
 |-------|---------|-----------|
-| [`create-a-prd`](create-a-prd/) | Write a Product Requirements Document | Starting a new feature or initiative |
-| [`prd-to-tasks`](prd-to-tasks/) | Break a PRD into an actionable task list | Planning implementation from a completed PRD |
+| [`idea-to-prd`](idea-to-prd/) | Write a Product Requirements Document | Starting a new feature or initiative |
+| [`prd-to-design`](prd-to-design/) | Turn a PRD into a technical design + ADRs | Architecting a non-trivial feature before tasks |
+| [`design-to-tasks`](design-to-tasks/) | Break a design (or PRD) into an actionable task list | Planning implementation from a design or PRD |
 | [`tasks-to-code`](tasks-to-code/) | Implement tasks one at a time | Executing an approved task list |
 | [`code-review`](code-review/) | Structured review of code changes | Reviewing a PR, diff, or set of changed files |
 | [`debug-and-fix`](debug-and-fix/) | Diagnose bugs and add regression tests | Something is broken and needs root-cause analysis |
@@ -19,48 +20,54 @@ A collection of structured, project-aware agent skills for software development 
 | [`release-checklist`](release-checklist/) | Go/no-go assessment before shipping | Preparing to deploy a completed plan |
 | [`plan-retrospective`](plan-retrospective/) | Close out a plan with metrics and lessons | Wrapping up a completed feature |
 
+> **Renamed (June 2026):** `create-a-prd` is now [`idea-to-prd`](idea-to-prd/) and `prd-to-tasks` is now [`design-to-tasks`](design-to-tasks/), so the build-pipeline skills read `input-to-output` and the new [`prd-to-design`](prd-to-design/) step slots in between. Existing installs of the old slugs keep working; new installs and links use the new names.
+
 ---
 
 ## Recommended Order of Operations
 
 These skills are designed to chain together into a complete software development lifecycle. There are two primary workflows:
 
-### Planning Trilogy (Feature Development)
+### Build Pipeline (Feature Development)
+
+The skill names encode the pipeline: each `X-to-Y` transform names its input and output, so the run order is self-evident.
 
 ```
-create-a-prd  →  prd-to-tasks  →  tasks-to-code
-  (what)           (how)            (build)
+idea-to-prd  →  prd-to-design  →  design-to-tasks  →  tasks-to-code
+  (what/why)      (architecture)     (task list)         (build)
 ```
 
-The planning trilogy covers a feature from idea to shipped code:
+The build pipeline covers a feature from idea to shipped code:
 
-1. **`create-a-prd`** — Turns a product idea into a structured PRD at `plans/<name>/prd.md`. Includes codebase discovery, user story writing, requirement labeling (`FR-N`, `US-N`, `NFR-N`, `QG-N`), phased implementation planning, and testing strategy.
+1. **`idea-to-prd`** — Turns a product idea into a structured PRD at `plans/<name>/prd.md`. Includes codebase discovery, user story writing, requirement labeling (`FR-N`, `US-N`, `NFR-N`, `QG-N`), phased implementation planning, and testing strategy.
 
-2. **`prd-to-tasks`** — Reads the PRD and generates a comprehensive, traceable task list at `plans/<name>/tasks.md`. Every task traces back to a specific PRD requirement. Tasks are sized (S/M/L/XL), prioritized (P0/P1/P2), and have explicit acceptance criteria.
+2. **`prd-to-design`** *(optional)* — Turns the PRD into a technical design at `plans/<name>/design.md` plus ADRs under `plans/<name>/adr/`: component boundaries, API/data contracts, sequence flows, and key decisions with rationale. Warranted for non-trivial features; **skip it for simple ones** and go straight to `design-to-tasks`.
 
-3. **`tasks-to-code`** — Implements tasks one at a time, following the project's existing patterns. Updates `tasks.md` with progress markers and records implementation decisions in `plans/<name>/decisions.md`. Waits for user confirmation between tasks.
+3. **`design-to-tasks`** — Reads the design (or the PRD when no design exists) and generates a comprehensive, traceable task list at `plans/<name>/tasks.md`. Every task traces back to a specific PRD requirement. Tasks are sized (S/M/L/XL), prioritized (P0/P1/P2), and have explicit acceptance criteria.
 
-### After the Trilogy
+4. **`tasks-to-code`** — Implements tasks one at a time, following the project's existing patterns and the design when present. Updates `tasks.md` with progress markers and records implementation decisions in `plans/<name>/decisions.md`. Waits for user confirmation between tasks.
+
+### After the Pipeline
 
 ```
 tasks-to-code  →  release-checklist  →  plan-retrospective
    (build)            (ship)               (close)
 ```
 
-4. **`release-checklist`** — Once implementation is complete, runs all quality gates, verifies P0 task completion, checks PRD success criteria, produces a deployment checklist, and generates a `CHANGELOG.md` entry. Issues a Go/No-Go verdict.
+5. **`release-checklist`** — Once implementation is complete, runs all quality gates, verifies P0 task completion, checks PRD success criteria, produces a deployment checklist, and generates a `CHANGELOG.md` entry. Issues a Go/No-Go verdict.
 
-5. **`plan-retrospective`** — Formally closes the plan. Computes completion metrics and scope drift, captures lessons learned, produces `plans/<name>/retro.md`, and archives the entire plan folder to `plans/archive/<name>/`.
+6. **`plan-retrospective`** — Formally closes the plan. Computes completion metrics and scope drift, captures lessons learned, produces `plans/<name>/retro.md`, and archives the entire plan folder to `plans/archive/<name>/`.
 
 ### Design-Driven Workflow
 
-For UI-focused work, `ui-design-audit` plugs in before the planning trilogy:
+For UI-focused work, `ui-design-audit` plugs in before the build pipeline:
 
 ```
-ui-design-audit  →  create-a-prd  →  prd-to-tasks  →  tasks-to-code
-   (findings)        (requirements)    (task list)       (build)
+ui-design-audit  →  idea-to-prd  →  design-to-tasks  →  tasks-to-code
+   (findings)        (requirements)    (task list)         (build)
 ```
 
-`ui-design-audit` outputs its findings directly in PRD format at `plans/ui-audit-<date>/prd.md`, making it immediately consumable by `prd-to-tasks`.
+`ui-design-audit` outputs its findings directly in PRD format at `plans/ui-audit-<date>/prd.md`, making it immediately consumable by `design-to-tasks` (which falls back to the PRD when there is no design).
 
 ### Standalone Skills
 
@@ -69,15 +76,15 @@ These skills work independently and don't require a plan:
 - **`code-review`** — Use any time you need a structured review of a diff, branch, or changed file set. Optionally reads `plans/<name>/tasks.md` to validate acceptance criteria if the change comes from a task.
 - **`debug-and-fix`** — Use when something is broken. Works entirely from a bug report (symptom, steps to reproduce, expected vs. actual). Has no plan dependency.
 - **`refactor`** — Use when code needs restructuring without any behavior change. Closes the loop on the suite's no-gold-plating discipline: it executes the structural improvements that `tasks-to-code`, `code-review`, and `plan-retrospective` defer into `decisions.md` / `retro.md` "Future Opportunities". Has no plan dependency.
-- **`security-review`** — Use for a dedicated, whole-system security pass (a lightweight threat model). Standalone, but can emit its findings as a PRD that feeds `prd-to-tasks`, the same way `ui-design-audit` does. Complements `code-review`'s per-change security check rather than repeating it.
+- **`security-review`** — Use for a dedicated, whole-system security pass (a lightweight threat model). Standalone, but can emit its findings as a PRD that feeds `design-to-tasks`, the same way `ui-design-audit` does. Complements `code-review`'s per-change security check rather than repeating it.
 
 ---
 
 ## Skill Details
 
-### `create-a-prd`
+### `idea-to-prd`
 
-**Trigger phrases:** "write a PRD", "create requirements", "plan a feature", "scope a feature"
+**Trigger phrases:** "idea to prd", "write a PRD", "create requirements", "plan a feature", "scope a feature"
 
 **What it produces:** `plans/<name>/prd.md` — a 10-section PRD with labeled requirements, user stories, phased implementation plan, testing strategy, and risk assessment.
 
@@ -94,15 +101,37 @@ These skills work independently and don't require a plan:
 
 ---
 
-### `prd-to-tasks`
+### `prd-to-design`
 
-**Trigger phrases:** "break down a PRD", "generate a task list", "create tasks from requirements"
+**Trigger phrases:** "prd to design", "design the architecture", "write an ADR", "technical design", "system design"
+
+**What it produces:** `plans/<name>/design.md` — component boundaries, API/data contracts, sequence flows, and a key-decisions index — plus one `plans/<name>/adr/NNNN-*.md` per significant decision.
+
+**Optional step.** Use it for non-trivial features where the architecture isn't obvious or is hard to reverse; skip it for simple ones and hand the PRD straight to `design-to-tasks`.
+
+**Key behaviors:**
+- Designs to the contract level (interfaces, boundaries, data ownership), not line-level code
+- Captures each significant or hard-to-reverse decision as an ADR with its rejected alternatives
+- Traces every component back to an `FR-N`; addresses every `NFR-N` with a structural choice
+- Never modifies the PRD — surfaces requirement gaps back to `idea-to-prd` instead
+
+**References inside the skill:**
+- `references/design-schema.md` — full design-document structure
+- `references/adr-template.md` — ADR template, numbering, and status lifecycle
+- `references/tradeoff-rubric.md` — evaluating alternatives and when a choice warrants an ADR
+
+---
+
+### `design-to-tasks`
+
+**Trigger phrases:** "design to tasks", "create tasks from a design", "break down a PRD", "generate a task list", "create tasks from requirements"
 
 **What it produces:** `plans/<name>/tasks.md` — a hierarchical task list with dependency mapping, effort estimates, and progress tracking.
 
 **Key behaviors:**
+- Reads `design.md` as the primary input when present and **falls back to `prd.md`** when no design exists, so simple features still go PRD→tasks
 - Will not generate tasks from a PRD missing Goals, labeled requirements, acceptance criteria, implementation phases, or testing strategy — it asks you to fix the PRD first
-- Traces every task back to a specific `FR-N`/`US-N`/`NFR-N` requirement
+- Traces every task back to a specific `FR-N`/`US-N`/`NFR-N` requirement; the PRD stays authoritative for traceability
 - Validates coverage before presenting: every PRD requirement must appear in at least one task
 - Task count heuristic: 3–8 tasks per PRD phase, 1–2 tasks per functional requirement
 
@@ -185,7 +214,7 @@ These skills work independently and don't require a plan:
 5. Report the structural changes
 
 **Key behaviors:**
-- Behavior-preserving only — new behavior routes to `create-a-prd`, bug fixes route to `debug-and-fix`
+- Behavior-preserving only — new behavior routes to `idea-to-prd`, bug fixes route to `debug-and-fix`
 - Characterization-tests-first: never restructures behavior that isn't under test
 - Scope-boxed recursively — improvements noticed mid-refactor become new Future Opportunities, not scope creep
 
@@ -201,7 +230,7 @@ These skills work independently and don't require a plan:
 
 **Trigger phrases:** "audit the UI", "check for design inconsistencies", "find loading state issues", "review component consistency"
 
-**What it produces:** `plans/ui-audit-<date>/prd.md` — findings in PRD format, ready for `prd-to-tasks`
+**What it produces:** `plans/ui-audit-<date>/prd.md` — findings in PRD format, ready for `design-to-tasks`
 
 **Seven audit dimensions** (work through in order, or scope to specific dimensions):
 1. **Loading States** — spinners, skeletons, placeholders, empty states
@@ -223,7 +252,7 @@ These skills work independently and don't require a plan:
 
 **Trigger phrases:** "do a security review", "threat model this", "run a security audit", "check for vulnerabilities", "review the auth flow", "is this safe to launch"
 
-**What it produces:** A prioritized, severity-tiered findings report; optionally `plans/security-review-<date>/prd.md` in PRD format, ready for `prd-to-tasks`
+**What it produces:** A prioritized, severity-tiered findings report; optionally `plans/security-review-<date>/prd.md` in PRD format, ready for `design-to-tasks`
 
 **Approach** — a lightweight threat model, not a pen test:
 1. **Asset & trust-boundary inventory** — what is worth protecting, where untrusted input enters, and where the boundaries are
@@ -282,8 +311,8 @@ Several skills share reference documents to avoid duplication:
 | Reference | Shared By |
 |-----------|-----------|
 | `_shared/references/conventions.md` | **All skills** — status markers, priority, severity↔priority, effort sizes, labels, and the `plans/` layout |
-| `create-a-prd/references/codebase-discovery.md` | `create-a-prd`, `prd-to-tasks`, `tasks-to-code`, `code-review`, `debug-and-fix`, `refactor`, `security-review` |
-| `create-a-prd/references/prd-schema.md` | `create-a-prd`, `ui-design-audit`, `security-review` |
+| `idea-to-prd/references/codebase-discovery.md` | `idea-to-prd`, `prd-to-design`, `design-to-tasks`, `tasks-to-code`, `code-review`, `debug-and-fix`, `refactor`, `security-review` |
+| `idea-to-prd/references/prd-schema.md` | `idea-to-prd`, `ui-design-audit`, `security-review` |
 | `code-review/references/review-checklist.md` | `code-review`, `security-review` (defers line-level diff checks to it) |
 | `tasks-to-code/references/implementation-guide.md` | `tasks-to-code`, `debug-and-fix`, `refactor` |
 

@@ -1,6 +1,6 @@
 ---
 name: security-review
-description: Perform a lightweight threat-model security review of an application and produce a prioritized, severity-tiered findings report. Use when the user asks to "do a security review", "threat model this", "run a security audit", "check for vulnerabilities", "review the auth flow", or "is this safe to launch", or wants a dedicated security pass on a service that handles authentication, payments, or sensitive data. Inventories assets and trust boundaries, then sweeps an OWASP-style checklist (authorization, input validation, secrets and transport, dependency CVEs, security-event logging, rate limiting). Complements code-review's per-change security check with a standalone whole-system pass, and can emit a PRD-compatible report that feeds create-a-prd and prd-to-tasks.
+description: Perform a lightweight threat-model security review of an application and produce a prioritized, severity-tiered findings report. Use when the user asks to "do a security review", "threat model this", "run a security audit", "check for vulnerabilities", "review the auth flow", or "is this safe to launch", or wants a dedicated security pass on a service that handles authentication, payments, or sensitive data. Inventories assets and trust boundaries, then sweeps an OWASP-style checklist (authorization, input validation, secrets and transport, dependency CVEs, security-event logging, rate limiting). Complements code-review's per-change security check with a standalone whole-system pass, and can emit a PRD-compatible report that feeds idea-to-prd and design-to-tasks.
 license: MIT
 metadata:
   author: pokanop
@@ -13,7 +13,7 @@ metadata:
 
 `code-review` checks the security of a *single change* as one dimension among seven. That catches the bug in the diff in front of you — but it never steps back to ask what the whole system is protecting, who the attacker is, or where the trust boundaries are. For a client app with authentication, payments, or sensitive user data, that gap matters.
 
-This skill performs a **lightweight threat model**: it inventories what is worth protecting and where the boundaries are, then sweeps an OWASP-style checklist across the system's security posture — not line by line, but layer by layer. The output is a prioritized, severity-tiered findings report. Because it can be written in PRD format, the findings feed directly into **create-a-prd** and **prd-to-tasks** for remediation, the same way **ui-design-audit** does for design debt.
+This skill performs a **lightweight threat model**: it inventories what is worth protecting and where the boundaries are, then sweeps an OWASP-style checklist across the system's security posture — not line by line, but layer by layer. The output is a prioritized, severity-tiered findings report. Because it can be written in PRD format, the findings feed directly into **idea-to-prd** and **design-to-tasks** for remediation, the same way **ui-design-audit** does for design debt.
 
 It is deliberately *lightweight*: an asset/boundary inventory and a structured checklist, not a formal STRIDE/DREAD exercise or a penetration test. It surfaces the security work that should become tasks — it does not exploit anything.
 
@@ -54,7 +54,7 @@ Before looking for vulnerabilities, establish *what an attacker would want* and 
 
 ### Phase 2: Codebase and Stack Discovery
 
-Security checks are stack-specific. A Swift/iOS app, a Kotlin/Android app, and a Node/Go/Rust backend each have different secret-storage, transport, and dependency-audit mechanics. Run targeted discovery (see [../create-a-prd/references/codebase-discovery.md](../create-a-prd/references/codebase-discovery.md)) to learn:
+Security checks are stack-specific. A Swift/iOS app, a Kotlin/Android app, and a Node/Go/Rust backend each have different secret-storage, transport, and dependency-audit mechanics. Run targeted discovery (see [../idea-to-prd/references/codebase-discovery.md](../idea-to-prd/references/codebase-discovery.md)) to learn:
 
 - The stack and framework (sets what "secure transport" and "secret storage" mean — Keychain, Keystore, env/secrets manager, KMS).
 - The auth mechanism (session cookies, JWT, OAuth, platform sign-in) and where it is enforced.
@@ -82,7 +82,7 @@ Every finding carries a severity from the single shared [severity scale](../_sha
 
 Structure all findings using [references/findings-format.md](references/findings-format.md): group by dimension, then by severity. Each finding records the affected asset/boundary, the weakness and the path that reaches it, the severity, and a concrete remediation. **Redact** any secret or exploit detail discovered along the way — describe the gap, never paste the credential.
 
-Lead with a summary: overall posture, counts by severity, and the top findings to fix first. Then, if the user wants remediation tracked, offer to write the report as `plans/security-review-<date>/prd.md` in PRD format (using [../create-a-prd/references/prd-schema.md](../create-a-prd/references/prd-schema.md)) so it hands off to **prd-to-tasks**. The mapping from finding to requirement is defined in [references/findings-format.md](references/findings-format.md).
+Lead with a summary: overall posture, counts by severity, and the top findings to fix first. Then, if the user wants remediation tracked, offer to write the report as `plans/security-review-<date>/prd.md` in PRD format (using [../idea-to-prd/references/prd-schema.md](../idea-to-prd/references/prd-schema.md)) so it hands off to **design-to-tasks**. The mapping from finding to requirement is defined in [references/findings-format.md](references/findings-format.md).
 
 ## Key Principles
 
@@ -104,5 +104,5 @@ Lead with a summary: overall posture, counts by severity, and the top findings t
 - [references/findings-format.md](references/findings-format.md) — Security severity calibration, finding format, and the PRD-compatible report schema
 - [../_shared/references/conventions.md](../_shared/references/conventions.md) — Canonical severity↔priority scale and other shared conventions
 - [../code-review/references/review-checklist.md](../code-review/references/review-checklist.md) — Per-change security checklist this skill defers to for line-level diff issues
-- [../create-a-prd/references/prd-schema.md](../create-a-prd/references/prd-schema.md) — PRD structure for the findings report output
-- [../create-a-prd/references/codebase-discovery.md](../create-a-prd/references/codebase-discovery.md) — Codebase discovery checklist (shared reference)
+- [../idea-to-prd/references/prd-schema.md](../idea-to-prd/references/prd-schema.md) — PRD structure for the findings report output
+- [../idea-to-prd/references/codebase-discovery.md](../idea-to-prd/references/codebase-discovery.md) — Codebase discovery checklist (shared reference)

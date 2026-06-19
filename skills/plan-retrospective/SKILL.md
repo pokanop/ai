@@ -14,8 +14,8 @@ metadata:
 This skill is the closing step of the planning lifecycle:
 
 ```
-create-a-prd  →  prd-to-tasks  →  tasks-to-code  →  plan-retrospective
-  (what)           (how)           (build)             (close)
+idea-to-prd  →  prd-to-design  →  design-to-tasks  →  tasks-to-code  →  plan-retrospective
+  (what/why)      (architecture)     (task list)         (build)             (close)
 ```
 
 It formally closes a plan by computing what was actually built versus what was planned, capturing decisions and lessons, and archiving the plan folder with a complete record. Without this step, institutional knowledge from the implementation is lost.
