@@ -209,6 +209,23 @@ After generating all tasks, validate:
 5. **Size check**: No tasks estimated as XL remain; all are broken down to L or smaller
 6. **Test check**: Every feature task has corresponding test coverage (either as a sub-criterion or a dedicated test task)
 
+### Automating the mechanical checks
+
+The bundled `plan-validate.py` helper (in `_shared/scripts/`) performs the
+machine-checkable parts of this step against `tasks.md`:
+
+```bash
+python3 _shared/scripts/plan-validate.py plans/<name>/tasks.md --prd plans/<name>/prd.md
+```
+
+It reports circular, backward, self-, and unknown dependencies (the **dependency
+check**), requirement labels that no task references and tasks with no PRD
+traceability (the **coverage** and **scope** checks), plus the one-in-progress
+rule and missing blocked/skipped notes. Run it and act on the findings, then
+judge by hand the checks it cannot — phase deployability, effort sizing, and
+whether test coverage is adequate. The input format and full list of checks are
+in `_shared/scripts/README.md`.
+
 ## Common Pitfalls
 
 | Pitfall | Symptom | Fix |

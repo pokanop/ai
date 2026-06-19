@@ -13,6 +13,14 @@ The canonical task status markers and their meanings — `[ ]`, `[~]`, `[x]`, `[
 3. **Skipped requires a reason** -- Always add a note explaining why the task was skipped and referencing any PRD change or decision.
 4. **Completed means verified** -- Do not mark `[x]` until acceptance criteria sub-checkboxes are all checked.
 
+Rules 1-3 are machine-checkable. The bundled `plan-validate.py` helper (in
+`_shared/scripts/`) flags `multiple-in-progress`, `blocked-missing-note`, and
+`skipped-missing-note` so these are caught without a manual read:
+
+```bash
+python3 _shared/scripts/plan-validate.py plans/<name>/tasks.md
+```
+
 ### Acceptance Criteria Sub-Checkboxes
 
 Each task's acceptance criteria also use `[ ]` / `[x]`:
@@ -88,6 +96,18 @@ Count tasks by their top-level checkbox marker:
 - Total = sum of all above
 
 Do **not** count acceptance criteria sub-checkboxes in the statistics. Only top-level task checkboxes.
+
+Rather than count by hand, run the bundled `plan-metrics.py` helper (in
+`_shared/scripts/`), which applies exactly these rules and returns the totals,
+the completion rate, and the per-phase breakdown as JSON:
+
+```bash
+python3 _shared/scripts/plan-metrics.py plans/<name>/tasks.md
+```
+
+Use its `totals` to fill the statistics table and its `phases` for the phase
+progress and the progress summary below. See `_shared/scripts/README.md` for the
+output schema.
 
 ## Phase Progress
 

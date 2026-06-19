@@ -14,6 +14,21 @@ Present the release checklist as a series of checkboxes grouped by stage. The do
 
 These must all pass before deployment proceeds. Any failure here is a hard block.
 
+Gather the task state with the bundled helper scripts (in `_shared/scripts/`)
+instead of hand-counting:
+
+```bash
+python3 _shared/scripts/plan-metrics.py  plans/<name>/tasks.md
+python3 _shared/scripts/plan-validate.py plans/<name>/tasks.md
+```
+
+`plan-metrics.py` returns the status `totals` (how many tasks are `[~]`, `[!]`,
+`[-]`, etc.) and the per-phase completion. `plan-validate.py` flags more than one
+`[~]` task and any `[-]` skipped task missing its deferral note. Read these, then
+confirm the gates below — the P0 gate is priority-specific, so also check that
+every `[P0]` task is `[x]` directly. The output schema is in
+`_shared/scripts/README.md`.
+
 ```markdown
 ## Stage 1: Pre-Release Gates
 
