@@ -58,7 +58,7 @@ Evaluate the change across the dimensions in [references/review-checklist.md](re
 
 1. **Correctness** — Does the code do what it claims? Are edge cases handled? Are there off-by-one errors, null dereferences, race conditions?
 2. **Requirements alignment** — If from a task: does it satisfy every acceptance criterion? If from a PRD: does it implement all stated requirements and nothing outside them?
-3. **Security** — Are inputs validated? Are secrets handled correctly? Are authorization checks in place? See [references/review-checklist.md](references/review-checklist.md) for the security checklist.
+3. **Security** — Are inputs validated? Are secrets handled correctly? Are authorization checks in place? See [references/review-checklist.md](references/review-checklist.md) for the security checklist. This covers the security of *this change*; for a dedicated whole-system threat model — asset/boundary inventory, object-level authz, dependency CVEs, security logging, rate limiting — use the **security-review** skill.
 4. **Test coverage** — Are there tests? Do they cover the happy path, error cases, and edge cases? Are they testing behavior or implementation details?
 5. **Consistency** — Does this follow the project's error handling, naming, file organization, and import patterns?
 6. **Performance** — Are there obvious N+1 queries, missing indexes, unbounded loops, or synchronous operations that should be async?

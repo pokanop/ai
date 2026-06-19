@@ -14,6 +14,7 @@ A collection of structured, project-aware agent skills for software development 
 | [`code-review`](code-review/) | Structured review of code changes | Reviewing a PR, diff, or set of changed files |
 | [`debug-and-fix`](debug-and-fix/) | Diagnose bugs and add regression tests | Something is broken and needs root-cause analysis |
 | [`ui-design-audit`](ui-design-audit/) | Sweep UI for design system inconsistencies | Auditing components before a design cleanup |
+| [`security-review`](security-review/) | Lightweight threat model + OWASP-style security sweep | Before launching auth/payments; a dedicated security pass |
 | [`release-checklist`](release-checklist/) | Go/no-go assessment before shipping | Preparing to deploy a completed plan |
 | [`plan-retrospective`](plan-retrospective/) | Close out a plan with metrics and lessons | Wrapping up a completed feature |
 
@@ -66,6 +67,7 @@ These skills work independently and don't require a plan:
 
 - **`code-review`** — Use any time you need a structured review of a diff, branch, or changed file set. Optionally reads `plans/<name>/tasks.md` to validate acceptance criteria if the change comes from a task.
 - **`debug-and-fix`** — Use when something is broken. Works entirely from a bug report (symptom, steps to reproduce, expected vs. actual). Has no plan dependency.
+- **`security-review`** — Use for a dedicated, whole-system security pass (a lightweight threat model). Standalone, but can emit its findings as a PRD that feeds `prd-to-tasks`, the same way `ui-design-audit` does. Complements `code-review`'s per-change security check rather than repeating it.
 
 ---
 
@@ -185,6 +187,24 @@ These skills work independently and don't require a plan:
 
 ---
 
+### `security-review`
+
+**Trigger phrases:** "do a security review", "threat model this", "run a security audit", "check for vulnerabilities", "review the auth flow", "is this safe to launch"
+
+**What it produces:** A prioritized, severity-tiered findings report; optionally `plans/security-review-<date>/prd.md` in PRD format, ready for `prd-to-tasks`
+
+**Approach** — a lightweight threat model, not a pen test:
+1. **Asset & trust-boundary inventory** — what is worth protecting, where untrusted input enters, and where the boundaries are
+2. **Six-dimension sweep** — Authentication & Authorization, Input Validation & Injection, Secrets & Transport, Dependencies & Known CVEs, Security-Event Logging, Rate Limiting & Abuse Resistance
+
+**Key behaviors:**
+- **Complements `code-review` instead of duplicating it** — code-review checks the security of one diff; security-review assesses the whole system's posture (missing layers, unmodeled boundaries) and defers line-level diff issues back to code-review
+- Severity is calibrated by exploitability × impact on the shared [severity↔priority scale](_shared/references/conventions.md#severity-and-priority): 🔴 Critical → P0, 🟡 Major → P1, ⚪ Minor → P2
+- The security baseline (OWASP / the stack's guidance) holds even when a weakness is applied consistently — like accessibility in `ui-design-audit`
+- Redacts secrets and never runs live exploits — it surfaces work, it does not attack the system
+
+---
+
 ### `release-checklist`
 
 **Trigger phrases:** "prepare a release", "we're ready to ship", "generate a changelog", "check if we're ready to deploy"
@@ -230,8 +250,9 @@ Several skills share reference documents to avoid duplication:
 | Reference | Shared By |
 |-----------|-----------|
 | `_shared/references/conventions.md` | **All skills** — status markers, priority, severity↔priority, effort sizes, labels, and the `plans/` layout |
-| `create-a-prd/references/codebase-discovery.md` | `create-a-prd`, `prd-to-tasks`, `tasks-to-code`, `code-review`, `debug-and-fix` |
-| `create-a-prd/references/prd-schema.md` | `create-a-prd`, `ui-design-audit` |
+| `create-a-prd/references/codebase-discovery.md` | `create-a-prd`, `prd-to-tasks`, `tasks-to-code`, `code-review`, `debug-and-fix`, `security-review` |
+| `create-a-prd/references/prd-schema.md` | `create-a-prd`, `ui-design-audit`, `security-review` |
+| `code-review/references/review-checklist.md` | `code-review`, `security-review` (defers line-level diff checks to it) |
 | `tasks-to-code/references/implementation-guide.md` | `tasks-to-code`, `debug-and-fix` |
 
 ---
