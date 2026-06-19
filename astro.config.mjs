@@ -5,6 +5,21 @@ import react from '@astrojs/react';
 export default defineConfig({
   site: 'https://pokanop.github.io',
   base: '/ai',
+  // Every docs page is generated as .mdx (see scripts/sync-docs.mjs). Astro's
+  // GFM default (tables, strikethrough, task lists, autolinks) is applied as a
+  // parameter default inside the .md-only markdown processor, so it never
+  // reaches @astrojs/mdx — which reads config.markdown.gfm directly and finds it
+  // unset. The result is GFM tables rendering as literal "| ... |" text on the
+  // live site. Setting it explicitly makes remark-gfm run for the .mdx pipeline.
+  //
+  // Astro warns that markdown.gfm is deprecated in favour of a markdown.processor
+  // (`unified({ gfm: true })`), but @astrojs/mdx 5.x does not yet honour that
+  // processor option — it only fixes .md files, not the .mdx pages this site is
+  // built from (verified: with the processor API the tables still render as raw
+  // text). Revisit once a future @astrojs/mdx reads markdown.processor.
+  markdown: {
+    gfm: true,
+  },
   integrations: [
     starlight({
       title: 'AI Prompts & Skills',
