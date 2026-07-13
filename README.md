@@ -123,9 +123,13 @@ Agent Skills are folders containing instructions, scripts, and resources that ag
 | [`debug-and-fix`](skills/debug-and-fix/) | Systematic debugging and root-cause analysis |
 | [`design-to-tasks`](skills/design-to-tasks/) | Break a design (or PRD) into actionable engineering tasks |
 | [`idea-to-prd`](skills/idea-to-prd/) | Create a Product Requirements Document from a feature idea |
+| [`next-step`](skills/next-step/) | Report plan status and route to the right skill |
+| [`performance-review`](skills/performance-review/) | Measurement-driven whole-system performance sweep |
 | [`plan-retrospective`](skills/plan-retrospective/) | Reflect on completed work and capture learnings |
 | [`prd-to-design`](skills/prd-to-design/) | Turn a PRD into a technical design and ADRs |
+| [`refactor`](skills/refactor/) | Restructure code safely without changing behavior |
 | [`release-checklist`](skills/release-checklist/) | Pre-release verification and deployment checklist |
+| [`security-review`](skills/security-review/) | Lightweight threat model and security posture sweep |
 | [`tasks-to-code`](skills/tasks-to-code/) | Implement engineering tasks from a task list |
 | [`ui-design-audit`](skills/ui-design-audit/) | Audit UI components for design consistency |
 

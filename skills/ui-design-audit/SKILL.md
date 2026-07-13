@@ -1,10 +1,10 @@
 ---
 name: ui-design-audit
-description: Audit a UI codebase for design system inconsistencies and produce a structured findings report. Use when the user asks to "audit the UI", "check for design inconsistencies", "find loading state issues", "review component consistency", "check the design system", or needs a systematic sweep of visual and interaction quality across the application. Produces a prioritized findings report and a PRD-compatible output that feeds directly into idea-to-prd and design-to-tasks.
+description: Audit a UI codebase for design system inconsistencies and produce a structured findings report. Use when the user asks to "audit the UI", "check for design inconsistencies", "find loading state issues", "review component consistency", "check the design system", or needs a systematic sweep of visual and interaction quality across the application. Produces a prioritized findings report and a PRD-compatible output that feeds directly into design-to-tasks for remediation planning.
 license: MIT
 metadata:
   author: pokanop
-  version: "1.0"
+  version: "2.0"
 ---
 
 # UI Design Audit
@@ -13,7 +13,9 @@ metadata:
 
 Design consistency degrades incrementally — one slightly-off spacing here, a non-standard loading state there. This skill performs a structured sweep of the UI codebase to surface these inconsistencies before they compound into a fragmented user experience.
 
-The output is a prioritized findings report. Because the report follows the same structure as a PRD, it feeds directly into **idea-to-prd** (to formalize findings as requirements) and then **design-to-tasks** (to generate remediation tasks).
+The output is a prioritized findings report written **in PRD format** at `plans/ui-audit-<date>/prd.md`, so it enters the build pipeline directly at **design-to-tasks** — no separate `idea-to-prd` pass is needed; the audit *is* the PRD.
+
+This is one of the suite's three audit skills — with [`security-review`](../security-review/) (security posture) and [`performance-review`](../performance-review/) (speed) — sharing one contract: standalone, whole-system, severity-tiered, PRD-emitting. See the [lifecycle](../_shared/references/conventions.md#the-development-lifecycle) for how audits feed the pipeline.
 
 ## Scope
 

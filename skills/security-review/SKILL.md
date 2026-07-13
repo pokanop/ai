@@ -1,10 +1,10 @@
 ---
 name: security-review
-description: Perform a lightweight threat-model security review of an application and produce a prioritized, severity-tiered findings report. Use when the user asks to "do a security review", "threat model this", "run a security audit", "check for vulnerabilities", "review the auth flow", or "is this safe to launch", or wants a dedicated security pass on a service that handles authentication, payments, or sensitive data. Inventories assets and trust boundaries, then sweeps an OWASP-style checklist (authorization, input validation, secrets and transport, dependency CVEs, security-event logging, rate limiting). Complements code-review's per-change security check with a standalone whole-system pass, and can emit a PRD-compatible report that feeds idea-to-prd and design-to-tasks.
+description: Perform a lightweight threat-model security review of an application and produce a prioritized, severity-tiered findings report. Use when the user asks to "do a security review", "threat model this", "run a security audit", "check for vulnerabilities", "review the auth flow", or "is this safe to launch", or wants a dedicated security pass on a service that handles authentication, payments, or sensitive data. Inventories assets and trust boundaries, then sweeps an OWASP-style checklist (authorization, input validation, secrets and transport, dependency CVEs, security-event logging, rate limiting). Complements code-review's per-change security check with a standalone whole-system pass, and can emit a PRD-compatible report that feeds design-to-tasks for remediation planning.
 license: MIT
 metadata:
   author: pokanop
-  version: "1.0"
+  version: "2.0"
 ---
 
 # Security Review
@@ -13,7 +13,9 @@ metadata:
 
 `code-review` checks the security of a *single change* as one dimension among seven. That catches the bug in the diff in front of you — but it never steps back to ask what the whole system is protecting, who the attacker is, or where the trust boundaries are. For a client app with authentication, payments, or sensitive user data, that gap matters.
 
-This skill performs a **lightweight threat model**: it inventories what is worth protecting and where the boundaries are, then sweeps an OWASP-style checklist across the system's security posture — not line by line, but layer by layer. The output is a prioritized, severity-tiered findings report. Because it can be written in PRD format, the findings feed directly into **idea-to-prd** and **design-to-tasks** for remediation, the same way **ui-design-audit** does for design debt.
+This skill performs a **lightweight threat model**: it inventories what is worth protecting and where the boundaries are, then sweeps an OWASP-style checklist across the system's security posture — not line by line, but layer by layer. The output is a prioritized, severity-tiered findings report. Because it can be written in PRD format (`plans/security-review-<date>/prd.md`), the findings enter the build pipeline directly at **design-to-tasks** for remediation — no separate `idea-to-prd` pass is needed; the audit *is* the PRD.
+
+This is one of the suite's three audit skills — with [`ui-design-audit`](../ui-design-audit/) (consistency) and [`performance-review`](../performance-review/) (speed) — sharing one contract: standalone, whole-system, severity-tiered, PRD-emitting. See the [lifecycle](../_shared/references/conventions.md#the-development-lifecycle) for how audits feed the pipeline.
 
 It is deliberately *lightweight*: an asset/boundary inventory and a structured checklist, not a formal STRIDE/DREAD exercise or a penetration test. It surfaces the security work that should become tasks — it does not exploit anything.
 

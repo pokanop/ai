@@ -4,7 +4,7 @@ description: Systematically debug a reported bug, implement a fix, and add a reg
 license: MIT
 metadata:
   author: pokanop
-  version: "1.0"
+  version: "2.0"
 ---
 
 # Debug and Fix
@@ -12,6 +12,20 @@ metadata:
 ## Purpose
 
 This skill provides a structured approach to debugging: hypothesize, isolate, fix, verify, protect. It prevents the two most common debugging failure modes — fixing the symptom instead of the root cause, and fixing the root cause without preventing it from recurring.
+
+## Triage Before You Start
+
+Not every "this is wrong" report is a bug. Classify the work first, using the canonical [routing table](../_shared/references/conventions.md#routing):
+
+| The report is… | Is it a bug? | Route to |
+|----------------|--------------|----------|
+| Behavior that contradicts the spec, docs, or obvious intent | ✅ Yes | This skill |
+| Working as designed, but the design is insufficient ("search works but results are bad") | ❌ No | [`idea-to-prd`](../idea-to-prd/) — that is a feature request |
+| Correct but slow | ❌ No | [`performance-review`](../performance-review/) for systemic slowness; a perf *regression* with a reproducible before/after is a bug and stays here |
+| Ugly/confusing but functioning code | ❌ No | [`refactor`](../refactor/) |
+| A vulnerability with no functional symptom | ❌ No | [`security-review`](../security-review/) to assess; the resulting fix work enters the pipeline |
+
+The expected-vs-actual question usually settles it: a bug has a defensible *expected* behavior the system fails to meet. If "expected" turns out to be a new opinion about what the product should do, it is a feature.
 
 ## Inputs
 
@@ -107,6 +121,8 @@ Present the fix to the user with a structured summary:
 ```
 
 Offer to log the fix in `plans/<name>/decisions.md` if the bug is related to an active plan and the root cause reveals something future tasks should know.
+
+**Escalate systemic root causes.** One bug is often the visible tip of a class: if the root cause is a missing validation layer, an unenforced boundary, or an unindexed growth path, the *fix* handles this instance but the *class* needs its own pass — recommend `security-review`, `performance-review`, or `refactor` (via a Future Opportunities entry) accordingly. Fixing one instance of a systemic problem and moving on is how the next three bugs get scheduled.
 
 ## Key Principles
 

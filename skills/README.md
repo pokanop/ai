@@ -8,6 +8,7 @@ A collection of structured, project-aware agent skills for software development 
 
 | Skill | Purpose | Use When |
 |-------|---------|-----------|
+| [`next-step`](next-step/) | Report plan status and route to the right skill | Resuming work, checking status, or unsure which skill fits |
 | [`idea-to-prd`](idea-to-prd/) | Write a Product Requirements Document | Starting a new feature or initiative |
 | [`prd-to-design`](prd-to-design/) | Turn a PRD into a technical design + ADRs | Architecting a non-trivial feature before tasks |
 | [`design-to-tasks`](design-to-tasks/) | Break a design (or PRD) into an actionable task list | Planning implementation from a design or PRD |
@@ -17,8 +18,11 @@ A collection of structured, project-aware agent skills for software development 
 | [`refactor`](refactor/) | Restructure code without changing behavior | Cleaning up code or executing a deferred improvement |
 | [`ui-design-audit`](ui-design-audit/) | Sweep UI for design system inconsistencies | Auditing components before a design cleanup |
 | [`security-review`](security-review/) | Lightweight threat model + OWASP-style security sweep | Before launching auth/payments; a dedicated security pass |
+| [`performance-review`](performance-review/) | Measurement-driven performance sweep | Before launch; when the app feels slow; when data volume grows |
 | [`release-checklist`](release-checklist/) | Go/no-go assessment before shipping | Preparing to deploy a completed plan |
 | [`plan-retrospective`](plan-retrospective/) | Close out a plan with metrics and lessons | Wrapping up a completed feature |
+
+The lifecycle these skills form — and the routing table for classifying any incoming request — is defined once in [shared conventions](_shared/references/conventions.md#the-development-lifecycle).
 
 > **Renamed (June 2026):** `create-a-prd` is now [`idea-to-prd`](idea-to-prd/) and `prd-to-tasks` is now [`design-to-tasks`](design-to-tasks/), so the build-pipeline skills read `input-to-output` and the new [`prd-to-design`](prd-to-design/) step slots in between. Existing installs of the old slugs keep working; new installs and links use the new names.
 
@@ -26,7 +30,7 @@ A collection of structured, project-aware agent skills for software development 
 
 ## Recommended Order of Operations
 
-These skills are designed to chain together into a complete software development lifecycle. There are two primary workflows:
+These skills are designed to chain together into a complete software development lifecycle — the canonical diagram and routing table live in [shared conventions](_shared/references/conventions.md#the-development-lifecycle), and the [`next-step`](next-step/) skill navigates it for you. The primary workflows:
 
 ### Build Pipeline (Feature Development)
 
@@ -50,41 +54,64 @@ The build pipeline covers a feature from idea to shipped code:
 ### After the Pipeline
 
 ```
-tasks-to-code  →  release-checklist  →  plan-retrospective
-   (build)            (ship)               (close)
+tasks-to-code  ⇄  code-review  →  release-checklist  →  plan-retrospective
+   (build)         (quality)          (ship)               (close)
 ```
 
-5. **`release-checklist`** — Once implementation is complete, runs all quality gates, verifies P0 task completion, checks PRD success criteria, produces a deployment checklist, and generates a `CHANGELOG.md` entry. Issues a Go/No-Go verdict.
+5. **`code-review`** — Run per task or per phase during implementation, and always before release. Reviews changes against the project's conventions, the task's acceptance criteria, and the plan's `design.md`/ADRs when they exist. Unresolved `🔴 Blocking` findings in `review.md` hard-block the release.
 
-6. **`plan-retrospective`** — Formally closes the plan. Computes completion metrics and scope drift, captures lessons learned, produces `plans/<name>/retro.md`, and archives the entire plan folder to `plans/archive/<name>/`.
+6. **`release-checklist`** — Once implementation is complete, runs all quality gates, verifies P0 task completion and review-finding resolution, checks PRD success criteria, produces a deployment checklist, and generates a `CHANGELOG.md` entry. Issues a Go/No-Go verdict.
+
+7. **`plan-retrospective`** — Formally closes the plan. Computes completion metrics and scope drift (via the deterministic `_shared/scripts/` plan tooling), captures lessons learned and ADR outcomes, produces `plans/<name>/retro.md`, and archives the entire plan folder to `plans/archive/<name>/`.
 
 ### Worked Example
 
 See one small feature — a persisted dark-mode toggle — carried through the entire pipeline as a set of golden artifacts (PRD → design + ADR → tasks → decisions → review → release → retro): **[examples/dark-mode-toggle](https://github.com/pokanop/ai/tree/main/examples/dark-mode-toggle)**.
 
-### Design-Driven Workflow
+### Audit Workflows
 
-For UI-focused work, `ui-design-audit` plugs in before the build pipeline:
+Three audit skills share one contract — standalone, whole-system, severity-tiered, and **PRD-emitting** — so their findings enter the build pipeline directly at `design-to-tasks`, with no separate `idea-to-prd` pass:
 
 ```
-ui-design-audit  →  idea-to-prd  →  design-to-tasks  →  tasks-to-code
-   (findings)        (requirements)    (task list)         (build)
+ui-design-audit / security-review / performance-review  →  design-to-tasks  →  tasks-to-code
+              (findings as a PRD)                            (task list)         (build)
 ```
 
-`ui-design-audit` outputs its findings directly in PRD format at `plans/ui-audit-<date>/prd.md`, making it immediately consumable by `design-to-tasks` (which falls back to the PRD when there is no design).
+| Audit | Question it answers | Findings PRD |
+|-------|--------------------|--------------|
+| `ui-design-audit` | Is the UI consistent with the project's own design system? | `plans/ui-audit-<date>/prd.md` |
+| `security-review` | Is the system's security posture sound? | `plans/security-review-<date>/prd.md` |
+| `performance-review` | Where does the system spend the user's time? | `plans/performance-review-<date>/prd.md` |
+
+Each complements the matching per-change dimension in `code-review` (which checks one diff) with a whole-system pass (which checks the posture).
 
 ### Standalone Skills
 
 These skills work independently and don't require a plan:
 
-- **`code-review`** — Use any time you need a structured review of a diff, branch, or changed file set. Optionally reads `plans/<name>/tasks.md` to validate acceptance criteria if the change comes from a task.
+- **`next-step`** — The suite's front door. Reads the `plans/` directory, reports where every plan sits in the lifecycle (using the deterministic `_shared/scripts/` plan tooling), and routes any request to the right skill via the canonical routing table.
+- **`code-review`** — Use any time you need a structured review of a diff, branch, or changed file set. Optionally reads `plans/<name>/tasks.md` to validate acceptance criteria if the change comes from a task, and `design.md`/ADRs for architecture conformance.
 - **`debug-and-fix`** — Use when something is broken. Works entirely from a bug report (symptom, steps to reproduce, expected vs. actual). Has no plan dependency.
 - **`refactor`** — Use when code needs restructuring without any behavior change. Closes the loop on the suite's no-gold-plating discipline: it executes the structural improvements that `tasks-to-code`, `code-review`, and `plan-retrospective` defer into `decisions.md` / `retro.md` "Future Opportunities". Has no plan dependency.
-- **`security-review`** — Use for a dedicated, whole-system security pass (a lightweight threat model). Standalone, but can emit its findings as a PRD that feeds `design-to-tasks`, the same way `ui-design-audit` does. Complements `code-review`'s per-change security check rather than repeating it.
 
 ---
 
 ## Skill Details
+
+### `next-step`
+
+**Trigger phrases:** "what's next", "where were we", "resume work", "status of the plan", "which skill should I use", "where do I start"
+
+**What it produces:** A plan-status report (stage + computed progress per active plan) and a single routed recommendation: which skill, on which plan, and why
+
+**Key behaviors:**
+- Detects each plan's lifecycle stage from the artifacts on disk and the task markers — never from memory
+- Runs `plan-metrics.py` / `plan-validate.py` for computed progress instead of estimates
+- Routes ambiguous requests via the canonical routing table; splits compound requests ("fix the crash and add export") into separately-routed parts
+- Blockers outrank progress: a `[!]` task, failing gate, or unresolved `🔴 Blocking` review finding is always the recommended next step
+- Read-only — orients and hands off; never performs the routed skill's work itself
+
+---
 
 ### `idea-to-prd`
 
@@ -270,11 +297,29 @@ These skills work independently and don't require a plan:
 
 ---
 
+### `performance-review`
+
+**Trigger phrases:** "performance review", "performance audit", "why is it slow", "find bottlenecks", "optimize performance", "is it fast enough to launch"
+
+**What it produces:** A prioritized, severity-tiered findings report with baseline measurements; optionally `plans/performance-review-<date>/prd.md` in PRD format, ready for `design-to-tasks`
+
+**Approach** — measurement-driven, never optimize on faith:
+1. **Baseline** — define the user-visible metrics for the scope, measure with the stack's own tools, set budgets (plan NFRs → project history → platform defaults)
+2. **Six-dimension sweep** — Data Access & Queries, Network & Payloads, Rendering & Responsiveness, Memory & Resources, Concurrency & Async, Scalability Posture
+
+**Key behaviors:**
+- **Complements `code-review` instead of duplicating it** — code-review checks the performance of one diff; performance-review assesses where the whole system spends the user's time
+- Severity is calibrated by user impact × frequency on the shared [severity↔priority scale](_shared/references/conventions.md#severity-and-priority); every severity claim cites a measurement, trace, or growth argument
+- Baseline measurements become PRD success criteria — remediation is verified by re-measuring
+- Never trades correctness for speed; consistency trade-offs route to `prd-to-design` as ADRs
+
+---
+
 ### `release-checklist`
 
 **Trigger phrases:** "prepare a release", "we're ready to ship", "generate a changelog", "check if we're ready to deploy"
 
-**Requires:** `plans/<name>/tasks.md` and `plans/<name>/prd.md`
+**Requires:** `plans/<name>/tasks.md` and `plans/<name>/prd.md`; reads `review.md` and `decisions.md` when present
 
 **What it produces:** Go/No-Go verdict + deployment checklist + `CHANGELOG.md` entry
 
@@ -282,6 +327,7 @@ These skills work independently and don't require a plan:
 - Any P0 task not `[x]` complete
 - Any failing quality gate (lint, typecheck, test, build — all must pass)
 - Any unmet or unverified PRD success criterion
+- Any unresolved `🔴 Blocking` finding in `review.md`
 
 **Checklist covers:** pre-release gate results, deployment prerequisites, smoke test steps, rollback plan, post-release verification.
 
@@ -314,9 +360,10 @@ Several skills share reference documents to avoid duplication:
 
 | Reference | Shared By |
 |-----------|-----------|
-| `_shared/references/conventions.md` | **All skills** — status markers, priority, severity↔priority, effort sizes, labels, and the `plans/` layout |
-| `idea-to-prd/references/codebase-discovery.md` | `idea-to-prd`, `prd-to-design`, `design-to-tasks`, `tasks-to-code`, `code-review`, `debug-and-fix`, `refactor`, `security-review` |
-| `idea-to-prd/references/prd-schema.md` | `idea-to-prd`, `ui-design-audit`, `security-review` |
+| `_shared/references/conventions.md` | **All skills** — the lifecycle and routing table, status markers, priority, severity↔priority, effort sizes, labels, and the `plans/` layout |
+| `_shared/scripts/` (`plan-metrics.py`, `plan-validate.py`) | `design-to-tasks` (post-generation validation), `tasks-to-code` (statistics), `release-checklist` (completion assessment), `plan-retrospective` (metrics), `next-step` (status) |
+| `idea-to-prd/references/codebase-discovery.md` | `idea-to-prd`, `prd-to-design`, `design-to-tasks`, `tasks-to-code`, `code-review`, `debug-and-fix`, `refactor`, `security-review`, `performance-review` |
+| `idea-to-prd/references/prd-schema.md` | `idea-to-prd`, `ui-design-audit`, `security-review`, `performance-review` |
 | `code-review/references/review-checklist.md` | `code-review`, `security-review` (defers line-level diff checks to it) |
 | `tasks-to-code/references/implementation-guide.md` | `tasks-to-code`, `debug-and-fix`, `refactor` |
 

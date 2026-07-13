@@ -4,7 +4,7 @@ description: Convert a design or Product Requirements Document (PRD) into a deta
 license: MIT
 metadata:
   author: pokanop
-  version: "1.0"
+  version: "2.0"
 ---
 
 # Design to Tasks
@@ -120,7 +120,15 @@ Before presenting the task list, validate completeness:
 5. **Size check**: No XL tasks remain. All are broken down to L or smaller.
 6. **Test check**: Every feature task has corresponding test coverage.
 
-This validation is mandatory. Do not present the task list until all checks pass.
+Then run the deterministic validator on the generated file — it catches structural problems (dependency cycles, unknown dependency references, missing Requirements fields, coverage gaps) mechanically instead of by eye:
+
+```bash
+python3 skills/_shared/scripts/plan-validate.py plans/<name>/tasks.md --prd plans/<name>/prd.md
+```
+
+Fix every error and warning it reports (see `skills/_shared/scripts/README.md` for the check list and output format).
+
+This validation is mandatory. Do not present the task list until all checks pass — the mental checks *and* a clean `plan-validate.py` run.
 
 ### Phase 4: Review and Refinement
 
@@ -142,14 +150,14 @@ The task list is a living document. As implementation progresses, the agent (or 
 
 When the user asks to "update tasks", "mark tasks done", "check progress", or "update the task list", read the existing `tasks.md`, apply the requested changes, and write it back. Always preserve the full document structure -- never truncate or drop sections when updating.
 
-## Handling PRD Changes
+## Handling PRD or Design Changes
 
-If the PRD is updated after `tasks.md` has been generated:
+If the PRD is revised (via `idea-to-prd`'s change protocol) or the design is revised (via `prd-to-design`'s design-change protocol) after `tasks.md` has been generated:
 
-1. **Read the updated PRD** and identify what changed (new requirements, removed requirements, modified scope)
-2. **Incremental update** (preferred): Add tasks for new requirements, mark removed-requirement tasks as `[-]` Skipped with a note, update affected acceptance criteria
+1. **Read the updated document(s)** and identify what changed (new requirements, removed requirements, modified scope, revised contracts or boundaries, superseded ADRs)
+2. **Incremental update** (preferred): Add tasks for new requirements or reworked contracts, mark removed-requirement tasks as `[-]` Skipped with a note, update affected acceptance criteria. For a superseded ADR, assess each completed task built on the old decision — still valid, needs a rework task, or acceptable divergence (noted in `decisions.md`).
 3. **Full re-generation**: Only when changes are so extensive that incremental updates would be more confusing (e.g., phases restructured, >50% of requirements changed). Preserve completed task statuses from the old version.
-4. **Always update** the requirements coverage to ensure traceability remains intact after changes
+4. **Always update** the requirements coverage to ensure traceability remains intact after changes, and re-run `plan-validate.py` (Phase 3.5) on the updated file
 
 ## Key Principles
 
@@ -168,4 +176,5 @@ If the PRD is updated after `tasks.md` has been generated:
 - [references/task-schema.md](references/task-schema.md) -- Full task document structure with section-by-section guidance
 - [references/decomposition-guide.md](references/decomposition-guide.md) -- How to break a PRD into well-formed tasks
 - [references/progress-tracking.md](references/progress-tracking.md) -- Status conventions, update workflows, and summary reporting
+- `../_shared/scripts/README.md` -- `plan-validate.py` / `plan-metrics.py`: deterministic task-list validation and metrics
 - [../_shared/references/conventions.md](../_shared/references/conventions.md) -- Shared markers, priority, effort, labels, and the `plans/` layout (single source of truth)

@@ -4,7 +4,7 @@ description: Safely restructure existing code without changing its behavior — 
 license: MIT
 metadata:
   author: pokanop
-  version: "1.0"
+  version: "2.0"
 ---
 
 # Refactor
@@ -57,9 +57,9 @@ Not every "Future Opportunity" or cleanup request is a refactor. Classify the wo
 | Adds, removes, or changes a feature or output | ❌ No | [`idea-to-prd`](../idea-to-prd/) → `prd-to-design` → `design-to-tasks` → `tasks-to-code` |
 | Fixes incorrect behavior | ❌ No | [`debug-and-fix`](../debug-and-fix/) |
 | Changes a public API / contract other code depends on | ⚠️ Not pure | Treat the contract change as a feature (PRD); the internal cleanup can follow as a refactor |
-| Improves performance with a measurable behavior-equivalent change | ⚠️ Careful | Refactor only if outputs are provably identical and you have a benchmark; otherwise treat as a feature with its own acceptance criteria |
+| Improves performance with a measurable behavior-equivalent change | ⚠️ Careful | Refactor only if outputs are provably identical and you have a benchmark; otherwise treat as a feature with its own acceptance criteria. For finding *where* performance work is warranted, [`performance-review`](../performance-review/) produces the measured, prioritized list |
 
-When in doubt, it is not a refactor. The cost of misclassifying a behavior change as "just cleanup" is a silent regression with no acceptance criterion to catch it.
+When in doubt, it is not a refactor. The cost of misclassifying a behavior change as "just cleanup" is a silent regression with no acceptance criterion to catch it. (This table is the refactor-side view of the canonical [routing table](../_shared/references/conventions.md#routing).)
 
 ## Workflow
 

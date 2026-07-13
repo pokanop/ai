@@ -64,7 +64,7 @@ Every skill in `skills/<name>/` must have a `SKILL.md` with YAML frontmatter whe
 - `name` **exactly matches** the directory name (the sync script and the agentskills.io spec both depend on this)
 - `description` is 1–1024 chars and includes trigger keywords (skills are discovered by keyword matching on description)
 
-See `skills/README.md` for the catalog and the chained workflow (`idea-to-prd → prd-to-design → design-to-tasks → tasks-to-code → release-checklist → plan-retrospective`).
+See `skills/README.md` for the catalog and the chained workflow (`idea-to-prd → prd-to-design → design-to-tasks → tasks-to-code ⇄ code-review → release-checklist → plan-retrospective`, plus the audit skills and `next-step` router). The canonical lifecycle/routing definition lives in `skills/_shared/references/conventions.md`.
 
 ## Quality gates
 
