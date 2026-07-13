@@ -1,11 +1,65 @@
 # Shared Conventions
 
-The single source of truth for the markers, labels, severities, priorities, effort
-sizes, and the `plans/` layout used across **every** skill in this collection.
+The single source of truth for the lifecycle, routing, markers, labels, severities,
+priorities, effort sizes, and the `plans/` layout used across **every** skill in
+this collection.
 
 When a skill needs to refer to one of these conventions, it links here instead of
 restating the definition. If any skill's wording disagrees with this file, **this
 file wins** — fix the skill, not this reference.
+
+---
+
+## The Development Lifecycle
+
+Every skill occupies a fixed position in one lifecycle. This diagram is canonical —
+skills reproduce fragments of it for local context, but this is the complete picture:
+
+```
+idea-to-prd → prd-to-design° → design-to-tasks → tasks-to-code ⇄ code-review → release-checklist → plan-retrospective
+ (what/why)    (architecture)     (task list)       (build)       (quality)        (ship)               (close)
+```
+
+- `°` **prd-to-design is optional** — warranted for non-trivial features, skipped for
+  simple ones (`design-to-tasks` falls back to the PRD).
+- **code-review is part of the pipeline, not an afterthought** — run it per task or per
+  phase during implementation, and always before `release-checklist`. Unresolved
+  `🔴 Blocking` findings in `review.md` are a release block.
+- **Audit skills** — `ui-design-audit`, `security-review`, `performance-review` — run
+  standalone, before or between pipelines. Each emits its findings **as a PRD**
+  (`plans/<audit-type>-<date>/prd.md`), entering the pipeline directly at
+  `design-to-tasks`; they do not pass through `idea-to-prd`.
+- **Repair skills** — `debug-and-fix` (incorrect behavior) and `refactor`
+  (structure-only change) — run standalone at any point and route work back into the
+  pipeline when it outgrows them.
+- **next-step** is the orchestrator: it reads the `plans/` state, reports where each
+  plan is in this lifecycle, and routes any request to the right skill.
+
+### Routing
+
+One table, used by every skill's intake triage. Classify the work first; misrouting
+is how behavior changes ship without acceptance criteria.
+
+| The work is… | Route to |
+|---|---|
+| A new feature, or any addition/change of behavior | `idea-to-prd`, then the pipeline |
+| Deciding the architecture for an existing PRD | `prd-to-design` |
+| Breaking a design or PRD into implementable work | `design-to-tasks` |
+| Implementing tasks from an approved task list | `tasks-to-code` |
+| Assessing a diff, PR, or changed file set | `code-review` |
+| Incorrect behavior — something is broken | `debug-and-fix` |
+| Restructuring code with behavior identical | `refactor` |
+| A systematic UI / design-system sweep | `ui-design-audit` |
+| A whole-system security posture sweep | `security-review` |
+| A whole-system performance posture sweep | `performance-review` |
+| Verifying a plan is safe to ship | `release-checklist` |
+| Closing out a completed plan | `plan-retrospective` |
+| Unsure what state the work is in or what comes next | `next-step` |
+
+**Bright lines:** new or changed behavior always enters through `idea-to-prd`;
+incorrect behavior is always `debug-and-fix`; a structure-only change is always
+`refactor`. When a piece of work straddles two rows, split it — never smuggle one
+kind of change inside another.
 
 ---
 
@@ -134,9 +188,30 @@ plans/
 - The folder name is lowercase, dasherized, and descriptive (`api-rate-limiting`, not
   `feature1`).
 - `prd.md` (and `design.md`, when present) is never modified after tasks are generated —
-  it is the historical record of intent and structure. The task list is a derivative artifact.
+  it is the historical record of intent and structure. The task list is a derivative
+  artifact. The one exception is the **change protocols**: a genuine requirements change
+  goes through `idea-to-prd` (PRD update → `design-to-tasks` incremental re-task), and a
+  genuine architecture change goes through `prd-to-design` (design/ADR update →
+  `design-to-tasks` incremental re-task). Silent drift is never allowed; deliberate,
+  recorded revision is.
 - `design.md` and `adr/` are optional: `prd-to-design` adds them for non-trivial features,
   and `design-to-tasks` falls back to `prd.md` when they are absent.
-- A UI design audit writes its findings as `plans/ui-audit-<date>/prd.md` so they feed
-  straight into `design-to-tasks`.
+- **Audit plans** are named `plans/<audit-type>-<date>/` — `plans/ui-audit-2026-07-12/`,
+  `plans/security-review-2026-07-12/`, `plans/performance-review-2026-07-12/` — each
+  containing a `prd.md` of findings that feeds straight into `design-to-tasks`.
 - Not every file exists for every plan; each skill creates the ones it owns.
+
+### Deterministic plan tooling
+
+Two stdlib-only Python helpers in `skills/_shared/scripts/` (documented in that
+directory's README) read a `tasks.md` and report on it, so skills **run the script
+and interpret the result** instead of hand-counting markers:
+
+- `plan-metrics.py` — status totals, completion rate, per-phase breakdown (JSON)
+- `plan-validate.py` — structural lint: missing notes, dependency cycles, multiple
+  in-progress tasks, requirement-coverage gaps (`--prd plans/<name>/prd.md`)
+
+`design-to-tasks` validates with them after generating, `tasks-to-code` recomputes
+statistics with them after each task, and `release-checklist` / `plan-retrospective`
+use them for completion assessment and metrics. Prefer them over manual counting —
+they are the arbiter when a hand-maintained statistics table disagrees.

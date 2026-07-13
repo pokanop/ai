@@ -4,7 +4,7 @@ description: Close out a completed plan with a structured retrospective. Use whe
 license: MIT
 metadata:
   author: pokanop
-  version: "1.0"
+  version: "2.0"
 ---
 
 # Plan Retrospective
@@ -40,16 +40,26 @@ Read all artifacts for the plan:
 1. `plans/<name>/prd.md` — original goals, requirements, success criteria, phases
 2. `plans/<name>/tasks.md` — final task statuses, completion notes, statistics
 3. `plans/<name>/decisions.md` — implementation decisions (if it exists)
+4. `plans/<name>/design.md` and `plans/<name>/adr/` — the intended architecture and its decision records (if they exist)
+5. `plans/<name>/review.md` — review rounds and finding resolutions (if it exists)
 
 Extract:
 - Original success criteria from the PRD (Section 1: Executive Summary)
 - All requirements with labels (FR-N, NFR-N, US-N, QG-N)
 - Final task status for every task
 - Decisions that deviated from the PRD
+- Each ADR's outcome — did the decision hold through implementation, or was it superseded along the way?
 
 ### Phase 2: Compute Metrics
 
-Calculate the following from `tasks.md`. See [references/metrics-guide.md](references/metrics-guide.md) for computation details.
+Compute the completion numbers deterministically, then derive the coverage and drift analysis on top. See [references/metrics-guide.md](references/metrics-guide.md) for computation details.
+
+```bash
+python3 skills/_shared/scripts/plan-metrics.py  plans/<name>/tasks.md
+python3 skills/_shared/scripts/plan-validate.py plans/<name>/tasks.md --prd plans/<name>/prd.md
+```
+
+`plan-metrics.py` produces the completion totals, rate, and per-phase breakdown; `plan-validate.py`'s `unreferenced-requirement` findings seed the coverage-gap list. The script output is the arbiter over any hand-maintained statistics table.
 
 **Completion metrics:**
 - Total tasks, completed (`[x]`), skipped (`[-]`), blocked (`[!]`), not started (`[ ]`)
@@ -74,11 +84,11 @@ Produce `retro.md` using the schema in [references/retro-schema.md](references/r
 2. **Metrics** — Computed numbers from Phase 2 (completion rate, requirement coverage).
 3. **What Was Built** — A plain-language list of what was actually shipped, derivable by a reader who hasn't read the PRD.
 4. **Scope Drift** — Any additions beyond the PRD, requirements intentionally deferred, and tasks skipped with reasons.
-5. **Key Decisions** — The most significant decisions from `decisions.md` (or implementation notes in `tasks.md`). Focus on decisions that future work should know about.
+5. **Key Decisions** — The most significant decisions from `decisions.md` (or implementation notes in `tasks.md`), plus each ADR's outcome: decisions that held, decisions superseded mid-implementation and why. An ADR that did not survive contact with the code is one of the most valuable lessons a retro can capture. Focus on decisions that future work should know about.
 6. **What Worked Well** — Patterns, tools, or approaches that should be repeated.
 7. **What to Improve** — Friction points, estimation misses, blockers that could have been avoided.
 8. **Open Items** — Any tasks marked `[!]` blocked or `[ ]` not started that are being carried forward rather than closed. For each, state: what it is, who owns it, and where it goes next (new plan, backlog, etc.).
-9. **Future Opportunities** — Items from `decisions.md`'s Future Opportunities section, or patterns noticed during implementation that didn't fit the current scope.
+9. **Future Opportunities** — Items from `decisions.md`'s Future Opportunities section, or patterns noticed during implementation that didn't fit the current scope. This list is a live work queue, not a memorial: [`refactor`](../refactor/) executes structure-only entries from it, and behavior-changing entries seed a future `idea-to-prd`. Note which entries were already executed during the plan.
 
 ### Phase 4: Review
 
@@ -123,4 +133,5 @@ Do not archive without explicit user confirmation. The plan folder is the canoni
 
 - [references/retro-schema.md](references/retro-schema.md) — Full retrospective document structure
 - [references/metrics-guide.md](references/metrics-guide.md) — How to compute completion, coverage, and drift metrics
+- `../_shared/scripts/README.md` — `plan-metrics.py` / `plan-validate.py`: deterministic metrics and coverage findings
 - [../_shared/references/conventions.md](../_shared/references/conventions.md) — Shared status markers, effort sizes, labels, and the `plans/` layout (single source of truth)

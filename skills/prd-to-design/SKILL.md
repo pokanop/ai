@@ -4,7 +4,7 @@ description: Turn a Product Requirements Document into a technical design — co
 license: MIT
 metadata:
   author: pokanop
-  version: "1.0"
+  version: "2.0"
 ---
 
 # PRD to Design
@@ -130,6 +130,17 @@ Iterate until the user confirms the design is sound.
 ### Phase 7: Handoff
 
 Once the design is confirmed, hand off to **design-to-tasks**, which reads `design.md` (falling back to `prd.md` if absent) and decomposes it into a trackable task list at `plans/<name>/tasks.md`. Tasks decompose along the component and contract boundaries this design defines, and each ADR that needs building becomes work in the task list.
+
+## Handling Design Changes
+
+Designs meet reality during implementation. When `tasks-to-code` (or `code-review`) surfaces that a contract, boundary, or decision does not survive contact with the codebase, the design is revised **here** — deliberately — never patched silently in code:
+
+1. **Confirm it is a design problem** — a requirements gap routes to `idea-to-prd` instead; an implementation detail the design never pinned needs no design change at all (log it in `decisions.md`).
+2. **Revise `design.md`** — update the affected contracts, boundaries, or flows, and note what changed and why in the Key Decisions table.
+3. **Supersede, don't rewrite, ADRs** — a reversed decision gets a new ADR that records the new choice and marks the old one `Superseded by NNNN` (see [references/adr-template.md](references/adr-template.md)). The rejected path and the reason it was originally chosen stay in the record.
+4. **Propagate to tasks** — hand the revised design to `design-to-tasks` for an incremental task update. Completed tasks built on the old decision are assessed: still valid, needs rework (a new task), or acceptable divergence (noted in `decisions.md`).
+
+The bar for a mid-implementation design change is evidence, not preference — "the chosen library cannot do X", not "I'd structure this differently."
 
 ## Key Principles
 

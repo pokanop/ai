@@ -4,7 +4,7 @@ description: Review code changes for quality, correctness, and adherence to proj
 license: MIT
 metadata:
   author: pokanop
-  version: "1.0"
+  version: "2.0"
 ---
 
 # Code Review
@@ -13,7 +13,9 @@ metadata:
 
 This skill performs a structured, project-aware code review. It evaluates changes against the project's existing conventions, the requirements that motivated the change, and general software quality principles — producing actionable, severity-tiered feedback rather than a wall of comments.
 
-If the change originated from a `plans/<name>/tasks.md` task, the review also validates that the implementation satisfies the task's acceptance criteria and traces back to the correct PRD requirements.
+If the change originated from a `plans/<name>/tasks.md` task, the review also validates that the implementation satisfies the task's acceptance criteria, traces back to the correct PRD requirements, and conforms to the plan's `design.md` and ADRs when they exist.
+
+In the [development lifecycle](../_shared/references/conventions.md#the-development-lifecycle), this skill is the quality step of the build pipeline — run it per task or per phase during `tasks-to-code`, and always before `release-checklist` (which hard-blocks on unresolved `🔴 Blocking` findings in `review.md`).
 
 ## Inputs
 
@@ -33,7 +35,7 @@ If the scope is unclear, ask before reviewing. A review without clear scope prod
 Before reading any code, understand *why* the change exists.
 
 1. **Identify the motivation** — Is this from a PRD task? A bug fix? A refactor? An unplanned change?
-   - If from a task: read `plans/<name>/tasks.md` to get the task's acceptance criteria and `plans/<name>/prd.md` for the underlying requirements
+   - If from a task: read `plans/<name>/tasks.md` to get the task's acceptance criteria and `plans/<name>/prd.md` for the underlying requirements — and `plans/<name>/design.md` plus `plans/<name>/adr/` when they exist, because the change must also conform to the architecture
    - If a bug fix: ask for the bug report or reproduction steps
    - If neither: ask the user what this change is intended to do
 
@@ -58,6 +60,7 @@ Evaluate the change across the dimensions in [references/review-checklist.md](re
 
 1. **Correctness** — Does the code do what it claims? Are edge cases handled? Are there off-by-one errors, null dereferences, race conditions?
 2. **Requirements alignment** — If from a task: does it satisfy every acceptance criterion? If from a PRD: does it implement all stated requirements and nothing outside them?
+   - **Design conformance** — when the plan has a `design.md`: does the change respect the component boundaries, API/data contracts, and ADR decisions the design defines? An undeclared deviation from the design is a `🔴 Blocking` finding — the fix is either to conform, or to route the conflict through `prd-to-design`'s design-change protocol so the design is revised deliberately. Check `decisions.md` first: a deviation already recorded and justified there is a decision, not a finding.
 3. **Security** — Are inputs validated? Are secrets handled correctly? Are authorization checks in place? See [references/review-checklist.md](references/review-checklist.md) for the security checklist. This covers the security of *this change*; for a dedicated whole-system threat model — asset/boundary inventory, object-level authz, dependency CVEs, security logging, rate limiting — use the **security-review** skill.
 4. **Test coverage** — Are there tests? Do they cover the happy path, error cases, and edge cases? Are they testing behavior or implementation details?
 5. **Consistency** — Does this follow the project's error handling, naming, file organization, and import patterns?
@@ -80,6 +83,10 @@ If the change has findings that require follow-up, offer to produce a `plans/<na
 
 The `review.md` format is defined in [references/feedback-format.md](references/feedback-format.md).
 
+`review.md` is not just a log — it is a **release gate**: `release-checklist` hard-blocks on any `🔴 Blocking` finding not marked resolved. Keep it current across rounds so the gate reflects reality.
+
+When a plan is active, file the review's "Future Opportunities" (worthwhile improvements beyond this change's scope) into `plans/<name>/decisions.md` under **Future Opportunities** rather than only mentioning them in the review summary — that is the list `refactor` executes from, so an opportunity recorded there survives; one only mentioned in passing is lost.
+
 ## Handling Re-Reviews
 
 When the user asks to "re-review" or "check the updates":
@@ -100,7 +107,7 @@ When the user asks to "re-review" or "check the updates":
 
 **Acknowledge what's good.** A review that only finds fault misses the opportunity to reinforce correct patterns. `✅ Praise` findings are not filler — they signal what to do more of.
 
-**No gold-plating in reviews.** Do not suggest improvements that go beyond the stated purpose of the change. File them in the review summary as "Future Opportunities" rather than feedback on this change.
+**No gold-plating in reviews.** Do not suggest improvements that go beyond the stated purpose of the change. File them as "Future Opportunities" — in `plans/<name>/decisions.md` when a plan is active, so `refactor` can execute them later — rather than feedback on this change.
 
 ## References
 

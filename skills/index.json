@@ -6,7 +6,7 @@
       "name": "code-review",
       "description": "Review code changes for quality, correctness, and adherence to project conventions. Use when the user asks to \"review this code\", \"review my changes\", \"do a code review\", \"check this PR\", \"look at what I changed\", or needs a structured quality assessment before merging. Accepts a diff, list of changed files, or branch description. Produces a structured review with severity-tiered feedback and an optional review.md for tracking resolution.",
       "path": "skills/code-review",
-      "version": "1.0",
+      "version": "2.0",
       "triggers": [
         "review this code",
         "review my changes",
@@ -19,7 +19,7 @@
       "name": "debug-and-fix",
       "description": "Systematically debug a reported bug, implement a fix, and add a regression test. Use when the user reports \"there's a bug\", \"this is broken\", \"this isn't working\", \"I'm getting an error\", or describes unexpected behavior. Accepts a bug report (symptom, steps to reproduce, expected vs. actual), isolates the root cause through hypothesis-driven investigation, implements a minimal fix, verifies the fix, and adds a regression test.",
       "path": "skills/debug-and-fix",
-      "version": "1.0",
+      "version": "2.0",
       "triggers": [
         "there's a bug",
         "this is broken",
@@ -31,7 +31,7 @@
       "name": "design-to-tasks",
       "description": "Convert a design or Product Requirements Document (PRD) into a detailed, actionable task list with progress tracking. Use when the user asks to turn a \"design to tasks\", \"create tasks from a design\", \"break down a design\", \"create tasks from a PRD\", \"break down a PRD\", \"generate a task list\", \"plan implementation\", or \"create an implementation plan from requirements\". Reads the design from plans/<name>/design.md when present and otherwise falls back to the PRD at plans/<name>/prd.md, then produces a comprehensive tasks.md in the same directory with hierarchical task decomposition, dependency mapping, effort estimation, and progress tracking.",
       "path": "skills/design-to-tasks",
-      "version": "1.0",
+      "version": "2.0",
       "triggers": [
         "design to tasks",
         "create tasks from a design",
@@ -47,7 +47,7 @@
       "name": "idea-to-prd",
       "description": "Create detailed, development-ready Product Requirements Documents (PRDs) for software projects. Use when the user asks to turn an \"idea to prd\", \"write a PRD\", \"create requirements\", \"plan a feature\", \"document a project spec\", \"scope a feature\", or needs to turn a product idea into a structured specification. Covers problem definition, solution design, user stories, alternatives analysis, implementation planning, testing strategy, and risk assessment. Includes codebase discovery to align PRDs with the project's existing tech stack and conventions.",
       "path": "skills/idea-to-prd",
-      "version": "1.0",
+      "version": "2.0",
       "triggers": [
         "idea to prd",
         "write a PRD",
@@ -58,10 +58,41 @@
       ]
     },
     {
+      "name": "next-step",
+      "description": "Read the state of every plan under plans/, report where each one sits in the development lifecycle, and route the user to the right skill to continue. Use when the user asks \"what's next\", \"what should I do next\", \"where were we\", \"resume work\", \"continue the plan\", \"what's the status of the plan\", \"which skill should I use\", \"where do I start\", or makes a request that doesn't clearly map to one skill. The front door and orchestrator of the skill suite — detects the lifecycle stage from the artifacts on disk and the task states, runs the deterministic plan tooling, and recommends the next skill with the reason.",
+      "path": "skills/next-step",
+      "version": "1.0",
+      "triggers": [
+        "what's next",
+        "what should I do next",
+        "where were we",
+        "resume work",
+        "continue the plan",
+        "what's the status of the plan",
+        "which skill should I use",
+        "where do I start"
+      ]
+    },
+    {
+      "name": "performance-review",
+      "description": "Perform a measurement-driven performance review of an application and produce a prioritized, severity-tiered findings report. Use when the user asks for a \"performance review\", \"performance audit\", says \"why is it slow\", \"the app feels slow\", \"find bottlenecks\", \"optimize performance\", \"is it fast enough to launch\", or wants a dedicated performance pass before shipping or after users report sluggishness. Establishes a baseline with real measurements, then sweeps six dimensions (data access and queries, network and payloads, rendering and responsiveness, memory and resources, concurrency and async, scalability posture). Complements code-review's per-change performance check with a standalone whole-system pass, and can emit a PRD-compatible report that feeds design-to-tasks.",
+      "path": "skills/performance-review",
+      "version": "1.0",
+      "triggers": [
+        "performance review",
+        "performance audit",
+        "why is it slow",
+        "the app feels slow",
+        "find bottlenecks",
+        "optimize performance",
+        "is it fast enough to launch"
+      ]
+    },
+    {
       "name": "plan-retrospective",
       "description": "Close out a completed plan with a structured retrospective. Use when the user asks to \"close out a plan\", \"do a retro\", \"archive a plan\", \"write a retrospective\", \"wrap up a feature\", or needs to formally complete a plan from plans/<name>/. Reads prd.md and tasks.md, computes completion metrics, surfaces scope drift, captures lessons learned, produces a retro.md, and moves the plan to plans/archive/.",
       "path": "skills/plan-retrospective",
-      "version": "1.0",
+      "version": "2.0",
       "triggers": [
         "close out a plan",
         "do a retro",
@@ -74,7 +105,7 @@
       "name": "prd-to-design",
       "description": "Turn a Product Requirements Document into a technical design — component boundaries, API and data contracts, sequence flows, and the key architecture decisions captured as ADRs. Use when the user asks to go from \"prd to design\", \"design the architecture\", \"write an ADR\", do a \"technical design\" or \"system design\", or needs to decide how a non-trivial feature will be built before tasks are cut. Reads plans/<name>/prd.md and produces plans/<name>/design.md plus plans/<name>/adr/NNNN-*.md. Optional step in the build pipeline — warranted for non-trivial features, skipped for simple ones.",
       "path": "skills/prd-to-design",
-      "version": "1.0",
+      "version": "2.0",
       "triggers": [
         "prd to design",
         "design the architecture",
@@ -87,7 +118,7 @@
       "name": "refactor",
       "description": "Safely restructure existing code without changing its behavior — characterization tests first, one small behavior-preserving step at a time, with every quality gate green throughout. Use when the user says \"refactor this\", \"clean up this code\", \"reduce duplication\", \"extract a function/component\", \"simplify this\", \"untangle this module\", \"pay down tech debt\", or wants to execute a deferred improvement from a decisions.md or retro.md \"Future Opportunities\" list. Scope-boxed and behavior-preserving, so tests stay green and observable behavior is unchanged. New behavior or bug fixes are out of scope — those route to idea-to-prd or debug-and-fix.",
       "path": "skills/refactor",
-      "version": "1.0",
+      "version": "2.0",
       "triggers": [
         "refactor this",
         "clean up this code",
@@ -103,7 +134,7 @@
       "name": "release-checklist",
       "description": "Verify a plan is ready to ship and produce a release checklist and changelog entry. Use when the user asks to \"prepare a release\", \"create a release checklist\", \"we're ready to ship\", \"generate a changelog\", \"check if we're ready to deploy\", or needs a go/no-go assessment before deploying. Reads plans/<name>/tasks.md and prd.md, runs all quality gates, verifies P0 task completion, produces a CHANGELOG.md entry, and outputs a deployment-ready checklist.",
       "path": "skills/release-checklist",
-      "version": "1.0",
+      "version": "2.0",
       "triggers": [
         "prepare a release",
         "create a release checklist",
@@ -114,9 +145,9 @@
     },
     {
       "name": "security-review",
-      "description": "Perform a lightweight threat-model security review of an application and produce a prioritized, severity-tiered findings report. Use when the user asks to \"do a security review\", \"threat model this\", \"run a security audit\", \"check for vulnerabilities\", \"review the auth flow\", or \"is this safe to launch\", or wants a dedicated security pass on a service that handles authentication, payments, or sensitive data. Inventories assets and trust boundaries, then sweeps an OWASP-style checklist (authorization, input validation, secrets and transport, dependency CVEs, security-event logging, rate limiting). Complements code-review's per-change security check with a standalone whole-system pass, and can emit a PRD-compatible report that feeds idea-to-prd and design-to-tasks.",
+      "description": "Perform a lightweight threat-model security review of an application and produce a prioritized, severity-tiered findings report. Use when the user asks to \"do a security review\", \"threat model this\", \"run a security audit\", \"check for vulnerabilities\", \"review the auth flow\", or \"is this safe to launch\", or wants a dedicated security pass on a service that handles authentication, payments, or sensitive data. Inventories assets and trust boundaries, then sweeps an OWASP-style checklist (authorization, input validation, secrets and transport, dependency CVEs, security-event logging, rate limiting). Complements code-review's per-change security check with a standalone whole-system pass, and can emit a PRD-compatible report that feeds design-to-tasks for remediation planning.",
       "path": "skills/security-review",
-      "version": "1.0",
+      "version": "2.0",
       "triggers": [
         "do a security review",
         "threat model this",
@@ -130,7 +161,7 @@
       "name": "tasks-to-code",
       "description": "Implement tasks from a task list generated by design-to-tasks. Use when the user asks to \"implement the next task\", \"work on tasks\", \"start coding\", \"pick up the next item\", \"work on task N.M\", or needs to translate a trackable task list into actual code changes. Reads plans/<name>/tasks.md, plans/<name>/prd.md, and plans/<name>/design.md when present, picks the next task, implements it following the project's existing conventions, verifies it against the task's acceptance criteria, and updates the task list with the result.",
       "path": "skills/tasks-to-code",
-      "version": "1.0",
+      "version": "2.0",
       "triggers": [
         "implement the next task",
         "work on tasks",
@@ -141,9 +172,9 @@
     },
     {
       "name": "ui-design-audit",
-      "description": "Audit a UI codebase for design system inconsistencies and produce a structured findings report. Use when the user asks to \"audit the UI\", \"check for design inconsistencies\", \"find loading state issues\", \"review component consistency\", \"check the design system\", or needs a systematic sweep of visual and interaction quality across the application. Produces a prioritized findings report and a PRD-compatible output that feeds directly into idea-to-prd and design-to-tasks.",
+      "description": "Audit a UI codebase for design system inconsistencies and produce a structured findings report. Use when the user asks to \"audit the UI\", \"check for design inconsistencies\", \"find loading state issues\", \"review component consistency\", \"check the design system\", or needs a systematic sweep of visual and interaction quality across the application. Produces a prioritized findings report and a PRD-compatible output that feeds directly into design-to-tasks for remediation planning.",
       "path": "skills/ui-design-audit",
-      "version": "1.0",
+      "version": "2.0",
       "triggers": [
         "audit the UI",
         "check for design inconsistencies",

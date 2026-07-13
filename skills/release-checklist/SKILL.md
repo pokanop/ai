@@ -4,7 +4,7 @@ description: Verify a plan is ready to ship and produce a release checklist and 
 license: MIT
 metadata:
   author: pokanop
-  version: "1.0"
+  version: "2.0"
 ---
 
 # Release Checklist
@@ -14,14 +14,18 @@ metadata:
 This skill provides the final gate before a plan's changes are deployed to production. It answers two questions: "Is the implementation complete?" and "Is it safe to ship?" Poor answers to either question create incidents. This skill exists to catch both.
 
 ```
-idea-to-prd  →  prd-to-design  →  design-to-tasks  →  tasks-to-code  →  release-checklist
-                                                                            (ship)
+idea-to-prd  →  prd-to-design  →  design-to-tasks  →  tasks-to-code  ⇄  code-review  →  release-checklist
+                                                                                             (ship)
 ```
+
+The full lifecycle is defined in [shared conventions](../_shared/references/conventions.md#the-development-lifecycle). This skill is the gate between "built and reviewed" and "deployed" — and after a Go, **plan-retrospective** closes the loop.
 
 ## Inputs
 
 - `plans/<name>/tasks.md` — to assess completion status
 - `plans/<name>/prd.md` — to identify the release scope and success criteria
+- `plans/<name>/review.md` (when present) — to verify no `🔴 Blocking` review finding is unresolved
+- `plans/<name>/decisions.md` (when present) — implementation decisions often carry deployment prerequisites (new env vars, migrations, feature flags) that belong on the checklist
 - The project's quality gate commands — run to confirm they all pass
 
 If the plan is not specified, ask which plan is being released.
@@ -30,11 +34,22 @@ If the plan is not specified, ask which plan is being released.
 
 ### Phase 1: Completion Assessment
 
-Read `tasks.md` and assess whether the plan is ready to ship.
+Read `tasks.md` and assess whether the plan is ready to ship. Compute the numbers deterministically rather than counting markers by eye:
+
+```bash
+python3 skills/_shared/scripts/plan-metrics.py  plans/<name>/tasks.md
+python3 skills/_shared/scripts/plan-validate.py plans/<name>/tasks.md --prd plans/<name>/prd.md --strict
+```
+
+`plan-metrics.py` provides the completion totals; a `plan-validate.py` error (missing blocked/skipped notes, dependency problems, coverage gaps) means the task list itself is not release-grade — fix the record before assessing the release.
 
 **P0 completion gate (hard block):**
 - Every P0 task must be `[x]` complete. A plan with any P0 task in `[ ]`, `[~]`, or `[!]` state is **not ready to release**.
 - Surface all incomplete P0 tasks as blocking items.
+
+**Review gate (hard block):**
+- If `plans/<name>/review.md` exists, every `🔴 Blocking` finding must be marked resolved. An unresolved Blocking finding is an unfixed Critical defect — it blocks release exactly like an incomplete P0 task.
+- If no review artifact exists and the plan's changes are substantial, flag the absence: recommend a `code-review` pass before shipping (flag, not hard block — the user may have reviewed through other means).
 
 **P1 and P2 assessment:**
 - List all incomplete P1 (`[P1]`) tasks. These are "should be done" — flag but don't hard-block.
@@ -136,4 +151,5 @@ If the verdict is Go, ask: "Ready to mark this plan complete and archive it?" If
 
 - [references/checklist-schema.md](references/checklist-schema.md) — Full release checklist structure
 - [references/changelog-guide.md](references/changelog-guide.md) — Changelog entry format and writing guidelines
-- [../_shared/references/conventions.md](../_shared/references/conventions.md) — Canonical priority (`[P0]`/`[P1]`/`[P2]`) and status markers used throughout this skill
+- `../_shared/scripts/README.md` — `plan-metrics.py` / `plan-validate.py`: deterministic completion assessment
+- [../_shared/references/conventions.md](../_shared/references/conventions.md) — Canonical priority (`[P0]`/`[P1]`/`[P2]`), status markers, and the lifecycle (single source of truth)

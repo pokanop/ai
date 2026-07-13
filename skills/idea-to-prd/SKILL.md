@@ -4,7 +4,7 @@ description: Create detailed, development-ready Product Requirements Documents (
 license: MIT
 metadata:
   author: pokanop
-  version: "1.0"
+  version: "2.0"
 ---
 
 # Idea to PRD
@@ -16,7 +16,9 @@ idea-to-prd  →  prd-to-design  →  design-to-tasks  →  tasks-to-code
   (what/why)      (architecture)     (task list)         (build)
 ```
 
-`prd-to-design` is optional — skip it for simple features and hand the PRD straight to `design-to-tasks`.
+`prd-to-design` is optional — skip it for simple features and hand the PRD straight to `design-to-tasks`. The full lifecycle this pipeline belongs to — including `code-review`, `release-checklist`, `plan-retrospective`, the audit skills, and the routing rules between them — is defined once in [shared conventions](../_shared/references/conventions.md#the-development-lifecycle).
+
+**Intake check:** this skill is the entry point for *new or changed behavior*. If the request is actually a bug ("X is broken") route to `debug-and-fix`; if it is a structure-only cleanup route to `refactor`; if the user is unsure what the work even is, route to `next-step`. Audit findings (from `ui-design-audit`, `security-review`, `performance-review`) arrive as ready-made PRDs and do **not** pass through this skill — they enter the pipeline at `design-to-tasks`.
 
 ## File Structure
 
@@ -130,6 +132,14 @@ Once the PRD is confirmed, point the user to the next step in the pipeline:
 - For a simple feature, hand the PRD straight to **design-to-tasks**, which decomposes it into an actionable, trackable task list at `plans/<name>/tasks.md` (it reads `design.md` when present and otherwise falls back to the PRD).
 
 Either step is optional but recommended before implementation begins.
+
+## Handling PRD Changes
+
+The PRD is the source of truth for intent, so it does not silently drift — but it can be deliberately revised when requirements genuinely change (a downstream skill surfaces a gap, the user changes scope, an open question resolves differently than assumed):
+
+1. **Revise the PRD explicitly** — update the affected sections, keeping requirement labels stable (never renumber; add new `FR-N`s, mark withdrawn ones as such with a note).
+2. **State what changed** — a short "Revision" note at the top of the PRD (date + what changed and why) keeps the historical record honest.
+3. **Propagate downstream** — if `design.md` exists, `prd-to-design` reassesses the affected decisions; if `tasks.md` exists, `design-to-tasks` runs its incremental update. Never leave downstream artifacts describing requirements that no longer exist.
 
 ## Key Principles
 
