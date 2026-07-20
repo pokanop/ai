@@ -355,3 +355,12 @@ Made with care for the AI community
 *Building the future of AI, one prompt at a time*
 
 </div>
+
+---
+
+## ☕ Support This Project
+
+If this project helped you, consider supporting its development:
+
+<a href="https://github.com/sponsors/pokanop" target="_blank"><img src="https://img.shields.io/badge/GitHub%20Sponsors-ea4aaa?style=for-the-badge&logo=github" alt="GitHub Sponsors" height="28"></a>
+<a href="https://ko-fi.com/pokanop" target="_blank"><img src="https://img.shields.io/badge/Ko--fi-Support%20Me-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Ko-fi" height="28"></a>
