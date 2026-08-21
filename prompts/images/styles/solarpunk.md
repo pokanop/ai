@@ -44,25 +44,49 @@ Photograph of solarpunk transportation infrastructure — [SCENE — e.g., a cov
 Photograph of a solarpunk community event — [SCENE — e.g., a neighborhood harvest festival in a rooftop food forest, with residents gathering produce, children running between the raised beds, and a communal kitchen preparing food under a solar canopy], 16:9 landscape format. The rooftop is dense with fruit trees, vegetable beds, and wildflower borders. Solar panels and rainwater collection tanks integrated aesthetically. The city skyline of green-covered towers visible in the background. Warm late-afternoon golden light. Communal, joyful, abundant.
 ```
 
-### ChatGPT / Midjourney / Stable Diffusion — 3 variations each following standard template.
-
 ### ChatGPT
+
+**Variation 1 — Urban Scene** _(Editorial)_
 ```text
-Var 1: Create a solarpunk urban scene: [SCENE]. Technology and nature interwoven. Art Nouveau organic architecture. Golden-hour sunlight. Lush, dense, hopeful. 3:2 landscape format.
-Var 2: Create a solarpunk building facade: [BUILDING]. Every surface supports life. Integrated solar tech. Warm sunlight. Dense botanical detail. 2:3 vertical format.
-Var 3: Create a solarpunk community event: [SCENE]. Rooftop garden, communal activity, green skyline. Golden-hour light. Joyful. 3:2 landscape format.
+Create a solarpunk urban scene of [SCENE] — technology and nature interwoven, Art Nouveau organic architecture with vertical gardens and integrated solar panels, warm golden-hour sunlight. Lush, dense, and hopeful. 3:2 landscape format.
+```
+
+**Variation 2 — Building Facade** _(Concept Art)_
+```text
+Create a solarpunk building facade of [BUILDING] where every surface supports life — living walls, rooftop greenhouses, solar glazing integrated aesthetically, dense botanical detail in warm sunlight. 2:3 vertical format.
+```
+
+**Variation 3 — Community Event** _(Social Media)_
+```text
+Create a solarpunk community scene of [SCENE — e.g., a rooftop harvest festival] — communal activity in a rooftop garden, a skyline of green-covered towers behind, golden-hour light, joyful and abundant. 3:2 landscape format.
 ```
 
 ### Midjourney
+
+**Variation 1 — Urban Scene** _(Editorial)_
 ```text
-Var 1: Solarpunk urban scene, [SCENE], vertical gardens, solar panels, organic architecture, golden-hour, lush green, hopeful --ar 16:9
-Var 2: Solarpunk building facade, [BUILDING], living walls, solar glazing, dense botanical, warm sunlight --ar 4:5
-Var 3: Solarpunk transport, [SCENE], elevated cycle-highway, living green roof, solar panels, forested city, blue sky --ar 16:9
+solarpunk urban scene, [SCENE], vertical gardens, integrated solar panels, Art Nouveau organic architecture, golden-hour light, lush green, hopeful --ar 16:9 --s 300
+```
+
+**Variation 2 — Building Facade** _(Concept Art)_
+```text
+solarpunk building facade, [BUILDING], living walls, solar glazing, rooftop greenhouse, dense botanical detail, warm sunlight --ar 4:5 --s 250
+```
+
+**Variation 3 — Green Transport** _(Desktop Wallpaper)_
+```text
+solarpunk transport scene, [SCENE], elevated cycle-highway with living green roof, solar panels, forested city skyline, bright blue sky --ar 16:9 --s 300
 ```
 
 ### Stable Diffusion
-- **Var 1:** `Solarpunk urban scene, vertical gardens, solar panels, organic architecture, golden-hour, lush, 8k` / Neg: `dark, dystopian, cyberpunk, gritty, industrial, neon`
-- **Var 2:** `Solarpunk building, living wall, solar glazing, botanical, warm sunlight, Art Nouveau, 8k` / Neg: `dark, gritty, industrial, brutalist, dead plants`
+
+**Variation 1 — Urban Scene** _(Editorial)_
+- **Prompt:** `solarpunk urban scene, [SCENE], vertical gardens, solar panels, Art Nouveau organic architecture, golden-hour sunlight, lush green, hopeful`
+- **Negative Prompt:** `dark, dystopian, cyberpunk, gritty, industrial, neon, dead plants`
+
+**Variation 2 — Building Facade** _(Concept Art)_
+- **Prompt:** `solarpunk building facade, [BUILDING], living walls, solar glazing, dense botanical detail, warm sunlight, Art Nouveau curves`
+- **Negative Prompt:** `dark, gritty, industrial, brutalist, dead plants, overcast`
 
 ---
 
@@ -74,7 +98,20 @@ Using the attached photo as reference, transform the scene into a solarpunk visi
 ```
 > 💡 **Refinements:** "Add more botanical density" · "Integrate more visible clean tech — wind turbines, solar, algae tubes" · "Add community activities — people gardening, cycling" · "Make it an aerial view"
 
-**ChatGPT / Midjourney / Stable Diffusion** — Standard I2I with "solarpunk, vertical gardens, solar panels, organic architecture, golden-hour, lush, hopeful" keywords.
+**ChatGPT**
+```text
+[Upload Photo] "Transform this scene into a solarpunk vision — cover the buildings in vertical gardens and living walls, add rooftop greenhouses and aesthetically integrated solar panels, replace cars with bicycles and light-rail, and light it all with warm golden-hour sun."
+```
+
+**Midjourney**
+```text
+[IMAGE_URL] solarpunk city, vertical gardens, living walls, integrated solar panels, organic architecture, golden-hour light, lush hopeful --iw 1 --ar 16:9
+```
+
+**Stable Diffusion**
+- **Pipeline:** Img2Img · Denoising Strength: `0.55–0.7` (greens the scene while keeping its structure)
+- **Prompt:** `solarpunk, vertical gardens, solar panels, organic architecture, golden-hour sunlight, lush, hopeful`
+- **Negative Prompt:** `dark, dystopian, cyberpunk, industrial, dead plants`
 
 ---
 

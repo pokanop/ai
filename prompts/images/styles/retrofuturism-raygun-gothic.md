@@ -44,27 +44,49 @@ Retrofuturist panoramic illustration of a city of tomorrow, 16:9 ultra-wide form
 Retrofuturist illustration of a friendly household robot — [DESIGN — e.g., chrome dome head with a single glowing blue eye, accordion-style segmented torso, pincer hands holding a serving tray of futuristic food pills], 3:4 vertical format. Mid-century sci-fi design language — rounded chrome body, atomic logo on the chest plate, antenna on the head. [PASTEL] domestic background. The robot has a cheerful, servile posture. Inspired by Robby the Robot and 1950s sci-fi illustration. Bright, clean, optimistic.
 ```
 
-### ChatGPT — **3 variations** | Midjourney — **3 variations** | Stable Diffusion — **2 variations**
-
-_(Following the same template structure as previous files — abbreviated for space)_
-
 ### ChatGPT
+
+**Variation 1 — Retrofuturist Scene** _(Poster)_
 ```text
-Var 1: Create a retrofuturist illustration of [SCENE]. Chrome and pastel palette. Streamlined shapes. Atomic motifs. 1960s World's Fair optimism. 3:2 landscape.
-Var 2: Create a retrofuturist city panorama with geodesic domes, monorails, flying cars. Pastel and chrome. Bright optimistic. 3:2 landscape.
-Var 3: Create a retrofuturist robot character — chrome dome head, friendly design, pastel domestic background. Mid-century sci-fi. 2:3 vertical.
+Create a retrofuturist illustration of [SCENE] — chrome and pastel palette, streamlined rounded shapes, atomic sunburst motifs, 1960s World's Fair optimism. Bright, sunny, and hopeful. 3:2 landscape format.
+```
+
+**Variation 2 — City Panorama** _(Desktop Wallpaper)_
+```text
+Create a retrofuturist city panorama with geodesic domes, elevated monorails, and flying cars with tail fins — chrome spires against a pastel sky, bright optimistic mid-century futurism. 3:2 landscape format.
+```
+
+**Variation 3 — Friendly Robot** _(Character Design)_
+```text
+Create a retrofuturist robot character — chrome dome head with a single glowing eye, [DESIGN], friendly servile posture, pastel domestic background. 1950s sci-fi illustration style, Robby the Robot inspired. 2:3 vertical format.
 ```
 
 ### Midjourney
+
+**Variation 1 — Retrofuturist Scene** _(Poster)_
 ```text
-Var 1: Retrofuturist scene, [SCENE], chrome and pastel, streamlined shapes, atomic motifs, 1960s optimism, The Jetsons --ar 16:9
-Var 2: Retrofuturist city, geodesic domes, monorails, flying cars, chrome spires, pastel, bright sunny --ar 21:9
-Var 3: Retrofuturist robot, chrome dome head, [DESIGN], friendly, pastel background, 1950s sci-fi --ar 4:5
+retrofuturist illustration, [SCENE], chrome and pastel palette, streamlined shapes, atomic motifs, 1960s World's Fair optimism, The Jetsons aesthetic --ar 16:9 --s 300
+```
+
+**Variation 2 — City Panorama** _(Desktop Wallpaper)_
+```text
+retrofuturist city panorama, geodesic domes, monorails, flying cars, chrome spires, pastel sky, bright sunny optimism --ar 21:9 --s 300
+```
+
+**Variation 3 — Friendly Robot** _(Character Design)_
+```text
+retrofuturist robot character, chrome dome head, [DESIGN], friendly, pastel domestic background, 1950s sci-fi illustration --ar 4:5 --s 250
 ```
 
 ### Stable Diffusion
-- **Var 1:** `Retrofuturist illustration, [SCENE], chrome, pastel palette, streamlined shapes, atomic motifs, 1960s optimism` / Neg: `dark, gritty, modern, realistic photo, cyberpunk`
-- **Var 2:** `Retrofuturist city panorama, geodesic domes, monorails, flying cars, chrome, pastel, sunny` / Neg: `dark, dystopian, modern, realistic, gritty`
+
+**Variation 1 — Retrofuturist Scene** _(Poster)_
+- **Prompt:** `retrofuturist illustration, [SCENE], chrome, pastel palette, streamlined rounded shapes, atomic sunburst motifs, 1960s optimism, mid-century sci-fi`
+- **Negative Prompt:** `dark, gritty, modern, realistic photo, cyberpunk, dystopian`
+
+**Variation 2 — City Panorama** _(Desktop Wallpaper)_
+- **Prompt:** `retrofuturist city panorama, geodesic domes, monorails, flying cars, chrome spires, pastel sky, bright sunny, mid-century futurism`
+- **Negative Prompt:** `dark, dystopian, modern architecture, realistic, gritty, neon cyberpunk`
 
 ---
 
@@ -76,7 +98,20 @@ Using the attached photo as reference, reimagine the scene in a retrofuturist 19
 ```
 > 💡 **Follow-up refinements:** "Add a flying car" · "Add a friendly chrome robot" · "Make it a poster with retro typography" · "Push the chrome harder"
 
-**ChatGPT / Midjourney / Stable Diffusion** — Standard I2I with "retrofuturist, chrome, pastel, streamlined, atomic motifs, 1960s optimism" keywords.
+**ChatGPT**
+```text
+[Upload Photo] "Reimagine this scene in retrofuturist 1960s sci-fi style — chrome streamlined technology with tail fins, geodesic dome architecture, a pastel-and-chrome palette, atomic sunburst motifs, and bright sunny optimism."
+```
+
+**Midjourney**
+```text
+[IMAGE_URL] retrofuturist 1960s sci-fi, chrome streamlined technology, geodesic domes, pastel and chrome palette, atomic motifs, bright optimistic --iw 1 --ar 16:9
+```
+
+**Stable Diffusion**
+- **Pipeline:** Img2Img · Denoising Strength: `0.6–0.75` (rebuilds technology and architecture in period style)
+- **Prompt:** `retrofuturist illustration, chrome, pastel palette, streamlined shapes, atomic motifs, 1960s optimism`
+- **Negative Prompt:** `dark, gritty, cyberpunk, modern realistic photo`
 
 ---
 

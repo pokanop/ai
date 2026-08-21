@@ -44,24 +44,49 @@ Professional food photograph capturing a frozen moment — [ACTION — e.g., oli
 Professional food photograph of a [HOLIDAY] feast table — [DETAILS — e.g., a golden roasted turkey at center, surrounded by cranberry sauce, roasted vegetables, gravy boat, corn bread, and autumn leaf decorations], [FORMAT]. Overhead angle showing the full table. Warm tungsten candlelight with [DETAILS]. Rich autumnal palette. Every dish styled with intention. Place settings with linen napkins. Communal, abundant, celebratory.
 ```
 
-### ChatGPT / Midjourney / Stable Diffusion — Standard templates.
-
 ### ChatGPT
+
+**Variation 1 — Fine Dining Plate** _(Restaurant Marketing)_
 ```text
-Var 1: Create a professional food photo of [DISH]. Dramatic side-lighting. Shallow DOF. Michelin-star plating. Dark background. [FORMAT].
-Var 2: Create an overhead flat-lay food photograph of [SPREAD]. Every element placed with intention. Natural window light. Rustic surface. [FORMAT].
-Var 3: Create a dramatic ingredient portrait of [INGREDIENT]. Chiaroscuro lighting. Extreme detail. Renaissance still-life aesthetic. [FORMAT].
+Create a professional food photograph of [DISH] with dramatic side-lighting and deep shadows — shallow depth of field, Michelin-star plating with refined garnish placement, on a dark moody background. 16:9 landscape format.
+```
+
+**Variation 2 — Overhead Flat-Lay** _(Social Media)_
+```text
+Create an overhead flat-lay food photograph of [SPREAD] — every element placed with intention, natural window light, a rustic wood or slate surface, linen napkins and props styled around the dishes. 1:1 square format.
+```
+
+**Variation 3 — Ingredient Portrait** _(Art Print)_
+```text
+Create a dramatic ingredient portrait of [INGREDIENT] in chiaroscuro lighting — extreme surface detail, Renaissance still-life aesthetic, dark moody background. 4:5 vertical format.
 ```
 
 ### Midjourney
+
+**Variation 1 — Fine Dining Plate** _(Restaurant Marketing)_
 ```text
-Var 1: Professional food photograph, [DISH], dramatic side-light, shallow DOF, Michelin plating, dark background --ar 16:9
-Var 2: Overhead flat-lay, [SPREAD], intentional placement, natural light, rustic surface --ar 1:1
-Var 3: Food art portrait, [INGREDIENT], chiaroscuro, extreme detail, dark moody --ar 4:5
+professional food photograph, [DISH], dramatic side-light, shallow depth of field, Michelin-star plating, dark moody background --ar 16:9 --s 200
+```
+
+**Variation 2 — Overhead Flat-Lay** _(Social Media)_
+```text
+overhead flat-lay food photograph, [SPREAD], intentional placement, natural window light, rustic surface, styled props --ar 1:1 --s 150
+```
+
+**Variation 3 — Ingredient Portrait** _(Art Print)_
+```text
+food art portrait, [INGREDIENT], chiaroscuro lighting, extreme detail, Renaissance still-life, dark moody --ar 4:5 --s 250
 ```
 
 ### Stable Diffusion
-- **Var 1:** `Professional food photograph, [DISH], dramatic lighting, shallow DOF, fine dining plating, dark background, 8k` / Neg: `amateur, bright flat, blurry, cartoon, illustration`
+
+**Variation 1 — Fine Dining Plate** _(Restaurant Marketing)_
+- **Prompt:** `professional food photograph, [DISH], dramatic side lighting, shallow depth of field, fine dining Michelin plating, dark background`
+- **Negative Prompt:** `amateur snapshot, bright flat lighting, blurry, cartoon, illustration, low quality`
+
+**Variation 2 — Ingredient Portrait** _(Art Print)_
+- **Prompt:** `food art portrait, [INGREDIENT], chiaroscuro lighting, extreme detail, Renaissance still life aesthetic, dark moody background`
+- **Negative Prompt:** `flat lighting, plastic looking food, cartoon, oversaturated, blur`
 
 ---
 
@@ -72,6 +97,21 @@ Var 3: Food art portrait, [INGREDIENT], chiaroscuro, extreme detail, dark moody 
 Using the attached food photo, elevate it to professional food art. Improve the lighting to dramatic side-light. Apply shallow depth of field. Enhance the plating to Michelin-star standards — refine garnish placement, add micro-details. Darken the background for mood. Create a fine art quality food photograph from this reference.
 ```
 > 💡 **Refinements:** "Make the lighting moodier" · "Add a sauce swoosh" · "Switch to overhead flat-lay angle" · "Add steam/action — pour, drizzle, sprinkle"
+
+**ChatGPT**
+```text
+[Upload Photo] "Elevate this food photo to professional food art — dramatic side-lighting, shallow depth of field, Michelin-star plating refinements, and a darker moodier background."
+```
+
+**Midjourney**
+```text
+[IMAGE_URL] professional food photograph, dramatic side-light, shallow depth of field, Michelin plating, dark moody background --iw 1.5 --ar 16:9
+```
+
+**Stable Diffusion**
+- **Pipeline:** Img2Img · Denoising Strength: `0.4–0.55` (keeps the dish; upgrades light and styling)
+- **Prompt:** `professional food photograph, dramatic lighting, shallow depth of field, fine dining plating, dark background`
+- **Negative Prompt:** `amateur, flat lighting, blurry, cartoon`
 
 ---
 

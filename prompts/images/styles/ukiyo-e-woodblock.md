@@ -45,19 +45,38 @@ Ukiyo-e woodblock print of [ANIMAL — e.g., a red-crowned crane standing in a s
 ```
 
 ### ChatGPT
+
+**Variation 1 — Landscape Scene** _(Art Print)_
 ```text
-Var 1: Create a ukiyo-e woodblock print of [SCENE]. Flat colors, visible woodgrain, bold outlines. [PALETTE]. Registration misalignment. Washi paper. [FORMAT].
-Var 2: Create a ukiyo-e portrait of [SUBJECT] in elaborate kimono. Flat colors, bold outlines. [STYLE] by [ARTIST]. [FORMAT].
+Create a ukiyo-e woodblock print of [SCENE] — flat areas of color with visible woodgrain texture, bold black outlines, [PALETTE], subtle registration misalignment between color layers, on cream washi paper. In the style of [ARTIST — Hokusai / Hiroshige]. 16:9 landscape format.
+```
+
+**Variation 2 — Bijin-ga Portrait** _(Art Print, Gift)_
+```text
+Create a ukiyo-e portrait of [SUBJECT] in an elaborate patterned kimono — flat colors, bold outlines, elegant elongated pose, in the bijin-ga style of Utamaro, on cream washi paper. 4:5 vertical format.
 ```
 
 ### Midjourney
+
+**Variation 1 — Landscape Scene** _(Art Print)_
 ```text
-Var 1: Ukiyo-e woodblock print, [SCENE], flat colors, visible woodgrain, bold outlines, [PALETTE], washi paper, [ARTIST] style --ar 16:9
-Var 2: Ukiyo-e bijin-ga portrait, [SUBJECT], flat color kimono, bold outlines, Utamaro style --ar 4:5
+ukiyo-e woodblock print, [SCENE], flat colors, visible woodgrain, bold black outlines, [PALETTE], cream washi paper, [ARTIST] style --ar 16:9 --s 250
+```
+
+**Variation 2 — Bijin-ga Portrait** _(Art Print, Gift)_
+```text
+ukiyo-e bijin-ga portrait, [SUBJECT], elaborate flat-color kimono, bold outlines, Utamaro style, washi paper --ar 4:5 --s 250
 ```
 
 ### Stable Diffusion
-- **Var 1:** `Ukiyo-e woodblock print, [SCENE], flat colors, visible woodgrain texture, bold black outlines, limited palette, washi paper, Japanese` / Neg: `photograph, 3d, gradient shading, modern, digital`
+
+**Variation 1 — Landscape Scene** _(Art Print)_
+- **Prompt:** `ukiyo-e woodblock print, [SCENE], flat colors, visible woodgrain texture, bold black outlines, limited palette, cream washi paper, Japanese art`
+- **Negative Prompt:** `photograph, 3d, gradient shading, modern, digital art, anime`
+
+**Variation 2 — Bijin-ga Portrait** _(Gift)_
+- **Prompt:** `ukiyo-e bijin-ga portrait, [SUBJECT], elaborate kimono, flat colors, bold outlines, Utamaro style, washi paper, woodgrain texture`
+- **Negative Prompt:** `photograph, anime, 3d, gradients, realistic shading, modern`
 
 ---
 
@@ -67,6 +86,21 @@ Var 2: Ukiyo-e bijin-ga portrait, [SUBJECT], flat color kimono, bold outlines, U
 ```text
 Using the attached photo, recreate the scene as a Japanese ukiyo-e woodblock print. Convert all shading to flat color areas with visible woodgrain texture. Apply bold black outlines to every form. Limit the palette to [NUMBER] colors — [COLORS]. Add subtle registration misalignment between color layers. Render on cream washi paper. Compose in the style of [ARTIST — Hokusai / Hiroshige / Kuniyoshi / Utamaro].
 ```
+
+**ChatGPT**
+```text
+[Upload Photo] "Recreate this scene as a Japanese ukiyo-e woodblock print — flat color areas with visible woodgrain, bold black outlines, a limited palette, subtle registration misalignment, on cream washi paper, in the style of [ARTIST]."
+```
+
+**Midjourney**
+```text
+[IMAGE_URL] ukiyo-e woodblock print, flat colors, visible woodgrain, bold black outlines, limited palette, cream washi paper --iw 1 --ar 16:9
+```
+
+**Stable Diffusion**
+- **Pipeline:** Img2Img · Denoising Strength: `0.6–0.75` (flattens shading into woodblock color areas)
+- **Prompt:** `ukiyo-e woodblock print, flat colors, woodgrain texture, bold black outlines, limited palette, washi paper`
+- **Negative Prompt:** `photograph, 3d, gradient shading, anime, modern`
 
 ---
 

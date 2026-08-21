@@ -45,19 +45,38 @@ Soviet Constructivist-style event poster for "[EVENT NAME]" on [DATE], [FORMAT].
 ```
 
 ### ChatGPT
+
+**Variation 1 — Propaganda Poster** _(Poster)_
 ```text
-Var 1: Create a Soviet Constructivist poster: [SUBJECT]. Red, black, cream. Diagonal composition. Radiating beams. High-contrast figure. Bold sans-serif text. [FORMAT].
-Var 2: Create a Constructivist typographic poster: "[TEXT]" at dramatic angles. Red, black, cream. Geometric shapes. No figures. El Lissitzky aesthetic. [FORMAT].
+Create a Soviet Constructivist poster of [SUBJECT] — red, black, and cream palette only, strong diagonal composition with radiating angular beams, the figure in high-contrast black-and-white photomontage, bold geometric sans-serif text. Aged paper texture. 11:17 poster format.
+```
+
+**Variation 2 — Typographic Poster** _(Event Promotion)_
+```text
+Create a Constructivist typographic poster with the text "[TEXT]" arranged at dramatic angles — red, black, cream, flat geometric shapes, no figures, El Lissitzky aesthetic. 11:17 poster format.
 ```
 
 ### Midjourney
+
+**Variation 1 — Propaganda Poster** _(Poster)_
 ```text
-Var 1: Soviet Constructivist poster, [SUBJECT], red black cream, diagonal composition, radiating beams, photomontage, bold typography --ar 11:17
-Var 2: Constructivist photomontage, [ELEMENTS], dynamic diagonals, red black cream, geometric shapes, Rodchenko --ar 1:1
+Soviet Constructivist poster, [SUBJECT], red black cream palette, strong diagonal composition, radiating beams, high-contrast photomontage, bold geometric typography, aged paper --ar 11:17 --s 250
+```
+
+**Variation 2 — Photomontage** _(Social Media)_
+```text
+Constructivist photomontage, [ELEMENTS], dynamic diagonals, red black cream, flat geometric shapes, Rodchenko style --ar 1:1 --s 250
 ```
 
 ### Stable Diffusion
-- **Var 1:** `Soviet Constructivist poster, [SUBJECT], red black cream palette, diagonal composition, radiating beams, bold typography, photomontage, aged paper` / Neg: `photograph, realistic, smooth gradient, pastel, soft`
+
+**Variation 1 — Propaganda Poster** _(Poster)_
+- **Prompt:** `Soviet Constructivist poster, [SUBJECT], red black cream palette, diagonal composition, radiating beams, bold typography, photomontage, aged paper`
+- **Negative Prompt:** `photograph, realistic, smooth gradients, pastel colors, soft lighting`
+
+**Variation 2 — Photomontage** _(Social Media)_
+- **Prompt:** `Constructivist photomontage, [ELEMENTS], dynamic diagonal composition, red black cream, geometric shapes, Rodchenko style, aged paper`
+- **Negative Prompt:** `full color photograph, realistic, gradients, pastel, centered composition`
 
 ---
 
@@ -67,6 +86,21 @@ Var 2: Constructivist photomontage, [ELEMENTS], dynamic diagonals, red black cre
 ```text
 Using the attached photo, transform it into a Soviet Constructivist poster. Convert the subject to high-contrast black and white photomontage. Replace the background with flat geometric shapes in red and cream. Add angular radiating beams. Rotate the composition to a strong diagonal. Add bold geometric sans-serif typography: "[TEXT]." Aged paper texture.
 ```
+
+**ChatGPT**
+```text
+[Upload Photo] "Transform this photo into a Soviet Constructivist poster — high-contrast black-and-white photomontage of the subject, flat red and cream geometric background, angular radiating beams, a strong diagonal composition, and bold sans-serif text reading '[TEXT]'."
+```
+
+**Midjourney**
+```text
+[IMAGE_URL] Soviet Constructivist poster, high-contrast photomontage, red black cream, diagonal composition, radiating beams, bold typography --iw 1 --ar 11:17
+```
+
+**Stable Diffusion**
+- **Pipeline:** Img2Img · Denoising Strength: `0.6–0.75` (converts photo to graphic poster style)
+- **Prompt:** `Soviet Constructivist poster, high-contrast photomontage, red black cream palette, diagonal composition, radiating beams, bold typography, aged paper`
+- **Negative Prompt:** `realistic photograph, full color, gradients, soft`
 
 ---
 
