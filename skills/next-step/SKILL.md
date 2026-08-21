@@ -4,7 +4,7 @@ description: Read the state of every plan under plans/, report where each one si
 license: MIT
 metadata:
   author: pokanop
-  version: "1.0"
+  version: "2.0"
 ---
 
 # Next Step

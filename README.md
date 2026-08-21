@@ -222,9 +222,13 @@ ai/
 │   ├── debug-and-fix/
 │   ├── design-to-tasks/
 │   ├── idea-to-prd/
+│   ├── next-step/
+│   ├── performance-review/
 │   ├── plan-retrospective/
 │   ├── prd-to-design/
+│   ├── refactor/
 │   ├── release-checklist/
+│   ├── security-review/
 │   ├── tasks-to-code/
 │   └── ui-design-audit/
 └── README.md

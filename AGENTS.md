@@ -82,6 +82,6 @@ TypeScript is `astro/tsconfigs/strict` but there's no standalone typecheck scrip
 
 ## Don't
 
-- Don't commit `node_modules/`, `dist/`, `.astro/`, `src/content/docs/`, `public/assets/`, `bun.lock` — all gitignored intentionally (yes, `bun.lock` is currently gitignored in `.gitignore` even though it exists in the working tree).
+- Don't commit `node_modules/`, `dist/`, `.astro/`, `src/content/docs/`, `public/assets/` — all gitignored intentionally. `bun.lock` IS committed — keep it in sync by committing it after any dependency change.
 - Don't edit generated `.mdx` under `src/content/docs/` — edit the source `.md` and re-run sync.
 - Don't add a new prompts type (`videos`/`audio`/`text`) without also wiring it in `sync-docs.mjs` (currently placeholders) and `astro.config.mjs` sidebar.
