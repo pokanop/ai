@@ -156,10 +156,28 @@ export default defineConfig({
           label: 'Agent Skills',
           items: [
             { label: 'Overview & Workflow', slug: 'skills' },
+            { label: 'Changelog', slug: 'skills/changelog' },
             {
               label: 'Skills',
               collapsed: true,
               autogenerate: { directory: 'skills/docs' },
+            },
+          ],
+        },
+        {
+          label: 'Worked Examples',
+          collapsed: true,
+          items: [
+            { label: 'Overview', slug: 'examples' },
+            {
+              label: 'Dark Mode Toggle',
+              collapsed: true,
+              autogenerate: { directory: 'examples/dark-mode-toggle' },
+            },
+            {
+              label: 'Security Review Remediation',
+              collapsed: true,
+              autogenerate: { directory: 'examples/security-review-remediation' },
             },
           ],
         },

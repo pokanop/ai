@@ -454,27 +454,33 @@ function extractVariations(block) {
     variations.push(variation);
   }
 
-  // Pattern 2: Inline prompts (shorter docs without code blocks)
+  // Pattern 2: Stable Diffusion style with Prompt/Negative Prompt bullets.
+  // Must run before the inline pattern: the inline pattern's separator would
+  // otherwise consume the "- " bullet and capture a literal "**Prompt:** ..."
+  // string while dropping the Negative Prompt line entirely.
   if (variations.length === 0) {
-    const inlineRegex = /\*\*Variation \d+\s*[—–-]\s*([^*]+)\*\*\s*(?:_\(([^)]+)\)_)?\s*[—–-]\s*(.+)/g;
+    const sdRegex = /\*\*Variation \d+\s*[—–-]\s*([^*]+)\*\*\s*(?:_\(([^)]+)\)_)?\s*\n-\s*\*\*Prompt:\*\*\s*`([^`]+)`(?:\s*\n-\s*\*\*Negative Prompt:\*\*\s*`([^`]+)`)?/g;
+    while ((match = sdRegex.exec(block)) !== null) {
+      const variation = {
+        title: match[1].trim(),
+        useCase: match[2] ? match[2].trim() : '',
+        prompt: match[3].trim(),
+      };
+      if (match[4]) variation.negativePrompt = match[4].trim();
+      variations.push(variation);
+    }
+  }
+
+  // Pattern 3: Inline prompts (shorter docs without code blocks). The
+  // separator dash must be on the same line as the variation heading so a
+  // bullet list on the next line can never be mistaken for an inline prompt.
+  if (variations.length === 0) {
+    const inlineRegex = /\*\*Variation \d+\s*[—–-]\s*([^*]+)\*\*[^\S\n]*(?:_\(([^)]+)\)_)?[^\S\n]*[—–-][^\S\n]*(.+)/g;
     while ((match = inlineRegex.exec(block)) !== null) {
       variations.push({
         title: match[1].trim(),
         useCase: match[2] ? match[2].trim() : '',
         prompt: match[3].trim(),
-      });
-    }
-  }
-
-  // Pattern 3: Stable Diffusion style with Prompt/Negative Prompt bullets
-  if (variations.length === 0) {
-    const sdRegex = /\*\*Variation \d+\s*[—–-]\s*([^*]+)\*\*\s*(?:_\(([^)]+)\)_)?\s*\n-\s*\*\*Prompt:\*\*\s*`([^`]+)`\s*\n-\s*\*\*Negative Prompt:\*\*\s*`([^`]+)`/g;
-    while ((match = sdRegex.exec(block)) !== null) {
-      variations.push({
-        title: match[1].trim(),
-        useCase: match[2] ? match[2].trim() : '',
-        prompt: match[3].trim(),
-        negativePrompt: match[4].trim(),
       });
     }
   }
@@ -818,30 +824,225 @@ function generateCategoryIndexMdx(content, title, allStyles) {
   return lines.join('\n');
 }
 
-// Index page for a video/audio/text prompt type: the type's README with
-// styles/<slug>.md links rewritten to their published routes.
-function generatePromptTypeIndexMdx(content, title, type) {
-  let body = content.replace(
+// Placeholder hero/card art for prompt types that have no generated
+// thumbnails yet (see assets/placeholder-*-style.svg).
+const TYPE_PLACEHOLDER_IMAGE = {
+  videos: '/ai/assets/placeholder-video-style.svg',
+  audio: '/ai/assets/placeholder-audio-style.svg',
+  text: '/ai/assets/placeholder-text-style.svg',
+};
+
+// Index page for a video/audio/text prompt type: the type's README with the
+// numbered style table replaced by a GalleryCard grid (matching the image
+// prompts index) and remaining styles/<slug>.md links rewritten.
+function generatePromptTypeIndexMdx(content, title, type, typeStyles) {
+  let body = content;
+
+  // Replace the "| # | Style/Template | Description |" index table with a CardGrid
+  body = body.replace(/\| # \| (?:Style|Template) \| Description \|\r?\n(?:\|[^\n]*\r?\n?)+/g, (match) => {
+    const slugs = [...match.matchAll(/\]\(styles\/([a-z0-9-]+)\.md\)/g)].map(m => m[1]);
+    if (slugs.length === 0) return match;
+    let grid = '<CardGrid>\n';
+    for (const slug of slugs) {
+      const style = typeStyles?.find(s => s.slug === slug);
+      if (!style) continue;
+      let shortDesc = style.description || '';
+      if (shortDesc.length > 100) shortDesc = shortDesc.substring(0, 97) + '...';
+      grid += `  <GalleryCard title="${escapeForJsx(style.title)}" href="/ai/prompts/${type}/styles/${slug}/" description="${escapeForJsx(shortDesc)}" image="${TYPE_PLACEHOLDER_IMAGE[type]}" />\n`;
+    }
+    grid += '</CardGrid>\n\n';
+    return grid;
+  });
+
+  body = body.replace(
     /\]\(styles\/([a-z0-9-]+)\.md\)/g,
     `](/ai/prompts/${type}/styles/$1/)`,
   );
-  return generateGenericMdx(hardenMdxText(body), title);
+
+  const mdx = generateGenericMdx(hardenMdxText(body), title);
+  // Inject component imports right after the frontmatter block
+  return mdx.replace(
+    /^(---\n[\s\S]*?\n---\n)/,
+    "$1\nimport { CardGrid } from '@astrojs/starlight/components';\nimport GalleryCard from '@components/GalleryCard.astro';\n",
+  );
 }
 
-// Style page for a video/audio/text prompt doc. Rewrites sibling links
-// (<slug>.md and styles/<slug>.md) to published routes, hardens stray
-// MDX-hostile characters, and pins the sidebar order to the README index.
-function generatePromptTypeStyleMdx(content, title, type, slug) {
-  let body = content;
-  body = body.replace(
+// ─── Video/Audio/Text style page parsing ─────────────────────────────────
+//
+// These docs share the image-style skeleton (# Title, back-link, description,
+// **Best for:**, ## Prompt Variations, ## 💡 Tips, **Pairs well with:**) but
+// their platform sections are richer: optional blockquote notes, variations
+// with multiple fenced prompts (optionally preceded by a "Label:" line),
+// `- **Negative prompt:**` bullets, and prose notes between blocks.
+
+function cleanPlatformHeading(heading) {
+  const featured = /\(Featured/i.test(heading);
+  const name = heading
+    .replace(/_\([^)]*\)_\s*$/, '')
+    .replace(/[\u{1F000}-\u{1FAFF}\u{2190}-\u{2BFF}\u{FE0F}]/gu, '')
+    .trim();
+  return { name, featured };
+}
+
+// Parse the body of one platform section (or the whole variations section
+// when a doc has no ### platform headings) into intro lines + variations.
+function parseTypeVariations(block) {
+  const intro = [];
+  const variations = [];
+  let current = null;
+  let pendingLabel = null;
+  let inFence = false;
+  let fenceLines = [];
+
+  for (const line of block.split('\n')) {
+    if (/^\s*```/.test(line)) {
+      if (!inFence) {
+        inFence = true;
+        fenceLines = [];
+      } else {
+        inFence = false;
+        if (current) {
+          current.blocks.push({ label: pendingLabel, prompt: fenceLines.join('\n').trim() });
+          pendingLabel = null;
+        }
+      }
+      continue;
+    }
+    if (inFence) { fenceLines.push(line); continue; }
+
+    const varMatch = line.match(/^\*\*Variation \d+\s*[—–-]\s*([^*]+)\*\*\s*(?:_\(([^)]+)\)_)?\s*$/);
+    if (varMatch) {
+      current = {
+        title: varMatch[1].trim(),
+        useCase: varMatch[2] ? varMatch[2].trim() : '',
+        blocks: [],
+        notes: [],
+      };
+      variations.push(current);
+      pendingLabel = null;
+      continue;
+    }
+
+    if (line.trim() === '' || line.trim() === '---') continue;
+
+    const negMatch = line.match(/^-\s*\*\*Negative [Pp]rompt:\*\*\s*`([^`]+)`\s*$/);
+    if (negMatch && current && current.blocks.length > 0) {
+      current.blocks[current.blocks.length - 1].negativePrompt = negMatch[1].trim();
+      continue;
+    }
+
+    // A short "Label:" line naming the next fenced prompt (e.g. Suno's
+    // "Style of Music:" / "Lyrics:")
+    const labelMatch = line.match(/^([A-Z][A-Za-z /&-]{1,30}):\s*$/);
+    if (labelMatch && current) {
+      pendingLabel = labelMatch[1].trim();
+      continue;
+    }
+
+    if (current) current.notes.push(line);
+    else intro.push(line);
+  }
+
+  return { intro, variations };
+}
+
+// Parse a video/audio/text style doc into structured data mirroring
+// parseImagePrompt. Sections other than the known ones pass through verbatim.
+function parseTypeStyle(content) {
+  const data = {
+    title: '',
+    description: '',
+    bestFor: [],
+    platforms: [],      // [{ name, featured, intro, variations }]
+    tips: [],
+    relatedStyles: [],
+    otherSections: [],  // raw markdown of unrecognized ## sections
+    hasVariations: false,
+  };
+
+  const titleMatch = content.match(/^# (.+)$/m);
+  if (titleMatch) data.title = titleMatch[1].trim();
+
+  const lines = content.split('\n');
+  const descStartIdx = lines.findIndex(l => l.startsWith('[← Back'));
+  if (descStartIdx !== -1) {
+    const descLines = [];
+    for (let i = descStartIdx + 1; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (line === '') {
+        if (descLines.length > 0) break;
+        continue;
+      }
+      if (line.startsWith('**Best for:**') || line.startsWith('#') || line.startsWith('---')) break;
+      descLines.push(line);
+    }
+    data.description = descLines.join(' ');
+  }
+
+  const bestForMatch = content.match(/\*\*Best for:\*\*\s*(.+)/);
+  if (bestForMatch) {
+    data.bestFor = bestForMatch[1].split('·').map(s => s.trim()).filter(Boolean);
+  }
+
+  const variationsSection = extractSection(content, '## Prompt Variations');
+  if (variationsSection) {
+    data.hasVariations = true;
+    const body = variationsSection.replace(/^## Prompt Variations\s*\n/, '');
+    const platformBlocks = [...body.matchAll(/### (.*?)(?=\n### |$)/gs)];
+    if (platformBlocks.length > 0) {
+      for (const m of platformBlocks) {
+        const heading = m[0].split('\n')[0].replace(/^###\s*/, '').trim();
+        const { name, featured } = cleanPlatformHeading(heading);
+        const parsed = parseTypeVariations(m[0].split('\n').slice(1).join('\n'));
+        data.platforms.push({ name, featured, ...parsed });
+      }
+    } else {
+      const parsed = parseTypeVariations(body);
+      data.platforms.push({ name: '', featured: false, ...parsed });
+    }
+  }
+
+  const tipsSection = extractSection(content, '## 💡 Tips');
+  if (tipsSection) {
+    data.tips = extractBulletPoints(tipsSection).filter(t => !t.startsWith('**Pairs well with:**'));
+  }
+
+  const pairsMatch = content.match(/\*\*Pairs well with:\*\*\s*(.+)/);
+  if (pairsMatch) {
+    const links = [...pairsMatch[1].matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)];
+    data.relatedStyles = links.map(m => ({ name: m[1], slug: basename(m[2], '.md') }));
+  }
+
+  return data;
+}
+
+// Render prose lines from a platform intro or variation notes as markdown,
+// with sibling links rewritten and MDX-hostile characters escaped.
+function renderTypeProse(linesArr, type) {
+  if (!linesArr || linesArr.length === 0) return [];
+  let text = linesArr.join('\n');
+  text = text.replace(
     /\]\((?:styles\/)?([a-z0-9-]+)\.md\)/g,
     `](/ai/prompts/${type}/styles/$1/)`,
   );
-  body = hardenMdxText(body);
+  return [escapeForMdx(hardenMdxText(text)), ''];
+}
+
+// Rich style page for a video/audio/text prompt doc, mirroring the image
+// style pages: StyleHero (placeholder art + Best-for badges), platform Tabs
+// of PromptBlocks, Tips, and Related Styles. Docs without a ## Prompt
+// Variations section (e.g. the prompt-engineering guide) keep their body
+// as-is under the hero.
+function generatePromptTypeStyleMdx(content, title, type, slug) {
+  const data = parseTypeStyle(content);
 
   const lines = [];
   lines.push('---');
   lines.push(`title: "${escapeForJsx(title)}"`);
+  if (data.description) {
+    const desc = data.description.substring(0, 160).replace(/"/g, '\\"');
+    lines.push(`description: "${desc}"`);
+  }
   const order = (TYPE_STYLE_ORDER[type] || []).indexOf(slug) + 1;
   if (order > 0) {
     lines.push('sidebar:');
@@ -849,13 +1050,173 @@ function generatePromptTypeStyleMdx(content, title, type, slug) {
   }
   lines.push('---');
   lines.push('');
+  lines.push("import { Tabs, TabItem, LinkCard } from '@astrojs/starlight/components';");
+  lines.push("import PromptBlock from '@components/PromptBlock.astro';");
+  lines.push("import StyleHero from '@components/StyleHero.astro';");
+  lines.push('');
 
-  // Strip the leading H1 (duplicated by the frontmatter title) and nav links
-  const headingMatch = body.match(/^# .+\n/);
-  if (headingMatch) body = body.substring(headingMatch[0].length);
-  body = body.replace(/\[← Back[^\]]*\]\([^)]*\)\s*\n*/g, '');
+  lines.push('<StyleHero');
+  lines.push(`  image="${TYPE_PLACEHOLDER_IMAGE[type]}"`);
+  if (data.bestFor.length > 0) {
+    lines.push(`  bestFor={${JSON.stringify(data.bestFor)}}`);
+  }
+  lines.push('/>');
+  lines.push('');
 
-  lines.push(escapeForMdx(body));
+  if (data.description) {
+    lines.push(escapeForMdx(hardenMdxText(data.description)));
+    lines.push('');
+  }
+
+  if (!data.hasVariations) {
+    // Guide-style doc: render everything after the hero generically
+    let body = content;
+    body = body.replace(/^# .+\n/, '');
+    body = body.replace(/\[← Back[^\]]*\]\([^)]*\)\s*\n*/g, '');
+    body = body.replace(/^[\s\S]*?\*\*Best for:\*\*[^\n]*\n+(?:---\n+)?/, '');
+    body = body.replace(
+      /\]\((?:styles\/)?([a-z0-9-]+)\.md\)/g,
+      `](/ai/prompts/${type}/styles/$1/)`,
+    );
+    lines.push(escapeForMdx(hardenMdxText(body)));
+    return lines.join('\n');
+  }
+
+  const renderVariations = (platform, indent) => {
+    const out = [];
+    for (const prose of renderTypeProse(platform.intro, type)) {
+      out.push(prose ? indent + prose.split('\n').join('\n' + indent) : '');
+    }
+    for (const v of platform.variations) {
+      v.blocks.forEach((b, i) => {
+        let blockTitle = '';
+        if (i === 0) blockTitle = b.label ? `${v.title} — ${b.label}` : v.title;
+        else if (b.label) blockTitle = b.label;
+        const titleAttr = blockTitle ? ` title="${escapeForJsx(blockTitle)}"` : '';
+        const useCaseAttr = i === 0 && v.useCase ? ` useCase="${escapeForJsx(v.useCase)}"` : '';
+        const negAttr = b.negativePrompt ? ` negativePrompt="${escapeForJsx(b.negativePrompt)}"` : '';
+        const platformAttr = platform.name ? ` platform="${escapeForJsx(platform.name)}"` : '';
+        out.push(`${indent}<PromptBlock${titleAttr}${useCaseAttr} prompt="${escapeForJsx(b.prompt)}"${negAttr}${platformAttr} />`);
+      });
+      for (const prose of renderTypeProse(v.notes, type)) {
+        out.push(prose ? indent + prose.split('\n').join('\n' + indent) : '');
+      }
+    }
+    return out;
+  };
+
+  lines.push('## Prompt Variations');
+  lines.push('');
+
+  const tabbed = data.platforms.length > 1 || (data.platforms.length === 1 && data.platforms[0].name);
+  if (tabbed) {
+    lines.push('<Tabs>');
+    for (const platform of data.platforms) {
+      const icon = platform.featured ? ' icon="star"' : '';
+      lines.push(`  <TabItem label="${escapeForJsx(platform.name)}"${icon}>`);
+      lines.push(...renderVariations(platform, '    '));
+      lines.push('  </TabItem>');
+    }
+    lines.push('</Tabs>');
+    lines.push('');
+  } else if (data.platforms.length === 1) {
+    lines.push(...renderVariations(data.platforms[0], ''));
+    lines.push('');
+  }
+
+  if (data.tips.length > 0) {
+    lines.push('## Tips & Best Practices');
+    lines.push('');
+    for (let tip of data.tips) {
+      tip = tip.replace(
+        /\]\((?:styles\/)?([a-z0-9-]+)\.md\)/g,
+        `](/ai/prompts/${type}/styles/$1/)`,
+      );
+      lines.push(`- ${escapeForMdx(hardenMdxText(tip))}`);
+    }
+    lines.push('');
+  }
+
+  if (data.relatedStyles.length > 0) {
+    lines.push('## Related Styles');
+    lines.push('');
+    for (const rs of data.relatedStyles) {
+      lines.push(`<LinkCard title="${escapeForJsx(rs.name)}" href="/ai/prompts/${type}/styles/${rs.slug}/" />`);
+    }
+    lines.push('');
+  }
+
+  return lines.join('\n');
+}
+
+// ─── Worked examples (examples/) ──────────────────────────────────────
+
+// Pipeline order for example artifacts, used for sidebar ordering.
+const EXAMPLE_ARTIFACT_ORDER = [
+  'prd', 'design', 'tasks', 'decisions', 'review', 'release-checklist', 'retro',
+];
+
+// Rewrite the relative links used inside examples/ docs to published routes.
+// `dirPath` is the file's directory relative to examples/ ('' for the README).
+function rewriteExampleLinks(content, dirPath) {
+  let out = content;
+
+  // Skill entrypoints: any depth of ../ then skills/<name>/SKILL.md
+  out = out.replace(
+    /\]\((?:\.\.\/)+skills\/([a-z0-9-]+)\/SKILL\.md(#[^)]*)?\)/g,
+    (_m, skill, frag) => `](/ai/skills/docs/${skill}/${frag || ''})`,
+  );
+
+  // Skill reference docs: ../skills/<name>/references/<file>.md
+  out = out.replace(
+    /\]\((?:\.\.\/)+skills\/([a-z0-9-]+)\/references\/([a-z0-9-]+)\.md(#[^)]*)?\)/g,
+    (_m, skill, file, frag) => `](/ai/skills/docs/${skill}/references/${file}/${frag || ''})`,
+  );
+
+  // Shared conventions: ../skills/_shared/references/<file>.md
+  out = out.replace(
+    /\]\((?:\.\.\/)+skills\/_shared\/references\/([a-z0-9-]+)\.md(#[^)]*)?\)/g,
+    (_m, file, frag) => `](/ai/skills/docs/_shared/references/${file}/${frag || ''})`,
+  );
+
+  // Sibling / descendant artifacts: (path/to/file.md) relative to this file's dir
+  out = out.replace(
+    /\]\((?!https?:\/\/|\/)([a-z0-9-]+(?:\/[a-z0-9-]+)*)\.md(#[^)]*)?\)/g,
+    (_m, relPath, frag) => {
+      const base = dirPath ? `${dirPath}/` : '';
+      return `](/ai/examples/${base}${relPath}/${frag || ''})`;
+    },
+  );
+
+  return out;
+}
+
+// Page for one examples/ artifact (e.g. examples/dark-mode-toggle/prd.md).
+function generateExampleMdx(content, dirPath, slug) {
+  let title = titleFromSlug(slug);
+  // HTML comments are invalid in MDX; drop them (they may precede the H1).
+  let body = content.replace(/<!--[\s\S]*?-->\n?/g, '').replace(/^\s+/, '');
+  const lead = body.match(/^#\s+(.+?)[ \t]*\r?\n/);
+  if (lead) {
+    title = lead[1].trim();
+    body = body.slice(lead[0].length);
+  }
+
+  body = rewriteExampleLinks(body, dirPath);
+  body = hardenMdxText(body);
+  body = escapeForMdx(body);
+
+  const lines = [];
+  lines.push('---');
+  lines.push(`title: "${escapeForJsx(title)}"`);
+  const order = EXAMPLE_ARTIFACT_ORDER.indexOf(slug) + 1;
+  if (order > 0) {
+    lines.push('sidebar:');
+    lines.push(`  order: ${order}`);
+  }
+  lines.push('---');
+  lines.push('');
+  lines.push(body);
   return lines.join('\n');
 }
 
@@ -974,17 +1335,8 @@ function main() {
     const dir = join(DOCS_OUT, 'prompts', type);
     ensureDir(dir);
 
-    // Index page from the type's README (placeholder if it doesn't exist yet)
-    const readmePath = join(ROOT, 'prompts', type, 'README.md');
-    if (existsSync(readmePath)) {
-      const readmeContent = readFileSync(readmePath, 'utf-8');
-      writeOut(join(dir, 'index.mdx'), generatePromptTypeIndexMdx(readmeContent, title, type));
-    } else {
-      writeOut(join(dir, 'index.mdx'), generatePlaceholderMdx(title, desc));
-    }
-    pageCount++;
-
-    // Individual style pages
+    // Individual style pages (collect metadata for the index CardGrid)
+    const typeStyles = [];
     const typeStylesDir = join(ROOT, 'prompts', type, 'styles');
     if (existsSync(typeStylesDir)) {
       const typeStyleFiles = findFiles(typeStylesDir, /\.md$/);
@@ -993,12 +1345,24 @@ function main() {
         const content = readFileSync(f, 'utf-8');
         const titleMatch = content.match(/^# (.+)$/m);
         const docTitle = titleMatch ? titleMatch[1] : titleFromSlug(slug);
+        const parsed = parseTypeStyle(content);
+        typeStyles.push({ slug, title: docTitle, description: parsed.description });
         const mdx = generatePromptTypeStyleMdx(content, docTitle, type, slug);
         ensureDir(join(dir, 'styles'));
         writeOut(join(dir, 'styles', `${slug}.mdx`), mdx);
         pageCount++;
       }
     }
+
+    // Index page from the type's README (placeholder if it doesn't exist yet)
+    const readmePath = join(ROOT, 'prompts', type, 'README.md');
+    if (existsSync(readmePath)) {
+      const readmeContent = readFileSync(readmePath, 'utf-8');
+      writeOut(join(dir, 'index.mdx'), generatePromptTypeIndexMdx(readmeContent, title, type, typeStyles));
+    } else {
+      writeOut(join(dir, 'index.mdx'), generatePlaceholderMdx(title, desc));
+    }
+    pageCount++;
   }
 
   // ── 4. Agent Skills ─────────────────────────────────────────────────
@@ -1068,6 +1432,45 @@ function main() {
       const outDir = join(skillDocsDir, '_shared', 'references');
       ensureDir(outDir);
       writeOut(join(outDir, `${refSlug}.mdx`), refMdx);
+      pageCount++;
+    }
+  }
+
+  // ── 5. Skills changelog ────────────────────────────────────────
+  const changelogPath = join(ROOT, 'skills', 'CHANGELOG.md');
+  if (existsSync(changelogPath)) {
+    console.log('  📜 Generating skills changelog page...');
+    let changelog = readFileSync(changelogPath, 'utf-8');
+    // Links are relative to skills/: README.md is the skills index
+    changelog = changelog.replace(/\]\(README\.md\)/g, '](/ai/skills/)');
+    const changelogMdx = generateGenericMdx(hardenMdxText(changelog), 'Skills Changelog');
+    writeOut(join(DOCS_OUT, 'skills', 'changelog.mdx'), changelogMdx);
+    pageCount++;
+  }
+
+  // ── 6. Worked examples ────────────────────────────────────────────
+  const examplesDir = join(ROOT, 'examples');
+  if (existsSync(examplesDir)) {
+    console.log('  🧪 Generating worked example pages...');
+
+    const examplesReadme = readFileSync(join(examplesDir, 'README.md'), 'utf-8');
+    const examplesIndexMdx = generateGenericMdx(
+      hardenMdxText(rewriteExampleLinks(examplesReadme, '')),
+      'Worked Examples',
+    );
+    ensureDir(join(DOCS_OUT, 'examples'));
+    writeOut(join(DOCS_OUT, 'examples', 'index.mdx'), examplesIndexMdx);
+    pageCount++;
+
+    for (const file of findFiles(examplesDir, /\.md$/)) {
+      const rel = relative(examplesDir, file);
+      if (rel === 'README.md') continue;
+      const slug = basename(file, '.md');
+      const dirPath = dirname(rel) === '.' ? '' : dirname(rel);
+      const mdx = generateExampleMdx(readFileSync(file, 'utf-8'), dirPath, slug);
+      const outDir = join(DOCS_OUT, 'examples', dirPath);
+      ensureDir(outDir);
+      writeOut(join(outDir, `${slug}.mdx`), mdx);
       pageCount++;
     }
   }

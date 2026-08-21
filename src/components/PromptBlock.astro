@@ -22,9 +22,10 @@ const platformColors: Record<string, string> = {
   'Midjourney': '#7c5cbf',
   'Stable Diffusion': '#e67e22',
   'Veo': '#4285f4',
-  'Runway Gen-3': '#ff4081',
-  'Pika Labs': '#ff6b35',
+  'Runway': '#ff4081',
+  'Pika': '#ff6b35',
   'Sora': '#1da1f2',
+  'Kling': '#e74c3c',
   'Suno': '#f5a623',
   'Udio': '#9b59b6',
   'ElevenLabs': '#2ecc71',
@@ -33,7 +34,13 @@ const platformColors: Record<string, string> = {
   'Llama': '#8b5cf6',
 };
 
-const color = platform ? (platformColors[platform] || '#6366f1') : '#6366f1';
+// Exact match first, then substring match so versioned platform names
+// ("Google Veo 3.1", "Runway Gen-4.x", "Suno v5") pick up their brand color.
+const color = platform
+  ? (platformColors[platform]
+      || Object.entries(platformColors).find(([key]) => platform.includes(key))?.[1]
+      || '#6366f1')
+  : '#6366f1';
 
 // Highlight [PLACEHOLDERS] in the prompt for display
 function highlightPlaceholders(text: string): string {
