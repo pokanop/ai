@@ -1,0 +1,52 @@
+name: New prompt style
+description: Propose a new image-prompt style for prompts/images/styles/
+title: "[Style]: "
+labels: ["prompts"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a style! A new `prompts/images/styles/<slug>.md` file alone is **not enough** —
+        the sync pipeline only routes styles wired into `IMAGE_CATEGORIES`. See AGENTS.md
+        ("Adding a new image-prompt style") for the full requirements.
+  - type: input
+    id: slug
+    attributes:
+      label: Style slug
+      description: Lowercase, dasherized filename for `prompts/images/styles/<slug>.md`.
+      placeholder: e.g. watercolor-storybook
+    validations:
+      required: true
+  - type: input
+    id: category
+    attributes:
+      label: Category
+      description: Which existing `IMAGE_CATEGORIES` array in `scripts/sync-docs.mjs` it belongs to — or the new category to create (a new category also needs a sidebar entry in `astro.config.mjs`).
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What the style is and what it's best for
+      description: The `**Best for:**` line and a short description.
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: Sample prompt and tested platforms
+      description: The exact prompt text and the model(s)/tool(s) it was tested with (Midjourney, DALL-E 3, Stable Diffusion, …).
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Wiring checklist
+      description: Everything a style needs before it renders on the site.
+      options:
+        - label: "`<slug>` added to a category array in `IMAGE_CATEGORIES` in `scripts/sync-docs.mjs` (unlisted files land in `uncategorized/` and aren't routed)"
+        - label: "If it's a new category: matching `autogenerate` sidebar entry added in `astro.config.mjs`"
+        - label: "File follows the structure `parseImagePrompt` relies on: `# Title`, `**Best for:**`, hero `![alt](path)`, `> **Sample prompt…**` + ```text``` block, `## Prompt Variations` with `### Platform` subsections and `**Variation N — Name** _(Use Case)_` blocks, `## 🔄` img2img, `## 💡 Tips`, `**Pairs well with:**`"
+        - label: "Internal links use the `/ai/` base path (e.g. `/ai/prompts/images/styles/<cat>/<slug>/`)"
+        - label: "Referenced images exist on disk (`python3 scripts/verify-placeholders.py` passes) and are normalized with `python3 scripts/resize-image.py -i <path>`"
+        - label: "`bun run build` passes"

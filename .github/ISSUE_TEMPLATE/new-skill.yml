@@ -1,0 +1,45 @@
+name: New skill
+description: Propose a new agent skill for skills/
+title: "[Skill]: "
+labels: ["skills"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a skill! Skills follow the [Agent Skills specification](https://agentskills.io/specification)
+        and the frontmatter rules in AGENTS.md and CONTRIBUTING.md. `bun run validate` enforces them in CI.
+  - type: input
+    id: name
+    attributes:
+      label: Skill name
+      description: Lowercase `a-z0-9-`, 1–64 chars, no leading/trailing/consecutive hyphens. Must exactly match the directory name `skills/<name>/`.
+      placeholder: e.g. my-awesome-skill
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description with trigger keywords
+      description: 1–1024 chars. Skills are discovered by keyword matching on the description, so include the phrases a user would say to trigger it.
+    validations:
+      required: true
+  - type: textarea
+    id: lifecycle
+    attributes:
+      label: Where it fits in the lifecycle
+      description: How it relates to the existing pipeline (`idea-to-prd → prd-to-design → design-to-tasks → tasks-to-code ⇄ code-review → release-checklist → plan-retrospective`), the audit skills, or the standalone skills. What does it produce, and which skill consumes that output?
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Spec-compliance checklist
+      description: What `bun run validate` and the sync pipeline require.
+      options:
+        - label: "`skills/<name>/SKILL.md` exists with YAML frontmatter: `name`, `description`, `license`, and `metadata` (`author`, `version`)"
+        - label: "`name` is lowercase `a-z0-9-`, 1–64 chars, no leading/trailing/consecutive hyphens, and exactly matches the directory name"
+        - label: "`description` is 1–1024 chars and includes trigger keywords"
+        - label: "Shared conventions are linked from `_shared/references/conventions.md` instead of restated"
+        - label: "Every file under `references/` is linked from a skill doc, and relative links resolve to files that exist"
+        - label: "`skills/index.json` regenerated via `bun run sync` (no catalog drift)"
+        - label: "`skills/README.md` catalog updated and `bun run validate` + `bun run build` pass"
