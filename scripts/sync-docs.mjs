@@ -838,8 +838,8 @@ const TYPE_PLACEHOLDER_IMAGE = {
 function generatePromptTypeIndexMdx(content, title, type, typeStyles) {
   let body = content;
 
-  // Replace the "| # | Style | Description |" index table with a CardGrid
-  body = body.replace(/\| # \| Style \| Description \|\r?\n(?:\|[^\n]*\r?\n?)+/g, (match) => {
+  // Replace the "| # | Style/Template | Description |" index table with a CardGrid
+  body = body.replace(/\| # \| (?:Style|Template) \| Description \|\r?\n(?:\|[^\n]*\r?\n?)+/g, (match) => {
     const slugs = [...match.matchAll(/\]\(styles\/([a-z0-9-]+)\.md\)/g)].map(m => m[1]);
     if (slugs.length === 0) return match;
     let grid = '<CardGrid>\n';
