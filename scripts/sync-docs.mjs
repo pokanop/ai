@@ -5,9 +5,9 @@
 //
 // Content type detection is path-based:
 //   prompts/images/styles/*.md  -> image prompt parser
-//   prompts/videos/styles/*.md  -> video prompt parser (stub)
-//   prompts/audio/styles/*.md   -> audio prompt parser (stub)
-//   prompts/text/styles/*.md    -> text prompt parser (stub)
+//   prompts/videos/styles/*.md  -> generic prompt style page
+//   prompts/audio/styles/*.md   -> generic prompt style page
+//   prompts/text/styles/*.md    -> generic prompt style page
 //   skills/[name]/SKILL.md      -> skill wrapper generator
 //   README.md                   -> index page generator
 //   CONTRIBUTING.md             -> static page
@@ -119,6 +119,43 @@ const IMAGE_CATEGORIES = {
     'holographic-ui-sci-fi',
     'solarpunk',
     'retrofuturism-raygun-gothic',
+  ],
+};
+
+// ─── Sidebar ordering for video/audio/text prompt styles ────────────────
+// Matches the numbered index tables in each prompts/<type>/README.md.
+// Files not listed here still render, sorted after the ordered ones.
+const TYPE_STYLE_ORDER = {
+  videos: [
+    'cinematic-sequence',
+    'product-showcase',
+    'social-ugc-clip',
+    'animation-stylized',
+    'drone-establishing-shot',
+    'dialogue-scene',
+    'action-chase',
+    'nature-wildlife',
+    'timelapse-hyperlapse',
+    'brand-commercial',
+  ],
+  audio: [
+    'pop-anthem',
+    'electronic-dance',
+    'cinematic-score',
+    'lofi-ambient',
+    'narration-voiceover',
+    'character-dialogue-voice',
+    'podcast-jingle',
+    'sound-effects',
+  ],
+  text: [
+    'prompt-engineering-guide',
+    'system-prompts',
+    'creative-writing',
+    'technical-documentation',
+    'marketing-copy',
+    'research-synthesis',
+    'summarization-transformation',
   ],
 };
 
@@ -781,6 +818,47 @@ function generateCategoryIndexMdx(content, title, allStyles) {
   return lines.join('\n');
 }
 
+// Index page for a video/audio/text prompt type: the type's README with
+// styles/<slug>.md links rewritten to their published routes.
+function generatePromptTypeIndexMdx(content, title, type) {
+  let body = content.replace(
+    /\]\(styles\/([a-z0-9-]+)\.md\)/g,
+    `](/ai/prompts/${type}/styles/$1/)`,
+  );
+  return generateGenericMdx(hardenMdxText(body), title);
+}
+
+// Style page for a video/audio/text prompt doc. Rewrites sibling links
+// (<slug>.md and styles/<slug>.md) to published routes, hardens stray
+// MDX-hostile characters, and pins the sidebar order to the README index.
+function generatePromptTypeStyleMdx(content, title, type, slug) {
+  let body = content;
+  body = body.replace(
+    /\]\((?:styles\/)?([a-z0-9-]+)\.md\)/g,
+    `](/ai/prompts/${type}/styles/$1/)`,
+  );
+  body = hardenMdxText(body);
+
+  const lines = [];
+  lines.push('---');
+  lines.push(`title: "${escapeForJsx(title)}"`);
+  const order = (TYPE_STYLE_ORDER[type] || []).indexOf(slug) + 1;
+  if (order > 0) {
+    lines.push('sidebar:');
+    lines.push(`  order: ${order}`);
+  }
+  lines.push('---');
+  lines.push('');
+
+  // Strip the leading H1 (duplicated by the frontmatter title) and nav links
+  const headingMatch = body.match(/^# .+\n/);
+  if (headingMatch) body = body.substring(headingMatch[0].length);
+  body = body.replace(/\[← Back[^\]]*\]\([^)]*\)\s*\n*/g, '');
+
+  lines.push(escapeForMdx(body));
+  return lines.join('\n');
+}
+
 function generatePlaceholderMdx(title, description) {
   return `---
 title: "${title}"
@@ -885,8 +963,8 @@ function main() {
   writeOut(join(DOCS_OUT, 'prompts', 'images', 'index.mdx'), imgIndexMdx);
   pageCount++;
 
-  // ── 3. Video/Audio/Text Prompt placeholders ─────────────────────────
-  console.log('  📋 Generating placeholder sections...');
+  // ── 3. Video/Audio/Text Prompts ─────────────────────────────────────
+  console.log('  📋 Generating video/audio/text prompt pages...');
 
   for (const [type, title, desc] of [
     ['videos', 'Video Prompts', 'Master prompts for Veo, Runway Gen-3, Pika Labs, Sora, and more. Video prompt styles will be added here with platform-specific variations and motion control techniques.'],
@@ -896,17 +974,17 @@ function main() {
     const dir = join(DOCS_OUT, 'prompts', type);
     ensureDir(dir);
 
-    // Check if a README exists for this type
+    // Index page from the type's README (placeholder if it doesn't exist yet)
     const readmePath = join(ROOT, 'prompts', type, 'README.md');
     if (existsSync(readmePath)) {
       const readmeContent = readFileSync(readmePath, 'utf-8');
-      writeOut(join(dir, 'index.mdx'), generateGenericMdx(readmeContent, title));
+      writeOut(join(dir, 'index.mdx'), generatePromptTypeIndexMdx(readmeContent, title, type));
     } else {
       writeOut(join(dir, 'index.mdx'), generatePlaceholderMdx(title, desc));
     }
     pageCount++;
 
-    // Process any existing style files in this type
+    // Individual style pages
     const typeStylesDir = join(ROOT, 'prompts', type, 'styles');
     if (existsSync(typeStylesDir)) {
       const typeStyleFiles = findFiles(typeStylesDir, /\.md$/);
@@ -914,8 +992,8 @@ function main() {
         const slug = basename(f, '.md');
         const content = readFileSync(f, 'utf-8');
         const titleMatch = content.match(/^# (.+)$/m);
-        const docTitle = titleMatch ? titleMatch[1] : slug;
-        const mdx = generateGenericMdx(content, docTitle);
+        const docTitle = titleMatch ? titleMatch[1] : titleFromSlug(slug);
+        const mdx = generatePromptTypeStyleMdx(content, docTitle, type, slug);
         ensureDir(join(dir, 'styles'));
         writeOut(join(dir, 'styles', `${slug}.mdx`), mdx);
         pageCount++;

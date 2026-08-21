@@ -120,21 +120,36 @@ export default defineConfig({
           label: 'Video Prompts',
           collapsed: true,
           items: [
-            { label: 'Overview', slug: 'prompts/videos' },
+            { label: 'Overview & Quick Start', slug: 'prompts/videos' },
+            {
+              label: 'Styles',
+              collapsed: true,
+              autogenerate: { directory: 'prompts/videos/styles' },
+            },
           ],
         },
         {
           label: 'Audio Prompts',
           collapsed: true,
           items: [
-            { label: 'Overview', slug: 'prompts/audio' },
+            { label: 'Overview & Quick Start', slug: 'prompts/audio' },
+            {
+              label: 'Styles',
+              collapsed: true,
+              autogenerate: { directory: 'prompts/audio/styles' },
+            },
           ],
         },
         {
           label: 'Text Prompts',
           collapsed: true,
           items: [
-            { label: 'Overview', slug: 'prompts/text' },
+            { label: 'Overview & Quick Start', slug: 'prompts/text' },
+            {
+              label: 'Templates',
+              collapsed: true,
+              autogenerate: { directory: 'prompts/text/styles' },
+            },
           ],
         },
         {
