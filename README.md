@@ -58,10 +58,10 @@ Prompts optimized for:
 <img src="assets/icon-video.svg" alt="Videos" width="80">
 
 Master prompts for:
-- **Veo** - Google's video AI
-- **Runway Gen-3** - Cinematic sequences
-- **Pika Labs** - Dynamic motion
-- **Sora** - Long-form narratives
+- **Veo 3.1** - Google's video AI with native audio
+- **Sora 2** - OpenAI's realistic video + audio
+- **Runway Gen-4** - Cinematic image-to-video
+- **Kling & Pika** - Motion and keyframe control
 
 [`prompts/videos/`](prompts/videos/)
 
