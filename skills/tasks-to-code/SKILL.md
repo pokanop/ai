@@ -5,7 +5,7 @@ compatibility: Requires python3 on PATH for the bundled plan tooling (skills/_sh
 license: MIT
 metadata:
   author: pokanop
-  version: "2.1"
+  version: "2.2"
 ---
 
 # Tasks to Code
@@ -110,6 +110,8 @@ See [references/verification-guide.md](references/verification-guide.md) for the
 
 If verification reveals that the implementation does not satisfy the acceptance criteria, fix it in Phase 4 and re-verify. Do not mark the task complete until all criteria pass.
 
+This phase is a [verification gate](../_shared/references/verification-gates.md): `[x]` is a claim that requires fresh evidence — every gate run in this session, every criterion individually checked. "Tests pass so the task is done" is the rationalization the gate exists to stop.
+
 ### Phase 6: Record
 
 Update the task list and decision log to reflect the completed work.
@@ -186,6 +188,8 @@ When blocked, do not attempt a workaround that violates the task's scope. Surfac
 
 **Quality gates are non-negotiable.** A task is not complete if a quality gate fails. Fix the gate or mark the task `[!]` with the specific gate failure noted.
 
+**Evidence before claims.** No completion claim without fresh verification output from this session — see the shared [verification gates](../_shared/references/verification-gates.md) for the gate sequence and the anti-rationalization table.
+
 ## References
 
 - [references/implementation-guide.md](references/implementation-guide.md) — Pattern-first implementation principles and discipline rules
@@ -193,4 +197,5 @@ When blocked, do not attempt a workaround that violates the task's scope. Surfac
 - [references/verification-guide.md](references/verification-guide.md) — How to verify a task against its acceptance criteria and quality gates
 - `../_shared/scripts/README.md` — `plan-metrics.py`: deterministic statistics for the tasks.md Overview table
 - [../_shared/references/conventions.md](../_shared/references/conventions.md) — Shared status markers, priority, and the `plans/` layout (single source of truth)
+- [../_shared/references/verification-gates.md](../_shared/references/verification-gates.md) — Evidence-before-claims gate discipline and anti-rationalization table (shared reference)
 - [../idea-to-prd/references/codebase-discovery.md](../idea-to-prd/references/codebase-discovery.md) — Full codebase discovery checklist (shared reference)

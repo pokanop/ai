@@ -5,7 +5,7 @@ compatibility: Requires python3 on PATH for the bundled plan tooling (skills/_sh
 license: MIT
 metadata:
   author: pokanop
-  version: "2.1"
+  version: "2.2"
 ---
 
 # Design to Tasks
@@ -129,7 +129,7 @@ python3 skills/_shared/scripts/plan-validate.py plans/<name>/tasks.md --prd plan
 
 Fix every error and warning it reports (see `skills/_shared/scripts/README.md` for the check list and output format).
 
-This validation is mandatory. Do not present the task list until all checks pass — the mental checks *and* a clean `plan-validate.py` run.
+This validation is mandatory. Do not present the task list until all checks pass — the mental checks *and* a clean `plan-validate.py` run. This is a [verification gate](../_shared/references/verification-gates.md): "every requirement has a task" is only claimable after a clean validator run in this session — the script is the arbiter, not your recollection of the mapping.
 
 ### Phase 4: Review and Refinement
 
@@ -179,3 +179,4 @@ If the PRD is revised (via `idea-to-prd`'s change protocol) or the design is rev
 - [references/progress-tracking.md](references/progress-tracking.md) -- Status conventions, update workflows, and summary reporting
 - `../_shared/scripts/README.md` -- `plan-validate.py` / `plan-metrics.py`: deterministic task-list validation and metrics
 - [../_shared/references/conventions.md](../_shared/references/conventions.md) -- Shared markers, priority, effort, labels, and the `plans/` layout (single source of truth)
+- [../_shared/references/verification-gates.md](../_shared/references/verification-gates.md) -- Evidence-before-claims gate discipline and anti-rationalization table (shared reference)

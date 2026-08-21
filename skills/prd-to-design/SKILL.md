@@ -4,7 +4,7 @@ description: Turn a Product Requirements Document into a technical design — co
 license: MIT
 metadata:
   author: pokanop
-  version: "2.0"
+  version: "2.1"
 ---
 
 # PRD to Design
@@ -116,6 +116,8 @@ Before presenting the design, validate it. This is a mandatory gate, not optiona
 
 If any check fails, fix it before presenting. Do not rely on the user to catch structural gaps.
 
+This is a [verification gate](../_shared/references/verification-gates.md): "the design covers every requirement" must be verified item by item against the PRD's labels, not asserted from memory.
+
 ### Phase 6: Review
 
 Present the design and ask for targeted feedback:
@@ -161,3 +163,4 @@ The bar for a mid-implementation design change is evidence, not preference — "
 - [references/tradeoff-rubric.md](references/tradeoff-rubric.md) -- How to evaluate alternatives and decide when a choice warrants an ADR
 - [../idea-to-prd/references/codebase-discovery.md](../idea-to-prd/references/codebase-discovery.md) -- Checklist for understanding the existing architecture before designing (shared reference)
 - [../_shared/references/conventions.md](../_shared/references/conventions.md) -- Shared priority, labels, and the `plans/` layout (single source of truth)
+- [../_shared/references/verification-gates.md](../_shared/references/verification-gates.md) -- Evidence-before-claims gate discipline and anti-rationalization table (shared reference)

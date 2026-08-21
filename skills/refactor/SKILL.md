@@ -4,7 +4,7 @@ description: Safely restructure existing code without changing its behavior — 
 license: MIT
 metadata:
   author: pokanop
-  version: "2.0"
+  version: "2.1"
 ---
 
 # Refactor
@@ -109,6 +109,8 @@ The proof that a refactor is safe is that nothing observable moved.
 3. **Confirm the public surface is identical** — same exported signatures, same API responses, same error shapes.
 4. **Confirm scope** — only the files you boxed in Phase 1 changed.
 
+This phase is a [verification gate](../_shared/references/verification-gates.md): "behavior is unchanged" requires a green suite **and** a `git diff` showing no test edits, both from this session — a green run alone proves nothing if the tests moved.
+
 See [references/behavior-preservation.md](references/behavior-preservation.md) for the full verification sequence, the "no test modified" rule, and equivalence techniques (golden-master diffing, output comparison) for areas that are hard to unit-test.
 
 ### Phase 5: Report
@@ -148,3 +150,4 @@ If you noticed further improvements while working, list them as new **Future Opp
 - [references/behavior-preservation.md](references/behavior-preservation.md) — How to verify behavior is unchanged: quality gates, the "no test modified" rule, and equivalence techniques
 - [../tasks-to-code/references/implementation-guide.md](../tasks-to-code/references/implementation-guide.md) — Pattern-first implementation discipline and minimal footprint (shared reference)
 - [../idea-to-prd/references/codebase-discovery.md](../idea-to-prd/references/codebase-discovery.md) — Codebase and test-pattern discovery (shared reference)
+- [../_shared/references/verification-gates.md](../_shared/references/verification-gates.md) — Evidence-before-claims gate discipline and anti-rationalization table (shared reference)
