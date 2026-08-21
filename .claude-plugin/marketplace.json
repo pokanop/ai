@@ -10,7 +10,7 @@
   },
   "plugins": [
     {
-      "name": "pokanop-skills",
+      "name": "skills",
       "source": "./",
       "description": "Project-aware agent skills covering the full software development lifecycle: PRDs, technical designs, task planning, implementation, reviews, testing, debugging, refactoring, upgrades, audits, releases, and retrospectives.",
       "category": "engineering",

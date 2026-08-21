@@ -195,7 +195,7 @@ Detailed instructions and guidance for the agent...
 **Install any skill from this repo via the CLI:**
 
 ```bash
-bunx skills add pokanop/ai
+npx skills add pokanop/ai
 ```
 
 Supported by: Claude Code, Cursor, Windsurf, OpenCode, GitHub Copilot, OpenHands, and more.
@@ -254,7 +254,7 @@ cd ai/prompts/images
 Install all skills in this repository directly into your project:
 
 ```bash
-bunx skills add pokanop/ai
+npx skills add pokanop/ai
 ```
 
 Or browse and install individual skills from the [skills.sh leaderboard](https://skills.sh).

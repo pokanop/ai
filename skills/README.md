@@ -10,14 +10,14 @@ Two install paths, two philosophies: the **Claude Code plugin** installs the who
 
 ### Claude Code (plugin marketplace)
 
-This repo is a [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugins). Add it once, then install the `pokanop-skills` plugin:
+This repo is a [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugins). Add it once, then install the `skills` plugin:
 
 ```bash
 claude plugin marketplace add pokanop/ai
-claude plugin install pokanop-skills@pokanop
+claude plugin install skills@pokanop
 ```
 
-Or from inside a session: `/plugin marketplace add pokanop/ai`, then `/plugin install pokanop-skills@pokanop`. Plugin installs are read-only and update automatically with this repo.
+Or from inside a session: `/plugin marketplace add pokanop/ai`, then `/plugin install skills@pokanop`. Plugin installs are read-only and update automatically with this repo.
 
 ### skills.sh CLI (Claude Code, Codex, Cursor, Devin, and others)
 
@@ -33,7 +33,7 @@ Or install a single skill by name with `--skill`:
 npx skills add pokanop/ai --skill idea-to-prd
 ```
 
-Useful variations: `--list` shows the available skills without installing, `--agent <name>` targets specific agents, and `--global` installs to your user directory instead of the current project. If you prefer Bun, `bunx skills add …` works identically.
+Useful variations: `--list` shows the available skills without installing, `--agent <name>` targets specific agents, and `--global` installs to your user directory instead of the current project. If you prefer Bun, `bunx skills add …` works identically (this repo uses Bun internally, but `npx` is the canonical install command in user-facing docs).
 
 Per-agent install directories used by the CLI (project scope / global scope):
 
