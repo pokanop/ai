@@ -12,10 +12,12 @@ on:
 
 jobs:
   validate:
-    # GitHub-hosted runner: this job runs on pull_request, so fork PRs would
-    # otherwise execute untrusted code on a self-hosted runner. All steps here
-    # are dependency-free, so ubuntu-latest is safe and fast.
-    runs-on: ubuntu-latest
+    # Self-hosted runner. Fork PRs are gated by the repository Actions setting
+    # "Require approval for all outside collaborators", so untrusted code never
+    # runs unapproved. Keep the trigger as `pull_request` (never
+    # `pull_request_target` with a PR-head checkout): forks then get a
+    # read-only GITHUB_TOKEN and no secrets.
+    runs-on: [self-hosted, linux, x64]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
