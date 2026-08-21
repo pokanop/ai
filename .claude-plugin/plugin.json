@@ -1,0 +1,42 @@
+{
+  "name": "skills",
+  "version": "1.0.0",
+  "description": "Project-aware agent skills covering the full software development lifecycle: PRDs, technical designs, task planning, implementation, reviews, testing, debugging, refactoring, upgrades, audits, releases, and retrospectives.",
+  "author": {
+    "name": "Pokanop",
+    "url": "https://github.com/pokanop"
+  },
+  "homepage": "https://pokanop.github.io/ai/",
+  "repository": "https://github.com/pokanop/ai",
+  "license": "MIT",
+  "keywords": [
+    "sdlc",
+    "planning",
+    "prd",
+    "code-review",
+    "testing",
+    "debugging",
+    "refactoring",
+    "security",
+    "performance",
+    "release"
+  ],
+  "skills": [
+    "./skills/next-step",
+    "./skills/idea-to-prd",
+    "./skills/prd-to-design",
+    "./skills/design-to-tasks",
+    "./skills/tasks-to-code",
+    "./skills/code-review",
+    "./skills/debug-and-fix",
+    "./skills/refactor",
+    "./skills/write-tests",
+    "./skills/dependency-upgrade",
+    "./skills/incident-postmortem",
+    "./skills/ui-design-audit",
+    "./skills/security-review",
+    "./skills/performance-review",
+    "./skills/release-checklist",
+    "./skills/plan-retrospective"
+  ]
+}

@@ -4,9 +4,24 @@ A collection of structured, project-aware agent skills for software development 
 
 ---
 
-## Installing
+## Installation
 
-The [skills.sh](https://skills.sh) CLI installs skills from this repo into your agent of choice (Claude Code, Codex, Cursor, and others). Install the whole collection:
+Two install paths, two philosophies: the **Claude Code plugin** installs the whole suite as a managed bundle that updates when this repo ships, while **[skills.sh](https://skills.sh)** copies editable skill files into your project (or user directory) for Claude Code, Codex, Cursor, Devin, and [70+ other agents](https://github.com/vercel-labs/skills#supported-agents). Pick one — installing both duplicates every skill.
+
+### Claude Code (plugin marketplace)
+
+This repo is a [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugins). Add it once, then install the `skills` plugin:
+
+```bash
+claude plugin marketplace add pokanop/ai
+claude plugin install skills@pokanop
+```
+
+Or from inside a session: `/plugin marketplace add pokanop/ai`, then `/plugin install skills@pokanop`. Plugin installs are read-only and update automatically with this repo.
+
+### skills.sh CLI (Claude Code, Codex, Cursor, Devin, and others)
+
+The [skills.sh](https://skills.sh) CLI installs skills from this repo into your agent of choice. Install the whole collection:
 
 ```bash
 npx skills add pokanop/ai
@@ -18,7 +33,20 @@ Or install a single skill by name with `--skill`:
 npx skills add pokanop/ai --skill idea-to-prd
 ```
 
-Useful variations: `--list` shows the available skills without installing, `--agent <name>` targets specific agents, and `--global` installs to your user directory instead of the current project. If you prefer Bun, `bunx skills add …` works identically.
+Useful variations: `--list` shows the available skills without installing, `--agent <name>` targets specific agents, and `--global` installs to your user directory instead of the current project. If you prefer Bun, `bunx skills add …` works identically (this repo uses Bun internally, but `npx` is the canonical install command in user-facing docs).
+
+Per-agent install directories used by the CLI (project scope / global scope):
+
+| Agent | `--agent` | Project | Global |
+|-------|-----------|---------|--------|
+| Claude Code | `claude-code` | `.claude/skills/` | `~/.claude/skills/` |
+| Codex | `codex` | `.agents/skills/` | `~/.codex/skills/` |
+| Cursor | `cursor` | `.agents/skills/` | `~/.cursor/skills/` |
+| Devin (Terminal) | `devin` | `.devin/skills/` | `~/.config/devin/skills/` |
+
+### Manual copy
+
+Every skill is a self-contained directory with a `SKILL.md` entrypoint, so you can also copy `skills/<name>/` straight into your agent's skills directory from the table above (include `skills/_shared/` — several skills reference its conventions).
 
 ---
 
