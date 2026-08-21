@@ -1,0 +1,15 @@
+{
+  "skill": "design-to-tasks",
+  "description": "Generate a task list from a small but structurally complete PRD (no design.md — exercises the PRD fallback path). The result must satisfy the shared plan tooling's structural contract and cover every labeled requirement.",
+  "prompt": "Using the design-to-tasks skill, generate a task list for the PRD at input/prd.md (there is no design.md — work from the PRD). Write the result to output/tasks.md in this scenario directory.",
+  "checks": [
+    { "type": "file_exists", "path": "output/tasks.md" },
+    { "type": "plan_validate", "tasks": "output/tasks.md", "prd": "input/prd.md" },
+    { "type": "min_count", "path": "output/tasks.md", "pattern": "^- \\[ \\]", "count": 6 },
+    { "type": "regex", "path": "output/tasks.md", "pattern": "FR-6" },
+    { "type": "regex", "path": "output/tasks.md", "pattern": "NFR-3" },
+    { "type": "regex", "path": "output/tasks.md", "pattern": "\\[P0\\]" },
+    { "type": "regex", "path": "output/tasks.md", "pattern": "Acceptance Criteria" },
+    { "type": "regex_absent", "path": "output/tasks.md", "pattern": "^- \\[x\\]" }
+  ]
+}

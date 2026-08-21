@@ -34,6 +34,9 @@ Useful variations: `--list` shows the available skills without installing, `--ag
 | [`code-review`](code-review/) | Structured review of code changes | Reviewing a PR, diff, or set of changed files |
 | [`debug-and-fix`](debug-and-fix/) | Diagnose bugs and add regression tests | Something is broken and needs root-cause analysis |
 | [`refactor`](refactor/) | Restructure code without changing behavior | Cleaning up code or executing a deferred improvement |
+| [`write-tests`](write-tests/) | Add or backfill test coverage without changing behavior | Code works but nothing tests it; a dedicated coverage pass |
+| [`dependency-upgrade`](dependency-upgrade/) | Safe, staged dependency and major-version upgrades | Bumping packages, frameworks, or toolchains; fixing audit findings |
+| [`incident-postmortem`](incident-postmortem/) | Blameless postmortem with routed action items | After an incident or outage, once the system is stable |
 | [`ui-design-audit`](ui-design-audit/) | Sweep UI for design system inconsistencies | Auditing components before a design cleanup |
 | [`security-review`](security-review/) | Lightweight threat model + OWASP-style security sweep | Before launching auth/payments; a dedicated security pass |
 | [`performance-review`](performance-review/) | Measurement-driven performance sweep | Before launch; when the app feels slow; when data volume grows |
@@ -111,6 +114,9 @@ These skills work independently and don't require a plan:
 - **`code-review`** — Use any time you need a structured review of a diff, branch, or changed file set. Optionally reads `plans/<name>/tasks.md` to validate acceptance criteria if the change comes from a task, and `design.md`/ADRs for architecture conformance.
 - **`debug-and-fix`** — Use when something is broken. Works entirely from a bug report (symptom, steps to reproduce, expected vs. actual). Has no plan dependency.
 - **`refactor`** — Use when code needs restructuring without any behavior change. Closes the loop on the suite's no-gold-plating discipline: it executes the structural improvements that `tasks-to-code`, `code-review`, and `plan-retrospective` defer into `decisions.md` / `retro.md` "Future Opportunities". Has no plan dependency.
+- **`write-tests`** — Use for a dedicated coverage pass over code that already works. Discovers the project's test framework and patterns first, prioritizes coverage by risk, and never modifies the code under test — bugs it finds route to `debug-and-fix`. Has no plan dependency.
+- **`dependency-upgrade`** — Use for version bumps, framework migrations, and dependency-audit fixes. Stages risky bumps one at a time with quality gates green after each; new-capability adoption routes to `idea-to-prd`. Has no plan dependency.
+- **`incident-postmortem`** — Use after an incident is over. Like the audit skills it is PRD-emitting: systemic prevention work becomes `plans/incident-<date>-<slug>/prd.md` entering the pipeline at `design-to-tasks`, while specific defect fixes route to `debug-and-fix`.
 
 ---
 
@@ -275,6 +281,83 @@ These skills work independently and don't require a plan:
 
 ---
 
+### `write-tests`
+
+**Trigger phrases:** "write tests", "add tests", "backfill test coverage", "increase coverage", "test this module", "add integration tests"
+
+**Accepts:** A coverage target (module, feature, service, or "the scary parts") + a coverage intent
+
+**What it produces:** Tests in the project's own framework and style, a risk-ranked coverage plan for large targets, and a coverage summary — with **zero changes to the code under test**
+
+**Workflow phases:**
+1. Discover the project's testing conventions (framework, location, style, doubles policy, coverage tooling)
+2. Map and prioritize the coverage gap — behavior inventory, risk ranking, pyramid level per behavior
+3. Decide characterization vs. specification tests per target
+4. Write the tests (one behavior per test, deterministic, error paths covered)
+5. Verify with the full suite and all quality gates, then report
+
+**Key behaviors:**
+- Never modifies the code under test — needed seams are surfaced as `refactor` work, not smuggled in
+- Bugs discovered while testing are characterized, flagged, and routed to `debug-and-fix` — never silently fixed or enshrined as "expected"
+- Coverage is risk-weighted: money-moving, auth, and widely-imported code first, not whatever is easiest
+
+**References inside the skill:**
+- `references/test-pyramid.md` — choosing unit / integration / end-to-end per behavior
+- `references/coverage-strategy.md` — behavior inventory, risk ranking, characterization vs. specification
+
+---
+
+### `dependency-upgrade`
+
+**Trigger phrases:** "upgrade dependencies", "update packages", "bump versions", "major version upgrade", "fix npm audit findings", "update the lockfile"
+
+**Requires:** A green baseline — all quality gates passing before the first bump
+
+**What it produces:** Staged, individually-verified version bumps with disciplined lockfile diffs and an upgrade summary
+
+**Workflow phases:**
+1. Inventory and plan the batches — outdated/audit report, risk classification, one stage per risky bump
+2. Read before you bump — changelogs across every crossed version, migration guides, supply-chain signals
+3. Apply one stage at a time — bump via the package manager, make required code changes, gates green, inspect the lockfile diff, commit
+4. Verify the whole, then report
+
+**Key behaviors:**
+- Never upgrades on a red baseline; never stacks a second risky stage on an unverified one
+- Supply-chain caution: prefers versions published ≥ 7 days ago; pinned/bounded ranges only; lockfile is reviewed like code and never hand-edited
+- Adopting new capabilities the upgrade enables routes to `idea-to-prd` — the upgrade diff contains versions plus required changes, nothing else
+
+**References inside the skill:**
+- `references/upgrade-planning.md` — risk classification, batching, stage ordering, changelog reading
+- `references/supply-chain.md` — threat signals, the ≥7-day rule, version-range and lockfile discipline
+
+---
+
+### `incident-postmortem`
+
+**Trigger phrases:** "write a postmortem", "incident review", "write up the outage", "root cause analysis of the incident", "blameless retro on the incident"
+
+**Requires:** The incident to be over or stable (a live outage routes to `debug-and-fix` first), plus the evidence: impact facts, logs/alerts/deploy history, responder accounts
+
+**What it produces:** `plans/incident-<date>-<slug>/postmortem.md` — impact, evidence-based timeline, contributing factors, routed action items — plus a `prd.md` in the same folder when systemic work is emitted, entering the pipeline at `design-to-tasks`
+
+**Workflow phases:**
+1. Establish impact and severity (numbers, on the shared severity scale)
+2. Reconstruct the timeline — timestamped, factual, sourced; detection/mitigation gaps are findings
+3. Analyze contributing factors — blameless, system-focused, never a single root cause
+4. Derive action items that actually route — defect fixes → `debug-and-fix`, systemic prevention → findings PRD
+5. Write and file the postmortem
+
+**Key behaviors:**
+- Blameless as a method: every "human error" is rewritten as the system condition that made it possible
+- Contributing factors, not root cause — real incidents are conjunctions, and each factor is a prevention opportunity
+- Action items are work or decoration: specific, prioritized on the shared scale, and routed into the pipeline
+
+**References inside the skill:**
+- `references/postmortem-schema.md` — full postmortem document structure
+- `references/analysis-guide.md` — blameless facilitation, iterative "why" analysis, factor classification, anti-patterns
+
+---
+
 ### `ui-design-audit`
 
 **Trigger phrases:** "audit the UI", "check for design inconsistencies", "find loading state issues", "review component consistency"
@@ -380,8 +463,9 @@ Several skills share reference documents to avoid duplication:
 |-----------|-----------|
 | `_shared/references/conventions.md` | **All skills** — the lifecycle and routing table, status markers, priority, severity↔priority, effort sizes, labels, and the `plans/` layout |
 | `_shared/scripts/` (`plan-metrics.py`, `plan-validate.py`) | `design-to-tasks` (post-generation validation), `tasks-to-code` (statistics), `release-checklist` (completion assessment), `plan-retrospective` (metrics), `next-step` (status) |
-| `idea-to-prd/references/codebase-discovery.md` | `idea-to-prd`, `prd-to-design`, `design-to-tasks`, `tasks-to-code`, `code-review`, `debug-and-fix`, `refactor`, `security-review`, `performance-review` |
-| `idea-to-prd/references/prd-schema.md` | `idea-to-prd`, `ui-design-audit`, `security-review`, `performance-review` |
+| `idea-to-prd/references/codebase-discovery.md` | `idea-to-prd`, `prd-to-design`, `design-to-tasks`, `tasks-to-code`, `code-review`, `debug-and-fix`, `refactor`, `write-tests`, `dependency-upgrade`, `security-review`, `performance-review` |
+| `idea-to-prd/references/prd-schema.md` | `idea-to-prd`, `ui-design-audit`, `security-review`, `performance-review`, `incident-postmortem` |
+| `refactor/references/safety-net.md` | `refactor`, `write-tests` (characterization-test mechanics) |
 | `code-review/references/review-checklist.md` | `code-review`, `security-review` (defers line-level diff checks to it) |
 | `tasks-to-code/references/implementation-guide.md` | `tasks-to-code`, `debug-and-fix`, `refactor` |
 

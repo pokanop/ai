@@ -32,6 +32,14 @@ idea-to-prd → prd-to-design° → design-to-tasks → tasks-to-code ⇄ code-r
 - **Repair skills** — `debug-and-fix` (incorrect behavior) and `refactor`
   (structure-only change) — run standalone at any point and route work back into the
   pipeline when it outgrows them.
+- **Maintenance skills** — `write-tests` (coverage without behavior change) and
+  `dependency-upgrade` (staged version bumps) — run standalone at any point; bugs
+  they surface route to `debug-and-fix`, and work that outgrows them enters through
+  `idea-to-prd`.
+- **incident-postmortem** analyzes an incident after the fact and, like the audit
+  skills, can emit its systemic remediation work as a PRD
+  (`plans/incident-<date>-<slug>/prd.md`) entering at `design-to-tasks`; specific
+  defect fixes route to `debug-and-fix`.
 - **next-step** is the orchestrator: it reads the `plans/` state, reports where each
   plan is in this lifecycle, and routes any request to the right skill.
 
@@ -49,6 +57,9 @@ is how behavior changes ship without acceptance criteria.
 | Assessing a diff, PR, or changed file set | `code-review` |
 | Incorrect behavior — something is broken | `debug-and-fix` |
 | Restructuring code with behavior identical | `refactor` |
+| Adding or backfilling test coverage, behavior unchanged | `write-tests` |
+| Bumping dependency, framework, or toolchain versions | `dependency-upgrade` |
+| Analyzing an incident or outage after the fact | `incident-postmortem` |
 | A systematic UI / design-system sweep | `ui-design-audit` |
 | A whole-system security posture sweep | `security-review` |
 | A whole-system performance posture sweep | `performance-review` |
@@ -58,7 +69,8 @@ is how behavior changes ship without acceptance criteria.
 
 **Bright lines:** new or changed behavior always enters through `idea-to-prd`;
 incorrect behavior is always `debug-and-fix`; a structure-only change is always
-`refactor`. When a piece of work straddles two rows, split it — never smuggle one
+`refactor`; a bug discovered while writing tests or upgrading dependencies routes
+to `debug-and-fix` rather than being fixed in place. When a piece of work straddles two rows, split it — never smuggle one
 kind of change inside another.
 
 ---
@@ -199,6 +211,10 @@ plans/
 - **Audit plans** are named `plans/<audit-type>-<date>/` — `plans/ui-audit-2026-07-12/`,
   `plans/security-review-2026-07-12/`, `plans/performance-review-2026-07-12/` — each
   containing a `prd.md` of findings that feeds straight into `design-to-tasks`.
+- **Incident plans** are named `plans/incident-<date>-<slug>/` and contain the
+  `postmortem.md` written by `incident-postmortem`, plus a `prd.md` when systemic
+  remediation work is emitted — entering the pipeline at `design-to-tasks` exactly
+  like an audit's findings.
 - Not every file exists for every plan; each skill creates the ones it owns.
 
 ### Deterministic plan tooling

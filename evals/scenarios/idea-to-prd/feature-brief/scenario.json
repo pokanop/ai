@@ -1,0 +1,17 @@
+{
+  "skill": "idea-to-prd",
+  "description": "Turn an informal feature brief into a structured PRD. The result must carry the suite's labeled-requirement contract (FR-N / NFR-N / US-N / QG-N), goals and non-goals, a phased implementation plan, and a testing strategy — the exact preconditions design-to-tasks checks before it will generate tasks.",
+  "prompt": "Using the idea-to-prd skill, write a PRD for the feature brief at input/brief.md. Treat the brief's out-of-scope list as authoritative Non-Goals. Write the result to output/prd.md in this scenario directory.",
+  "checks": [
+    { "type": "file_exists", "path": "output/prd.md" },
+    { "type": "min_count", "path": "output/prd.md", "pattern": "\\bFR-\\d+\\b", "count": 4 },
+    { "type": "min_count", "path": "output/prd.md", "pattern": "\\bNFR-\\d+\\b", "count": 2 },
+    { "type": "min_count", "path": "output/prd.md", "pattern": "\\bUS-\\d+\\b", "count": 2 },
+    { "type": "regex", "path": "output/prd.md", "pattern": "\\bQG-\\d+\\b" },
+    { "type": "regex", "path": "output/prd.md", "pattern": "(?i)^#+.*\\bGoals\\b" },
+    { "type": "regex", "path": "output/prd.md", "pattern": "(?i)\\bNon-Goals\\b" },
+    { "type": "regex", "path": "output/prd.md", "pattern": "(?i)^#+.*Testing Strategy" },
+    { "type": "regex", "path": "output/prd.md", "pattern": "(?i)\\bPhase 1\\b" },
+    { "type": "regex_absent", "path": "output/prd.md", "pattern": "(?i)server-side storage of templates is required" }
+  ]
+}

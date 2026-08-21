@@ -1,10 +1,11 @@
 ---
 name: plan-retrospective
 description: Close out a completed plan with a structured retrospective. Use when the user asks to "close out a plan", "do a retro", "archive a plan", "write a retrospective", "wrap up a feature", or needs to formally complete a plan from plans/<name>/. Reads prd.md and tasks.md, computes completion metrics, surfaces scope drift, captures lessons learned, produces a retro.md, and moves the plan to plans/archive/.
+compatibility: Requires python3 on PATH for the bundled plan tooling (skills/_shared/scripts/plan-metrics.py and plan-validate.py, stdlib-only)
 license: MIT
 metadata:
   author: pokanop
-  version: "2.0"
+  version: "2.1"
 ---
 
 # Plan Retrospective
