@@ -20,6 +20,12 @@ The split of responsibilities:
   applies each scenario's machine-checkable expectations to the artifacts the
   agent produced.
 
+Each scenario also commits a `sample_output/` — a known-good artifact produced
+by actually running the skill. It serves two purposes: it is the reference for
+what a passing artifact looks like, and it keeps the grader itself exercised —
+a full `python3 evals/run.py` on a fresh checkout grades every scenario
+against its sample instead of skipping everything.
+
 Because the generation half is agent-in-the-loop, **these evals are not (and
 must not become) a required CI gate**. They are a manual authoring tool.
 
@@ -39,15 +45,19 @@ must not become) a required CI gate**. They are a manual authoring tool.
 3. Grade the output:
 
    ```bash
-   python3 evals/run.py                                   # all scenarios with output present
+   python3 evals/run.py                                   # all scenarios
    python3 evals/run.py design-to-tasks/basic-prd         # one scenario
    ```
 
-   Scenarios without an `output/` directory are reported as SKIP (nothing to
-   grade). Exit code is non-zero if any graded scenario fails.
+   A scenario with a live `output/` directory is graded against it. Without
+   one, the runner falls back to the committed `sample_output/` (labeled
+   `(sample_output)` in the report), so a full run always grades every
+   scenario. Only a scenario with neither directory is reported as SKIP.
+   Exit code is non-zero if any graded scenario fails.
 
 `output/` directories are scratch space — they are gitignored and never
-committed.
+committed. `sample_output/` directories are committed reference artifacts;
+update one only by re-running the skill and re-grading.
 
 ## Scenario Layout
 
@@ -59,8 +69,12 @@ evals/
         └── <scenario-name>/
             ├── scenario.json       # prompt + expectations
             ├── input/              # committed fixtures the agent works from
+            ├── sample_output/      # committed known-good artifact (graded fallback)
             └── output/             # agent-produced artifacts (gitignored)
 ```
+
+Check paths in `scenario.json` always use the `output/` prefix; when the
+runner grades a `sample_output/`, it remaps the prefix automatically.
 
 `scenario.json` fields:
 
@@ -91,6 +105,9 @@ Check types (paths are relative to the scenario directory):
    contract for `tasks.md`.
 3. Run the agent, then `python3 evals/run.py <skill>/<scenario-name>` until the
    scenario passes for the right reasons.
+4. Commit the passing artifact as `sample_output/` (copy `output/` over and
+   drop anything extraneous) so future full runs grade the scenario without a
+   live agent run.
 
 Keep checks about **structure and contract** (labels present, tooling passes,
 required sections exist), not about wording — agent output varies; the

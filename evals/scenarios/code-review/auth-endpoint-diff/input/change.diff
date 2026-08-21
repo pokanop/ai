@@ -1,0 +1,50 @@
+diff --git a/src/auth/password-reset.ts b/src/auth/password-reset.ts
+new file mode 100644
+--- /dev/null
++++ b/src/auth/password-reset.ts
+@@ -0,0 +1,26 @@
++import { Router } from "express";
++import { userRepo, resetTokenRepo } from "../repos";
++
++export const passwordResetRouter = Router();
++
++passwordResetRouter.post("/api/password-reset", async (req, res) => {
++  const e = req.body.email;
++  if (typeof e !== "string" || !e.includes("@")) {
++    return res.status(400).json({ error: "invalid email" });
++  }
++
++  const user = await userRepo.findByEmail(e);
++  if (!user) {
++    return res.status(404).json({ error: "email not found" });
++  }
++
++  const token = Math.random().toString(36).slice(2);
++  await resetTokenRepo.create({
++    userId: user.id,
++    token,
++    expiresAt: new Date(Date.now() + 60 * 60 * 1000),
++  });
++
++  return res.status(202).json({ status: "sent" });
++});
+diff --git a/tests/auth/password-reset.test.ts b/tests/auth/password-reset.test.ts
+new file mode 100644
+--- /dev/null
++++ b/tests/auth/password-reset.test.ts
+@@ -0,0 +1,14 @@
++import { request } from "../helpers";
++
++describe("POST /api/password-reset", () => {
++  it("returns 202 and stores a token for a registered email", async () => {
++    const res = await request().post("/api/password-reset").send({
++      email: "registered@example.com",
++    });
++    expect(res.status).toBe(202);
++  });
++
++  it("rejects a malformed email", async () => {
++    const res = await request().post("/api/password-reset").send({ email: 5 });
++    expect(res.status).toBe(400);
++  });
++});
