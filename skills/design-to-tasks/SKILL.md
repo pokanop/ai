@@ -1,10 +1,11 @@
 ---
 name: design-to-tasks
 description: Convert a design or Product Requirements Document (PRD) into a detailed, actionable task list with progress tracking. Use when the user asks to turn a "design to tasks", "create tasks from a design", "break down a design", "create tasks from a PRD", "break down a PRD", "generate a task list", "plan implementation", or "create an implementation plan from requirements". Reads the design from plans/<name>/design.md when present and otherwise falls back to the PRD at plans/<name>/prd.md, then produces a comprehensive tasks.md in the same directory with hierarchical task decomposition, dependency mapping, effort estimation, and progress tracking.
+compatibility: Requires python3 on PATH for the bundled plan tooling (skills/_shared/scripts/plan-metrics.py and plan-validate.py, stdlib-only)
 license: MIT
 metadata:
   author: pokanop
-  version: "2.0"
+  version: "2.1"
 ---
 
 # Design to Tasks

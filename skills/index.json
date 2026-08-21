@@ -28,10 +28,26 @@
       ]
     },
     {
+      "name": "dependency-upgrade",
+      "description": "Safely upgrade project dependencies, frameworks, or toolchains through staged, individually-verified bumps. Use when the user asks to \"upgrade dependencies\", \"update packages\", \"bump versions\", \"update to the latest version\", \"do a major version upgrade\", \"migrate to React 19 / Python 3.13 / Rails 8\", \"fix npm audit findings\", or \"update the lockfile\". Reads changelogs and breaking-change notes before touching anything, sequences risky bumps one at a time with quality gates green after each, keeps lockfile changes disciplined and reviewable, and applies supply-chain caution — preferring versions published at least 7 days ago and pinned, bounded ranges.",
+      "path": "skills/dependency-upgrade",
+      "version": "1.0",
+      "triggers": [
+        "upgrade dependencies",
+        "update packages",
+        "bump versions",
+        "update to the latest version",
+        "do a major version upgrade",
+        "migrate to React 19 / Python 3.13 / Rails 8",
+        "fix npm audit findings",
+        "update the lockfile"
+      ]
+    },
+    {
       "name": "design-to-tasks",
       "description": "Convert a design or Product Requirements Document (PRD) into a detailed, actionable task list with progress tracking. Use when the user asks to turn a \"design to tasks\", \"create tasks from a design\", \"break down a design\", \"create tasks from a PRD\", \"break down a PRD\", \"generate a task list\", \"plan implementation\", or \"create an implementation plan from requirements\". Reads the design from plans/<name>/design.md when present and otherwise falls back to the PRD at plans/<name>/prd.md, then produces a comprehensive tasks.md in the same directory with hierarchical task decomposition, dependency mapping, effort estimation, and progress tracking.",
       "path": "skills/design-to-tasks",
-      "version": "2.0",
+      "version": "2.1",
       "triggers": [
         "design to tasks",
         "create tasks from a design",
@@ -58,10 +74,24 @@
       ]
     },
     {
+      "name": "incident-postmortem",
+      "description": "Write a blameless postmortem for an incident or outage and turn it into tracked follow-up work. Use when the user asks to \"write a postmortem\", \"do an incident review\", \"write up the outage\", \"analyze what went wrong in production\", \"do a root cause analysis of the incident\", or \"run a blameless retro on the incident\". Reconstructs a factual timeline from evidence, identifies contributing factors rather than a single root cause or a person to blame, and produces prioritized action items that route into the pipeline — defect fixes to debug-and-fix, systemic prevention work emitted as a PRD for design-to-tasks.",
+      "path": "skills/incident-postmortem",
+      "version": "1.0",
+      "triggers": [
+        "write a postmortem",
+        "do an incident review",
+        "write up the outage",
+        "analyze what went wrong in production",
+        "do a root cause analysis of the incident",
+        "run a blameless retro on the incident"
+      ]
+    },
+    {
       "name": "next-step",
       "description": "Read the state of every plan under plans/, report where each one sits in the development lifecycle, and route the user to the right skill to continue. Use when the user asks \"what's next\", \"what should I do next\", \"where were we\", \"resume work\", \"continue the plan\", \"what's the status of the plan\", \"which skill should I use\", \"where do I start\", or makes a request that doesn't clearly map to one skill. The front door and orchestrator of the skill suite — detects the lifecycle stage from the artifacts on disk and the task states, runs the deterministic plan tooling, and recommends the next skill with the reason.",
       "path": "skills/next-step",
-      "version": "1.0",
+      "version": "1.1",
       "triggers": [
         "what's next",
         "what should I do next",
@@ -92,7 +122,7 @@
       "name": "plan-retrospective",
       "description": "Close out a completed plan with a structured retrospective. Use when the user asks to \"close out a plan\", \"do a retro\", \"archive a plan\", \"write a retrospective\", \"wrap up a feature\", or needs to formally complete a plan from plans/<name>/. Reads prd.md and tasks.md, computes completion metrics, surfaces scope drift, captures lessons learned, produces a retro.md, and moves the plan to plans/archive/.",
       "path": "skills/plan-retrospective",
-      "version": "2.0",
+      "version": "2.1",
       "triggers": [
         "close out a plan",
         "do a retro",
@@ -134,7 +164,7 @@
       "name": "release-checklist",
       "description": "Verify a plan is ready to ship and produce a release checklist and changelog entry. Use when the user asks to \"prepare a release\", \"create a release checklist\", \"we're ready to ship\", \"generate a changelog\", \"check if we're ready to deploy\", or needs a go/no-go assessment before deploying. Reads plans/<name>/tasks.md and prd.md, runs all quality gates, verifies P0 task completion, produces a CHANGELOG.md entry, and outputs a deployment-ready checklist.",
       "path": "skills/release-checklist",
-      "version": "2.0",
+      "version": "2.1",
       "triggers": [
         "prepare a release",
         "create a release checklist",
@@ -161,7 +191,7 @@
       "name": "tasks-to-code",
       "description": "Implement tasks from a task list generated by design-to-tasks. Use when the user asks to \"implement the next task\", \"work on tasks\", \"start coding\", \"pick up the next item\", \"work on task N.M\", or needs to translate a trackable task list into actual code changes. Reads plans/<name>/tasks.md, plans/<name>/prd.md, and plans/<name>/design.md when present, picks the next task, implements it following the project's existing conventions, verifies it against the task's acceptance criteria, and updates the task list with the result.",
       "path": "skills/tasks-to-code",
-      "version": "2.0",
+      "version": "2.1",
       "triggers": [
         "implement the next task",
         "work on tasks",
@@ -181,6 +211,21 @@
         "find loading state issues",
         "review component consistency",
         "check the design system"
+      ]
+    },
+    {
+      "name": "write-tests",
+      "description": "Add or backfill automated test coverage for existing code without changing its behavior. Use when the user asks to \"write tests\", \"add tests\", \"add unit tests\", \"backfill test coverage\", \"increase coverage\", \"test this module\", \"add integration tests\", or wants a dedicated testing pass over code that already works. Discovers the project's test framework and patterns first, decides characterization vs. specification tests per target, applies the test pyramid to choose levels, and prioritizes coverage by risk. Bugs discovered while writing tests route to debug-and-fix; testability restructuring routes to refactor.",
+      "path": "skills/write-tests",
+      "version": "1.0",
+      "triggers": [
+        "write tests",
+        "add tests",
+        "add unit tests",
+        "backfill test coverage",
+        "increase coverage",
+        "test this module",
+        "add integration tests"
       ]
     }
   ]

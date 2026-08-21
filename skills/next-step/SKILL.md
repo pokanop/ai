@@ -1,10 +1,12 @@
 ---
 name: next-step
 description: Read the state of every plan under plans/, report where each one sits in the development lifecycle, and route the user to the right skill to continue. Use when the user asks "what's next", "what should I do next", "where were we", "resume work", "continue the plan", "what's the status of the plan", "which skill should I use", "where do I start", or makes a request that doesn't clearly map to one skill. The front door and orchestrator of the skill suite — detects the lifecycle stage from the artifacts on disk and the task states, runs the deterministic plan tooling, and recommends the next skill with the reason.
+compatibility: Requires python3 on PATH for the bundled plan tooling (skills/_shared/scripts/plan-metrics.py and plan-validate.py, stdlib-only)
+allowed-tools: Read Grep Glob Bash(python3:*)
 license: MIT
 metadata:
   author: pokanop
-  version: "1.0"
+  version: "1.1"
 ---
 
 # Next Step

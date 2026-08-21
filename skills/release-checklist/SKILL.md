@@ -1,10 +1,11 @@
 ---
 name: release-checklist
 description: Verify a plan is ready to ship and produce a release checklist and changelog entry. Use when the user asks to "prepare a release", "create a release checklist", "we're ready to ship", "generate a changelog", "check if we're ready to deploy", or needs a go/no-go assessment before deploying. Reads plans/<name>/tasks.md and prd.md, runs all quality gates, verifies P0 task completion, produces a CHANGELOG.md entry, and outputs a deployment-ready checklist.
+compatibility: Requires python3 on PATH for the bundled plan tooling (skills/_shared/scripts/plan-metrics.py and plan-validate.py, stdlib-only)
 license: MIT
 metadata:
   author: pokanop
-  version: "2.0"
+  version: "2.1"
 ---
 
 # Release Checklist
