@@ -12,13 +12,13 @@ on:
 
 jobs:
   validate:
-    runs-on: [self-hosted, linux, x64]
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
 
       # No `bun install` needed: validate-skills.mjs has no dependencies
       # (standard fs/path only), so this stays fast and isolated from the
@@ -34,3 +34,13 @@ jobs:
       # catches broken reference links at PR time, before they reach main.
       - name: Check generated docs for broken reference links
         run: bun run sync
+
+      # Verify that image paths referenced in .md files exist on disk.
+      # Dependency-free (standard library only).
+      - name: Verify image placeholders
+        run: python3 scripts/verify-placeholders.py
+
+      # Offline check that relative links in source .md files resolve to real
+      # files. Does not hit the network, so it can't flake on external URLs.
+      - name: Check relative markdown links
+        run: bun run scripts/check-links.mjs

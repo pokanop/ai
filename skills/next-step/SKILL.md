@@ -6,7 +6,7 @@ allowed-tools: Read Grep Glob Bash(python3:*)
 license: MIT
 metadata:
   author: pokanop
-  version: "1.1"
+  version: "2.1"
 ---
 
 # Next Step
