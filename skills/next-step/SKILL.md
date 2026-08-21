@@ -1,17 +1,19 @@
 ---
 name: next-step
-description: Read the state of every plan under plans/, report where each one sits in the development lifecycle, and route the user to the right skill to continue. Use when the user asks "what's next", "what should I do next", "where were we", "resume work", "continue the plan", "what's the status of the plan", "which skill should I use", "where do I start", or makes a request that doesn't clearly map to one skill. The front door and orchestrator of the skill suite — detects the lifecycle stage from the artifacts on disk and the task states, runs the deterministic plan tooling, and recommends the next skill with the reason.
+description: The start-here front door of the skill suite. Reads the state of every plan under plans/, reports where each one sits in the development lifecycle, and routes the user to the right skill to continue. Use when the user asks "what's next", "what should I do next", "where were we", "resume work", "continue the plan", "what's the status of the plan", "which skill should I use", "where do I start", "help me get started", or makes a request that doesn't clearly map to one skill. Detects the lifecycle stage from the artifacts on disk and the task states, runs the deterministic plan tooling, recommends the next skill with the reason, and routes first-time repos to setup-pokanop-skills.
 compatibility: Requires python3 on PATH for the bundled plan tooling (skills/_shared/scripts/plan-metrics.py and plan-validate.py, stdlib-only)
 allowed-tools: Read Grep Glob Bash(python3:*)
 license: MIT
 metadata:
   author: pokanop
-  version: "2.1"
+  version: "2.2"
 ---
 
 # Next Step
 
 ## Purpose
+
+**Start here.** When in doubt about which skill to use, this is the one to invoke — it costs nothing (read-only) and always ends with a named skill to run next.
 
 Every other skill in this suite does one stage of the lifecycle well. This skill answers the question that sits between them: **"where is the work right now, and which skill continues it?"**
 
@@ -22,6 +24,22 @@ It exists for three situations:
 3. **Status** — "how far along are we?" answered with computed numbers, not impressions.
 
 It is read-only with one purpose: **orient, then hand off.** It never writes plan artifacts, never implements, and never skips the skill it routes to.
+
+## Routing Map
+
+The canonical routing table lives in [shared conventions](../_shared/references/conventions.md#routing); this is the compact map of where each kind of work goes:
+
+| The work is… | Route to |
+|---|---|
+| First use of the suite in this repo (no `plans/config.md`) | `setup-pokanop-skills` |
+| New feature or changed behavior | `idea-to-prd` → `prd-to-design`° → `design-to-tasks` → `tasks-to-code` ⇄ `code-review` → `release-checklist` → `plan-retrospective` |
+| Something is broken | `debug-and-fix` |
+| Structure-only cleanup | `refactor` |
+| Coverage without behavior change | `write-tests` |
+| Version / dependency bumps | `dependency-upgrade` |
+| Whole-system sweep (UI / security / performance) | `ui-design-audit` / `security-review` / `performance-review` — each emits a PRD entering at `design-to-tasks` |
+| After an incident | `incident-postmortem` |
+| Ready to ship / close out | `release-checklist`, then `plan-retrospective` |
 
 ## The Lifecycle
 
@@ -35,10 +53,14 @@ Audit skills (`ui-design-audit`, `security-review`, `performance-review`) emit P
 
 ## Workflow
 
+### Phase 0: First-time check
+
+If `plans/config.md` does not exist and there are no active plans, this repo has likely never used the suite: recommend running `setup-pokanop-skills` first — it records the repo's issue tracker, conventions, and workflow preferences that every other skill reads. Then continue below (routing a concrete request does not have to wait for setup). If `plans/config.md` exists, read it — it answers tracker and convention questions without asking the user.
+
 ### Phase 1: Inventory the plans
 
 1. **List `plans/`** — every directory except `archive/` is an active plan. Note audit plans by their `<audit-type>-<date>` names.
-2. **For each active plan, list its artifacts** — which of `prd.md`, `design.md`, `adr/`, `tasks.md`, `decisions.md`, `review.md`, `retro.md` exist. The artifact set is the primary stage signal (see [references/state-detection.md](references/state-detection.md)).
+2. **For each active plan, list its artifacts** (note: `plans/config.md` is suite configuration, not a plan) — which of `prd.md`, `design.md`, `adr/`, `tasks.md`, `decisions.md`, `review.md`, `retro.md` exist. The artifact set is the primary stage signal (see [references/state-detection.md](references/state-detection.md)).
 3. **If there are no plans** and the user asked a "where do I start" question, skip to Phase 3 — the answer is a routing question, not a status question.
 
 ### Phase 2: Determine each plan's stage

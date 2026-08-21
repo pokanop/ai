@@ -54,7 +54,8 @@ Every skill is a self-contained directory with a `SKILL.md` entrypoint, so you c
 
 | Skill | Purpose | Use When |
 |-------|---------|-----------|
-| [`next-step`](next-step/) | Report plan status and route to the right skill | Resuming work, checking status, or unsure which skill fits |
+| [`setup-pokanop-skills`](setup-pokanop-skills/) | One-time repo onboarding — record tracker, conventions, and workflows in `plans/config.md` | First use of the suite in a repo |
+| [`next-step`](next-step/) | Report plan status and route to the right skill | Starting here, resuming work, checking status, or unsure which skill fits |
 | [`idea-to-prd`](idea-to-prd/) | Write a Product Requirements Document | Starting a new feature or initiative |
 | [`prd-to-design`](prd-to-design/) | Turn a PRD into a technical design + ADRs | Architecting a non-trivial feature before tasks |
 | [`design-to-tasks`](design-to-tasks/) | Break a design (or PRD) into an actionable task list | Planning implementation from a design or PRD |
@@ -138,6 +139,7 @@ Each complements the matching per-change dimension in `code-review` (which check
 
 These skills work independently and don't require a plan:
 
+- **`setup-pokanop-skills`** — The one-time onboarding step. Interviews the user about the repo's issue tracker, plans/docs locations, coding conventions, and preferred workflows, then writes `plans/config.md` — the repo-local configuration every other skill reads during discovery instead of re-asking. Run once per repo; re-run only to revise answers.
 - **`next-step`** — The suite's front door. Reads the `plans/` directory, reports where every plan sits in the lifecycle (using the deterministic `_shared/scripts/` plan tooling), and routes any request to the right skill via the canonical routing table.
 - **`code-review`** — Use any time you need a structured review of a diff, branch, or changed file set. Optionally reads `plans/<name>/tasks.md` to validate acceptance criteria if the change comes from a task, and `design.md`/ADRs for architecture conformance.
 - **`debug-and-fix`** — Use when something is broken. Works entirely from a bug report (symptom, steps to reproduce, expected vs. actual). Has no plan dependency.

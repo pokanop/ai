@@ -89,9 +89,9 @@
     },
     {
       "name": "next-step",
-      "description": "Read the state of every plan under plans/, report where each one sits in the development lifecycle, and route the user to the right skill to continue. Use when the user asks \"what's next\", \"what should I do next\", \"where were we\", \"resume work\", \"continue the plan\", \"what's the status of the plan\", \"which skill should I use\", \"where do I start\", or makes a request that doesn't clearly map to one skill. The front door and orchestrator of the skill suite — detects the lifecycle stage from the artifacts on disk and the task states, runs the deterministic plan tooling, and recommends the next skill with the reason.",
+      "description": "The start-here front door of the skill suite. Reads the state of every plan under plans/, reports where each one sits in the development lifecycle, and routes the user to the right skill to continue. Use when the user asks \"what's next\", \"what should I do next\", \"where were we\", \"resume work\", \"continue the plan\", \"what's the status of the plan\", \"which skill should I use\", \"where do I start\", \"help me get started\", or makes a request that doesn't clearly map to one skill. Detects the lifecycle stage from the artifacts on disk and the task states, runs the deterministic plan tooling, recommends the next skill with the reason, and routes first-time repos to setup-pokanop-skills.",
       "path": "skills/next-step",
-      "version": "2.1",
+      "version": "2.2",
       "triggers": [
         "what's next",
         "what should I do next",
@@ -100,7 +100,8 @@
         "continue the plan",
         "what's the status of the plan",
         "which skill should I use",
-        "where do I start"
+        "where do I start",
+        "help me get started"
       ]
     },
     {
@@ -185,6 +186,20 @@
         "check for vulnerabilities",
         "review the auth flow",
         "is this safe to launch"
+      ]
+    },
+    {
+      "name": "setup-pokanop-skills",
+      "description": "One-time onboarding for the pokanop skills suite. Interviews the user about their issue tracker, where plans and docs live, coding conventions, and preferred workflows, then writes the repo-local configuration at plans/config.md that every other skill reads for context. Use when the user says \"set up the skills\", \"setup pokanop skills\", \"configure the skills\", \"onboard this repo\", \"initialize the skill suite\", \"get started with these skills\", or when another skill finds no plans/config.md and the repo has never used the suite before. Run once per repo; re-run only to change the recorded answers.",
+      "path": "skills/setup-pokanop-skills",
+      "version": "1.0",
+      "triggers": [
+        "set up the skills",
+        "setup pokanop skills",
+        "configure the skills",
+        "onboard this repo",
+        "initialize the skill suite",
+        "get started with these skills"
       ]
     },
     {

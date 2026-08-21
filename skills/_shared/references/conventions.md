@@ -40,6 +40,10 @@ idea-to-prd → prd-to-design° → design-to-tasks → tasks-to-code ⇄ code-r
   skills, can emit its systemic remediation work as a PRD
   (`plans/incident-<date>-<slug>/prd.md`) entering at `design-to-tasks`; specific
   defect fixes route to `debug-and-fix`.
+- **setup-pokanop-skills** runs once per repo, before (or on) first use of the suite:
+  it interviews the user and records the repo's issue tracker, plans/docs locations,
+  coding conventions, and preferred workflows in `plans/config.md`, which every other
+  skill reads during discovery instead of re-asking.
 - **next-step** is the orchestrator: it reads the `plans/` state, reports where each
   plan is in this lifecycle, and routes any request to the right skill.
 
@@ -66,6 +70,7 @@ is how behavior changes ship without acceptance criteria.
 | Verifying a plan is safe to ship | `release-checklist` |
 | Closing out a completed plan | `plan-retrospective` |
 | Unsure what state the work is in or what comes next | `next-step` |
+| First use of the suite in a repo (no `plans/config.md` yet) | `setup-pokanop-skills` |
 
 **Bright lines:** new or changed behavior always enters through `idea-to-prd`;
 incorrect behavior is always `debug-and-fix`; a structure-only change is always
@@ -181,6 +186,7 @@ All planning artifacts for one initiative live in a single dasherized folder und
 
 ```
 plans/
+├── config.md                 # setup-pokanop-skills — repo-local suite configuration (not a plan)
 ├── <active-feature>/         # Active work
 │   ├── prd.md                # idea-to-prd — source of truth for intent
 │   ├── design.md             # prd-to-design — architecture (optional; non-trivial features)
@@ -216,6 +222,9 @@ plans/
   remediation work is emitted — entering the pipeline at `design-to-tasks` exactly
   like an audit's findings.
 - Not every file exists for every plan; each skill creates the ones it owns.
+- **`plans/config.md` is configuration, not a plan** — written once by
+  `setup-pokanop-skills` (issue tracker, conventions, workflow preferences) and read
+  by other skills during discovery. Plan inventories skip it.
 
 ### Deterministic plan tooling
 
