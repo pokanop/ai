@@ -132,6 +132,7 @@ Agent Skills are folders containing instructions, scripts, and resources that ag
 | [`refactor`](skills/refactor/) | Restructure code safely without changing behavior |
 | [`release-checklist`](skills/release-checklist/) | Pre-release verification and deployment checklist |
 | [`security-review`](skills/security-review/) | Lightweight threat model and security posture sweep |
+| [`setup-pokanop-skills`](skills/setup-pokanop-skills/) | One-time repo onboarding for the skill suite |
 | [`tasks-to-code`](skills/tasks-to-code/) | Implement engineering tasks from a task list |
 | [`ui-design-audit`](skills/ui-design-audit/) | Audit UI components for design consistency |
 | [`write-tests`](skills/write-tests/) | Add or backfill test coverage without changing behavior |

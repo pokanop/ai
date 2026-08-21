@@ -6,6 +6,14 @@ suite-level milestones those versions roll up into.
 
 ## Unreleased
 
+- New skill: `setup-pokanop-skills` — one-time repo onboarding that interviews
+  the user (issue tracker, plans/docs locations, coding conventions, preferred
+  workflows) and writes `plans/config.md`, the repo-local configuration other
+  skills read during discovery instead of re-asking.
+- `next-step` strengthened as the suite's start-here entry point (`2.2`): a
+  compact routing map in the SKILL.md, a first-time check that routes repos
+  without `plans/config.md` to `setup-pokanop-skills`, and plan inventories
+  that skip `plans/config.md`.
 - New skills being added in a parallel workstream — will be catalogued here and
   in [README.md](README.md) when they land.
 
