@@ -1,6 +1,24 @@
 # Agent Skills
 
-A collection of structured, project-aware agent skills for software development workflows. Each skill follows the [Agent Skills specification](https://agentskills.io/specification) and can be installed via the [skills.sh](https://skills.sh) registry.
+A collection of structured, project-aware agent skills for software development workflows. Each skill follows the [Agent Skills specification](https://agentskills.io/specification) and can be installed via the [skills.sh](https://skills.sh) registry. Suite-level history and the skill versioning policy live in the [changelog](https://github.com/pokanop/ai/blob/main/skills/CHANGELOG.md).
+
+---
+
+## Installing
+
+The [skills.sh](https://skills.sh) CLI installs skills from this repo into your agent of choice (Claude Code, Codex, Cursor, and others). Install the whole collection:
+
+```bash
+npx skills add pokanop/ai
+```
+
+Or install a single skill by name with `--skill`:
+
+```bash
+npx skills add pokanop/ai --skill idea-to-prd
+```
+
+Useful variations: `--list` shows the available skills without installing, `--agent <name>` targets specific agents, and `--global` installs to your user directory instead of the current project. If you prefer Bun, `bunx skills add …` works identically.
 
 ---
 

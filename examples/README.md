@@ -27,6 +27,29 @@ idea-to-prd → prd-to-design → design-to-tasks → tasks-to-code → code-rev
                  adr/0001-*.md                                                                            (then archive)
 ```
 
+## `security-review-remediation/` — an audit, entering the pipeline sideways
+
+The complementary path: instead of starting from an idea, work starts from a
+[security-review](../skills/security-review/SKILL.md) of a fictional invoicing
+API ("Ledgerline"). The audit emits its findings **as a PRD** — each finding is
+an `FR-N` with a severity mapped to priority (🔴 → P0, 🟡 → P1, ⚪ → P2) — so it
+enters the pipeline directly at `design-to-tasks`, skipping `idea-to-prd` and
+`prd-to-design` entirely. Unlike `dark-mode-toggle/`, this plan is shown
+mid-flight: Phase 1 (Critical findings) is complete, Phase 2 is in progress, so
+you can see the status markers doing real work.
+
+| Step | Skill | Artifact |
+|------|-------|----------|
+| 1. Findings PRD | [security-review](../skills/security-review/SKILL.md) | [security-review-remediation/prd.md](security-review-remediation/prd.md) |
+| 2. Tasks | [design-to-tasks](../skills/design-to-tasks/SKILL.md) | [security-review-remediation/tasks.md](security-review-remediation/tasks.md) |
+| 3. Decisions (implementation) | [tasks-to-code](../skills/tasks-to-code/SKILL.md) | [security-review-remediation/decisions.md](security-review-remediation/decisions.md) |
+
+```
+security-review → design-to-tasks → tasks-to-code
+  prd.md            tasks.md          decisions.md
+ (findings)        (remediation)      (in progress)
+```
+
 ## How to read it
 
 Start with [the PRD](dark-mode-toggle/prd.md) and follow the links forward. The
