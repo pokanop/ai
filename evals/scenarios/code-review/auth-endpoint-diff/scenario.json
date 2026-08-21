@@ -1,0 +1,20 @@
+{
+  "skill": "code-review",
+  "description": "Review a small diff against a task's acceptance criteria. The diff seeds blocking issues (account-existence leak, Math.random() token, missing rate limiting), a suggestion-level test gap, a nit, and one thing done well. The review must follow the feedback format: severity-tiered findings on the 🔴/🟡/⚪ scale, a summary header, a requirements-coverage table, and a blocking-items list.",
+  "prompt": "Using the code-review skill, review the change at input/change.diff, which implements the task at input/task.md. Write the review to output/review.md in this scenario directory.",
+  "checks": [
+    { "type": "file_exists", "path": "output/review.md" },
+    { "type": "regex", "path": "output/review.md", "pattern": "(?i)^#+.*Code Review" },
+    { "type": "regex", "path": "output/review.md", "pattern": "\\*\\*Overall\\*\\*" },
+    { "type": "regex", "path": "output/review.md", "pattern": "\\*\\*Risk Profile\\*\\*" },
+    { "type": "min_count", "path": "output/review.md", "pattern": "🔴", "count": 2 },
+    { "type": "min_count", "path": "output/review.md", "pattern": "🟡", "count": 1 },
+    { "type": "min_count", "path": "output/review.md", "pattern": "⚪", "count": 1 },
+    { "type": "regex", "path": "output/review.md", "pattern": "✅ \\*\\*Praise\\*\\*" },
+    { "type": "regex", "path": "output/review.md", "pattern": "(?i)^#+.*Requirements Coverage" },
+    { "type": "regex", "path": "output/review.md", "pattern": "(?i)^#+.*Blocking Items" },
+    { "type": "regex", "path": "output/review.md", "pattern": "(?i)rate.?limit" },
+    { "type": "regex", "path": "output/review.md", "pattern": "Math\\.random" },
+    { "type": "regex_absent", "path": "output/review.md", "pattern": "(?i)approved with no findings" }
+  ]
+}

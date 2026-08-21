@@ -1,0 +1,26 @@
+{
+  "skill": "prd-to-design",
+  "description": "Produce a technical design from a PRD that genuinely needs one (a new index component, a persistence contract, and a hard-to-reverse index-engine choice). The design must follow the design-schema section structure, trace components to labeled requirements, record at least one decision as an ADR, and stay at the contract level.",
+  "prompt": "Using the prd-to-design skill, write a technical design for the PRD at input/prd.md. Write the design to output/design.md and each ADR to output/adr/NNNN-short-title.md in this scenario directory, with the first ADR at output/adr/0001-index-storage.md deciding where the persisted index lives (the PRD's Q1).",
+  "checks": [
+    { "type": "file_exists", "path": "output/design.md" },
+    { "type": "file_exists", "path": "output/adr/0001-index-storage.md" },
+    { "type": "regex", "path": "output/design.md", "pattern": "(?i)^#+.*\\bContext\\b" },
+    { "type": "regex", "path": "output/design.md", "pattern": "(?i)^#+.*Architecture Overview" },
+    { "type": "regex", "path": "output/design.md", "pattern": "(?i)^#+.*Component Responsibilities" },
+    { "type": "regex", "path": "output/design.md", "pattern": "(?i)^#+.*(API|Interface) .*Contracts" },
+    { "type": "regex", "path": "output/design.md", "pattern": "(?i)^#+.*Data Model" },
+    { "type": "regex", "path": "output/design.md", "pattern": "(?i)^#+.*Sequence Flows" },
+    { "type": "regex", "path": "output/design.md", "pattern": "(?i)^#+.*Key Decisions" },
+    { "type": "regex", "path": "output/design.md", "pattern": "(?i)^#+.*Cross-Cutting Concerns" },
+    { "type": "regex", "path": "output/design.md", "pattern": "(?i)^#+.*(Risks|Open Technical Questions)" },
+    { "type": "min_count", "path": "output/design.md", "pattern": "\\bFR-\\d+\\b", "count": 5 },
+    { "type": "min_count", "path": "output/design.md", "pattern": "\\bNFR-\\d+\\b", "count": 3 },
+    { "type": "regex", "path": "output/design.md", "pattern": "adr/0001-index-storage\\.md" },
+    { "type": "regex", "path": "output/adr/0001-index-storage.md", "pattern": "(?i)^#+.*\\bContext\\b" },
+    { "type": "regex", "path": "output/adr/0001-index-storage.md", "pattern": "(?i)^#+.*Alternatives Considered" },
+    { "type": "regex", "path": "output/adr/0001-index-storage.md", "pattern": "(?i)^#+.*Consequences" },
+    { "type": "regex", "path": "output/adr/0001-index-storage.md", "pattern": "(?i)\\*\\*Status\\*\\*" },
+    { "type": "regex_absent", "path": "output/design.md", "pattern": "(?i)(POST|GET)\\s+/api/search" }
+  ]
+}

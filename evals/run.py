@@ -4,8 +4,12 @@
 Stdlib-only. The agent-in-the-loop half (producing each scenario's output/)
 happens before this runs — see evals/README.md.
 
+Each scenario is graded against its live, gitignored `output/` directory when
+one exists; otherwise it falls back to the committed `sample_output/`
+reference artifact, so a fresh checkout still grades every scenario.
+
 Usage:
-    python3 evals/run.py                     # grade every scenario with output
+    python3 evals/run.py                     # grade every scenario
     python3 evals/run.py <skill>/<scenario>  # grade specific scenario(s)
 """
 
@@ -33,23 +37,30 @@ def discover(args):
     return sorted(p.parent for p in SCENARIOS_DIR.glob("*/*/scenario.json"))
 
 
-def read_text(scenario_dir, rel):
-    path = scenario_dir / rel
+def resolve(scenario_dir, rel, output_dir):
+    """Map a check's `output/...` path onto the directory being graded."""
+    if output_dir != "output" and rel.startswith("output/"):
+        rel = output_dir + rel[len("output"):]
+    return scenario_dir / rel
+
+
+def read_text(scenario_dir, rel, output_dir):
+    path = resolve(scenario_dir, rel, output_dir)
     if not path.is_file():
         return None
     return path.read_text(encoding="utf-8")
 
 
-def run_check(scenario_dir, check):
+def run_check(scenario_dir, check, output_dir):
     ctype = check["type"]
 
     if ctype == "file_exists":
         rel = check["path"]
-        ok = (scenario_dir / rel).is_file()
+        ok = resolve(scenario_dir, rel, output_dir).is_file()
         return ok, f"file_exists: {rel}" + ("" if ok else " — missing")
 
     if ctype == "plan_validate":
-        tasks = scenario_dir / check["tasks"]
+        tasks = resolve(scenario_dir, check["tasks"], output_dir)
         if not tasks.is_file():
             return False, f"plan_validate: {check['tasks']} — missing"
         cmd = [sys.executable, str(PLAN_VALIDATE), str(tasks), "--strict"]
@@ -63,7 +74,7 @@ def run_check(scenario_dir, check):
         return proc.returncode == 0, detail
 
     if ctype in ("regex", "regex_absent", "min_count"):
-        text = read_text(scenario_dir, check["path"])
+        text = read_text(scenario_dir, check["path"], output_dir)
         if text is None:
             return False, f"{ctype}: {check['path']} — missing"
         matches = re.findall(check["pattern"], text, re.MULTILINE)
@@ -91,15 +102,19 @@ def main(argv):
         name = scenario_dir.relative_to(SCENARIOS_DIR).as_posix()
         spec = json.loads((scenario_dir / "scenario.json").read_text())
 
-        if not (scenario_dir / "output").is_dir():
-            print(f"SKIP  {name} — no output/ to grade")
+        if (scenario_dir / "output").is_dir():
+            output_dir, label = "output", ""
+        elif (scenario_dir / "sample_output").is_dir():
+            output_dir, label = "sample_output", " (sample_output)"
+        else:
+            print(f"SKIP  {name} — no output/ or sample_output/ to grade")
             skipped += 1
             continue
 
         graded += 1
-        results = [run_check(scenario_dir, c) for c in spec["checks"]]
+        results = [run_check(scenario_dir, c, output_dir) for c in spec["checks"]]
         ok = all(passed for passed, _ in results)
-        print(f"{'PASS' if ok else 'FAIL'}  {name}")
+        print(f"{'PASS' if ok else 'FAIL'}  {name}{label}")
         for passed, detail in results:
             print(f"  {'✓' if passed else '✗'} {detail}")
         if not ok:
