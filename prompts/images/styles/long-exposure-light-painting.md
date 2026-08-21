@@ -44,25 +44,49 @@ Long exposure photograph of [FIGURE] spinning burning steel wool on a chain in [
 Long exposure photograph of [WATER SCENE — e.g., a waterfall cascading over mossy rocks into a pool], [FORMAT]. [DURATION — e.g., 2-second] exposure smoothing the water into flowing silk — the waterfall becomes a continuous white veil, the pool surface becomes glassy. The rocks and moss are tack-sharp — only the water is blurred. [LIGHTING — e.g., soft overcast light with rich green saturation]. The contrast between sharp rock and silky water is the magic.
 ```
 
-### ChatGPT / Midjourney / Stable Diffusion — Standard templates.
-
 ### ChatGPT
+
+**Variation 1 — Star Trails** _(Desktop Wallpaper)_
 ```text
-Var 1: Create a long exposure with star trails over [SCENE]. Concentric arcs. Sharp foreground lit by flashlight. Deep blue sky. [FORMAT].
-Var 2: Create a long exposure of [SCENE] with car light trails. White headlight ribbons, red taillight ribbons. Blue-hour sky. [FORMAT].
-Var 3: Create a long exposure steel wool spin in [LOCATION]. Radial spark trails. Spinner silhouette. Warm glow on surfaces. [FORMAT].
+Create a long exposure photograph with star trails over [SCENE] — concentric arcs circling Polaris in a deep blue night sky, with a tack-sharp foreground lit softly by flashlight. 16:9 landscape format.
+```
+
+**Variation 2 — Traffic Light Trails** _(Print)_
+```text
+Create a long exposure of [SCENE — e.g., a curving highway overpass] with car light trails — white headlight ribbons and red taillight ribbons streaming through the frame, blue-hour twilight sky, sharp static architecture. 16:9 landscape format.
+```
+
+**Variation 3 — Steel Wool Spin** _(Social Media)_
+```text
+Create a long exposure of a steel wool spin in [LOCATION] — radial spark trails bursting outward, the spinner as a dark silhouette at the center, warm orange glow reflecting off nearby surfaces. 1:1 square format.
 ```
 
 ### Midjourney
+
+**Variation 1 — Star Trails** _(Desktop Wallpaper)_
 ```text
-Var 1: Long exposure, star trails, [SCENE], concentric arcs, sharp foreground, deep blue sky --ar 16:9
-Var 2: Long exposure, light trails, [SCENE], white red ribbons, blue hour twilight --ar 16:9
-Var 3: Long exposure, silky waterfall, [SCENE], smooth water veil, sharp rocks, overcast --ar 4:5
+long exposure photograph, star trails over [SCENE], concentric arcs, sharp flashlight-lit foreground, deep blue night sky --ar 16:9 --s 200
+```
+
+**Variation 2 — Traffic Light Trails** _(Print)_
+```text
+long exposure, car light trails through [SCENE], white headlight ribbons, red taillight ribbons, blue hour twilight, sharp architecture --ar 16:9 --s 200
+```
+
+**Variation 3 — Silky Water** _(Art Print)_
+```text
+long exposure, silky waterfall in [SCENE], smooth white water veil, tack-sharp mossy rocks, soft overcast light --ar 4:5 --s 150
 ```
 
 ### Stable Diffusion
-- **Var 1:** `Long exposure, star trails, [SCENE], concentric arcs, sharp foreground, deep blue, 8k` / Neg: `daytime, sharp stars, illustration, cartoon`
-- **Var 2:** `Long exposure, light trails, [SCENE], traffic ribbons, blue hour, 8k` / Neg: `daytime, sharp cars, illustration`
+
+**Variation 1 — Star Trails** _(Desktop Wallpaper)_
+- **Prompt:** `long exposure photograph, star trails, [SCENE], concentric arcs, sharp foreground, deep blue night sky`
+- **Negative Prompt:** `daytime, sharp point stars, illustration, cartoon, low quality`
+
+**Variation 2 — Traffic Light Trails** _(Print)_
+- **Prompt:** `long exposure, car light trails, [SCENE], white and red light ribbons, blue hour twilight, sharp static architecture`
+- **Negative Prompt:** `daytime, visible sharp cars, illustration, blur on buildings`
 
 ---
 
@@ -73,6 +97,21 @@ Var 3: Long exposure, silky waterfall, [SCENE], smooth water veil, sharp rocks, 
 Using the attached photo, apply long exposure effects. [CHOOSE: smooth all water to silky texture / transform lights into flowing ribbons / add star trails to the sky]. The static elements should remain sharp while moving elements blur into smooth, continuous streams. Maintain the original composition and static details.
 ```
 > 💡 **Refinements:** "Longer exposure — more blur" · "Add star trails" · "Add light painting trails around the subject" · "Smooth the water more"
+
+**ChatGPT**
+```text
+[Upload Photo] "Apply long exposure effects to this photo — [smooth the water to silk / turn moving lights into flowing ribbons / add star trails] while keeping all static elements tack-sharp."
+```
+
+**Midjourney**
+```text
+[IMAGE_URL] long exposure photograph, motion blur on moving elements, light trails, sharp static elements --iw 1.2 --ar 16:9
+```
+
+**Stable Diffusion**
+- **Pipeline:** Img2Img · Denoising Strength: `0.45–0.6` (adds motion smoothing while preserving scene)
+- **Prompt:** `long exposure photograph, silky smooth motion blur, light trails, sharp static elements, night photography`
+- **Negative Prompt:** `daytime, frozen motion, blurry static elements, illustration`
 
 ---
 

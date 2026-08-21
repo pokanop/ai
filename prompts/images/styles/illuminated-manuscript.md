@@ -45,19 +45,38 @@ Illuminated manuscript page depicting [MODERN SUBJECT — e.g., a person sitting
 ```
 
 ### ChatGPT
+
+**Variation 1 — Gilded Initial Page** _(Art Print)_
 ```text
-Var 1: Create an illuminated manuscript page on aged vellum. Gilded initial "[LETTER]." [STYLE] decoration. Gold leaf, rich pigments. Gothic blackletter text. Decorated border. [FORMAT].
-Var 2: Create a medieval bestiary page: [CREATURE]. Flat medieval style. Gold leaf background. Knotwork border. Latin text. [FORMAT].
+Create an illuminated manuscript page on aged vellum with a large gilded initial "[LETTER]" — [STYLE — e.g., Celtic knotwork] decoration, gold leaf and rich mineral pigments (ultramarine, vermillion), Gothic blackletter text, and a fully decorated border. 4:5 vertical format.
+```
+
+**Variation 2 — Medieval Bestiary Page** _(Gift, Social Media)_
+```text
+Create a medieval bestiary page depicting [CREATURE] in flat medieval illustration style — gold leaf background, knotwork border, Latin text caption in Gothic script, on aged vellum with foxing. 4:5 vertical format.
 ```
 
 ### Midjourney
+
+**Variation 1 — Gilded Initial Page** _(Art Print)_
 ```text
-Var 1: Illuminated manuscript, aged vellum, gilded initial, Celtic knotwork, gold leaf ultramarine vermillion, Gothic blackletter, decorated border --ar 4:5
-Var 2: Medieval bestiary page, [CREATURE], flat medieval style, gold leaf, mineral pigments, knotwork border, Latin text --ar 4:5
+illuminated manuscript page, aged vellum, gilded initial letter, Celtic knotwork, gold leaf, ultramarine and vermillion pigments, Gothic blackletter, decorated border --ar 4:5 --s 250
+```
+
+**Variation 2 — Medieval Bestiary Page** _(Gift, Social Media)_
+```text
+medieval bestiary page, [CREATURE], flat medieval style, gold leaf background, mineral pigments, knotwork border, Latin text --ar 4:5 --s 250
 ```
 
 ### Stable Diffusion
-- **Var 1:** `Illuminated manuscript, aged vellum, gilded initial, Celtic knotwork, gold leaf, rich mineral pigments, Gothic script, decorated border` / Neg: `modern, photograph, 3d, digital, clean white paper`
+
+**Variation 1 — Gilded Initial Page** _(Art Print)_
+- **Prompt:** `illuminated manuscript page, aged vellum, gilded initial, Celtic knotwork, gold leaf, rich mineral pigments, Gothic blackletter script, decorated border`
+- **Negative Prompt:** `modern, photograph, 3d render, digital art, clean white paper`
+
+**Variation 2 — Medieval Bestiary Page** _(Gift)_
+- **Prompt:** `medieval bestiary page, [CREATURE], flat medieval illustration, gold leaf background, mineral pigments, knotwork border, Latin text, aged vellum`
+- **Negative Prompt:** `modern, realistic photograph, 3d, Renaissance perspective, white paper`
 
 ---
 
@@ -67,6 +86,21 @@ Var 2: Medieval bestiary page, [CREATURE], flat medieval style, gold leaf, miner
 ```text
 Using the attached image, recreate the subject as an illuminated manuscript miniature on aged vellum. Render in flat medieval illustration style with rich mineral pigments (ultramarine, vermillion, malachite green) and gold leaf accents. Add a decorated border with knotwork and marginalia. Include Gothic blackletter text caption. Vellum aging — foxing, yellowing.
 ```
+
+**ChatGPT**
+```text
+[Upload Photo] "Recreate this subject as an illuminated manuscript miniature on aged vellum — flat medieval style, rich mineral pigments and gold leaf accents, a decorated knotwork border, and a Gothic blackletter caption."
+```
+
+**Midjourney**
+```text
+[IMAGE_URL] illuminated manuscript miniature, aged vellum, gold leaf, mineral pigments, flat medieval style, decorated border, Gothic blackletter --iw 1 --ar 4:5
+```
+
+**Stable Diffusion**
+- **Pipeline:** Img2Img · Denoising Strength: `0.6–0.75` (flattens perspective into medieval style)
+- **Prompt:** `illuminated manuscript miniature, aged vellum, gold leaf, mineral pigments, flat medieval illustration, decorated border, Gothic script`
+- **Negative Prompt:** `photograph, 3d, modern, realistic perspective`
 
 ---
 

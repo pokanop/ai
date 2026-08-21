@@ -45,22 +45,48 @@ Triple exposure photograph layering three elements: [ELEMENT 1 — e.g., a balle
 ```
 
 ### ChatGPT
+
+**Variation 1 — Portrait + Landscape** _(Art Print)_
 ```text
-Var 1: Create a double exposure merging [SUBJECT] silhouette with [LANDSCAPE]. Dark areas reveal nature. Crisp outline on [BACKGROUND]. [PALETTE]. Seamless blend. [FORMAT].
-Var 2: Create a double exposure: [ANIMAL] silhouette filled with [ENVIRONMENT]. Crisp outline. [PALETTE]. [FORMAT].
-Var 3: Create a triple exposure: [ELEMENT 1], [ELEMENT 2], [ELEMENT 3]. Layered, ethereal, dreamlike. [FORMAT].
+Create a double exposure photograph merging the silhouette of [SUBJECT] with [LANDSCAPE]. The dark areas of the portrait reveal the landscape; lighter areas blend into the background. Crisp silhouette outline on a clean [BACKGROUND]. [PALETTE]. Seamless, poetic blend. 4:5 vertical format.
+```
+
+**Variation 2 — Animal + Environment** _(Social Media)_
+```text
+Create a double exposure of a [ANIMAL] silhouette filled with [ENVIRONMENT — e.g., misty pine forest]. Crisp outline, seamless internal blend, [PALETTE]. 16:9 landscape format.
+```
+
+**Variation 3 — Triple Exposure** _(Experimental)_
+```text
+Create a triple exposure layering [ELEMENT 1], [ELEMENT 2], and [ELEMENT 3] — layered, ethereal, dreamlike, the three exposures forming a visual poem. 3:4 vertical format.
 ```
 
 ### Midjourney
+
+**Variation 1 — Portrait + Landscape** _(Art Print)_
 ```text
-Var 1: Double exposure, [SUBJECT] silhouette filled with [LANDSCAPE], crisp outline, [BACKGROUND], [PALETTE] --ar 4:5
-Var 2: Double exposure, [ANIMAL] silhouette with [ENVIRONMENT], seamless blend, [PALETTE] --ar 16:9
-Var 3: Triple exposure, [ELEMENTS], ethereal layered dreamlike --ar 4:5
+double exposure, [SUBJECT] silhouette filled with [LANDSCAPE], crisp outline, clean [BACKGROUND], [PALETTE], seamless blend --ar 4:5 --s 250
+```
+
+**Variation 2 — Animal + Environment** _(Social Media)_
+```text
+double exposure, [ANIMAL] silhouette filled with [ENVIRONMENT], seamless blend, crisp outline, [PALETTE] --ar 16:9 --s 250
+```
+
+**Variation 3 — Triple Exposure** _(Experimental)_
+```text
+triple exposure, [ELEMENT 1], [ELEMENT 2], [ELEMENT 3], layered ethereal dreamlike, visual poem --ar 4:5 --s 350
 ```
 
 ### Stable Diffusion
-- **Var 1:** `Double exposure photograph, [SUBJECT] silhouette, [LANDSCAPE] filling, crisp outline, [BACKGROUND], [PALETTE], 8k` / Neg: `collage, separate images, harsh edges, cartoon`
-- **Var 2:** `Double exposure, [ANIMAL] silhouette, [ENVIRONMENT], seamless, poetic, 8k` / Neg: `collage, separate, harsh, cartoon, digital`
+
+**Variation 1 — Portrait + Landscape** _(Art Print)_
+- **Prompt:** `double exposure photograph, [SUBJECT] silhouette, filled with [LANDSCAPE], crisp outline, clean [BACKGROUND], [PALETTE], seamless blend`
+- **Negative Prompt:** `collage, separate images, harsh edges, cartoon, low quality`
+
+**Variation 2 — Animal + Environment** _(Social Media)_
+- **Prompt:** `double exposure, [ANIMAL] silhouette, filled with [ENVIRONMENT], seamless poetic blend, crisp outline, [PALETTE]`
+- **Negative Prompt:** `collage, separate images, harsh edges, cartoon, digital artifacts`
 
 ---
 
@@ -72,7 +98,20 @@ Using the attached portrait photo, create a double exposure effect by blending t
 ```
 > 💡 **Refinements:** "Make the blend more subtle / more dramatic" · "Switch the second image to [DIFFERENT SCENE]" · "Add a third exposure layer" · "Make the outline softer — more gradual fade"
 
-**ChatGPT / Midjourney / Stable Diffusion** — Standard I2I with "double exposure, silhouette blend, [SECOND IMAGE]" keywords. SD denoising: `0.50–0.65`.
+**ChatGPT**
+```text
+[Upload Photo] "Create a double exposure from this portrait — blend the silhouette with [SECOND IMAGE], letting the dark areas reveal the second scene, keep a crisp outline and a clean background outside the silhouette."
+```
+
+**Midjourney**
+```text
+[IMAGE_URL] double exposure, silhouette blend with [SECOND IMAGE], crisp outline, clean background, seamless --iw 1.2 --ar 4:5
+```
+
+**Stable Diffusion**
+- **Pipeline:** Img2Img · Denoising Strength: `0.5–0.65` (keeps silhouette while blending the fill)
+- **Prompt:** `double exposure photograph, silhouette blend, [SECOND IMAGE], crisp outline, clean background, seamless`
+- **Negative Prompt:** `collage, separate images, harsh edges, cartoon`
 
 ---
 

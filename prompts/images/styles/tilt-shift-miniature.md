@@ -44,22 +44,39 @@ Tilt-shift photograph of [SCENE — e.g., a football stadium during a match, sho
 Tilt-shift photograph of [SCENE — e.g., a Christmas market village square from above], 3:4 vertical format. Narrow focus on the market stalls — stall canopies, tiny shoppers, and miniature string lights. Oversaturated Christmas colors — red, green, gold. Snow on rooftops looks like model snow flock. The scene appears to be a miniature Christmas village display. Warm tungsten from the market lights contrasting with cool blue twilight sky.
 ```
 
-### ChatGPT / Midjourney / Stable Diffusion — Standard template.
-
 ### ChatGPT
+
+**Variation 1 — City from Above** _(Social Media)_
 ```text
-Var 1: Create a tilt-shift photograph of [SCENE] from a high angle. Narrow focus band, dramatic blur, oversaturated model-like colors. Must look like a scale model. 3:2 landscape format.
-Var 2: Create a tilt-shift aerial photograph of [SCENE]. Miniature effect. Saturated paint colors. [FORMAT].
+Create a tilt-shift photograph of [SCENE] from a high angle looking down — a narrow horizontal band of sharp focus, dramatic blur above and below, slightly oversaturated model-like colors, crisp midday shadows. The scene must look like a detailed scale model. 3:2 landscape format.
+```
+
+**Variation 2 — Aerial Miniature** _(Desktop Wallpaper)_
+```text
+Create a tilt-shift aerial photograph of [SCENE] with a strong miniature effect — saturated paint-like colors, narrow focus band, everything appearing to be a hand-built model diorama. 16:9 landscape format.
 ```
 
 ### Midjourney
+
+**Variation 1 — City from Above** _(Social Media)_
 ```text
-Var 1: Tilt-shift miniature effect, [SCENE], high angle, narrow focus band, oversaturated, model-like, crisp shadows --ar 16:9
-Var 2: Tilt-shift aerial, [SCENE], miniature effect, paint-like colors, dramatic blur, scale model --ar 16:9
+tilt-shift miniature effect, [SCENE], high angle looking down, narrow focus band, oversaturated model-like colors, crisp shadows --ar 16:9 --s 200
+```
+
+**Variation 2 — Aerial Miniature** _(Desktop Wallpaper)_
+```text
+tilt-shift aerial photograph, [SCENE], miniature effect, paint-like saturated colors, dramatic blur, scale model look --ar 16:9 --s 200
 ```
 
 ### Stable Diffusion
-- **Var 1:** `Tilt-shift miniature photograph, [SCENE], high angle, narrow focus, oversaturated, model-like, miniature effect` / Neg: `normal perspective, eye-level, natural colors, wide focus`
+
+**Variation 1 — City from Above** _(Social Media)_
+- **Prompt:** `tilt-shift miniature photograph, [SCENE], high angle, narrow focus band, oversaturated colors, model-like, crisp shadows, miniature effect`
+- **Negative Prompt:** `normal perspective, eye-level, natural muted colors, wide focus, low quality`
+
+**Variation 2 — Aerial Miniature** _(Desktop Wallpaper)_
+- **Prompt:** `tilt-shift aerial photograph, [SCENE], miniature diorama effect, paint-like saturated colors, narrow focus band, scale model`
+- **Negative Prompt:** `eye-level view, natural colors, deep focus, blurry subject`
 
 ---
 
@@ -71,7 +88,20 @@ Using the attached photo, apply an aggressive tilt-shift miniature effect. Creat
 ```
 > 💡 **Refinements:** "Make the miniature effect more aggressive — narrower focus band" · "Oversaturate the colors more" · "Shift the focus band up/down" · "Add model elements — a visible model base edge"
 
-**ChatGPT / Midjourney / Stable Diffusion** — Standard I2I with "tilt-shift miniature, narrow focus band, oversaturated, scale model" keywords. SD denoising: `0.35–0.50`.
+**ChatGPT**
+```text
+[Upload Photo] "Apply an aggressive tilt-shift miniature effect to this photo — a narrow horizontal band of sharp focus through the center, dramatic blur above and below, and slightly oversaturated model-painted colors so it looks like a scale model."
+```
+
+**Midjourney**
+```text
+[IMAGE_URL] tilt-shift miniature effect, narrow focus band, oversaturated model-like colors, scale model look --iw 1.5 --ar 16:9
+```
+
+**Stable Diffusion**
+- **Pipeline:** Img2Img · Denoising Strength: `0.35–0.5` (light touch — the effect is mostly focus and color)
+- **Prompt:** `tilt-shift miniature photograph, narrow focus band, oversaturated colors, scale model effect, high angle`
+- **Negative Prompt:** `eye-level, natural colors, wide focus`
 
 ---
 

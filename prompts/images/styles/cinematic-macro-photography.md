@@ -44,22 +44,39 @@ Cinematic macro photograph of [MATERIAL — e.g., a vinyl record groove at extre
 Cinematic macro photograph of [MINERAL — e.g., amethyst crystal cluster with individual hexagonal crystal terminations], [FORMAT]. Extreme close-up revealing [DETAILS — e.g., internal phantoms, color zoning from deep purple to clear quartz, tiny rainbow inclusions]. [LIGHTING — e.g., transmitted backlight making the crystal glow with internal color]. Razor-thin depth of field on the foremost crystal point. [BACKGROUND vibrant bokeh from deeper crystals]. Gemological beauty.
 ```
 
-### ChatGPT / Midjourney / Stable Diffusion — Standard template with macro-specific prompts.
-
 ### ChatGPT
+
+**Variation 1 — Hidden Textures** _(Desktop Wallpaper)_
 ```text
-Var 1: Create a cinematic macro photograph of [SUBJECT]. Extreme close-up with razor-thin depth of field. [LIGHTING]. Dramatic, revealing hidden textures. [FORMAT].
-Var 2: Create a cinematic macro of [CREATURE] facing camera. Extreme detail on [FEATURES]. Ring light catch lights. [FORMAT].
+Create a cinematic macro photograph of [SUBJECT] — an extreme close-up with razor-thin depth of field revealing hidden textures and structures invisible at normal scale. [LIGHTING — e.g., dramatic backlight making thin structures translucent]. 16:9 landscape format.
+```
+
+**Variation 2 — Creature Close-Up** _(Social Media)_
+```text
+Create a cinematic macro photograph of [CREATURE] facing the camera — extreme detail on [FEATURES — e.g., compound eyes and individual leg hairs], ring light catch lights in the eyes, shallow focus melting the background to bokeh. 1:1 square format.
 ```
 
 ### Midjourney
+
+**Variation 1 — Hidden Textures** _(Desktop Wallpaper)_
 ```text
-Var 1: Cinematic macro, [SUBJECT], extreme close-up, razor-thin depth of field, [LIGHTING], [BOKEH] --ar 16:9
-Var 2: Cinematic macro, [CREATURE], extreme detail, ring light, shallow focus, [BACKGROUND] --ar 1:1
+cinematic macro photograph, [SUBJECT], extreme close-up, razor-thin depth of field, [LIGHTING], hidden textures revealed, [BOKEH] background --ar 16:9 --s 200
+```
+
+**Variation 2 — Creature Close-Up** _(Social Media)_
+```text
+cinematic macro, [CREATURE] facing camera, extreme detail on [FEATURES], ring light catch lights, shallow focus, [BACKGROUND] bokeh --ar 1:1 --s 200
 ```
 
 ### Stable Diffusion
-- **Var 1:** `Cinematic macro photograph, [SUBJECT], extreme close-up, razor-thin DOF, [LIGHTING], detailed texture, 8k` / Neg: `wide angle, full body, illustration, cartoon, far away`
+
+**Variation 1 — Hidden Textures** _(Desktop Wallpaper)_
+- **Prompt:** `cinematic macro photograph, [SUBJECT], extreme close-up, razor-thin depth of field, [LIGHTING], detailed texture, bokeh background`
+- **Negative Prompt:** `wide angle, full body, illustration, cartoon, far away, low quality`
+
+**Variation 2 — Creature Close-Up** _(Social Media)_
+- **Prompt:** `cinematic macro photograph, [CREATURE], face close-up, extreme detail, [FEATURES], ring light catch lights, shallow focus, bokeh`
+- **Negative Prompt:** `wide shot, blurry subject, illustration, cartoon, distant view`
 
 ---
 
@@ -70,6 +87,21 @@ Var 2: Cinematic macro, [CREATURE], extreme detail, ring light, shallow focus, [
 Using the attached photo, reimagine it as extreme cinematic macro photography. Zoom in dramatically on [AREA] to reveal hidden textures and structures invisible at normal scale. Apply razor-thin depth of field. Add dramatic [LIGHTING]. Transform the familiar subject into an alien landscape through extreme magnification.
 ```
 > 💡 **Refinements:** "Zoom in tighter" · "Add water droplets on the surface" · "Change lighting to backlit/sidelit" · "Focus on a different area"
+
+**ChatGPT**
+```text
+[Upload Photo] "Reimagine this photo as extreme cinematic macro photography — zoom in dramatically on [AREA] to reveal hidden textures, apply razor-thin depth of field, and add dramatic [LIGHTING]."
+```
+
+**Midjourney**
+```text
+[IMAGE_URL] cinematic macro photograph, extreme close-up, razor-thin depth of field, dramatic lighting, hidden textures revealed --iw 1 --ar 16:9
+```
+
+**Stable Diffusion**
+- **Pipeline:** Img2Img · Denoising Strength: `0.6–0.75` (re-frames subject at macro scale)
+- **Prompt:** `cinematic macro photograph, extreme close-up, razor-thin depth of field, dramatic lighting, detailed texture, bokeh`
+- **Negative Prompt:** `wide angle, full scene, illustration, low quality`
 
 ---
 

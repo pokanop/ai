@@ -44,24 +44,49 @@ Botanical illustration of [SUBJECT — e.g., Citrus sinensis (blood orange) — 
 Botanical illustration in the style of Maria Sibylla Merian showing [PLANT] with associated [INSECT — e.g., Danaus plexippus (Monarch butterfly) in all life stages — egg, caterpillar, chrysalis, adult — arranged on the host milkweed plant], on cream cotton rag paper, [FORMAT]. Fine watercolor. Both plant and insect rendered with equal scientific precision. The insect interacts naturally with the plant — caterpillar feeding, butterfly resting. Anatomical details in the margins. Latin names for both species. Natural history museum aesthetic.
 ```
 
-### ChatGPT / Midjourney / Stable Diffusion — Standard templates.
-
 ### ChatGPT
+
+**Variation 1 — Single Specimen** _(Art Print)_
 ```text
-Var 1: Create a botanical illustration of [SPECIES] on cream paper. Fine watercolor, every detail rendered. Anatomical callout. Latin name in italic. Museum-quality. [FORMAT].
-Var 2: Create a botanical composition of [SPECIES LIST]. Naturalistic arrangement. Fine watercolor. Vein detail. Cream paper. [FORMAT].
-Var 3: Create a botanical life cycle of [SPECIES]. Five stages. Fine watercolor. Anatomical callouts. Latin names. Cream paper. [FORMAT].
+Create a scientific botanical illustration of [SPECIES] on cream cotton rag paper — fine watercolor washes with every petal, leaf, and vein rendered in detail, an anatomical callout (cross-section or magnified detail) in the corner, and the Latin name in italic copperplate below. Museum-quality. 4:5 vertical format.
+```
+
+**Variation 2 — Botanical Composition** _(Home Décor)_
+```text
+Create a botanical composition of [SPECIES LIST] in a naturalistic arrangement — fine watercolor, detailed vein and stamen work, cream cotton rag paper, Latin names labeled. 4:5 vertical format.
+```
+
+**Variation 3 — Life Cycle Study** _(Educational Content)_
+```text
+Create a botanical life cycle illustration of [SPECIES] showing five growth stages — seed, seedling, bud, bloom, and seed head — in fine watercolor with anatomical callouts and Latin names on cream paper. 16:9 landscape format.
 ```
 
 ### Midjourney
+
+**Variation 1 — Single Specimen** _(Art Print)_
 ```text
-Var 1: Botanical illustration, [SPECIES], cream paper, fine watercolor, scientific detail, anatomical callout, Latin name, museum quality --ar 4:5
-Var 2: Botanical composition, [SPECIES LIST], arranged bouquet, fine watercolor, cream paper, museum quality --ar 4:5
-Var 3: Botanical life cycle, [SPECIES], five stages, cream paper, watercolor, anatomical detail --ar 16:9
+botanical scientific illustration of [SPECIES], cream cotton rag paper, fine watercolor, detailed veins and stamens, anatomical callout, Latin name in italic, museum quality --ar 4:5 --s 150
+```
+
+**Variation 2 — Botanical Composition** _(Home Décor)_
+```text
+botanical composition, [SPECIES LIST], naturalistic arranged bouquet, fine watercolor, cream paper, Latin labels, museum quality --ar 4:5 --s 150
+```
+
+**Variation 3 — Life Cycle Study** _(Educational Content)_
+```text
+botanical life cycle illustration, [SPECIES], five growth stages, fine watercolor, anatomical callouts, Latin names, cream paper --ar 16:9 --s 100
 ```
 
 ### Stable Diffusion
-- **Var 1:** `Botanical scientific illustration, [SPECIES], cream paper, fine watercolor, detailed veins stamens, Latin name, museum quality, 8k` / Neg: `photograph, dark, modern, abstract, cartoon`
+
+**Variation 1 — Single Specimen** _(Art Print)_
+- **Prompt:** `botanical scientific illustration, [SPECIES], cream cotton rag paper, fine watercolor, detailed veins and stamens, anatomical callout, Latin name, museum quality`
+- **Negative Prompt:** `photograph, dark background, modern digital art, abstract, cartoon`
+
+**Variation 2 — Botanical Composition** _(Home Décor)_
+- **Prompt:** `botanical composition, [SPECIES LIST], naturalistic arrangement, fine watercolor, cream paper, Latin name labels, scientific illustration`
+- **Negative Prompt:** `photograph, decorative flower painting, dark, blur, low quality`
 
 ---
 

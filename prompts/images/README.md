@@ -22,7 +22,7 @@ If you just want to generate something great right now:
 
 ## Platform Guide
 
-Each prompt is provided in four platform-specific variants. Understanding their strengths will help you get the best results.
+Each prompt is provided in four platform-specific variants. Understanding their strengths will help you get the best results. The guide also covers three additional platforms — FLUX, Ideogram, and Recraft — worth reaching for when their specialties match your use case; the prompts in this library adapt to them with minor tweaks.
 
 ### 🔵 Nano Banana 2 _(Featured — Best Overall Quality)_
 
@@ -76,6 +76,31 @@ Each prompt is provided in four platform-specific variants. Understanding their 
 - **Style**: Supports both keyword tags and natural language. Modern models (SDXL, SD 3.5) work best with descriptive sentences, structured as **Subject → Action → Environment → Style/Lighting**.
 - **Negative Prompts**: Use sparingly and only for *specific unwanted elements*. Bloated negative prompt lists degrade output quality on modern models. Try generating without negatives first, then add targeted exclusions as needed.
 - **Tips**: Avoid over-weighting (e.g., `(keyword:1.5)`) — use it to nudge, not force. Ensure your resolution matches the model's native aspect ratio.
+
+### FLUX (Black Forest Labs)
+
+> *The FLUX.1 family spans open-weight models ([schnell], [dev]) and hosted pro tiers (FLUX.1 [pro], FLUX 1.1 [pro]), plus the FLUX.1 Kontext suite for image editing.*
+
+- **Style**: Descriptive natural language, similar to SDXL/SD 3.5 prompting but with stronger prompt adherence — complex multi-subject scenes and spatial relationships hold together well. No negative prompts on standard pipelines.
+- **Strengths**: Excellent prompt following, photorealistic rendering, solid in-image typography, and strong anatomy. Open-weight variants run locally (ComfyUI, Diffusers) and support LoRA fine-tuning.
+- **Kontext (image editing)**: FLUX.1 Kontext performs in-context generation and editing — prompt with text *plus* an image to make targeted local edits, preserve a character across scenes, or apply a reference style, all without fine-tuning or masks. Iterative editing keeps the rest of the image stable, making it a strong alternative for the img2img workflows in this library.
+- **Tips**: Reuse the Stable Diffusion prompts from each style doc, dropping the negative prompt. For Kontext edits, give short imperative instructions ("Change the background to a rainy street, keep the subject unchanged") and iterate one change at a time.
+
+### Ideogram (3.0)
+
+> *Best-in-class text-in-image rendering — the go-to platform when your image must contain legible, correctly spelled words.*
+
+- **Style**: Natural language. Put the exact text you want in quotes and describe the typography (serif, hand-lettered, neon sign) and placement.
+- **Strengths**: Market-leading text accuracy (posters, logos, signage, packaging, book covers — even multi-word headlines), strong graphic-design layouts, and photorealism. Style References (upload up to 3 images) and reusable style codes give precise aesthetic control; Magic Prompt expands terse prompts.
+- **Tips**: Ideal for styles in this library that feature typography (concert posters, vinyl album covers, vintage advertising). Pick a design category (Poster, Logo) when available, and spell out the exact wording — e.g., `a screen-printed gig poster with the headline "MIDNIGHT CANYON" in hand-drawn psychedelic lettering`.
+
+### Recraft (V3)
+
+> *A design-focused model — the only major platform that generates true vector (SVG) output, built for brand and production design work.*
+
+- **Style**: Natural language plus explicit design controls — style presets, exact brand colors, and text size/position on the canvas.
+- **Strengths**: Native vector art generation (logos, icons, illustrations that scale infinitely), custom brand styles derived from a set of reference images without retraining, accurate text rendering with positioning control, and a full editing suite (vectorize, background removal, upscaling, inpainting/outpainting).
+- **Tips**: Reach for Recraft when the deliverable is a logo, icon set, or brand asset rather than a rendered scene. Feed it exact hex/RGB brand colors, and use vector output for anything destined for print or scaling. Styles like Minimalist Notion, Art Deco, and Glass Embossed 3D translate especially well.
 
 ---
 

@@ -44,25 +44,49 @@ Photograph of a cluttered steampunk inventor's workshop, 16:9 landscape format. 
 Macro photograph of an exposed steampunk clockwork mechanism, 1:1 square format. [DETAILS — e.g., dozens of interlocking brass gears of varying sizes, ruby jewel bearings, a coiled mainspring, tiny ratchet pawls, and a visible escapement wheel ticking]. The mechanism is mounted in an ornate brass case with engraved Victorian scrollwork. Warm amber lighting catching the polished gear teeth. Extreme detail — you can see the machining marks on individual gear teeth. The beauty of precision mechanical engineering.
 ```
 
-### ChatGPT / Midjourney / Stable Diffusion — 3 variations each following standard template.
-
 ### ChatGPT
+
+**Variation 1 — Mechanical Animal** _(Art Print)_
 ```text
-Var 1: Create a steampunk [ANIMAL] from brass gears, copper, and leather. Every component interlocks. Warm patina. Steam venting. Workshop lighting. 3:2 format.
-Var 2: Create a steampunk [VEHICLE]. Exposed mechanisms, ornate brass, riveted panels. Jules Verne aesthetic. 3:2 format.
-Var 3: Create a steampunk workshop interior. Dense detail, gas lamps, workbenches, instruments. Warm amber. 3:2 format.
+Create a steampunk [ANIMAL] built entirely from brass gears, copper plating, and stitched leather — every component visibly interlocking, warm aged patina on the metal, steam venting from the joints, moody Victorian workshop lighting. 3:2 landscape format.
+```
+
+**Variation 2 — Fantastic Vehicle** _(Concept Art)_
+```text
+Create a steampunk [VEHICLE] with exposed clockwork mechanisms, ornate engraved brass, riveted copper panels, and pressure gauges — a Jules Verne aesthetic in warm sunset light. 3:2 landscape format.
+```
+
+**Variation 3 — Workshop Interior** _(Desktop Wallpaper)_
+```text
+Create a steampunk inventor's workshop interior — dense mechanical detail, gas lamps, cluttered workbenches with brass instruments, hanging gears and belts, warm amber lighting throughout. 3:2 landscape format.
 ```
 
 ### Midjourney
+
+**Variation 1 — Mechanical Animal** _(Art Print)_
 ```text
-Var 1: Steampunk [ANIMAL], brass gears copper, interlocking mechanisms, steam venting, warm patina, workshop lighting --ar 16:9
-Var 2: Steampunk [VEHICLE], exposed gears, ornate brass, riveted, Jules Verne, warm sunset --ar 16:9
-Var 3: Steampunk clockwork mechanism close-up, interlocking gears, ruby bearings, brass case, macro, amber lighting --ar 1:1
+steampunk [ANIMAL], brass gears and copper, interlocking mechanisms, stitched leather, steam venting, warm aged patina, Victorian workshop lighting --ar 16:9 --s 300
+```
+
+**Variation 2 — Fantastic Vehicle** _(Concept Art)_
+```text
+steampunk [VEHICLE], exposed clockwork, ornate engraved brass, riveted copper panels, pressure gauges, Jules Verne aesthetic, warm sunset --ar 16:9 --s 300
+```
+
+**Variation 3 — Clockwork Close-Up** _(Social Media)_
+```text
+steampunk clockwork mechanism close-up, interlocking brass gears, ruby jewel bearings, engraved brass case, macro detail, warm amber lighting --ar 1:1 --s 250
 ```
 
 ### Stable Diffusion
-- **Var 1:** `Steampunk [ANIMAL], brass gears copper leather, interlocking, steam, warm patina, workshop, 8k` / Neg: `modern, plastic, clean, minimalist, digital`
-- **Var 2:** `Steampunk [VEHICLE], exposed mechanisms, brass copper, riveted panels, Jules Verne, 8k` / Neg: `modern, sleek, minimal, digital, clean`
+
+**Variation 1 — Mechanical Animal** _(Art Print)_
+- **Prompt:** `steampunk [ANIMAL], brass gears, copper, leather, interlocking mechanisms, steam venting, warm aged patina, Victorian workshop lighting`
+- **Negative Prompt:** `modern, plastic, clean minimalist, digital, LEDs, low quality`
+
+**Variation 2 — Fantastic Vehicle** _(Concept Art)_
+- **Prompt:** `steampunk [VEHICLE], exposed clockwork mechanisms, ornate brass, copper, riveted panels, pressure gauges, Jules Verne aesthetic, warm light`
+- **Negative Prompt:** `modern, sleek, minimal, digital, plastic, clean surfaces`
 
 ---
 
@@ -74,7 +98,20 @@ Using the attached photo, transform the subject into a steampunk version. Replac
 ```
 > 💡 **Refinements:** "Add more gears and mechanical complexity" · "Make it more ornate — engravings and scrollwork" · "Add a Victorian workshop background" · "Steam must be visible"
 
-**ChatGPT / Midjourney / Stable Diffusion** — Standard I2I with "steampunk, brass, copper, gears, steam, Victorian, warm patina" keywords.
+**ChatGPT**
+```text
+[Upload Photo] "Transform this subject into a steampunk version — replace modern materials with brass, copper, and leather, add visible gear mechanisms, steam pipes, and gauges, give the metal a warm aged patina, and vent steam from the joints."
+```
+
+**Midjourney**
+```text
+[IMAGE_URL] steampunk, brass copper leather, exposed gears, steam pipes, gauges, warm aged patina, Victorian, amber lighting --iw 1.2 --ar 16:9
+```
+
+**Stable Diffusion**
+- **Pipeline:** Img2Img · Denoising Strength: `0.55–0.7` (rebuilds materials while keeping the form)
+- **Prompt:** `steampunk, brass, copper, leather, exposed gears, steam, gauges, Victorian, warm patina, amber lighting`
+- **Negative Prompt:** `modern, plastic, clean, minimalist, LEDs`
 
 ---
 

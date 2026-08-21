@@ -19,17 +19,74 @@ Flowing organic lines, elaborate floral borders, ethereal female figures, and or
 
 ### 🔵 Nano Banana 2 _(Featured)_
 
-**Variation 1 — Figure with Floral Frame** _(Poster, Print)_ — Mucha-style figure within ornate circular halo, flowing hair intertwined with [FLOWERS], muted palette with gold accents, floral border, decorative typography, [FORMAT].
+**Variation 1 — Figure with Floral Frame** _(Poster, Print)_
+```text
+Mucha-style figure within ornate circular halo, flowing hair intertwined with [FLOWERS], muted palette with gold accents, floral border, decorative typography, [FORMAT].
+```
 
-**Variation 2 — Seasonal / Allegorical** _(Art Print, Social Media)_ — Art Nouveau personification of [SEASON/CONCEPT], surrounded by appropriate flora, circular halo, Mucha palette, ornate border, [FORMAT].
+**Variation 2 — Seasonal / Allegorical** _(Art Print, Social Media)_
+```text
+Art Nouveau personification of [SEASON/CONCEPT], surrounded by appropriate flora, circular halo, Mucha palette, ornate border, [FORMAT].
+```
 
-**Variation 3 — Product / Advertisement** _(Brand, Social Media)_ — Art Nouveau advertising poster for [PRODUCT], Mucha figure holding/presenting it, ornate border, decorative lettering, muted palette, [FORMAT].
+**Variation 3 — Product / Advertisement** _(Brand, Social Media)_
+```text
+Art Nouveau advertising poster for [PRODUCT], Mucha figure holding/presenting it, ornate border, decorative lettering, muted palette, [FORMAT].
+```
 
-**Variation 4 — Botanical Panel** _(Home Décor, Print)_ — Art Nouveau decorative panel of [FLOWERS/BOTANICAL], no figure, flowing organic lines, geometric Art Nouveau motifs, muted palette with gold, [FORMAT].
+**Variation 4 — Botanical Panel** _(Home Décor, Print)_
+```text
+Art Nouveau decorative panel of [FLOWERS/BOTANICAL], no figure, flowing organic lines, geometric Art Nouveau motifs, muted palette with gold, [FORMAT].
+```
 
-**Variation 5 — Portrait** _(Profile Picture, Gift)_ — Art Nouveau portrait of [SUBJECT], circular halo frame, flowing hair with botanical elements, Mucha flat decorative style, muted palette, [FORMAT].
+**Variation 5 — Portrait** _(Profile Picture, Gift)_
+```text
+Art Nouveau portrait of [SUBJECT], circular halo frame, flowing hair with botanical elements, Mucha flat decorative style, muted palette, [FORMAT].
+```
 
-### ChatGPT / Midjourney / Stable Diffusion — Standard templates with "Art Nouveau, Alphonse Mucha, flowing organic lines, ornate floral border, muted earth tones, gold accents" core keywords.
+### ChatGPT
+
+**Variation 1 — Figure with Floral Frame** _(Poster, Print)_
+```text
+Create an Art Nouveau poster in the style of Alphonse Mucha: an ethereal figure with flowing hair intertwined with [FLOWERS], standing within an ornate circular halo border of interlocking floral arabesques. Muted earth tones — ochre, sage, dusty rose, cream — with metallic gold accents. Flat decorative shading, flowing organic lines with no sharp angles. Decorative typography reading "[TEXT]" at the bottom. 2:3 vertical format.
+```
+
+**Variation 2 — Product / Advertisement** _(Brand, Social Media)_
+```text
+Create an Art Nouveau advertising poster in the style of Alphonse Mucha for [PRODUCT]. A graceful figure presents the product, framed by an ornate floral border with gold accents. Muted earthy palette, flat decorative style, organic Art Nouveau lettering with the product name. 2:3 vertical format.
+```
+
+**Variation 3 — Botanical Panel** _(Home Décor)_
+```text
+Create an Art Nouveau decorative panel of [FLOWERS/BOTANICAL] with no figure — flowing organic lines, interlocking stems and blossoms, geometric Art Nouveau border motifs. Muted earth tones with metallic gold accents on cream paper. 2:3 vertical format.
+```
+
+### Midjourney
+
+**Variation 1 — Figure with Floral Frame** _(Poster, Print)_
+```text
+Art Nouveau poster in the style of Alphonse Mucha, ethereal figure with flowing hair intertwined with [FLOWERS], ornate circular halo border, floral arabesques, muted earth tones, metallic gold accents, flat decorative shading, cream paper --ar 2:3 --s 400
+```
+
+**Variation 2 — Seasonal / Allegorical** _(Art Print)_
+```text
+Art Nouveau allegorical figure personifying [SEASON/CONCEPT], Alphonse Mucha style, circular halo, seasonal flora border, muted ochre sage dusty rose palette, gold accents, decorative flat style --ar 2:3 --s 400
+```
+
+**Variation 3 — Botanical Panel** _(Home Décor)_
+```text
+Art Nouveau decorative botanical panel, [FLOWERS], flowing organic lines, interlocking stems, geometric border motifs, muted earth tones with gold, Mucha aesthetic --ar 2:3 --s 350
+```
+
+### Stable Diffusion
+
+**Variation 1 — Figure with Floral Frame** _(Poster, Print)_
+- **Prompt:** `Art Nouveau poster, Alphonse Mucha style, ethereal figure, flowing hair with [FLOWERS], ornate circular halo border, floral arabesques, muted earth tones, gold accents, flat decorative shading, cream paper`
+- **Negative Prompt:** `photograph, 3d render, sharp angles, vivid primary colors, Art Deco geometry`
+
+**Variation 2 — Botanical Panel** _(Home Décor)_
+- **Prompt:** `Art Nouveau decorative panel, [FLOWERS], flowing organic lines, interlocking stems, geometric border motifs, muted ochre sage palette, metallic gold accents, Mucha style`
+- **Negative Prompt:** `photograph, realistic, harsh shadows, neon colors, low quality`
 
 ---
 
@@ -39,6 +96,21 @@ Flowing organic lines, elaborate floral borders, ethereal female figures, and or
 ```text
 Using the attached photo, transform it into an Art Nouveau poster in the style of Alphonse Mucha. Restyle the figure with flowing organic lines and flat decorative shading. Add an ornate circular halo border of interlocking floral arabesques. Remap colors to muted earth tones with metallic gold accents. Intertwine botanical elements with the hair/clothing. Add decorative typography. Cream paper background.
 ```
+
+**ChatGPT**
+```text
+[Upload Photo] "Transform this portrait into an Alphonse Mucha Art Nouveau poster. Flowing organic linework, flat decorative shading, an ornate circular halo border of floral arabesques, muted earth tones with gold accents, and botanical elements woven into the hair."
+```
+
+**Midjourney**
+```text
+[IMAGE_URL] Art Nouveau poster, Alphonse Mucha style, flowing organic lines, ornate circular halo border, floral arabesques, muted earth tones, gold accents, flat decorative shading --iw 1.2 --ar 2:3
+```
+
+**Stable Diffusion**
+- **Pipeline:** Img2Img · Denoising Strength: `0.55–0.7` (preserves likeness while flattening into decorative style)
+- **Prompt:** `Art Nouveau poster, Alphonse Mucha style, flowing lines, circular halo border, floral arabesques, muted earth tones, gold accents, flat shading`
+- **Negative Prompt:** `photograph, 3d render, sharp angles, vivid primaries`
 
 ---
 
