@@ -4,7 +4,7 @@ description: Create detailed, development-ready Product Requirements Documents (
 license: MIT
 metadata:
   author: pokanop
-  version: "2.0"
+  version: "2.1"
 ---
 
 # Idea to PRD
@@ -100,6 +100,8 @@ Verify:
 
 If any check fails, fix it before presenting. Do not rely on the user to catch structural gaps.
 
+This is a [verification gate](../_shared/references/verification-gates.md): "the PRD is complete" is a claim that requires checking every item above against the actual draft — not a feeling that the schema was followed.
+
 ### Phase 3: Review
 
 Present the draft and ask for targeted feedback using these review criteria:
@@ -159,3 +161,4 @@ The PRD is the source of truth for intent, so it does not silently drift — but
 - [references/codebase-discovery.md](references/codebase-discovery.md) -- Checklist for understanding project conventions before writing
 - [references/quality-standards.md](references/quality-standards.md) -- Writing standards, decision quality criteria, and completeness checklist
 - [../_shared/references/conventions.md](../_shared/references/conventions.md) -- Shared priority, labels, and the `plans/` layout (single source of truth)
+- [../_shared/references/verification-gates.md](../_shared/references/verification-gates.md) -- Evidence-before-claims gate discipline and anti-rationalization table (shared reference)

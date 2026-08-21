@@ -4,7 +4,7 @@ description: Add or backfill automated test coverage for existing code without c
 license: MIT
 metadata:
   author: pokanop
-  version: "1.0"
+  version: "1.1"
 ---
 
 # Write Tests
@@ -81,6 +81,8 @@ When the code's actual behavior contradicts its apparent spec, **do not encode y
 
 1. Run the **full suite**, not just the new tests — new fixtures or setup must not destabilize existing tests.
 2. Run every configured quality gate (lint, typecheck, build) — test code is held to the same standard as production code.
+
+This phase is a [verification gate](../_shared/references/verification-gates.md): "these tests protect the behavior" requires a full-suite run in this session and each new test observed failing (Phase 4, step 4) — a test that was never seen to fail is an assumption, not evidence.
 3. Re-run the coverage tool if one exists and compare against the Phase 2 baseline.
 4. Report:
 
@@ -116,3 +118,4 @@ If the coverage work belongs to an active plan, offer to record notable findings
 - [../idea-to-prd/references/codebase-discovery.md](../idea-to-prd/references/codebase-discovery.md) — Test framework and pattern discovery (shared reference)
 - [../refactor/references/safety-net.md](../refactor/references/safety-net.md) — Characterization-test mechanics and legacy-seam handling (shared reference)
 - [../_shared/references/conventions.md](../_shared/references/conventions.md) — Canonical routing table and shared conventions (single source of truth)
+- [../_shared/references/verification-gates.md](../_shared/references/verification-gates.md) — Evidence-before-claims gate discipline and anti-rationalization table (shared reference)

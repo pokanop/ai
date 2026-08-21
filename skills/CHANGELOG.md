@@ -8,6 +8,13 @@ suite-level milestones those versions roll up into.
 
 - New skills being added in a parallel workstream — will be catalogued here and
   in [README.md](README.md) when they land.
+- Added shared verification-gate discipline: a new
+  `_shared/references/verification-gates.md` defines the evidence-before-claims
+  gate sequence, what counts as evidence per claim, and an anti-rationalization
+  table. The eight lifecycle skills (`idea-to-prd`, `prd-to-design`,
+  `design-to-tasks`, `tasks-to-code`, `code-review`, `debug-and-fix`,
+  `refactor`, `write-tests`) each gained a brief gate pointer at their
+  verification moment and a minor version bump.
 
 ## 2.0 — Suite synchronization (PR [#15](https://github.com/pokanop/ai/pull/15), POK-299)
 

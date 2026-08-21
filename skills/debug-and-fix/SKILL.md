@@ -4,7 +4,7 @@ description: Systematically debug a reported bug, implement a fix, and add a reg
 license: MIT
 metadata:
   author: pokanop
-  version: "2.0"
+  version: "2.1"
 ---
 
 # Debug and Fix
@@ -95,12 +95,14 @@ See [references/fix-verification.md](references/fix-verification.md) for the ful
 3. **Regression check** — Confirm no existing tests broke.
 4. **Edge case check** — Think about inputs adjacent to the bug. Does the fix hold for empty inputs, maximum values, concurrent calls?
 
+This phase is a [verification gate](../_shared/references/verification-gates.md): "the bug is fixed" requires re-running the original reproduction steps in this session — "the root cause is addressed" is not evidence.
+
 ### Phase 5: Add a Regression Test
 
 Every bug fix must include a test that would have caught the bug before it shipped.
 
 **Test requirements:**
-- The test must fail on the unfixed code and pass on the fixed code
+- The test must fail on the unfixed code and pass on the fixed code — verify the red-green cycle, don't assume it (see [verification gates](../_shared/references/verification-gates.md))
 - The test must describe the bug scenario clearly in its name: `it("returns 404 when session is missing, not 500")`
 - The test must be placed in the correct location following the project's test conventions (see [../idea-to-prd/references/codebase-discovery.md](../idea-to-prd/references/codebase-discovery.md) for test pattern detection)
 
@@ -141,3 +143,4 @@ Offer to log the fix in `plans/<name>/decisions.md` if the bug is related to an 
 - [../tasks-to-code/references/implementation-guide.md](../tasks-to-code/references/implementation-guide.md) — Implementation discipline (shared reference)
 - [../idea-to-prd/references/codebase-discovery.md](../idea-to-prd/references/codebase-discovery.md) — Test pattern discovery (shared reference)
 - [../_shared/references/conventions.md](../_shared/references/conventions.md) — Shared status markers, severity↔priority scale, and the `plans/` layout (single source of truth)
+- [../_shared/references/verification-gates.md](../_shared/references/verification-gates.md) — Evidence-before-claims gate discipline and anti-rationalization table (shared reference)

@@ -30,6 +30,14 @@ In the rapidly evolving world of AI, **the right prompt can unlock extraordinary
 
 Whether you're generating stunning visuals, crafting compelling videos, synthesizing audio, or building intelligent agents — this is your toolkit.
 
+### Why this suite
+
+Plenty of collections offer prompts or agent skills. This one is built on three commitments that most don't make:
+
+- **Artifact-driven.** Every lifecycle skill emits real, reviewable filesystem artifacts in `plans/` — PRDs, designs, ADRs, task lists, decision logs, retros. The work leaves a paper trail you can read, diff, and audit, not just a chat transcript.
+- **Auditable.** Deterministic plan validation (`plan-validate.py`, `plan-metrics.py`) checks task lists mechanically instead of by eye, shared [verification gates](https://github.com/pokanop/ai/blob/main/skills/_shared/references/verification-gates.md) require evidence before any completion claim, and an eval harness plus CI checks keep the skills themselves honest.
+- **Multimodal.** The SDLC skills live alongside curated image, video, audio, and text prompt libraries — one repository, one docs site, covering both how agents build software and how they generate media.
+
 ---
 
 ## What's Inside

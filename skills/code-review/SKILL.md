@@ -4,7 +4,7 @@ description: Review code changes for quality, correctness, and adherence to proj
 license: MIT
 metadata:
   author: pokanop
-  version: "2.0"
+  version: "2.1"
 ---
 
 # Code Review
@@ -73,6 +73,8 @@ Structure all findings using the format in [references/feedback-format.md](refer
 
 Present findings grouped by file, then by severity within each file. Always lead with a summary.
 
+Delivering the review is a [verification gate](../_shared/references/verification-gates.md): every finding must cite the actual code it refers to, and every "criterion satisfied" judgment must come from checking the criterion against the diff — not from the change's description of itself.
+
 ### Phase 5: Track (Optional)
 
 If the change has findings that require follow-up, offer to produce a `plans/<name>/review.md` tracking document. This is recommended when:
@@ -114,4 +116,5 @@ When the user asks to "re-review" or "check the updates":
 - [references/review-checklist.md](references/review-checklist.md) — Dimension-by-dimension review criteria
 - [references/feedback-format.md](references/feedback-format.md) — Finding severity, presentation format, and review.md schema
 - [../_shared/references/conventions.md](../_shared/references/conventions.md) — Canonical severity↔priority scale and other shared conventions
+- [../_shared/references/verification-gates.md](../_shared/references/verification-gates.md) — Evidence-before-claims gate discipline and anti-rationalization table (shared reference)
 - [../idea-to-prd/references/codebase-discovery.md](../idea-to-prd/references/codebase-discovery.md) — Codebase discovery checklist (shared reference)
