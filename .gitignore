@@ -11,9 +11,6 @@ src/content/docs/
 # Static assets (copied from assets/ by sync-docs.mjs)
 public/assets/
 
-# Bun
-bun.lock
-
 # Python (helper scripts in skills/_shared/scripts/)
 __pycache__/
 *.pyc
