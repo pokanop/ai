@@ -53,7 +53,7 @@ Prompts optimized for:
 </td>
 <td width="50%" valign="top">
 
-### Video Creation
+### Video Creation 🚧 Coming soon
 
 <img src="assets/icon-video.svg" alt="Videos" width="80">
 
@@ -63,14 +63,14 @@ Master prompts for:
 - **Pika Labs** - Dynamic motion
 - **Sora** - Long-form narratives
 
-[`prompts/videos/`](prompts/videos/)
+`prompts/videos/` — coming soon
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### Audio & Voice
+### Audio & Voice 🚧 Coming soon
 
 <img src="assets/icon-audio.svg" alt="Audio" width="80">
 
@@ -80,12 +80,12 @@ Prompts for:
 - **Sound effects** - Immersive audio design
 - **Podcast content** - Engaging scripts
 
-[`prompts/audio/`](prompts/audio/)
+`prompts/audio/` — coming soon
 
 </td>
 <td width="50%" valign="top">
 
-### Text & Content
+### Text & Content 🚧 Coming soon
 
 <img src="assets/icon-code.svg" alt="Code" width="80">
 
@@ -95,7 +95,7 @@ Expert prompts for:
 - **Marketing copy** - Conversion-focused content
 - **Research synthesis** - Academic excellence
 
-[`prompts/text/`](prompts/text/)
+`prompts/text/` — coming soon
 
 </td>
 </tr>
@@ -213,18 +213,19 @@ ai/
 │   ├── icon-agents.svg
 │   └── icon-code.svg
 ├── prompts/
-│   ├── images/            # Image generation prompts
-│   ├── videos/            # Video creation prompts
-│   ├── audio/             # Audio generation prompts
-│   └── text/              # Text & content prompts
+│   └── images/            # Image generation prompts (videos, audio, text coming soon)
 ├── skills/                # Agent Skills (agentskills.io format)
 │   ├── code-review/
 │   ├── debug-and-fix/
 │   ├── design-to-tasks/
 │   ├── idea-to-prd/
+│   ├── next-step/
+│   ├── performance-review/
 │   ├── plan-retrospective/
 │   ├── prd-to-design/
+│   ├── refactor/
 │   ├── release-checklist/
+│   ├── security-review/
 │   ├── tasks-to-code/
 │   └── ui-design-audit/
 └── README.md

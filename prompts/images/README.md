@@ -30,7 +30,7 @@ Each prompt is provided in four platform-specific variants. Understanding their 
 
 - **Style**: Detailed, structured natural language. Front-load the asset type and primary subject, then layer in style, lighting, and composition details.
 - **Strengths**: Combines pro-model quality with flash-model speed. Supports multi-turn conversational refinement, search grounding (reference real-world subjects by name), accurate text rendering, character consistency (up to 5 characters), and output up to 4K resolution.
-- **Why It's Featured**: NB2 consistently produces the most detailed, accurate, and stylistically faithful results across all 57 styles in this library. Its conversational refinement loop means you can iterate toward perfection without re-writing your entire prompt.
+- **Why It's Featured**: NB2 consistently produces the most detailed, accurate, and stylistically faithful results across all 72 styles in this library. Its conversational refinement loop means you can iterate toward perfection without re-writing your entire prompt.
 - **Key Tips**:
 
   | Tip | Details |
