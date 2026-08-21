@@ -1,0 +1,31 @@
+{
+  "name": "pokanop",
+  "owner": {
+    "name": "Pokanop",
+    "url": "https://github.com/pokanop"
+  },
+  "metadata": {
+    "description": "Pokanop's AI prompt library and agent skills for the full software development lifecycle.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "pokanop-skills",
+      "source": "./",
+      "description": "Project-aware agent skills covering the full software development lifecycle: PRDs, technical designs, task planning, implementation, reviews, testing, debugging, refactoring, upgrades, audits, releases, and retrospectives.",
+      "category": "engineering",
+      "keywords": [
+        "sdlc",
+        "planning",
+        "prd",
+        "code-review",
+        "testing",
+        "debugging",
+        "refactoring",
+        "security",
+        "performance",
+        "release"
+      ]
+    }
+  ]
+}

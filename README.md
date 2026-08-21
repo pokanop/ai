@@ -10,6 +10,7 @@
 
 <img src="assets/hero-banner.svg" alt="Hero Banner" width="100%">
 
+[![skills.sh](https://skills.sh/b/pokanop/ai)](https://skills.sh/pokanop/ai)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![AI Prompts](https://img.shields.io/badge/AI-Prompts-blue.svg)](prompts/)
@@ -24,7 +25,7 @@
 In the rapidly evolving world of AI, **the right prompt can unlock extraordinary results**. This repository serves as your definitive resource for:
 
 - **High-quality prompts** tested across multiple AI platforms
-- **Agent Skills** following the [Agent Skills specification](https://agentskills.io) and discoverable via [skills.sh](https://skills.sh)
+- **Agent Skills** following the [Agent Skills specification](https://agentskills.io) and discoverable via [skills.sh](https://skills.sh) — install with `npx skills add pokanop/ai` or as a [Claude Code plugin](skills/README.md)
 - **Best practices** distilled from real-world usage
 - **Foundation patterns** applicable to any AI use case
 
