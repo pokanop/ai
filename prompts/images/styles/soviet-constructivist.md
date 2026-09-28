@@ -8,99 +8,23 @@ Bold revolutionary propaganda posters with limited red-black-cream palettes, str
 
 ![Soviet Constructivist Example](../../../assets/placeholder-soviet.jpeg)
 
-> **Sample prompt used to generate the above image (Nano Banana 2):**
-> ```text
-> Soviet Constructivist propaganda poster featuring a figure pointing dramatically toward the horizon while standing atop geometric shapes, 9:16 vertical format. Strict limited palette — bold red, matte black, and cream. Strong diagonal composition — all elements angled at 30 degrees. Angular radiating beams emanate from behind the figure. Bold geometric sans-serif Russian typography at the top reading "[TEXT]" in stark red. Photomontage-style contrast — the figure is high-contrast black and white while the background is flat geometric red and cream. Rodchenko / El Lissitzky aesthetic. Printed on aged paper with visible grain.
-> ```
-
 ---
 
-## Prompt Variations
+## Prompt
 
-### 🔵 Nano Banana 2 _(Featured)_
+Replace the bracketed details with your subject and preferred format.
 
-**Variation 1 — Classic Propaganda Pose** _(Poster, Social Media)_
 ```text
 Soviet Constructivist poster of [SUBJECT — e.g., a worker holding up a gear/tool/torch], [FORMAT]. Bold red, black, and cream palette. Strong diagonal composition. Angular radiating beams. The figure is high-contrast photomontage style. Bold geometric sans-serif typography: "[TEXT]." Rodchenko / El Lissitzky aesthetic. Aged paper texture.
 ```
 
-**Variation 2 — Modern Subject** _(Social Media, Event Promotion)_
-```text
-Soviet Constructivist poster depicting [MODERN SUBJECT — e.g., a programmer typing furiously, surrounded by radiating code fragments], [FORMAT]. Classic red-black-cream palette. Strong 30-degree diagonal composition. The subject rendered in high-contrast photomontage. Geometric shapes and angular beams. Bold sans-serif text: "[TEXT]." The contrast between modern content and revolutionary aesthetics creates impact.
-```
+## With a Reference Image
 
-**Variation 3 — Typographic / Text-Dominant** _(Poster, Brand)_
-```text
-Soviet Constructivist typographic poster — text-dominant composition with bold geometric sans-serif type arranged at dramatic angles, [FORMAT]. The primary text "[TEXT]" is massive, rotated at 30 degrees. Secondary text elements at opposing angles create visual tension. Red, black, and cream. Geometric shapes — circles, triangles, bars — organize the composition. No figurative imagery — pure typography and geometry. El Lissitzky "Beat the Whites with the Red Wedge" aesthetic.
-```
+Attach your image and use this prompt to preserve its defining features while applying the style.
 
-**Variation 4 — Photomontage Collage** _(Art Print, Social Media)_
-```text
-Soviet Constructivist photomontage combining [ELEMENTS — e.g., a high-contrast eye, geometric machinery, radiating lines, and bold typography], arranged in a dynamic diagonal composition, [FORMAT]. Red, black, and cream. Photographic elements are high-contrast and cut with hard geometric edges. Geometric shapes overlap and intersect. Bold sans-serif text at multiple angles. Rodchenko photomontage aesthetic. Aged paper with grain.
-```
-
-**Variation 5 — Event / Concert Poster** _(Event Promotion)_
-```text
-Soviet Constructivist-style event poster for "[EVENT NAME]" on [DATE], [FORMAT]. [IMAGERY — e.g., a hand reaching upward grasping a star/microphone/lightning bolt]. Bold red, black, cream palette. Strong diagonal composition with radiating angular beams. The figure in high-contrast photomontage. Event details in bold geometric sans-serif at the bottom. The poster commands attention and conveys urgency. Revolutionary poster aesthetic applied to modern event.
-```
-
-### ChatGPT
-
-**Variation 1 — Propaganda Poster** _(Poster)_
-```text
-Create a Soviet Constructivist poster of [SUBJECT] — red, black, and cream palette only, strong diagonal composition with radiating angular beams, the figure in high-contrast black-and-white photomontage, bold geometric sans-serif text. Aged paper texture. 11:17 poster format.
-```
-
-**Variation 2 — Typographic Poster** _(Event Promotion)_
-```text
-Create a Constructivist typographic poster with the text "[TEXT]" arranged at dramatic angles — red, black, cream, flat geometric shapes, no figures, El Lissitzky aesthetic. 11:17 poster format.
-```
-
-### Midjourney
-
-**Variation 1 — Propaganda Poster** _(Poster)_
-```text
-Soviet Constructivist poster, [SUBJECT], red black cream palette, strong diagonal composition, radiating beams, high-contrast photomontage, bold geometric typography, aged paper --ar 11:17 --s 250
-```
-
-**Variation 2 — Photomontage** _(Social Media)_
-```text
-Constructivist photomontage, [ELEMENTS], dynamic diagonals, red black cream, flat geometric shapes, Rodchenko style --ar 1:1 --s 250
-```
-
-### Stable Diffusion
-
-**Variation 1 — Propaganda Poster** _(Poster)_
-- **Prompt:** `Soviet Constructivist poster, [SUBJECT], red black cream palette, diagonal composition, radiating beams, bold typography, photomontage, aged paper`
-- **Negative Prompt:** `photograph, realistic, smooth gradients, pastel colors, soft lighting`
-
-**Variation 2 — Photomontage** _(Social Media)_
-- **Prompt:** `Constructivist photomontage, [ELEMENTS], dynamic diagonal composition, red black cream, geometric shapes, Rodchenko style, aged paper`
-- **Negative Prompt:** `full color photograph, realistic, gradients, pastel, centered composition`
-
----
-
-## 🔄 Image-to-Image Transformations
-
-**Nano Banana 2** _(Featured)_
 ```text
 Using the attached photo, transform it into a Soviet Constructivist poster. Convert the subject to high-contrast black and white photomontage. Replace the background with flat geometric shapes in red and cream. Add angular radiating beams. Rotate the composition to a strong diagonal. Add bold geometric sans-serif typography: "[TEXT]." Aged paper texture.
 ```
-
-**ChatGPT**
-```text
-[Upload Photo] "Transform this photo into a Soviet Constructivist poster — high-contrast black-and-white photomontage of the subject, flat red and cream geometric background, angular radiating beams, a strong diagonal composition, and bold sans-serif text reading '[TEXT]'."
-```
-
-**Midjourney**
-```text
-[IMAGE_URL] Soviet Constructivist poster, high-contrast photomontage, red black cream, diagonal composition, radiating beams, bold typography --iw 1 --ar 11:17
-```
-
-**Stable Diffusion**
-- **Pipeline:** Img2Img · Denoising Strength: `0.6–0.75` (converts photo to graphic poster style)
-- **Prompt:** `Soviet Constructivist poster, high-contrast photomontage, red black cream palette, diagonal composition, radiating beams, bold typography, aged paper`
-- **Negative Prompt:** `realistic photograph, full color, gradients, soft`
 
 ---
 

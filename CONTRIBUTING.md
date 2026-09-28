@@ -5,15 +5,15 @@ First of all, thank you for considering contributing to this repository! It's pe
 ## Ways to Contribute
 
 ### 1. Adding Prompts
-Share your best-performing prompts for any AI platform.
-- **Images**: Midjourney, DALL-E 3, Stable Diffusion, etc.
+Share your best-performing prompts.
+- **Images**: One model-neutral prompt per style and a separate reference-image prompt for transforming an existing image.
 - **Videos**: Veo, Runway, Pika, Sora, etc.
 - **Audio**: Music, Voice, Sound Effects.
 - **Text**: Creative writing, Technical, Marketing, etc.
 
 Place your prompts in the appropriate sub-directory within `prompts/`. Each prompt should include:
 - The exact prompt text.
-- The model or tool it was tested with.
+- For image styles, the subject, composition, lighting, and materials needed to reproduce the look. Include a reference-image prompt that states what to preserve from the source.
 - The expected result or a sample output if possible.
 
 ### 2. Creating Skills

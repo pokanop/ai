@@ -329,9 +329,8 @@ function parseImagePrompt(content, filePath) {
     bestFor: [],
     heroImage: '',
     heroImageAlt: '',
-    samplePrompt: '',
-    platforms: {},     // { platformName: [{ title, useCase, prompt, negativePrompt? }] }
-    img2img: {},       // { platformName: { prompt, pipeline?, denoising?, negativePrompt?, refinements? } }
+    prompt: '',
+    referencePrompt: '',
     tips: [],
     relatedStyles: [],
   };
@@ -371,24 +370,13 @@ function parseImagePrompt(content, filePath) {
     data.heroImage = `/ai/assets/${imgName}`;
   }
 
-  // Extract sample prompt (blockquote with code block after image)
-  const sampleMatch = content.match(/>\s*\*\*Sample prompt[^*]*\*\*[^`]*```text\n([\s\S]*?)```/);
-  if (sampleMatch) {
-    // Clean the blockquote markers
-    data.samplePrompt = sampleMatch[1]
-      .split('\n')
-      .map(l => l.replace(/^>\s*/, '').trim())
-      .join(' ')
-      .trim();
+  const promptSection = extractSection(content, '## Prompt\n');
+  const referenceSection = extractSection(content, '## With a Reference Image');
+  data.prompt = promptSection?.match(/```text\n([\s\S]*?)\n```/)?.[1].trim() || '';
+  data.referencePrompt = referenceSection?.match(/```text\n([\s\S]*?)\n```/)?.[1].trim() || '';
+  if (!data.prompt || !data.referencePrompt) {
+    throw new Error(`Missing image or reference prompt in ${filePath}`);
   }
-
-  // Extract platform sections and their prompts
-  const platformSections = extractPlatformSections(content, '## Prompt Variations', '## 🔄');
-  data.platforms = platformSections;
-
-  // Extract img2img sections
-  const img2imgSections = extractImg2ImgSections(content);
-  data.img2img = img2imgSections;
 
   // Extract tips
   const tipsSection = extractSection(content, '## 💡 Tips');
@@ -404,133 +392,6 @@ function parseImagePrompt(content, filePath) {
   }
 
   return data;
-}
-
-function extractPlatformSections(content, startHeading, endHeading) {
-  const platforms = {};
-  const startIdx = content.indexOf(startHeading);
-  if (startIdx === -1) return platforms;
-
-  const endIdx = content.indexOf(endHeading, startIdx);
-  const section = endIdx !== -1
-    ? content.substring(startIdx, endIdx)
-    : content.substring(startIdx);
-
-  // Split by H3 headings (### Platform Name)
-  const platformRegex = /### (.*?)(?=\n### |\n## |$)/gs;
-  let match;
-  while ((match = platformRegex.exec(section)) !== null) {
-    const heading = match[1].trim();
-    const block = match[0];
-
-    let platformName = heading;
-    // Normalize platform names
-    if (heading.includes('Nano Banana')) platformName = 'Nano Banana 2';
-    else if (heading.includes('ChatGPT')) platformName = 'ChatGPT';
-    else if (heading.includes('Midjourney')) platformName = 'Midjourney';
-    else if (heading.includes('Stable Diffusion')) platformName = 'Stable Diffusion';
-
-    const variations = extractVariations(block);
-    if (variations.length > 0) {
-      platforms[platformName] = variations;
-    }
-  }
-
-  return platforms;
-}
-
-function extractVariations(block) {
-  const variations = [];
-
-  // Pattern 1: **Variation N — Name** _(Use Case)_ followed by code block
-  const varRegex = /\*\*Variation \d+\s*[—–-]\s*([^*]+)\*\*\s*(?:_\(([^)]+)\)_)?\s*\n```(?:text)?\n([\s\S]*?)```/g;
-  let match;
-  while ((match = varRegex.exec(block)) !== null) {
-    const variation = {
-      title: match[1].trim(),
-      useCase: match[2] ? match[2].trim() : '',
-      prompt: match[3].trim(),
-    };
-    variations.push(variation);
-  }
-
-  // Pattern 2: Stable Diffusion style with Prompt/Negative Prompt bullets.
-  // Must run before the inline pattern: the inline pattern's separator would
-  // otherwise consume the "- " bullet and capture a literal "**Prompt:** ..."
-  // string while dropping the Negative Prompt line entirely.
-  if (variations.length === 0) {
-    const sdRegex = /\*\*Variation \d+\s*[—–-]\s*([^*]+)\*\*\s*(?:_\(([^)]+)\)_)?\s*\n-\s*\*\*Prompt:\*\*\s*`([^`]+)`(?:\s*\n-\s*\*\*Negative Prompt:\*\*\s*`([^`]+)`)?/g;
-    while ((match = sdRegex.exec(block)) !== null) {
-      const variation = {
-        title: match[1].trim(),
-        useCase: match[2] ? match[2].trim() : '',
-        prompt: match[3].trim(),
-      };
-      if (match[4]) variation.negativePrompt = match[4].trim();
-      variations.push(variation);
-    }
-  }
-
-  // Pattern 3: Inline prompts (shorter docs without code blocks). The
-  // separator dash must be on the same line as the variation heading so a
-  // bullet list on the next line can never be mistaken for an inline prompt.
-  if (variations.length === 0) {
-    const inlineRegex = /\*\*Variation \d+\s*[—–-]\s*([^*]+)\*\*[^\S\n]*(?:_\(([^)]+)\)_)?[^\S\n]*[—–-][^\S\n]*(.+)/g;
-    while ((match = inlineRegex.exec(block)) !== null) {
-      variations.push({
-        title: match[1].trim(),
-        useCase: match[2] ? match[2].trim() : '',
-        prompt: match[3].trim(),
-      });
-    }
-  }
-
-  return variations;
-}
-
-function extractImg2ImgSections(content) {
-  const img2img = {};
-  const startIdx = content.indexOf('## 🔄');
-  if (startIdx === -1) return img2img;
-
-  const endIdx = content.indexOf('\n## ', startIdx + 5);
-  const section = endIdx !== -1
-    ? content.substring(startIdx, endIdx)
-    : content.substring(startIdx);
-
-  // Extract platform blocks within img2img
-  const platforms = [
-    { name: 'Nano Banana 2', pattern: /\*\*Nano Banana 2\*\*[^`]*```(?:text)?\n([\s\S]*?)```/s },
-    { name: 'ChatGPT', pattern: /\*\*ChatGPT\*\*[^`]*```(?:text)?\n([\s\S]*?)```/s },
-    { name: 'Midjourney', pattern: /\*\*Midjourney\*\*[^`]*```(?:text)?\n([\s\S]*?)```/s },
-    { name: 'Stable Diffusion', pattern: /\*\*Stable Diffusion\*\*[\s\S]*?(?:-\s*\*\*Pipeline:\*\*\s*(.+)\n)?(?:-\s*\*\*Prompt:\*\*\s*`([^`]+)`\n)?(?:-\s*\*\*Negative Prompt:\*\*\s*`([^`]+)`)?/s },
-  ];
-
-  for (const { name, pattern } of platforms) {
-    const match = section.match(pattern);
-    if (match) {
-      if (name === 'Stable Diffusion') {
-        img2img[name] = {
-          pipeline: match[1] ? match[1].trim() : '',
-          prompt: match[2] ? match[2].trim() : '',
-          negativePrompt: match[3] ? match[3].trim() : '',
-        };
-      } else {
-        img2img[name] = {
-          prompt: match[1].trim(),
-        };
-      }
-    }
-  }
-
-  // Extract follow-up refinements for NB2
-  const refinementsMatch = section.match(/>\s*💡\s*\*\*Follow-up refinements:\*\*([\s\S]*?)(?=\n\*\*|\n---|\n##|$)/);
-  if (refinementsMatch && img2img['Nano Banana 2']) {
-    const refinements = [...refinementsMatch[1].matchAll(/>\s*-\s*"([^"]+)"/g)].map(m => m[1]);
-    img2img['Nano Banana 2'].refinements = refinements;
-  }
-
-  return img2img;
 }
 
 function extractSection(content, heading) {
@@ -567,7 +428,7 @@ function generateImagePromptMdx(data) {
   }
   lines.push('---');
   lines.push('');
-  lines.push("import { Tabs, TabItem, Card, LinkCard } from '@astrojs/starlight/components';");
+  lines.push("import { LinkCard } from '@astrojs/starlight/components';");
   lines.push("import PromptBlock from '@components/PromptBlock.astro';");
   lines.push("import StyleHero from '@components/StyleHero.astro';");
   lines.push('');
@@ -578,76 +439,21 @@ function generateImagePromptMdx(data) {
   if (data.bestFor.length > 0) {
     lines.push(`  bestFor={${JSON.stringify(data.bestFor)}}`);
   }
-  if (data.samplePrompt) {
-    lines.push(`  samplePrompt="${escapeForJsx(data.samplePrompt)}"`);
-  }
   lines.push('/>');
   lines.push('');
 
-  // Platform prompt variations
-  const platformOrder = ['Nano Banana 2', 'ChatGPT', 'Midjourney', 'Stable Diffusion'];
-  const hasPlatforms = platformOrder.some(p => data.platforms[p]?.length > 0);
-
-  if (hasPlatforms) {
-    lines.push('## Prompt Variations');
-    lines.push('');
-    lines.push('<Tabs>');
-
-    for (const platform of platformOrder) {
-      const variations = data.platforms[platform];
-      if (!variations || variations.length === 0) continue;
-
-      const icon = platform === 'Nano Banana 2' ? ' icon="star"' : '';
-      lines.push(`  <TabItem label="${platform}"${icon}>`);
-
-      for (const v of variations) {
-        const useCaseAttr = v.useCase ? ` useCase="${escapeForJsx(v.useCase)}"` : '';
-        const negPromptAttr = v.negativePrompt ? ` negativePrompt="${escapeForJsx(v.negativePrompt)}"` : '';
-        lines.push(`    <PromptBlock title="${escapeForJsx(v.title)}"${useCaseAttr} prompt="${escapeForJsx(v.prompt)}"${negPromptAttr} platform="${platform}" />`);
-      }
-
-      lines.push('  </TabItem>');
-    }
-
-    lines.push('</Tabs>');
-    lines.push('');
-  }
-
-  // Image-to-Image section
-  const hasImg2Img = Object.keys(data.img2img).length > 0;
-  if (hasImg2Img) {
-    lines.push('## Image-to-Image Transformations');
-    lines.push('');
-    lines.push('<Tabs>');
-
-    for (const platform of platformOrder) {
-      const i2i = data.img2img[platform];
-      if (!i2i) continue;
-
-      const icon = platform === 'Nano Banana 2' ? ' icon="star"' : '';
-      lines.push(`  <TabItem label="${platform}"${icon}>`);
-
-      if (platform === 'Stable Diffusion' && i2i.pipeline) {
-        lines.push(`    <PromptBlock prompt="${escapeForJsx(i2i.prompt)}" negativePrompt="${escapeForJsx(i2i.negativePrompt || '')}" platform="${platform}" useCase="${escapeForJsx(i2i.pipeline)}" />`);
-      } else {
-        lines.push(`    <PromptBlock prompt="${escapeForJsx(i2i.prompt || '')}" platform="${platform}" />`);
-      }
-
-      if (i2i.refinements && i2i.refinements.length > 0) {
-        lines.push('');
-        lines.push('    :::tip[Follow-up refinements]');
-        for (const r of i2i.refinements) {
-          lines.push(`    - "${r}"`);
-        }
-        lines.push('    :::');
-      }
-
-      lines.push('  </TabItem>');
-    }
-
-    lines.push('</Tabs>');
-    lines.push('');
-  }
+  lines.push('## Prompt');
+  lines.push('');
+  lines.push('Replace the bracketed details with your subject and preferred format.');
+  lines.push('');
+  lines.push(`<PromptBlock prompt="${escapeForJsx(data.prompt)}" />`);
+  lines.push('');
+  lines.push('## With a Reference Image');
+  lines.push('');
+  lines.push('Attach your image and use this prompt to preserve its defining features while applying the style.');
+  lines.push('');
+  lines.push(`<PromptBlock prompt="${escapeForJsx(data.referencePrompt)}" />`);
+  lines.push('');
 
   // Tips section
   if (data.tips.length > 0) {
@@ -1268,15 +1074,7 @@ function main() {
   writeOut(join(DOCS_OUT, 'contributing.mdx'), contribMdx);
   pageCount++;
 
-  // Platform Guide (extracted from images README or standalone)
   const imagesReadme = readFileSync(join(ROOT, 'prompts', 'images', 'README.md'), 'utf-8');
-  const platformGuideSection = extractSection(imagesReadme, '## Platform Guide');
-  if (platformGuideSection) {
-    const guideMdx = generateGenericMdx(platformGuideSection, 'Platform Guide');
-    ensureDir(join(DOCS_OUT, 'guides'));
-    writeOut(join(DOCS_OUT, 'guides', 'platform-guide.mdx'), guideMdx);
-    pageCount++;
-  }
 
   // ── 2. Image Prompts ────────────────────────────────────────────────
   console.log('  🖼️  Generating image prompt pages...');

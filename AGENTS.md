@@ -37,7 +37,6 @@ There is no `package-lock.json`, no `npm` scripts beyond what's in `package.json
 |---|---|
 | Homepage (`/ai/`) | `README.md` |
 | Contributing | `CONTRIBUTING.md` |
-| Platform Guide | `## Platform Guide` section of `prompts/images/README.md` |
 | Image prompt style page | `prompts/images/styles/<slug>.md` |
 | Skills index | `skills/README.md` |
 | Individual skill page | `skills/<name>/SKILL.md` |
@@ -50,7 +49,7 @@ A new `prompts/images/styles/<slug>.md` file alone is **not enough**. You must a
 
 1. Add `<slug>` to a category array in `IMAGE_CATEGORIES` in `scripts/sync-docs.mjs`. Files not listed there land in `uncategorized/` and aren't routed.
 2. If creating a new category, add a matching sidebar entry in `astro.config.mjs` (look for `autogenerate: { directory: 'prompts/images/styles/<category>' }`).
-3. Follow the existing `.md` structure — `parseImagePrompt` in `sync-docs.mjs` relies on specific markers: `# Title`, `**Best for:**`, a hero `![alt](path)`, a `> **Sample prompt...** ... ```text``` block, `## Prompt Variations` with `### Platform` subsections, `**Variation N — Name** _(Use Case)_` blocks, `## 🔄` for img2img, `## 💡 Tips`, and `**Pairs well with:**` for related styles. Breaking this structure silently drops content from the generated page.
+3. Follow the existing `.md` structure — `parseImagePrompt` in `sync-docs.mjs` relies on `# Title`, `**Best for:**`, a hero `![alt](path)`, `## Prompt` with one fenced `text` block, `## With a Reference Image` with one fenced `text` block, `## 💡 Tips`, and `**Pairs well with:**` for related styles. The build fails if either prompt is missing.
 
 ## Internal links must use the `/ai/` base path
 

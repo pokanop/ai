@@ -51,11 +51,7 @@ Plenty of collections offer prompts or agent skills. This one is built on three 
 
 <img src="assets/features-icons.svg" alt="Images" width="80">
 
-Prompts optimized for:
-- **Nano Banana 2** - Fast, high-fidelity image generation
-- **DALL-E 3** - Photorealistic & artistic outputs
-- **Midjourney** - Stylized creative imagery
-- **Stable Diffusion** - Fine-tuned control
+Model-neutral prompts for 72 image styles, each with a dedicated option for transforming a reference image.
 
 [`prompts/images/`](prompts/images/README.md)
 

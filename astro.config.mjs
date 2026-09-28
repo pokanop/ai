@@ -46,7 +46,6 @@ export default defineConfig({
           label: 'Getting Started',
           items: [
             { label: 'Introduction', slug: 'index' },
-            { label: 'Platform Guide', slug: 'guides/platform-guide' },
             { label: 'Contributing', slug: 'contributing' },
           ],
         },

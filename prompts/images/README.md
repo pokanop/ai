@@ -2,185 +2,18 @@
 
 [← Back to Main Repository](../../README.md)
 
-A comprehensive library of **72 optimized image generation prompt styles** across **12 categories**, each with multiple contextual prompt variations tailored for real-world use cases. Every style doc provides copy-paste prompts for Nano Banana 2 _(featured)_, ChatGPT, Midjourney, and Stable Diffusion — simply replace `[PLACEHOLDERS]` with your own content.
+A library of **72 image generation styles** across **12 categories**. Each style provides one polished prompt for generating an image and one for transforming a reference image. Replace the bracketed details with your own subject and format.
 
 ---
 
-## ⚡ Quick Start with Nano Banana 2
+## How to Use These Prompts
 
-If you just want to generate something great right now:
+1. Choose a style from the categories below or the [use-case guide](#-choosing-the-right-style-by-use-case).
+2. Copy the single prompt from the style page, replace its bracketed details with your subject and setting, and adjust the suggested format for your output.
+3. If starting from an existing image, attach it and use the **With a Reference Image** prompt instead.
+4. Refine the composition, colors, lighting, or details based on the result.
 
-1. Pick a style from the [categories below](#-professional--persona).
-2. Open the style doc and go to the **Nano Banana 2** section (listed first).
-3. Choose the variation that matches your use case (e.g., "Social Media Post," "Desktop Wallpaper," "Character Portrait").
-4. Copy the prompt, replace the `[PLACEHOLDERS]`, and paste into Nano Banana.
-5. Iterate — use follow-up messages to refine colors, composition, lighting, or details.
-
-> **Have a reference photo?** Jump to the [Image-to-Image Transformations](#-using-reference-images-image-to-image) section to transform existing images into any style.
-
----
-
-## Platform Guide
-
-Each prompt is provided in four platform-specific variants. Understanding their strengths will help you get the best results. The guide also covers three additional platforms — FLUX, Ideogram, and Recraft — worth reaching for when their specialties match your use case; the prompts in this library adapt to them with minor tweaks.
-
-### 🔵 Nano Banana 2 _(Featured — Best Overall Quality)_
-
-> *Nano Banana 2 (powered by Gemini 3.1 Flash Image) is a major upgrade over the original. Treat it as a full-featured creative engine, not a quick-filter tool.*
-
-- **Style**: Detailed, structured natural language. Front-load the asset type and primary subject, then layer in style, lighting, and composition details.
-- **Strengths**: Combines pro-model quality with flash-model speed. Supports multi-turn conversational refinement, search grounding (reference real-world subjects by name), accurate text rendering, character consistency (up to 5 characters), and output up to 4K resolution.
-- **Why It's Featured**: NB2 consistently produces the most detailed, accurate, and stylistically faithful results across all 72 styles in this library. Its conversational refinement loop means you can iterate toward perfection without re-writing your entire prompt.
-- **Key Tips**:
-
-  | Tip | Details |
-  |-----|---------|
-  | **Be specific, not vague** | NB2's reasoning engine rewards precise descriptors for textures, colors, and lighting over generic adjectives |
-  | **Front-load important details** | Place the asset type and primary subject at the beginning of your prompt |
-  | **Specify aspect ratios** | Explicitly state the format: `16:9` for wallpapers, `3:4` for Instagram, `9:16` for stories, `1:1` for profile pictures |
-  | **Iterate conversationally** | Refine with follow-ups: "Change the palette to warmer tones," "Move the subject left," "Add more texture to the background" |
-  | **Leverage search grounding** | For real-world subjects, ask the model to reference accurate imagery: "Use image search to find accurate reference for [specific subject]" |
-  | **Use positive framing** | Instead of "no cars," describe the scene you *do* want: "empty, deserted street" |
-  | **Specify camera/lens** | For photographic styles, include lens (85mm, 35mm, macro), aperture (f/1.8, f/8), and camera angle (low, eye-level, bird's eye) |
-  | **Name your lighting** | Use specific lighting terms: "Rembrandt lighting," "golden hour," "tungsten warm glow," "volumetric fog" |
-
-### ChatGPT (GPT-4o Image Generation)
-
-> *Replaces the standalone DALL-E 3 model, which is deprecated as of May 2026.*
-
-- **Style**: Fully conversational, natural language. Describe your scene as if briefing an artist.
-- **Strengths**: Excellent scene comprehension, precise spatial relationships, and iterative refinement through follow-up messages.
-- **Tips**: Be specific about subject placement, lighting direction, and mood. You can assign it a persona (e.g., *"Act as a professional product photographer"*) for higher fidelity. Use follow-up messages to adjust individual elements without re-describing the whole scene.
-
-### Midjourney (V7)
-
-> *V7 is the current default model. Parameters like `--v 6.0` are no longer needed.*
-
-- **Style**: Natural language with parameters appended at the end. V7 has moved away from keyword stuffing toward descriptive sentences.
-- **Key Parameters**:
-
-  | Parameter | Purpose | Example |
-  |-----------|---------|---------|
-  | `--ar` | Aspect ratio | `--ar 16:9`, `--ar 4:5` |
-  | `--s` | Stylization (0–1000). Low = literal, high = artistic | `--s 250` |
-  | `--no` | Exclude elements (replaces negative prompts) | `--no text, blur` |
-  | `--cref` | Character reference — maintains identity across images | `--cref [URL]` |
-  | `--sref` | Style reference — applies the aesthetic of a reference image | `--sref [URL]` |
-  | `--iw` | Image weight for reference influence (0–2) | `--iw 1.5` |
-  | `--chaos` | Variation in initial grid (0–100) | `--chaos 30` |
-
-- **Tips**: Place the most important visual information first. Use `--niji` for anime and illustration styles.
-
-### Stable Diffusion (SDXL / SD 3.5)
-
-- **Style**: Supports both keyword tags and natural language. Modern models (SDXL, SD 3.5) work best with descriptive sentences, structured as **Subject → Action → Environment → Style/Lighting**.
-- **Negative Prompts**: Use sparingly and only for *specific unwanted elements*. Bloated negative prompt lists degrade output quality on modern models. Try generating without negatives first, then add targeted exclusions as needed.
-- **Tips**: Avoid over-weighting (e.g., `(keyword:1.5)`) — use it to nudge, not force. Ensure your resolution matches the model's native aspect ratio.
-
-### FLUX (Black Forest Labs)
-
-> *The FLUX.1 family spans open-weight models ([schnell], [dev]) and hosted pro tiers (FLUX.1 [pro], FLUX 1.1 [pro]), plus the FLUX.1 Kontext suite for image editing.*
-
-- **Style**: Descriptive natural language, similar to SDXL/SD 3.5 prompting but with stronger prompt adherence — complex multi-subject scenes and spatial relationships hold together well. No negative prompts on standard pipelines.
-- **Strengths**: Excellent prompt following, photorealistic rendering, solid in-image typography, and strong anatomy. Open-weight variants run locally (ComfyUI, Diffusers) and support LoRA fine-tuning.
-- **Kontext (image editing)**: FLUX.1 Kontext performs in-context generation and editing — prompt with text *plus* an image to make targeted local edits, preserve a character across scenes, or apply a reference style, all without fine-tuning or masks. Iterative editing keeps the rest of the image stable, making it a strong alternative for the img2img workflows in this library.
-- **Tips**: Reuse the Stable Diffusion prompts from each style doc, dropping the negative prompt. For Kontext edits, give short imperative instructions ("Change the background to a rainy street, keep the subject unchanged") and iterate one change at a time.
-
-### Ideogram (3.0)
-
-> *Best-in-class text-in-image rendering — the go-to platform when your image must contain legible, correctly spelled words.*
-
-- **Style**: Natural language. Put the exact text you want in quotes and describe the typography (serif, hand-lettered, neon sign) and placement.
-- **Strengths**: Market-leading text accuracy (posters, logos, signage, packaging, book covers — even multi-word headlines), strong graphic-design layouts, and photorealism. Style References (upload up to 3 images) and reusable style codes give precise aesthetic control; Magic Prompt expands terse prompts.
-- **Tips**: Ideal for styles in this library that feature typography (concert posters, vinyl album covers, vintage advertising). Pick a design category (Poster, Logo) when available, and spell out the exact wording — e.g., `a screen-printed gig poster with the headline "MIDNIGHT CANYON" in hand-drawn psychedelic lettering`.
-
-### Recraft (V3)
-
-> *A design-focused model — the only major platform that generates true vector (SVG) output, built for brand and production design work.*
-
-- **Style**: Natural language plus explicit design controls — style presets, exact brand colors, and text size/position on the canvas.
-- **Strengths**: Native vector art generation (logos, icons, illustrations that scale infinitely), custom brand styles derived from a set of reference images without retraining, accurate text rendering with positioning control, and a full editing suite (vectorize, background removal, upscaling, inpainting/outpainting).
-- **Tips**: Reach for Recraft when the deliverable is a logo, icon set, or brand asset rather than a rendered scene. Feed it exact hex/RGB brand colors, and use vector output for anything destined for print or scaling. Styles like Minimalist Notion, Art Deco, and Glass Embossed 3D translate especially well.
-
----
-
-## 📐 Aspect Ratio Cheat Sheet
-
-Quick reference for common output formats. Note that aspect ratio capabilities vary by platform:
-- **Nano Banana 2**: Fixed presets (`16:9`, `4:3`, `1:1`, `3:4`, `9:16`).
-- **ChatGPT**: Fixed presets (`1:1`, `3:2`, `2:3`).
-- **Midjourney & Stable Diffusion**: Fully dynamic support for precise pixel dimensions and custom ratios.
-
-
-| Use Case | Ratio | Pixels (Recommended) | Notes |
-|----------|-------|----------------------|-------|
-| Instagram Post | `1:1` | 1080×1080 | Square feed post |
-| Instagram Portrait | `4:5` | 1080×1350 | Tallest feed format, maximum real estate |
-| Instagram / TikTok Story | `9:16` | 1080×1920 | Full-screen vertical |
-| LinkedIn / Twitter Header | `3:1` | 1500×500 | Wide banner |
-| Desktop Wallpaper | `16:9` | 3840×2160 | Standard widescreen / 4K |
-| Ultrawide Wallpaper | `21:9` | 3440×1440 | Ultrawide monitors |
-| Phone Wallpaper | `9:19.5` | 1290×2796 | iPhone Pro Max |
-| Profile Picture / App Icon | `1:1` | 512×512 or 1024×1024 | Square, tight crop |
-| Pinterest Pin | `2:3` | 1000×1500 | Tall vertical |
-| YouTube Thumbnail | `16:9` | 1280×720 | Standard video thumbnail |
-| Poster / Print (A-series) | `1:1.414` | 2480×3508 | A4 at 300 DPI |
-| Book Cover | `2:3` | 1600×2400 | Standard paperback |
-
----
-
-## 🖼️ Using Reference Images (Image-to-Image)
-
-When you want to stylize an existing photo (e.g., turning a portrait into a Pixar character or transforming a landscape into a watercolor), each platform handles reference images differently. Each style doc includes a dedicated **🔄 Image-to-Image Transformations** section with platform-specific prompts.
-
-### Nano Banana 2 _(Featured)_
-
-Upload your image to the conversation, then describe the transformation:
-
-```text
-"Using the attached image as the base, transform it into [STYLE]. Preserve the subject's appearance and pose, but apply [SPECIFIC STYLE DETAILS]. Use a [ASPECT RATIO] format."
-```
-
-**Conversational refinement** — After the initial result, iterate with follow-ups:
-- "Increase the intensity of the style — push it further from photorealism"
-- "Keep the subject's face more recognizable"
-- "Change the background to [NEW ENVIRONMENT] while keeping the style"
-- "Apply the style only to the background — keep the subject photorealistic"
-
-### ChatGPT
-
-Upload the image to the conversation, then prompt:
-
-```text
-"Using the attached image as a reference for the subject's appearance, create a [STYLE] version. Preserve the person's likeness, clothing, and pose. [ADDITIONAL STYLE DETAILS]."
-```
-
-### Midjourney
-
-Place the image URL at the **start** of your prompt:
-
-```text
-[IMAGE_URL] [STYLE DESCRIPTION] --iw [WEIGHT] --ar [RATIO]
-```
-
-| Parameter | Recommended Value | Purpose |
-|-----------|-------------------|---------|
-| `--iw` | `1.0–1.5` for style transfer, `1.5–2.0` for close preservation | Controls how closely the output follows the reference |
-| `--cref` | Use for character consistency across multiple images | Maintains identity (face, features) across generations |
-| `--sref` | Use to apply a style from a separate reference | Applies the aesthetic of another image |
-
-### Stable Diffusion
-
-Use the **Img2Img** pipeline with these recommended settings:
-
-| Setting | Light Stylization | Medium Transformation | Heavy Restyling |
-|---------|-------------------|----------------------|-----------------|
-| **Denoising Strength** | 0.3–0.45 | 0.45–0.65 | 0.65–0.85 |
-| **Use Case** | Subtle filter effect | Balanced style transfer | New artwork based on composition |
-
-- **ControlNet** alternative: For preserving exact pose/composition while completely changing style, use ControlNet with the `canny` or `openpose` preprocessor.
-- **Prompt**: Describe the desired output style. The original image provides composition/structure.
-- **Negative Prompt**: Target specific unwanted artifacts only.
+Both prompts work with image generators that accept natural-language instructions.
 
 ---
 
@@ -208,19 +41,6 @@ Not sure which style to pick? Start from what you need:
 | **Movie / TV fan art** | [Movie Diorama Cube](styles/movie-diorama-cube.md), [Collectible Figurines](styles/collectible-figurines.md), [Superhero Comic Book](styles/superhero-comic-book.md) |
 | **Travel / city content** | [Fridge Magnet Knolling](styles/fridge-magnet-knolling.md), [Landmark Dioramas](styles/landmark-dioramas.md), [Tilt-Shift Miniature](styles/tilt-shift-miniature.md) |
 | **Moody editorial / album art** | [Frosted Silhouette](styles/frosted-silhouette.md), [Double Exposure](styles/double-exposure.md), [Daguerreotype / Tintype](styles/daguerreotype-tintype.md) |
-
----
-
-## How to Use These Prompts
-
-1. **Find a style** from the categories below or use the [use-case guide](#-choosing-the-right-style-by-use-case) above.
-2. **Click through** to the individual style doc.
-3. **Pick a variation** that matches your intended output (profile pic, wallpaper, poster, etc.).
-4. **Copy the prompt** for your platform — Nano Banana 2 is listed first and recommended.
-5. **Replace placeholders** — `[SUBJECT]`, `[ENVIRONMENT]`, `[COLOR]`, etc. — with your desired content.
-6. **Iterate** — adjust details, swap environments, or refine lighting based on initial results.
-
-> **Contribute!** Generated a great image with one of these prompts? Submit a PR to replace the placeholder image in the style doc with your result!
 
 ---
 
