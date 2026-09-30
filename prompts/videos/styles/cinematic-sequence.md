@@ -6,6 +6,14 @@ Film-grade narrative shots with deliberate cinematography — named camera moves
 
 **Best for:** Short films · Title sequences · Mood pieces · Pitch previsualization · Music video shots
 
+![Cinematic Sequence Example](../../../assets/sample-cinematic-sequence.mp4)
+
+> **Sample prompt used to generate the above video (Google Veo 3.1):**
+> ```text
+> Cinematic slow dolly-in shot, 35mm anamorphic lens with shallow depth of field. A woman stands motionless at a rain-streaked window, backlit by cold blue city light, as her reflection slowly sharpens in the glass. Interior of a dim apartment at night, practical lamps glowing warm in the background bokeh. Moody neo-noir style, volumetric haze, high contrast. Ambient noise: distant traffic, rain against glass, a low synth drone swelling.
+> ```
+
+
 ---
 
 ## Prompt Variations

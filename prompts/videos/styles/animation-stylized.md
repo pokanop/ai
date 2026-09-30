@@ -6,6 +6,14 @@ Non-photorealistic looks — 3D character animation, anime, claymation, paper cu
 
 **Best for:** Kids' content · Explainers · Music visuals · Game trailers · Stylized brand spots
 
+![Animation & Stylized Example](../../../assets/sample-animation-stylized.mp4)
+
+> **Sample prompt used to generate the above video (Google Veo 3.1):**
+> ```text
+> 3D animated film style: a whimsical round robot with big expressive eyes waddles through a cozy cluttered workshop, pauses, and reacts with exaggerated surprise as a spark of light pops from a toaster. Soft global illumination, subsurface scattering on materials, large emotive eyes, squash-and-stretch animation principles. Warm storybook palette. SFX: playful orchestral sting, servo whirs, a comedic boing on the reaction.
+> ```
+
+
 ---
 
 ## Prompt Variations

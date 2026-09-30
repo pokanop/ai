@@ -6,6 +6,14 @@ High-energy pursuits, stunts, and kinetic camera work. Action is the hardest thi
 
 **Best for:** Trailers · Sports content · Game cinematics · Stunt previz · Music video cuts
 
+![Action & Chase Example](../../../assets/sample-action-chase.mp4)
+
+> **Sample prompt used to generate the above video (Google Veo 3.1):**
+> ```text
+> Dynamic tracking shot: a runner in a grey hoodie sprints across a rooftop toward the camera, vaults a ventilation duct, and slides under a pipe, the camera whip-panning to follow. Late afternoon sun, long shadows, dust kicked up on the slide. Fast shutter feel with crisp motion, urban skyline background. SFX: pounding footsteps, fabric rustle, a metallic clang on the vault, driving percussion.
+> ```
+
+
 ---
 
 ## Prompt Variations

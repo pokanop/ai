@@ -6,6 +6,14 @@ Compressed time: cities pulsing at night, clouds streaming past monuments, const
 
 **Best for:** Intros & transitions · Travel content · Corporate sizzle reels · Music video B-roll · Ambient screens
 
+![Timelapse & Hyperlapse Example](../../../assets/sample-timelapse-hyperlapse.mp4)
+
+> **Sample prompt used to generate the above video (MiniMax H3 (local)):**
+> ```text
+> Timelapse from a high rooftop overlooking a busy city intersection: traffic streams as continuous light trails, pedestrians blur into flowing rivers of motion, clouds race across the sky as day compresses into dusk and windows flicker on across the skyline. Locked camera, sharp architecture, saturated dusk gradient. Audio: accelerated city hum with a rhythmic pulse. No voices, no speech, no vocals.
+> ```
+
+
 ---
 
 ## Prompt Variations

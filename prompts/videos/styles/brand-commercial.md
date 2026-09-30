@@ -6,6 +6,14 @@ Polished 15–30 second spot energy compressed into single clips: lifestyle mome
 
 **Best for:** Brand spots · Pitch decks & mood films · Pre-roll ads · Agency previz · Landing page heroes
 
+![Brand Commercial Example](../../../assets/sample-brand-commercial.mp4)
+
+> **Sample prompt used to generate the above video (Google Veo 3.1):**
+> ```text
+> Commercial lifestyle shot: a woman in her 30s in a linen shirt laughs while pouring coffee for friends in a sun-drenched Scandinavian kitchen, slow dolly-in as morning light blooms through sheer curtains. Warm editorial grade, soft skin tones, gentle lens flare. Ambient noise: warm room tone, soft laughter, an acoustic guitar bed.
+> ```
+
+
 ---
 
 ## Prompt Variations

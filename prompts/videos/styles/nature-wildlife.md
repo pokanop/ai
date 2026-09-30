@@ -6,6 +6,14 @@ Documentary-grade animal behavior, macro nature detail, and dramatic weather. Na
 
 **Best for:** Documentary B-roll · Screensavers & ambient loops · Educational content · Stock footage · Meditation apps
 
+![Nature & Wildlife Example](../../../assets/sample-nature-wildlife.mp4)
+
+> **Sample prompt used to generate the above video (MiniMax H3 (local)):**
+> ```text
+> Wildlife documentary telephoto shot of a snow leopard moving slowly along a rocky Himalayan ridge, muscles shifting under its thick coat, breath faintly visible in the cold air. It pauses and turns its head to look directly toward the lens. Compressed telephoto perspective, creamy background blur, natural overcast light, photorealistic documentary footage. Audio: wind over rock, faint crunch of paws on gravel. No voices, no speech, no vocals.
+> ```
+
+
 ---
 
 ## Prompt Variations
