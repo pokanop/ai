@@ -8,9 +8,9 @@ Studio-quality product reveals with orbit shots, macro detail passes, and clean 
 
 ![Product Showcase Example](../../../assets/sample-product-showcase.mp4)
 
-> **Sample prompt used to generate the above video (Chroma keyframe + MiniMax H3 (local)):**
+> **Sample prompt used to generate the above video (Qwen-Image-2.1 keyframe + MiniMax H3 (local)):**
 > ```text
-> Keyframe (Chroma text-to-image):
+> Keyframe (Qwen-Image-2.1 text-to-image):
 > Premium studio product photograph: a minimalist matte ceramic coffee cup on a light oak pedestal against a seamless warm grey background, soft diffused key light, crisp rim light tracing the cup's edges, subtle specular highlights on the glaze, shallow depth of field, macro-level sharpness, high-end commercial aesthetic.
 >
 > Animation (MiniMax H3 image-to-video):

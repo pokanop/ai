@@ -8,9 +8,9 @@ Film-grade narrative shots with deliberate cinematography — named camera moves
 
 ![Cinematic Sequence Example](../../../assets/sample-cinematic-sequence.mp4)
 
-> **Sample prompt used to generate the above video (Chroma keyframe + MiniMax H3 (local)):**
+> **Sample prompt used to generate the above video (Qwen-Image-2.1 keyframe + MiniMax H3 (local)):**
 > ```text
-> Keyframe (Chroma text-to-image):
+> Keyframe (Qwen-Image-2.1 text-to-image):
 > Cinematic film still, 35mm anamorphic, shallow depth of field: a woman stands motionless at a rain-streaked apartment window at night, backlit by cold blue city light, her reflection visible in the glass. She wears a long-sleeved dark knit sweater, full-length, high neckline, modest comfortable home clothing. Interior of a dim apartment at night, practical lamps glowing warm in the background bokeh. Moody neo-noir style, volumetric haze, high contrast, photorealistic film grain.
 >
 > Animation (MiniMax H3 image-to-video):

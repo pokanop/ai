@@ -8,9 +8,9 @@ Compressed time: cities pulsing at night, clouds streaming past monuments, const
 
 ![Timelapse & Hyperlapse Example](../../../assets/sample-timelapse-hyperlapse.mp4)
 
-> **Sample prompt used to generate the above video (Chroma keyframe + MiniMax H3 (local)):**
+> **Sample prompt used to generate the above video (Qwen-Image-2.1 keyframe + MiniMax H3 (local)):**
 > ```text
-> Keyframe (Chroma text-to-image):
+> Keyframe (Qwen-Image-2.1 text-to-image):
 > Timelapse film still from a high rooftop overlooking a busy city intersection at dusk: traffic streams rendered as continuous light trails, pedestrians blurred into rivers of motion, saturated dusk gradient sky with streaked clouds, windows glowing across the skyline, sharp architecture, locked camera, photorealistic long-exposure aesthetic.
 >
 > Animation (MiniMax H3 image-to-video):
