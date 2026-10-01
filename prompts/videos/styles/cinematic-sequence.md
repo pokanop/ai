@@ -8,9 +8,13 @@ Film-grade narrative shots with deliberate cinematography — named camera moves
 
 ![Cinematic Sequence Example](../../../assets/sample-cinematic-sequence.mp4)
 
-> **Sample prompt used to generate the above video (Google Veo 3.1):**
+> **Sample prompt used to generate the above video (Chroma keyframe + MiniMax H3 (local)):**
 > ```text
-> Cinematic slow dolly-in shot, 35mm anamorphic lens with shallow depth of field. A woman stands motionless at a rain-streaked window, backlit by cold blue city light, as her reflection slowly sharpens in the glass. Interior of a dim apartment at night, practical lamps glowing warm in the background bokeh. Moody neo-noir style, volumetric haze, high contrast. Ambient noise: distant traffic, rain against glass, a low synth drone swelling.
+> Keyframe (Chroma text-to-image):
+> Cinematic film still, 35mm anamorphic, shallow depth of field: a woman stands motionless at a rain-streaked apartment window at night, backlit by cold blue city light, her reflection visible in the glass. She wears a long-sleeved dark knit sweater, full-length, high neckline, modest comfortable home clothing. Interior of a dim apartment at night, practical lamps glowing warm in the background bokeh. Moody neo-noir style, volumetric haze, high contrast, photorealistic film grain.
+>
+> Animation (MiniMax H3 image-to-video):
+> The scene comes alive with subtle, restrained motion. Rain streaks slide slowly down the window glass. The city lights beyond shimmer and pulse faintly through the haze. The woman remains still, breathing gently; only her eyes shift slowly toward the window as the camera pushes in on a slow dolly. Audio: rain against glass, distant traffic hum, a low synth drone swelling softly. No voices, no speech, no vocals.
 > ```
 
 
