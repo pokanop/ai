@@ -6,6 +6,14 @@ Studio-quality product reveals with orbit shots, macro detail passes, and clean 
 
 **Best for:** E-commerce videos · Launch teasers · App store previews · Kickstarter pages · Social ads
 
+![Product Showcase Example](../../../assets/sample-product-showcase.mp4)
+
+> **Sample prompt used to generate the above video (MiniMax H3 (local)):**
+> ```text
+> Studio product video: a slow, smooth 360-degree orbit around a minimalist ceramic coffee cup resting on a light oak pedestal against a seamless warm grey background. Soft diffused key light with a crisp rim light tracing the cup's edges, subtle specular highlights rolling across its glaze as the camera circles. Shallow depth of field, macro-level sharpness, premium minimal aesthetic. Audio: a soft airy whoosh, a clean resolve tone. No voices, no speech, no vocals.
+> ```
+
+
 ---
 
 ## Prompt Variations

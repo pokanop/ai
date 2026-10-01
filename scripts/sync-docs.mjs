@@ -832,6 +832,17 @@ const TYPE_PLACEHOLDER_IMAGE = {
   text: '/ai/assets/placeholder-text-style.svg',
 };
 
+// Per-style sample thumbnail: real generated art when a
+// assets/placeholder-<slug>.jpg poster exists (video poster frame or audio
+// waveform art), falling back to the generic type placeholder.
+function typeStyleThumb(type, slug) {
+  const jpg = join(ASSETS_SRC, `placeholder-${slug}.jpg`);
+  if (existsSync(jpg)) return `/ai/assets/placeholder-${slug}.jpg`;
+  const jpeg = join(ASSETS_SRC, `placeholder-${slug}.jpeg`);
+  if (existsSync(jpeg)) return `/ai/assets/placeholder-${slug}.jpeg`;
+  return TYPE_PLACEHOLDER_IMAGE[type];
+}
+
 // Index page for a video/audio/text prompt type: the type's README with the
 // numbered style table replaced by a GalleryCard grid (matching the image
 // prompts index) and remaining styles/<slug>.md links rewritten.
@@ -848,7 +859,7 @@ function generatePromptTypeIndexMdx(content, title, type, typeStyles) {
       if (!style) continue;
       let shortDesc = style.description || '';
       if (shortDesc.length > 100) shortDesc = shortDesc.substring(0, 97) + '...';
-      grid += `  <GalleryCard title="${escapeForJsx(style.title)}" href="/ai/prompts/${type}/styles/${slug}/" description="${escapeForJsx(shortDesc)}" image="${TYPE_PLACEHOLDER_IMAGE[type]}" />\n`;
+      grid += `  <GalleryCard title="${escapeForJsx(style.title)}" href="/ai/prompts/${type}/styles/${slug}/" description="${escapeForJsx(shortDesc)}" image="${typeStyleThumb(type, slug)}" />\n`;
     }
     grid += '</CardGrid>\n\n';
     return grid;
@@ -958,6 +969,10 @@ function parseTypeStyle(content) {
     relatedStyles: [],
     otherSections: [],  // raw markdown of unrecognized ## sections
     hasVariations: false,
+    heroMedia: '',      // /ai/assets/sample-<slug>.mp4|.mp3 when the doc has a media hero
+    heroMediaAlt: '',
+    samplePrompt: '',   // full text of the "> **Sample prompt...**" blockquote
+    sampleCredit: '',   // e.g. "Google Veo 3.1" from "(Google Veo 3.1):"
   };
 
   const titleMatch = content.match(/^# (.+)$/m);
@@ -983,6 +998,27 @@ function parseTypeStyle(content) {
   if (bestForMatch) {
     data.bestFor = bestForMatch[1].split('·').map(s => s.trim()).filter(Boolean);
   }
+
+  // Extract hero media (video/audio sample, image-style convention):
+  // ![Alt](../../../assets/sample-<slug>.mp4) or .mp3
+  const mediaMatch = content.match(/!\[([^\]]*)\]\(([^)]+\.(?:mp4|mp3))\)/);
+  if (mediaMatch) {
+    data.heroMediaAlt = mediaMatch[1];
+    data.heroMedia = `/ai/assets/${basename(mediaMatch[2])}`;
+  }
+
+  // Extract sample prompt blockquote (image-style convention):
+  // > **Sample prompt used to generate the above video (Platform):**
+  const sampleMatch = content.match(/>\s*\*\*Sample prompt[^*]*\*\*[^`]*```text\n([\s\S]*?)```/);
+  if (sampleMatch) {
+    data.samplePrompt = sampleMatch[1]
+      .split('\n')
+      .map(l => l.replace(/^>\s*/, '').trim())
+      .join(' ')
+      .trim();
+  }
+  const creditMatch = content.match(/>\s*\*\*Sample prompt[^*]*\*\*.*?\(([^)]+)\)\s*[:：]/);
+  if (creditMatch) data.sampleCredit = creditMatch[1].trim();
 
   const variationsSection = extractSection(content, '## Prompt Variations');
   if (variationsSection) {
@@ -1053,14 +1089,32 @@ function generatePromptTypeStyleMdx(content, title, type, slug) {
   lines.push("import { Tabs, TabItem, LinkCard } from '@astrojs/starlight/components';");
   lines.push("import PromptBlock from '@components/PromptBlock.astro';");
   lines.push("import StyleHero from '@components/StyleHero.astro';");
+  lines.push("import MediaHero from '@components/MediaHero.astro';");
   lines.push('');
 
-  lines.push('<StyleHero');
-  lines.push(`  image="${TYPE_PLACEHOLDER_IMAGE[type]}"`);
-  if (data.bestFor.length > 0) {
-    lines.push(`  bestFor={${JSON.stringify(data.bestFor)}}`);
+  if (data.heroMedia) {
+    lines.push('<MediaHero');
+    lines.push(`  kind="${type === 'videos' ? 'video' : 'audio'}"`);
+    lines.push(`  media="${data.heroMedia}"`);
+    lines.push(`  poster="${typeStyleThumb(type, slug)}"`);
+    if (data.bestFor.length > 0) {
+      lines.push(`  bestFor={${JSON.stringify(data.bestFor)}}`);
+    }
+    if (data.samplePrompt) {
+      lines.push(`  samplePrompt="${escapeForJsx(data.samplePrompt)}"`);
+    }
+    if (data.sampleCredit) {
+      lines.push(`  sampleCredit="${escapeForJsx(data.sampleCredit)}"`);
+    }
+    lines.push('/>');
+  } else {
+    lines.push('<StyleHero');
+    lines.push(`  image="${TYPE_PLACEHOLDER_IMAGE[type]}"`);
+    if (data.bestFor.length > 0) {
+      lines.push(`  bestFor={${JSON.stringify(data.bestFor)}}`);
+    }
+    lines.push('/>');
   }
-  lines.push('/>');
   lines.push('');
 
   if (data.description) {

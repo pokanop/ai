@@ -6,6 +6,14 @@ Authentic, handheld, selfie-style content that feels like a real person filmed i
 
 **Best for:** TikTok & Reels ads · Creator-style testimonials · Product reactions · Vlogs · Organic-feel brand content
 
+![Social / UGC Clip Example](../../../assets/sample-social-ugc-clip.mp4)
+
+> **Sample prompt used to generate the above video (MiniMax H3 (local)):**
+> ```text
+> Vertical selfie video, handheld front-facing phone camera with slight natural shake. A woman in her 20s with curly hair sits in a bright, slightly messy bedroom with daylight from a window, holding a small skincare bottle up to the camera and speaking with casual excited energy. Natural skin texture, no studio lighting, authentic phone-video look. Audio: her voice speaking casually, quiet room tone.
+> ```
+
+
 ---
 
 ## Prompt Variations

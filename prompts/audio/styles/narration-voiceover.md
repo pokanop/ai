@@ -6,6 +6,14 @@ Documentary narration, audiobook reads, explainer voiceovers, and ad reads with 
 
 **Best for:** Explainer videos · Documentaries · Audiobooks · Ads & promos · E-learning
 
+![Narration & Voiceover Example](../../../assets/sample-narration-voiceover.mp3)
+
+> **Sample prompt used to generate the above audio (AI voice, generated locally with TTS):**
+> ```text
+> In the heart of the Amazon, something remarkable is happening. For over fifty million years, the forest has shaped everything around it — quietly, patiently… almost invisibly. But look closer, and a different story emerges. Ten thousand species call this canopy home. And that changes everything we thought we knew about balance.
+> ```
+
+
 ---
 
 ## Prompt Variations

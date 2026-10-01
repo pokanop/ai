@@ -6,6 +6,14 @@ Expressive character performances with ElevenLabs v3 — emotional range, non-ve
 
 **Best for:** Game characters · Animation dubbing · Audio dramas · Character-driven ads · Interactive agents
 
+![Character & Dialogue Voice Example](../../../assets/sample-character-dialogue-voice.mp3)
+
+> **Sample prompt used to generate the above audio (AI voice, generated locally with TTS):**
+> ```text
+> So… you came back. I didn't think you would. Wait — what's that in your hand? Is that… you actually found it? You FOUND it? I can't believe this. After all these years! Come here. Come here — let me look at you.
+> ```
+
+
 ---
 
 ## Prompt Variations

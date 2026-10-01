@@ -6,6 +6,14 @@ Character-driven scenes with synchronized, lip-synced speech and natural perform
 
 **Best for:** Short film scenes · Explainer hosts · Character vignettes · Ad spokespeople · Previz table reads
 
+![Dialogue Scene Example](../../../assets/sample-dialogue-scene.mp4)
+
+> **Sample prompt used to generate the above video (Google Veo 3.1):**
+> ```text
+> Cinematic medium two-shot in a dim diner booth at night, warm practical light overhead, rain on the window behind. An older detective leans forward and says wearily, "Some cases don't stay buried." A nervous young man looks away and replies quietly, "This one never was." Shallow depth of field, subtle handheld drift. Ambient noise: rain, distant dishes clinking, low diner hum.
+> ```
+
+
 ---
 
 ## Prompt Variations

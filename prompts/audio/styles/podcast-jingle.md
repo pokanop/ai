@@ -6,6 +6,14 @@ Intros, outros, stingers, and branded audio idents — short-form music with a j
 
 **Best for:** Podcast intros/outros · YouTube channel idents · Radio imaging · Brand sonic logos · Segment stingers
 
+![Podcast & Jingle Example](../../../assets/sample-podcast-jingle.mp3)
+
+> **Sample prompt used to generate the above audio (MiniMax Music 3):**
+> ```text
+> upbeat podcast intro theme, 110 BPM, punchy drums, funky bass, bright electric piano stabs, hand claps, energetic and friendly, clean modern production, instrumental, 30 second theme
+> ```
+
+
 ---
 
 ## Prompt Variations
