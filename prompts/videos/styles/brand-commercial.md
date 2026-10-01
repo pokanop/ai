@@ -8,9 +8,13 @@ Polished 15–30 second spot energy compressed into single clips: lifestyle mome
 
 ![Brand Commercial Example](../../../assets/sample-brand-commercial.mp4)
 
-> **Sample prompt used to generate the above video (Google Veo 3.1):**
+> **Sample prompt used to generate the above video (Chroma keyframe + MiniMax H3 (local)):**
 > ```text
-> Commercial lifestyle shot: a woman in her 30s in a linen shirt laughs while pouring coffee for friends in a sun-drenched Scandinavian kitchen, slow dolly-in as morning light blooms through sheer curtains. Warm editorial grade, soft skin tones, gentle lens flare. Ambient noise: warm room tone, soft laughter, an acoustic guitar bed.
+> Keyframe (Chroma text-to-image):
+> Commercial lifestyle photograph: a woman in her 30s wearing a loose linen shirt buttoned to the collar and full-length trousers, laughing warmly while pouring coffee for two friends at a wooden dining table in a sun-drenched Scandinavian kitchen. Morning light blooms through sheer curtains. Warm editorial color grade, soft skin tones, gentle lens flare, photorealistic, everyone fully and modestly clothed.
+>
+> Animation (MiniMax H3 image-to-video):
+> The scene comes alive gently. Steam curls rise from the coffee cups. Morning light blooms and shifts through the sheer curtains. The friends laugh and talk softly, gesturing naturally with their hands, faces animated with warmth, as the camera dollies in slowly. Audio: warm room tone, soft laughter, cups gently clinking, an acoustic guitar bed. No lyrics, no sung vocals.
 > ```
 
 

@@ -8,9 +8,13 @@ Studio-quality product reveals with orbit shots, macro detail passes, and clean 
 
 ![Product Showcase Example](../../../assets/sample-product-showcase.mp4)
 
-> **Sample prompt used to generate the above video (MiniMax H3 (local)):**
+> **Sample prompt used to generate the above video (Chroma keyframe + MiniMax H3 (local)):**
 > ```text
-> Studio product video: a slow, smooth 360-degree orbit around a minimalist ceramic coffee cup resting on a light oak pedestal against a seamless warm grey background. Soft diffused key light with a crisp rim light tracing the cup's edges, subtle specular highlights rolling across its glaze as the camera circles. Shallow depth of field, macro-level sharpness, premium minimal aesthetic. Audio: a soft airy whoosh, a clean resolve tone. No voices, no speech, no vocals.
+> Keyframe (Chroma text-to-image):
+> Premium studio product photograph: a minimalist matte ceramic coffee cup on a light oak pedestal against a seamless warm grey background, soft diffused key light, crisp rim light tracing the cup's edges, subtle specular highlights on the glaze, shallow depth of field, macro-level sharpness, high-end commercial aesthetic.
+>
+> Animation (MiniMax H3 image-to-video):
+> The product comes alive on a slow, smooth 360-degree orbit. The camera circles the cup steadily as light rolls across the glaze and specular highlights sweep along the rim. Shallow depth of field holds macro sharpness on the product throughout the orbit. Audio: a soft airy whoosh building to a clean resolve tone. No voices, no speech, no vocals.
 > ```
 
 
