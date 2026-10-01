@@ -6,6 +6,18 @@ Authentic, handheld, selfie-style content that feels like a real person filmed i
 
 **Best for:** TikTok & Reels ads · Creator-style testimonials · Product reactions · Vlogs · Organic-feel brand content
 
+![Social / UGC Clip Example](../../../assets/sample-social-ugc-clip.mp4)
+
+> **Sample prompt used to generate the above video (Qwen-Image-2.1 keyframe + MiniMax H3 (local)):**
+> ```text
+> Keyframe (Qwen-Image-2.1 text-to-image):
+> Vertical selfie-style photograph, front-facing phone camera: a young woman with curly hair wearing a plain high-neck turtleneck sweater in soft grey and loose full-length soft trousers, sitting cross-legged on her bed in a bright slightly messy bedroom, daylight from a window, holding a small skincare bottle up beside her face, smiling with casual excited energy. Her clothing is completely intact with no rips, no distressing, no cutouts — solid fabric covering her from neck to wrists to ankles. Only her face, neck, and hands are visible. Natural skin texture, authentic phone-photo look, modest everyday casual outfit.
+>
+> Animation (MiniMax H3 image-to-video):
+> The scene comes alive naturally. The young woman speaks to camera with casual excited energy, her expression animated as she shows the bottle, gesturing slightly; light natural handheld camera shake. Audio: her voice speaking casually and clearly about the product, quiet room tone. One speaker only.
+> ```
+
+
 ---
 
 ## Prompt Variations

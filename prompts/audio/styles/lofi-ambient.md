@@ -6,6 +6,14 @@ Chill beats, ambient textures, and long-form soundscapes for focus, sleep, and b
 
 **Best for:** Focus/study playlists · Sleep & meditation apps · Stream backgrounds · Café/retail ambience · App soundscapes
 
+![Lo-fi & Ambient Example](../../../assets/sample-lofi-ambient.mp3)
+
+> **Sample prompt used to generate the above audio (MiniMax Music 3):**
+> ```text
+> lo-fi hip hop, 82 BPM, dusty boom bap drums, warm Rhodes chords, mellow jazz guitar licks, vinyl crackle, tape saturation, soft rain ambience, relaxed and nostalgic, instrumental
+> ```
+
+
 ---
 
 ## Prompt Variations

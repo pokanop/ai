@@ -6,6 +6,18 @@ Documentary-grade animal behavior, macro nature detail, and dramatic weather. Na
 
 **Best for:** Documentary B-roll · Screensavers & ambient loops · Educational content · Stock footage · Meditation apps
 
+![Nature & Wildlife Example](../../../assets/sample-nature-wildlife.mp4)
+
+> **Sample prompt used to generate the above video (Qwen-Image-2.1 keyframe + MiniMax H3 (local)):**
+> ```text
+> Keyframe (Qwen-Image-2.1 text-to-image):
+> Wildlife documentary film still, telephoto compression: a snow leopard on a rocky Himalayan ridge, thick fur coat, walking slowly along the rocks, breath faintly visible in the cold air, head beginning to turn toward the camera. Creamy background blur, natural overcast light, photorealistic nature documentary photography.
+>
+> Animation (MiniMax H3 image-to-video):
+> The scene comes alive with quiet documentary motion. The snow leopard walks slowly along the ridge, muscles shifting under its thick coat, breath visible in the cold air. It pauses, then turns its head to look directly into the lens, holding the gaze. Audio: wind over rock, faint crunch of paws on gravel. No voices, no speech, no vocals.
+> ```
+
+
 ---
 
 ## Prompt Variations

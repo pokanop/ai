@@ -6,6 +6,23 @@ Radio-ready pop songs with big hooks, clean modern production, and full verse/ch
 
 **Best for:** Original songs · Brand anthems · Event themes · Social soundtracks · Demos for writers
 
+![Pop Anthem Example](../../../assets/sample-pop-anthem.mp3)
+
+> **Sample prompt used to generate the above audio (MiniMax Music 3):**
+> ```text
+> uplifting anthemic pop, 118 BPM, punchy drums, bright synth stabs, driving bass, layered powerful female vocals, huge singalong chorus, polished radio mix
+> Lyrics:
+> [Verse]
+> City lights are calling out my name
+> Every scar is just a spark of flame
+> [Pre-Chorus]
+> We were broken, now we're burning bright
+> [Chorus]
+> We rise, we rise, nothing's stopping us tonight
+> Hands up to the sky, we're alive, we rise
+> ```
+
+
 ---
 
 ## Prompt Variations

@@ -6,6 +6,14 @@ Orchestral and hybrid trailer music, emotional themes, and underscore beds for f
 
 **Best for:** Trailers & teasers · Film/game underscore · Brand films · Podcast beds · Presentation openers
 
+![Cinematic Score Example](../../../assets/sample-cinematic-score.mp3)
+
+> **Sample prompt used to generate the above audio (MiniMax Music 3):**
+> ```text
+> epic hybrid trailer music, 90 BPM, thunderous taiko drums, braams, staccato string ostinato, soaring brass theme, choir swells, massive cinematic hits, builds from quiet tension to overwhelming climax, instrumental
+> ```
+
+
 ---
 
 ## Prompt Variations

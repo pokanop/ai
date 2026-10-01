@@ -6,6 +6,18 @@ Compressed time: cities pulsing at night, clouds streaming past monuments, const
 
 **Best for:** Intros & transitions · Travel content · Corporate sizzle reels · Music video B-roll · Ambient screens
 
+![Timelapse & Hyperlapse Example](../../../assets/sample-timelapse-hyperlapse.mp4)
+
+> **Sample prompt used to generate the above video (Qwen-Image-2.1 keyframe + MiniMax H3 (local)):**
+> ```text
+> Keyframe (Qwen-Image-2.1 text-to-image):
+> Timelapse film still from a high rooftop overlooking a busy city intersection at dusk: traffic streams rendered as continuous light trails, pedestrians blurred into rivers of motion, saturated dusk gradient sky with streaked clouds, windows glowing across the skyline, sharp architecture, locked camera, photorealistic long-exposure aesthetic.
+>
+> Animation (MiniMax H3 image-to-video):
+> The timelapse accelerates into motion. Traffic flows as rivers of light trails below, clouds race across the deepening dusk sky, building windows flicker on one by one across the skyline as day compresses into night. Camera locked rock steady. Audio: accelerated city hum with a rhythmic pulse. No voices, no speech, no vocals.
+> ```
+
+
 ---
 
 ## Prompt Variations

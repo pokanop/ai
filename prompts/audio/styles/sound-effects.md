@@ -6,6 +6,14 @@ Foley, ambience, impacts, and UI sounds. SFX prompts are short and physical: des
 
 **Best for:** Video sound design · Game audio · App/UI sounds · Podcast production · Ambience beds
 
+![Sound Effects Example](../../../assets/sample-sound-effects.mp3)
+
+> **Sample prompt used to generate the above audio (Google Veo 3.1 audio track):**
+> ```text
+> A heavy wooden door creaks open slowly in a stone cathedral. Locked-off interior shot, dust motes drifting in a shaft of cold morning light through high windows, the massive oak door swinging inward with a long, low groan and a deep natural echo. SFX: prolonged wooden creak, iron hinge strain, stone-room reverb tail. No music, no voices.
+> ```
+
+
 ---
 
 ## Prompt Variations

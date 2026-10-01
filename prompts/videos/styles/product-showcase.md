@@ -6,6 +6,18 @@ Studio-quality product reveals with orbit shots, macro detail passes, and clean 
 
 **Best for:** E-commerce videos · Launch teasers · App store previews · Kickstarter pages · Social ads
 
+![Product Showcase Example](../../../assets/sample-product-showcase.mp4)
+
+> **Sample prompt used to generate the above video (Qwen-Image-2.1 keyframe + MiniMax H3 (local)):**
+> ```text
+> Keyframe (Qwen-Image-2.1 text-to-image):
+> Premium studio product photograph: a minimalist matte ceramic coffee cup on a light oak pedestal against a seamless warm grey background, soft diffused key light, crisp rim light tracing the cup's edges, subtle specular highlights on the glaze, shallow depth of field, macro-level sharpness, high-end commercial aesthetic.
+>
+> Animation (MiniMax H3 image-to-video):
+> The product comes alive on a slow, smooth 360-degree orbit. The camera circles the cup steadily as light rolls across the glaze and specular highlights sweep along the rim. Shallow depth of field holds macro sharpness on the product throughout the orbit. Audio: a soft airy whoosh building to a clean resolve tone. No voices, no speech, no vocals.
+> ```
+
+
 ---
 
 ## Prompt Variations

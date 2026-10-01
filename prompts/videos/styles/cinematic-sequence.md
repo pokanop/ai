@@ -6,6 +6,18 @@ Film-grade narrative shots with deliberate cinematography — named camera moves
 
 **Best for:** Short films · Title sequences · Mood pieces · Pitch previsualization · Music video shots
 
+![Cinematic Sequence Example](../../../assets/sample-cinematic-sequence.mp4)
+
+> **Sample prompt used to generate the above video (Qwen-Image-2.1 keyframe + MiniMax H3 (local)):**
+> ```text
+> Keyframe (Qwen-Image-2.1 text-to-image):
+> Cinematic film still, 35mm anamorphic, shallow depth of field: a woman stands motionless at a rain-streaked apartment window at night, backlit by cold blue city light, her reflection visible in the glass. She wears a long-sleeved dark knit sweater, full-length, high neckline, modest comfortable home clothing. Interior of a dim apartment at night, practical lamps glowing warm in the background bokeh. Moody neo-noir style, volumetric haze, high contrast, photorealistic film grain.
+>
+> Animation (MiniMax H3 image-to-video):
+> The scene comes alive with subtle, restrained motion. Rain streaks slide slowly down the window glass. The city lights beyond shimmer and pulse faintly through the haze. The woman remains still, breathing gently; only her eyes shift slowly toward the window as the camera pushes in on a slow dolly. Audio: rain against glass, distant traffic hum, a low synth drone swelling softly. No voices, no speech, no vocals.
+> ```
+
+
 ---
 
 ## Prompt Variations

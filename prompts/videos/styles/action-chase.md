@@ -6,6 +6,18 @@ High-energy pursuits, stunts, and kinetic camera work. Action is the hardest thi
 
 **Best for:** Trailers · Sports content · Game cinematics · Stunt previz · Music video cuts
 
+![Action & Chase Example](../../../assets/sample-action-chase.mp4)
+
+> **Sample prompt used to generate the above video (Qwen-Image-2.1 keyframe + MiniMax H3 (local)):**
+> ```text
+> Keyframe (Qwen-Image-2.1 text-to-image):
+> Dynamic action film still: a male runner in a grey hoodie and long athletic trousers sprinting across a rooftop mid-stride toward the camera, body leaning into the run, one arm driving forward, late afternoon sun, long shadows, dust kicked up around his feet, urban skyline background, fast shutter feel, crisp motion, photorealistic.
+>
+> Animation (MiniMax H3 image-to-video):
+> The action explodes into motion. The runner sprints straight toward the camera at full speed, arms pumping, hood snapping in the wind, gravel spraying from his shoes as the camera whip-pans to follow him past frame. Fast, urgent, kinetic. Audio: pounding footsteps, fabric rustling, heavy breathing, driving percussion. No voices, no speech, no vocals.
+> ```
+
+
 ---
 
 ## Prompt Variations

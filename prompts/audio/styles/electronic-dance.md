@@ -6,6 +6,14 @@ House, techno, synthwave, and EDM — genres where BPM, drum character, and synt
 
 **Best for:** DJ sets & mixes · Game and stream soundtracks · Workout playlists · Product launch videos · Fashion content
 
+![Electronic & Dance Example](../../../assets/sample-electronic-dance.mp3)
+
+> **Sample prompt used to generate the above audio (MiniMax Music 3):**
+> ```text
+> melodic techno, 124 BPM, hypnotic analog arpeggios, deep rolling bassline, crisp four-on-the-floor kick, dark atmospheric pads, slow tension build to a euphoric drop, instrumental, club-ready mix
+> ```
+
+
 ---
 
 ## Prompt Variations

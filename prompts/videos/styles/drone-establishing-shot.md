@@ -6,6 +6,14 @@ Sweeping aerials, FPV fly-throughs, and slow crane reveals that set a location a
 
 **Best for:** Openers & intros · Travel content · Real estate · Documentary B-roll · Game/film previz
 
+![Drone & Establishing Shot Example](../../../assets/sample-drone-establishing-shot.mp4)
+
+> **Sample prompt used to generate the above video (Google Veo 3.1):**
+> ```text
+> Cinematic aerial establishing shot: the camera cranes up from behind a ridge of pine trees to reveal a dramatic coastline with turquoise water stretching to the horizon at golden hour. Slow, majestic movement, atmospheric haze softening the distance, sun flare at the reveal. 16:9 format. Ambient noise: wind, distant waves, soaring orchestral swell.
+> ```
+
+
 ---
 
 ## Prompt Variations
